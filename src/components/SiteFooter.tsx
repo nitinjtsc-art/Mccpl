@@ -3,11 +3,12 @@ import mccLogo from "@/assets/mcc-logo.jpeg";
 
 export function SiteFooter() {
   return (
-    <footer className="relative overflow-hidden bg-primary text-primary-foreground">
-      <div className="stripe-amber absolute inset-x-0 top-0 h-2" />
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-4">
+    <footer className="relative overflow-hidden border-t border-border/60 bg-card/40">
+      <div className="absolute inset-x-0 top-0 h-px bg-plasma" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-40 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-aurora opacity-20 blur-3xl" />
+      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="inline-block rounded-sm bg-primary-foreground p-5">
+          <div className="inline-block rounded-2xl bg-primary-foreground/95 p-4">
             <img
               src={mccLogo}
               alt="MCC — Mittal Construction Company"
