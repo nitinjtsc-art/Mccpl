@@ -20,7 +20,7 @@ export function SiteHeader() {
           <img
             src={mccLogo}
             alt="MCC — Mittal Construction Company"
-            className="h-7 w-auto md:h-8"
+            className="h-7 w-auto md:h-8 mix-blend-multiply"
             loading="eager"
           />
         </Link>
