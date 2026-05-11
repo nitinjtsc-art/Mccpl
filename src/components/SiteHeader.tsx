@@ -43,7 +43,7 @@ export function SiteHeader() {
 
         <Link
           to="/contact"
-          className="hidden items-center gap-2 bg-primary px-5 py-2.5 mono text-[11px] uppercase tracking-[0.18em] text-primary-foreground transition-transform hover:translate-x-0.5 md:inline-flex"
+          className="hidden items-center gap-2 rounded-full bg-plasma px-5 py-2 mono text-[10px] uppercase tracking-[0.2em] text-accent-foreground shadow-glow transition-transform hover:-translate-y-0.5 md:inline-flex"
         >
           Get Quote →
         </Link>
