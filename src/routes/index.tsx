@@ -43,36 +43,56 @@ function Home() {
       <SiteHeader />
 
       {/* HERO */}
-      <section ref={ref} className="relative h-[100svh] overflow-hidden bg-primary text-primary-foreground">
+      <section ref={ref} className="noise relative h-[100svh] overflow-hidden bg-primary text-primary-foreground">
         <motion.div style={{ y }} className="absolute inset-0">
           <img
             src={heroImg}
             alt="Construction site at dusk"
-            className="h-full w-full object-cover opacity-60"
+            className="h-full w-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/30 to-primary" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary" />
         </motion.div>
 
-        <motion.div style={{ opacity }} className="relative mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 pt-32">
-          <div className="mono mb-6 flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-accent">
-            <span className="h-px w-12 bg-accent" /> Bhiwadi · Rajasthan · Est. 2013
-          </div>
+        {/* Drifting accent blob */}
+        <div
+          aria-hidden
+          className="drift pointer-events-none absolute -right-32 top-1/4 h-[520px] w-[520px] rounded-full opacity-30 blur-3xl"
+          style={{ background: "radial-gradient(circle, var(--accent), transparent 65%)" }}
+        />
 
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+        <motion.div style={{ opacity }} className="relative mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-24 pt-32">
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="display text-[clamp(3.5rem,12vw,11rem)] leading-[0.85] text-balance"
+            transition={{ duration: 0.6 }}
+            className="mb-8 inline-flex w-fit items-center gap-3 rounded-full border border-primary-foreground/15 bg-primary-foreground/[0.04] px-4 py-2 backdrop-blur-sm"
           >
-            WE BUILD<br />
-            <span className="text-accent">WHAT LASTS.</span>
-          </motion.h1>
+            <span className="pulse-dot relative inline-block h-2 w-2 rounded-full bg-accent" />
+            <span className="mono text-[10px] uppercase tracking-[0.3em] text-primary-foreground/80">
+              Now building · Bhiwadi · Rajasthan
+            </span>
+          </motion.div>
+
+          <h1 className="display text-[clamp(3.5rem,12vw,11rem)] leading-[0.85] text-balance">
+            {["WE BUILD", "WHAT LASTS."].map((line, i) => (
+              <span key={line} className="block overflow-hidden">
+                <motion.span
+                  initial={{ y: "110%" }}
+                  animate={{ y: "0%" }}
+                  transition={{ duration: 1.1, delay: i * 0.18, ease: [0.22, 1, 0.36, 1] }}
+                  className={`block ${i === 1 ? "text-accent" : ""}`}
+                >
+                  {line}
+                </motion.span>
+              </span>
+            ))}
+          </h1>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="mt-10 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end"
+            transition={{ duration: 1, delay: 0.6 }}
+            className="mt-12 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end"
           >
             <p className="max-w-md text-lg text-primary-foreground/80">
               Turnkey industrial, institutional and commercial construction across
@@ -81,10 +101,13 @@ function Home() {
             <div className="flex gap-3">
               <Link
                 to="/projects"
-                className="group inline-flex items-center gap-2 bg-accent px-6 py-4 mono text-xs uppercase tracking-[0.2em] text-accent-foreground"
+                className="group relative inline-flex items-center gap-2 overflow-hidden bg-accent px-6 py-4 mono text-xs uppercase tracking-[0.2em] text-accent-foreground"
               >
-                See Our Work
-                <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <span className="absolute inset-0 -translate-x-full bg-primary-foreground transition-transform duration-500 group-hover:translate-x-0" />
+                <span className="relative flex items-center gap-2 transition-colors group-hover:text-primary">
+                  See Our Work
+                  <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </span>
               </Link>
               <Link
                 to="/contact"
@@ -95,8 +118,22 @@ function Home() {
             </div>
           </motion.div>
         </motion.div>
+      </section>
 
-        <div className="absolute bottom-0 left-0 right-0 stripe-amber h-2" />
+      {/* MARQUEE STRIP */}
+      <section className="overflow-hidden border-y border-border bg-primary text-primary-foreground">
+        <div className="marquee-track flex whitespace-nowrap py-5">
+          {Array.from({ length: 2 }).map((_, k) => (
+            <div key={k} className="flex shrink-0 items-center gap-12 pr-12">
+              {["RCC & Steel Structures", "Industrial Turnkey", "Institutional", "MEP Coordination", "11+ Years", "Bhiwadi · Alwar", "Mott MacDonald · NBCC", "On-time Hand-over"].map((t) => (
+                <span key={t} className="flex items-center gap-12 display text-4xl md:text-6xl">
+                  {t}
+                  <span className="inline-block h-2 w-2 rotate-45 bg-accent" />
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* STATS */}

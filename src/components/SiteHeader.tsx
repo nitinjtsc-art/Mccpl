@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import mccLogo from "@/assets/mcc-logo.png";
+import mccLogo from "@/assets/mcc-logo.jpeg";
 
 const links = [
   { to: "/", label: "Home" },
@@ -19,8 +19,8 @@ export function SiteHeader() {
         <Link to="/" className="flex items-center gap-3">
           <img
             src={mccLogo}
-            alt="Rajendra Mittal Constructions logo"
-            className="h-10 w-auto md:h-11"
+            alt="MCC — Mittal Construction Company"
+            className="h-7 w-auto md:h-8"
             loading="eager"
           />
         </Link>
