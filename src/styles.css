@@ -41,42 +41,42 @@
 :root {
   --radius: 0.25rem;
 
-  /* MCC brand palette — navy blue, sky blue, steel grey */
-  --background: oklch(0.985 0.003 240);
-  --foreground: oklch(0.18 0.04 255);
+  /* MCC monochrome — true black, bone white, electric lime accent */
+  --background: oklch(0.985 0.002 90);
+  --foreground: oklch(0.12 0 0);
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.04 255);
+  --card-foreground: oklch(0.12 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.04 255);
+  --popover-foreground: oklch(0.12 0 0);
 
-  --primary: oklch(0.26 0.09 260);            /* MCC deep navy */
-  --primary-foreground: oklch(0.985 0.003 240);
+  --primary: oklch(0.14 0 0);                 /* MCC black */
+  --primary-foreground: oklch(0.985 0.002 90);
 
-  --secondary: oklch(0.93 0.015 240);
-  --secondary-foreground: oklch(0.26 0.09 260);
+  --secondary: oklch(0.94 0.003 90);
+  --secondary-foreground: oklch(0.14 0 0);
 
-  --muted: oklch(0.94 0.012 240);
-  --muted-foreground: oklch(0.46 0.04 255);
+  --muted: oklch(0.95 0.003 90);
+  --muted-foreground: oklch(0.45 0.005 90);
 
-  --accent: oklch(0.74 0.13 235);             /* MCC sky blue */
-  --accent-foreground: oklch(0.18 0.04 255);
+  --accent: oklch(0.88 0.18 115);             /* electric lime — modern construction site */
+  --accent-foreground: oklch(0.12 0 0);
 
   --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
 
-  --border: oklch(0.88 0.012 240);
-  --input: oklch(0.88 0.012 240);
-  --ring: oklch(0.74 0.13 235);
+  --border: oklch(0.9 0.003 90);
+  --input: oklch(0.9 0.003 90);
+  --ring: oklch(0.88 0.18 115);
 
-  --concrete: oklch(0.86 0.008 240);
-  --steel: oklch(0.42 0.02 250);
-  --amber-glow: oklch(0.82 0.13 230);
+  --concrete: oklch(0.88 0.004 90);
+  --steel: oklch(0.32 0.004 90);
+  --amber-glow: oklch(0.88 0.18 115);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.22 0.08 260) 0%, oklch(0.32 0.1 250) 100%);
-  --gradient-amber: linear-gradient(135deg, oklch(0.78 0.13 230) 0%, oklch(0.6 0.14 250) 100%);
-  --shadow-brutal: 8px 8px 0 0 oklch(0.26 0.09 260);
-  --shadow-amber: 0 20px 60px -20px oklch(0.74 0.13 235 / 0.5);
+  --gradient-hero: linear-gradient(135deg, oklch(0.1 0 0) 0%, oklch(0.2 0.005 90) 100%);
+  --gradient-amber: linear-gradient(135deg, oklch(0.92 0.19 115) 0%, oklch(0.78 0.18 130) 100%);
+  --shadow-brutal: 8px 8px 0 0 oklch(0.14 0 0);
+  --shadow-amber: 0 20px 60px -20px oklch(0.88 0.18 115 / 0.5);
 }
 
 .dark {
