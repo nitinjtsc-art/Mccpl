@@ -18,7 +18,7 @@ export function SiteFooter() {
           <div className="mono mt-4 text-xs uppercase tracking-[0.3em] text-accent">
             Est. 2013 · Bhiwadi, Rajasthan
           </div>
-          <p className="mt-6 max-w-md text-sm text-primary-foreground/70">
+          <p className="mt-6 max-w-md text-sm text-foreground/60">
             Engineering durable industrial, institutional and commercial structures
             across North India for over a decade.
           </p>
