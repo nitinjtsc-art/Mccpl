@@ -14,15 +14,17 @@ const links = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+    <header className="fixed inset-x-0 top-0 z-50">
+      <div className="mx-auto mt-3 flex h-14 max-w-7xl items-center justify-between rounded-full glass px-5 md:mx-auto md:max-w-6xl">
         <Link to="/" className="flex items-center gap-3">
-          <img
-            src={mccLogo}
-            alt="MCC — Mittal Construction Company"
-            className="h-7 w-auto md:h-8"
-            loading="eager"
-          />
+          <div className="rounded-full bg-primary-foreground/95 p-1.5">
+            <img
+              src={mccLogo}
+              alt="MCC — Mittal Construction Company"
+              className="h-6 w-auto md:h-7"
+              loading="eager"
+            />
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
