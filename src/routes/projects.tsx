@@ -30,7 +30,7 @@ function ProjectsPage() {
             Built work,<br />on the ground.
           </h1>
         </div>
-        <div className="stripe-amber absolute bottom-0 inset-x-0 h-2" />
+        <div className="bg-plasma absolute bottom-0 inset-x-0 h-2" />
       </section>
 
       <section className="py-24">
@@ -49,7 +49,7 @@ function ProjectsPage() {
                       className="h-full w-full object-cover transition-transform duration-1000 hover:scale-105"
                     />
                   </div>
-                  <div className="mono absolute -top-3 -left-3 bg-accent px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-accent-foreground shadow-brutal">
+                  <div className="mono absolute -top-3 -left-3 bg-accent px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-accent-foreground shadow-glow">
                     0{i + 1} / {projects.length}
                   </div>
                 </div>
