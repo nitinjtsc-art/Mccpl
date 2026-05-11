@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import mccLogo from "@/assets/mcc-logo.png";
+import mccLogo from "@/assets/mcc-logo.jpeg";
 
 export function SiteFooter() {
   return (
