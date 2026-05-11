@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import mccLogo from "@/assets/mcc-logo.png";
 
 export function SiteFooter() {
   return (
@@ -6,9 +7,15 @@ export function SiteFooter() {
       <div className="stripe-amber absolute inset-x-0 top-0 h-2" />
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="display text-5xl md:text-7xl">MITTAL</div>
-          <div className="mono mt-2 text-xs uppercase tracking-[0.3em] text-accent">
-            Construction Co. — Est. 2013
+          <div className="inline-block rounded-sm bg-primary-foreground/95 p-4">
+            <img
+              src={mccLogo}
+              alt="Rajendra Mittal Constructions logo"
+              className="h-14 w-auto md:h-16"
+            />
+          </div>
+          <div className="mono mt-4 text-xs uppercase tracking-[0.3em] text-accent">
+            Est. 2013 · Bhiwadi, Rajasthan
           </div>
           <p className="mt-6 max-w-md text-sm text-primary-foreground/70">
             Engineering durable industrial, institutional and commercial structures
