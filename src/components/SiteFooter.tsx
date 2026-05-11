@@ -7,11 +7,11 @@ export function SiteFooter() {
       <div className="stripe-amber absolute inset-x-0 top-0 h-2" />
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="inline-block rounded-sm bg-primary-foreground/95 p-4">
+          <div className="inline-block rounded-sm bg-primary-foreground p-5">
             <img
               src={mccLogo}
-              alt="Rajendra Mittal Constructions logo"
-              className="h-14 w-auto md:h-16"
+              alt="MCC — Mittal Construction Company"
+              className="h-9 w-auto md:h-11"
             />
           </div>
           <div className="mono mt-4 text-xs uppercase tracking-[0.3em] text-accent">
