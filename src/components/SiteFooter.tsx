@@ -40,7 +40,7 @@ export function SiteFooter() {
           <div className="mono mb-4 text-[10px] uppercase tracking-[0.25em] text-accent">
             Office
           </div>
-          <address className="not-italic text-sm leading-relaxed text-primary-foreground/70">
+          <address className="not-italic text-sm leading-relaxed text-foreground/60">
             RIICO Industrial Area<br />
             Bhiwadi, Alwar<br />
             Rajasthan, India<br /><br />
@@ -49,8 +49,8 @@ export function SiteFooter() {
           </address>
         </div>
       </div>
-      <div className="border-t border-primary-foreground/10">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 mono text-[10px] uppercase tracking-[0.2em] text-primary-foreground/50">
+      <div className="relative border-t border-border/60">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 mono text-[10px] uppercase tracking-[0.2em] text-foreground/40">
           <span>© 2026 Mittal Construction</span>
           <span>Built on bedrock.</span>
         </div>
