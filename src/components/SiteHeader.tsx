@@ -16,16 +16,13 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center bg-accent text-accent-foreground">
-            <span className="display text-lg">M</span>
-          </div>
-          <div className="leading-tight">
-            <div className="display text-base tracking-wide">MITTAL</div>
-            <div className="mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
-              Construction Co.
-            </div>
-          </div>
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src={mccLogo}
+            alt="Rajendra Mittal Constructions logo"
+            className="h-10 w-auto md:h-11"
+            loading="eager"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
