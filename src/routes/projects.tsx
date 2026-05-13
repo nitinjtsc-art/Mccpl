@@ -20,17 +20,16 @@ function ProjectsPage() {
   return (
     <>
       <SiteHeader />
-      <section className="relative bg-primary pt-40 pb-24 text-primary-foreground">
-        <div className="grid-lines absolute inset-0 opacity-20" />
-        <div className="relative mx-auto max-w-7xl px-6">
+      <section className="relative bg-ink pt-40 pb-24 text-primary-foreground">
+        <div className="container-x relative">
           <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
             Portfolio · {projects.length} projects
           </div>
-          <h1 className="display text-[clamp(3.5rem,11vw,10rem)] leading-[0.85] text-balance">
+          <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.95] text-balance">
             Built work,<br />on the ground.
           </h1>
         </div>
-        <div className="bg-plasma absolute bottom-0 inset-x-0 h-2" />
+        <div className="absolute inset-x-0 bottom-0 h-1 bg-accent" />
       </section>
 
       <section className="py-24">
@@ -49,7 +48,7 @@ function ProjectsPage() {
                       className="h-full w-full object-cover transition-transform duration-1000 hover:scale-105"
                     />
                   </div>
-                  <div className="mono absolute -top-3 -left-3 bg-accent px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-accent-foreground shadow-glow">
+                  <div className="mono absolute -top-3 -left-3 bg-accent px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-accent-foreground shadow-soft">
                     0{i + 1} / {projects.length}
                   </div>
                 </div>
