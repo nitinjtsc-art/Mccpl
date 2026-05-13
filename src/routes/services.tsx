@@ -100,7 +100,7 @@ function ServicesPage() {
           </h2>
           <Link
             to="/contact"
-            className="bg-accent px-8 py-5 mono text-xs uppercase tracking-[0.25em] text-accent-foreground"
+            className="rounded-md bg-primary-foreground px-8 py-5 mono text-xs uppercase tracking-[0.25em] text-ink hover:bg-accent hover:text-accent-foreground transition-colors"
           >
             Start Conversation →
           </Link>

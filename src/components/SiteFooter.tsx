@@ -52,9 +52,9 @@ export function SiteFooter() {
             Get in touch
           </div>
           <ul className="space-y-3 text-sm text-primary-foreground/80">
-            <li className="flex gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-accent" /> RIICO Industrial Area, Bhiwadi, Alwar, Rajasthan</li>
-            <li className="flex gap-3"><Phone size={16} className="mt-0.5 shrink-0 text-accent" /> +91 98765 43210</li>
-            <li className="flex gap-3"><Mail size={16} className="mt-0.5 shrink-0 text-accent" /> hello@mittalconstruction.in</li>
+            <li className="flex gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-accent" /><span>RIICO Industrial Area, Bhiwadi, Alwar, Rajasthan 301019</span></li>
+            <li className="flex gap-3"><Phone size={16} className="mt-0.5 shrink-0 text-accent" /><a href="tel:+919876543210" className="hover:text-accent">+91 98765 43210</a></li>
+            <li className="flex gap-3"><Mail size={16} className="mt-0.5 shrink-0 text-accent" /><a href="mailto:hello@mittalconstruction.in" className="hover:text-accent">hello@mittalconstruction.in</a></li>
           </ul>
         </div>
       </div>

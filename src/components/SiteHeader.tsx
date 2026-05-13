@@ -76,7 +76,7 @@ export function SiteHeader() {
 
           <Link
             to="/contact"
-            className="hidden items-center gap-2 bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground transition-colors hover:bg-ink md:inline-flex"
+            className="hidden items-center gap-2 rounded-md bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground transition-colors hover:bg-accent hover:text-accent-foreground md:inline-flex"
           >
             Get a Quote
           </Link>
@@ -107,7 +107,7 @@ export function SiteHeader() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground"
+              className="mt-4 inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground"
             >
               Get a Quote
             </Link>
