@@ -1,60 +1,94 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Menu, X, Phone } from "lucide-react";
 import mccLogo from "@/assets/mcc-logo.jpeg";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/projects", label: "Projects" },
-  { to: "/services", label: "Services" },
   { to: "/about", label: "About" },
+  { to: "/services", label: "Services" },
+  { to: "/projects", label: "Projects" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="mx-auto mt-3 flex h-14 max-w-7xl items-center justify-between rounded-full glass px-5 md:mx-auto md:max-w-6xl">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="rounded-full bg-primary-foreground/95 p-1.5">
+      {/* Top utility bar */}
+      <div className="hidden bg-ink text-primary-foreground/80 md:block">
+        <div className="container-x flex h-9 items-center justify-between text-[11px] tracking-wide">
+          <span className="mono uppercase tracking-[0.18em] text-primary-foreground/60">
+            Mittal Construction Company · Est. 2013 · Bhiwadi, Rajasthan
+          </span>
+          <div className="flex items-center gap-6">
+            <a href="tel:+919876543210" className="inline-flex items-center gap-2 hover:text-accent">
+              <Phone size={11} /> +91 98765 43210
+            </a>
+            <a href="mailto:hello@mittalconstruction.in" className="hover:text-accent">
+              hello@mittalconstruction.in
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main nav */}
+      <div
+        className={`transition-all duration-300 ${
+          scrolled
+            ? "bg-background/95 backdrop-blur shadow-soft"
+            : "bg-background/80 backdrop-blur-sm"
+        }`}
+      >
+        <div className="container-x flex h-16 items-center justify-between md:h-20">
+          <Link to="/" className="flex items-center gap-3">
             <img
               src={mccLogo}
               alt="MCC — Mittal Construction Company"
-              className="h-6 w-auto md:h-7"
+              className="h-8 w-auto md:h-10"
               loading="eager"
             />
-          </div>
-        </Link>
+          </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {links.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className="mono text-xs uppercase tracking-[0.18em] text-foreground/70 transition-colors hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
-              activeOptions={{ exact: l.to === "/" }}
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
+          <nav className="hidden items-center gap-9 md:flex">
+            {links.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="group relative text-sm font-medium text-foreground/75 transition-colors hover:text-brand"
+                activeProps={{ className: "text-brand" }}
+                activeOptions={{ exact: l.to === "/" }}
+              >
+                {l.label}
+                <span className="absolute -bottom-1.5 left-0 h-0.5 w-full origin-right scale-x-0 bg-accent transition-transform duration-500 group-hover:origin-left group-hover:scale-x-100" />
+              </Link>
+            ))}
+          </nav>
 
-        <Link
-          to="/contact"
-          className="hidden items-center gap-2 rounded-full bg-plasma px-5 py-2 mono text-[10px] uppercase tracking-[0.2em] text-accent-foreground shadow-glow transition-transform hover:-translate-y-0.5 md:inline-flex"
-        >
-          Get Quote →
-        </Link>
+          <Link
+            to="/contact"
+            className="hidden items-center gap-2 bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground transition-colors hover:bg-ink md:inline-flex"
+          >
+            Get a Quote
+          </Link>
 
-        <button
-          aria-label="Menu"
-          onClick={() => setOpen((v) => !v)}
-          className="md:hidden"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+          <button
+            aria-label="Menu"
+            onClick={() => setOpen((v) => !v)}
+            className="md:hidden"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -65,11 +99,18 @@ export function SiteHeader() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="mono py-3 text-sm uppercase tracking-[0.18em]"
+                className="border-b border-border py-3 text-sm font-medium"
               >
                 {l.label}
               </Link>
             ))}
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-4 inline-flex items-center justify-center bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground"
+            >
+              Get a Quote
+            </Link>
           </div>
         </div>
       )}

@@ -1,8 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
-import { useRef, useEffect } from "react";
-import { ArrowUpRight, HardHat, Building2, Factory, Ruler, Sparkles } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import {
+  ArrowUpRight,
+  ArrowRight,
+  Building2,
+  Factory,
+  HardHat,
+  Ruler,
+  ShieldCheck,
+  Award,
+  Users,
+  CheckCircle2,
+} from "lucide-react";
 import heroImg from "@/assets/hero-construction.jpg";
+import aboutImg from "@/assets/about-team.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
@@ -12,246 +24,328 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Mittal Construction — Industrial & Civil Builders, Rajasthan" },
-      { name: "description", content: "Turnkey industrial, institutional and commercial construction. 11+ years across North India. ₹500M+ delivered." },
+      { title: "Mittal Construction Company — Industrial & Civil Builders, Rajasthan" },
+      {
+        name: "description",
+        content:
+          "Multi-disciplinary construction firm delivering industrial, institutional and commercial projects across North India since 2013. ₹500M+ delivered.",
+      },
     ],
   }),
 });
 
-const stats = [
-  { v: "11+", l: "Years Active" },
-  { v: "50+", l: "Projects Shipped" },
-  { v: "₹500M+", l: "Contract Value" },
-  { v: "100%", l: "On-time Delivery" },
+const heroSlides = [
+  {
+    image: projects[3].image,
+    eyebrow: "Industrial · Process Plant",
+    title: "Engineering plants that run for decades.",
+    sub: "Lucid Colloids · Bikaner, Rajasthan",
+  },
+  {
+    image: projects[1].image,
+    eyebrow: "Industrial · Manufacturing",
+    title: "Turnkey factories, delivered on schedule.",
+    sub: "Toyoda Gosei · Neemrana, Rajasthan",
+  },
+  {
+    image: projects[2].image,
+    eyebrow: "Institutional",
+    title: "Public buildings designed to serve generations.",
+    sub: "Govt. Degree College · Bilawar, J&K",
+  },
 ];
 
 const services = [
-  { icon: Factory, t: "Industrial", d: "Factories, plants, warehouses — turnkey." },
-  { icon: Building2, t: "Commercial", d: "Showrooms, offices, mixed-use shells." },
-  { icon: HardHat, t: "Institutional", d: "Colleges, hospitals, government works." },
-  { icon: Ruler, t: "Civil & MEP", d: "Earthworks, RCC, finishing, services." },
+  {
+    icon: Factory,
+    title: "Industrial Construction",
+    desc: "Factories, process plants and warehouses delivered turnkey — civil, structural and MEP under one accountability.",
+  },
+  {
+    icon: Building2,
+    title: "Commercial Buildings",
+    desc: "Showrooms, offices and mixed-use shells engineered for brand-grade finish and long service life.",
+  },
+  {
+    icon: HardHat,
+    title: "Institutional Works",
+    desc: "Colleges, hospitals and government buildings executed to NBCC and consultant specifications.",
+  },
+  {
+    icon: Ruler,
+    title: "Civil, RCC & MEP",
+    desc: "Earthworks, foundations, structural steel, finishes and full MEP coordination — self-performed.",
+  },
+];
+
+const stats = [
+  { v: "11+", l: "Years in Business" },
+  { v: "50+", l: "Projects Delivered" },
+  { v: "₹500M+", l: "Cumulative Value" },
+  { v: "4", l: "States Served" },
+];
+
+const whyUs = [
+  {
+    icon: ShieldCheck,
+    t: "Engineered for safety",
+    d: "Site safety embedded into every method statement. Zero lost-time incidents on recent projects.",
+  },
+  {
+    icon: Award,
+    t: "Consultant-grade quality",
+    d: "Delivered to specifications of Mott MacDonald, Artscan, Gian P. Mathur and NBCC.",
+  },
+  {
+    icon: Users,
+    t: "Self-performed crews",
+    d: "Direct workforce for civil, RCC, steel and finishes — no quality dilution through layered subcontracting.",
+  },
 ];
 
 function Home() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const [active, setActive] = useState(0);
 
-  // cursor-following spotlight
-  const mx = useMotionValue(50);
-  const my = useMotionValue(30);
-  const sx = useSpring(mx, { stiffness: 50, damping: 20 });
-  const sy = useSpring(my, { stiffness: 50, damping: 20 });
   useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      mx.set((e.clientX / window.innerWidth) * 100);
-      my.set((e.clientY / window.innerHeight) * 100);
-    };
-    window.addEventListener("mousemove", handler);
-    return () => window.removeEventListener("mousemove", handler);
-  }, [mx, my]);
+    const id = setInterval(() => setActive((i) => (i + 1) % heroSlides.length), 6000);
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <>
       <SiteHeader />
 
-      {/* HERO */}
-      <section ref={ref} className="noise relative min-h-[100svh] overflow-hidden bg-background">
-        {/* Aurora mesh background */}
-        <div className="absolute inset-0 bg-mesh" />
-
-        {/* Animated grid */}
-        <div className="grid-lines-animated absolute inset-0 opacity-60" />
-
-        {/* Cursor spotlight */}
-        <motion.div
-          aria-hidden
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background: useTransform(
-              [sx, sy],
-              ([x, y]) => `radial-gradient(600px circle at ${x}% ${y}%, oklch(0.82 0.16 195 / 0.18), transparent 60%)`
-            ),
-          }}
-        />
-
-        {/* Parallax hero image */}
-        <motion.div style={{ y, scale }} className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt=""
-            className="h-full w-full object-cover opacity-25 mix-blend-luminosity"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
-        </motion.div>
-
-        {/* Spinning aurora orb */}
-        <div className="pointer-events-none absolute -right-40 top-20 h-[600px] w-[600px] opacity-40">
-          <div className="spin-slow h-full w-full rounded-full bg-aurora blur-3xl" />
-        </div>
-
-        <motion.div style={{ opacity }} className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-6 pt-28 pb-16">
-          {/* Status pill */}
+      {/* HERO — full bleed image carousel */}
+      <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-ink pt-20 md:pt-28">
+        <AnimatePresence>
           <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="glass mb-10 inline-flex w-fit items-center gap-3 rounded-full px-4 py-2"
+            key={active}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2 }}
+            className="absolute inset-0"
           >
-            <span className="pulse-dot relative inline-block h-2 w-2 rounded-full bg-accent" />
-            <span className="mono text-[10px] uppercase tracking-[0.3em] text-foreground/80">
-              Now building · Bhiwadi · Rajasthan
-            </span>
-            <Sparkles size={12} className="text-accent" />
+            <img
+              src={heroSlides[active].image}
+              alt=""
+              className="ken-burns h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent" />
           </motion.div>
+        </AnimatePresence>
 
-          <h1 className="display text-[clamp(3.5rem,11vw,10rem)] leading-[0.9] text-balance">
-            {[
-              { text: "We engineer", className: "" },
-              { text: "the future", className: "text-gradient" },
-              { text: "of construction.", className: "" },
-            ].map((line, i) => (
-              <span key={i} className="block overflow-hidden pb-2">
-                <motion.span
-                  initial={{ y: "110%" }}
-                  animate={{ y: "0%" }}
-                  transition={{ duration: 1.1, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
-                  className={`block ${line.className}`}
-                >
-                  {line.text}
-                </motion.span>
-              </span>
+        <div className="container-x relative z-10 flex h-full flex-col justify-end pb-20 md:pb-28">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={active}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="max-w-3xl text-primary-foreground"
+            >
+              <div className="mono mb-5 text-[11px] uppercase tracking-[0.3em] text-accent">
+                {heroSlides[active].eyebrow}
+              </div>
+              <h1 className="display text-balance text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] text-primary-foreground">
+                {heroSlides[active].title}
+              </h1>
+              <p className="mt-5 max-w-xl text-base text-primary-foreground/70 md:text-lg">
+                {heroSlides[active].sub}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <Link
+              to="/projects"
+              className="group inline-flex items-center gap-3 bg-accent px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-transform hover:-translate-y-0.5"
+            >
+              Explore Our Work
+              <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-3 border border-primary-foreground/30 px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-ink"
+            >
+              Request a Quote
+            </Link>
+          </div>
+
+          {/* Slide indicators */}
+          <div className="mt-12 flex items-center gap-3">
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActive(i)}
+                aria-label={`Slide ${i + 1}`}
+                className="group relative h-1 w-14 overflow-hidden bg-primary-foreground/20"
+              >
+                <span
+                  className={`block h-full bg-accent transition-all duration-500 ${
+                    i === active ? "w-full" : "w-0"
+                  }`}
+                />
+              </button>
             ))}
-          </h1>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.7 }}
-            className="mt-12 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end"
-          >
-            <p className="max-w-md text-lg leading-relaxed text-foreground/70">
-              Turnkey industrial, institutional & commercial construction across
-              North India. <span className="text-foreground">Engineered for decades.</span> Delivered on schedule.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                to="/projects"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-plasma px-7 py-4 mono text-[11px] uppercase tracking-[0.2em] text-accent-foreground shadow-glow transition-transform hover:-translate-y-0.5"
-              >
-                <span className="relative flex items-center gap-2">
-                  See Our Work
-                  <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </span>
-              </Link>
-              <Link
-                to="/contact"
-                className="glass glow-border inline-flex items-center gap-2 rounded-full px-7 py-4 mono text-[11px] uppercase tracking-[0.2em] hover:bg-foreground/[0.06]"
-              >
-                Start a Project
-              </Link>
-            </div>
-          </motion.div>
-        </motion.div>
+            <span className="mono ml-3 text-[11px] uppercase tracking-[0.25em] text-primary-foreground/60">
+              0{active + 1} / 0{heroSlides.length}
+            </span>
+          </div>
+        </div>
       </section>
 
-      {/* MARQUEE STRIP */}
-      <section className="relative overflow-hidden border-y border-border/60 bg-card/40">
-        <div className="marquee-track flex whitespace-nowrap py-6">
-          {Array.from({ length: 2 }).map((_, k) => (
-            <div key={k} className="flex shrink-0 items-center gap-12 pr-12">
-              {["RCC & Steel Structures", "Industrial Turnkey", "Institutional", "MEP Coordination", "11+ Years", "Bhiwadi · Alwar", "Mott MacDonald · NBCC", "On-time Hand-over"].map((t) => (
-                <span key={t} className="flex items-center gap-12 display text-4xl md:text-6xl text-foreground/40 hover:text-foreground transition-colors">
-                  {t}
-                  <span className="inline-block h-2 w-2 rounded-full bg-accent shadow-[0_0_20px] shadow-accent" />
-                </span>
+      {/* MARQUEE — clients / consultants */}
+      <section className="border-y border-border bg-background">
+        <div className="container-x flex items-center gap-8 py-5">
+          <span className="mono shrink-0 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+            Trusted by
+          </span>
+          <div className="overflow-hidden">
+            <div className="marquee-track flex whitespace-nowrap">
+              {Array.from({ length: 2 }).map((_, k) => (
+                <div key={k} className="flex shrink-0 items-center gap-12 pr-12">
+                  {[
+                    "Greenply Industries",
+                    "Toyoda Gosei",
+                    "Lucid Colloids",
+                    "Surya Roshni",
+                    "R K Marble",
+                    "Mott MacDonald",
+                    "Artscan",
+                    "NBCC",
+                    "Gian P. Mathur",
+                  ].map((t) => (
+                    <span
+                      key={t}
+                      className="text-sm font-medium uppercase tracking-[0.18em] text-foreground/40"
+                    >
+                      {t}
+                      <span className="mx-12 inline-block h-1 w-1 rounded-full bg-accent" />
+                    </span>
+                  ))}
+                </div>
               ))}
             </div>
-          ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="bg-background py-24 md:py-32">
+        <div className="container-x grid gap-16 md:grid-cols-12">
+          <Reveal className="md:col-span-5">
+            <div className="relative overflow-hidden">
+              <img
+                src={aboutImg}
+                alt="Mittal Construction site team"
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <div className="absolute -bottom-px -right-px bg-accent px-7 py-6 text-accent-foreground">
+                <div className="display text-5xl font-semibold leading-none">11+</div>
+                <div className="mono mt-2 text-[10px] uppercase tracking-[0.2em]">
+                  Years of Excellence
+                </div>
+              </div>
+            </div>
+          </Reveal>
+          <div className="md:col-span-7 md:pt-6">
+            <Reveal>
+              <div className="eyebrow mb-5">About MCC</div>
+              <h2 className="display text-balance text-4xl md:text-6xl">
+                A construction partner built on{" "}
+                <span className="text-brand">trust, precision and delivery.</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
+                Founded in 2013 in Bhiwadi, Rajasthan, Mittal Construction Company has
+                grown into a multi-disciplinary contractor delivering industrial plants,
+                institutional buildings and commercial structures across Rajasthan,
+                Haryana, Uttar Pradesh and Jammu & Kashmir.
+              </p>
+              <p className="mt-5 max-w-2xl text-foreground/65">
+                We self-perform earthworks, RCC, structural steel, masonry and finishes —
+                while coordinating MEP services in close collaboration with leading
+                consultants. One contractor, one accountability line, one promise:
+                delivered as designed, on schedule.
+              </p>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+                {[
+                  "Self-performed civil & RCC",
+                  "Consultant-led quality",
+                  "Industrial-grade safety",
+                  "On-time hand-over record",
+                ].map((t) => (
+                  <li key={t} className="flex items-center gap-3 text-sm">
+                    <CheckCircle2 size={18} className="text-accent" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/about"
+                className="link-underline mt-10 inline-flex text-sm font-semibold uppercase tracking-[0.18em] text-brand"
+              >
+                Read our story <ArrowRight size={16} />
+              </Link>
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* STATS */}
-      <section className="relative border-b border-border/60">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-border/60 md:grid-cols-4 md:divide-y-0">
+      <section className="bg-brand text-brand-foreground">
+        <div className="container-x grid grid-cols-2 divide-y divide-x divide-primary-foreground/10 md:grid-cols-4 md:divide-y-0">
           {stats.map((s, i) => (
-            <Reveal key={s.l} delay={i * 0.08} className="group relative p-8 md:p-12 overflow-hidden">
-              <div className="display text-5xl md:text-6xl text-gradient">{s.v}</div>
-              <div className="mono mt-3 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+            <Reveal key={s.l} delay={i * 0.08} className="px-2 py-12 md:px-8 md:py-16">
+              <div className="display text-5xl font-semibold md:text-6xl">{s.v}</div>
+              <div className="mono mt-4 text-[10px] uppercase tracking-[0.22em] text-primary-foreground/65">
                 {s.l}
               </div>
-              <div className="absolute inset-x-0 bottom-0 h-px bg-plasma scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700" />
             </Reveal>
           ))}
         </div>
       </section>
 
-      {/* INTRO */}
-      <section className="relative overflow-hidden py-32">
-        <div className="grid-lines absolute inset-0 opacity-50" />
-        <div
-          aria-hidden
-          className="drift pointer-events-none absolute -left-40 top-1/3 h-[500px] w-[500px] rounded-full opacity-30 blur-3xl"
-          style={{ background: "radial-gradient(circle, var(--neon), transparent 65%)" }}
-        />
-        <div className="relative mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12">
-          <Reveal className="md:col-span-5">
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
-              [ 01 ] / About
-            </div>
-            <h2 className="display text-5xl md:text-7xl text-balance">
-              A decade of <span className="text-gradient">precision</span> concrete.
-            </h2>
-          </Reveal>
-          <Reveal delay={0.15} className="space-y-6 md:col-span-6 md:col-start-7">
-            <p className="text-lg leading-relaxed text-foreground/80">
-              Since 2013, Mittal Construction has executed industrial plants and
-              institutional buildings across Rajasthan, Haryana, UP and Jammu —
-              partnering with consultants like Mott MacDonald, Artscan and NBCC.
-            </p>
-            <p className="text-foreground/60">
-              We self-perform earthworks, RCC, structural steel, masonry, finishes,
-              and MEP coordination. One contractor. One accountability line.
-            </p>
-            <Link
-              to="/about"
-              className="group inline-flex items-center gap-2 mono text-xs uppercase tracking-[0.2em] text-accent"
-            >
-              Read our story
-              <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
       {/* SERVICES */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-mesh opacity-50" />
-        <div className="relative mx-auto max-w-7xl px-6">
-          <Reveal>
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
-              [ 02 ] / Capabilities
-            </div>
-            <h2 className="display max-w-3xl text-5xl md:text-7xl text-balance">
-              From foundation pit to <span className="text-gradient">ribbon cutting.</span>
-            </h2>
-          </Reveal>
-          <div className="mt-20 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <section className="bg-sand py-24 md:py-32">
+        <div className="container-x">
+          <div className="grid gap-10 md:grid-cols-12 md:items-end">
+            <Reveal className="md:col-span-7">
+              <div className="eyebrow mb-5">What we do</div>
+              <h2 className="display text-balance text-4xl md:text-6xl">
+                Capabilities across the full <span className="text-brand">construction lifecycle.</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1} className="md:col-span-5">
+              <p className="text-foreground/70">
+                From foundation pit to ribbon cutting — civil, structural, finishes and
+                MEP coordination handled in-house, supervised by a senior project team.
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
             {services.map((s, i) => (
-              <Reveal key={s.t} delay={i * 0.08}>
-                <div className="glass glow-border group relative h-full rounded-2xl p-8 transition-transform hover:-translate-y-1">
-                  <div className="mb-10 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-plasma text-accent-foreground">
-                    <s.icon size={22} strokeWidth={1.5} />
-                  </div>
-                  <div className="display text-3xl">{s.t}</div>
-                  <p className="mt-3 text-sm text-foreground/60">
-                    {s.d}
+              <Reveal key={s.title} delay={i * 0.08}>
+                <div className="group relative h-full bg-background p-8 transition-colors hover:bg-brand hover:text-brand-foreground">
+                  <s.icon size={32} strokeWidth={1.4} className="text-brand transition-colors group-hover:text-accent" />
+                  <h3 className="mt-10 text-xl font-semibold">{s.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/65 transition-colors group-hover:text-primary-foreground/75">
+                    {s.desc}
                   </p>
-                  <div className="mono absolute right-6 top-6 text-[10px] text-foreground/30">
+                  <div className="mono mt-8 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-foreground/40 transition-colors group-hover:text-accent">
                     /0{i + 1}
                   </div>
+                  <ArrowUpRight
+                    size={20}
+                    className="absolute right-7 top-7 text-foreground/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
+                  />
                 </div>
               </Reveal>
             ))}
@@ -259,49 +353,54 @@ function Home() {
         </div>
       </section>
 
-      {/* FEATURED PROJECTS */}
-      <section className="relative py-32">
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="mb-16 flex items-end justify-between gap-6">
-            <div>
-              <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
-                [ 03 ] / Selected Work
-              </div>
-              <h2 className="display text-5xl md:text-7xl text-balance">
-                Recently <span className="text-gradient">delivered.</span>
+      {/* PROJECTS */}
+      <section className="bg-background py-24 md:py-32">
+        <div className="container-x">
+          <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+            <Reveal>
+              <div className="eyebrow mb-5">Selected Work</div>
+              <h2 className="display text-balance text-4xl md:text-6xl">
+                Recently <span className="text-brand">delivered.</span>
               </h2>
-            </div>
-            <Link
-              to="/projects"
-              className="hidden mono text-xs uppercase tracking-[0.2em] hover:text-accent md:inline-flex"
-            >
-              All projects →
-            </Link>
-          </Reveal>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <Link
+                to="/projects"
+                className="link-underline text-sm font-semibold uppercase tracking-[0.18em] text-brand"
+              >
+                View all projects <ArrowRight size={16} />
+              </Link>
+            </Reveal>
+          </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {projects.slice(0, 4).map((p, i) => (
-              <Reveal key={p.id} delay={(i % 2) * 0.1}>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {projects.slice(0, 6).map((p, i) => (
+              <Reveal key={p.id} delay={(i % 3) * 0.08}>
                 <Link to="/projects" className="group block">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-card">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-card">
                     <img
                       src={p.image}
                       alt={p.name}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
+                      className="img-hover h-full w-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-90" />
-                    <div className="absolute inset-0 ring-1 ring-inset ring-foreground/10 rounded-2xl" />
-                    <div className="mono absolute left-4 top-4 glass rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-accent">
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent opacity-90" />
+                    <div className="absolute left-5 top-5 bg-accent px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-foreground">
                       {p.category}
                     </div>
-                    <div className="absolute inset-x-6 bottom-6">
-                      <div className="display text-2xl md:text-3xl">{p.name}</div>
-                      <div className="mt-2 flex items-center justify-between">
-                        <div className="mono text-[10px] uppercase tracking-[0.18em] text-foreground/60">
-                          {p.location} · {p.year}
-                        </div>
-                        <div className="display text-lg text-accent">{p.value}</div>
+                    <div className="absolute inset-x-6 bottom-6 text-primary-foreground">
+                      <div className="mono mb-2 text-[10px] uppercase tracking-[0.22em] text-primary-foreground/70">
+                        {p.location} · {p.year}
+                      </div>
+                      <div className="display text-xl font-semibold leading-tight md:text-2xl">
+                        {p.name}
+                      </div>
+                      <div className="mt-4 flex items-center justify-between border-t border-primary-foreground/20 pt-4 text-sm">
+                        <span className="text-primary-foreground/70">{p.value}</span>
+                        <ArrowUpRight
+                          size={18}
+                          className="text-accent transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                        />
                       </div>
                     </div>
                   </div>
@@ -312,25 +411,57 @@ function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative overflow-hidden py-32">
-        <div className="absolute inset-0 bg-aurora opacity-25 blur-3xl" />
-        <div className="grid-lines absolute inset-0 opacity-40" />
-        <Reveal className="relative mx-auto max-w-5xl px-6 text-center">
-          <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
-            Ready to break ground?
+      {/* WHY US */}
+      <section className="bg-sand py-24 md:py-32">
+        <div className="container-x">
+          <Reveal className="max-w-3xl">
+            <div className="eyebrow mb-5">Why MCC</div>
+            <h2 className="display text-balance text-4xl md:text-6xl">
+              Engineered to last. <span className="text-brand">Delivered to plan.</span>
+            </h2>
+          </Reveal>
+
+          <div className="mt-16 grid gap-10 md:grid-cols-3">
+            {whyUs.map((w, i) => (
+              <Reveal key={w.t} delay={i * 0.08}>
+                <div className="border-t-2 border-brand pt-8">
+                  <w.icon size={28} strokeWidth={1.4} className="text-brand" />
+                  <h3 className="mt-6 text-2xl font-semibold">{w.t}</h3>
+                  <p className="mt-3 text-foreground/65">{w.d}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
-          <h2 className="display text-[clamp(3rem,9vw,8rem)] text-balance leading-[0.9]">
-            Let's build something <span className="text-gradient">serious.</span>
-          </h2>
-          <Link
-            to="/contact"
-            className="mt-12 inline-flex items-center gap-3 rounded-full bg-plasma px-8 py-5 mono text-xs uppercase tracking-[0.25em] text-accent-foreground shadow-glow transition-transform hover:-translate-y-1"
-          >
-            Request a Quote
-            <ArrowUpRight size={16} />
-          </Link>
-        </Reveal>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="relative overflow-hidden bg-ink py-24 text-primary-foreground md:py-32">
+        <div className="absolute inset-0 opacity-25">
+          <img src={heroImg} alt="" className="h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
+        </div>
+        <div className="container-x relative grid gap-10 md:grid-cols-12 md:items-center">
+          <Reveal className="md:col-span-8">
+            <div className="eyebrow mb-5 !text-accent before:bg-accent">Let's build</div>
+            <h2 className="display text-balance text-4xl md:text-6xl">
+              Have a project on the <span className="text-accent">drawing board?</span>
+            </h2>
+            <p className="mt-6 max-w-xl text-primary-foreground/70">
+              Share your scope, drawings and timeline. We will revert with a detailed
+              proposal and a credible execution schedule.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1} className="md:col-span-4 md:justify-self-end">
+            <Link
+              to="/contact"
+              className="group inline-flex items-center gap-3 bg-accent px-8 py-5 text-sm font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-transform hover:-translate-y-0.5"
+            >
+              Request a Quote
+              <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          </Reveal>
+        </div>
       </section>
 
       <SiteFooter />
