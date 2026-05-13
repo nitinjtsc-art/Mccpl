@@ -455,7 +455,7 @@ function Home() {
           <Reveal delay={0.1} className="md:col-span-4 md:justify-self-end">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-3 bg-accent px-8 py-5 text-sm font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-transform hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-3 rounded-md bg-primary-foreground px-8 py-5 text-sm font-semibold uppercase tracking-[0.14em] text-ink transition-transform hover:-translate-y-0.5"
             >
               Request a Quote
               <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

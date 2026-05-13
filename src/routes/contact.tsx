@@ -97,7 +97,7 @@ function ContactPage() {
                 </div>
                 <button
                   type="submit"
-                  className="group inline-flex items-center gap-3 bg-primary px-8 py-5 mono text-xs uppercase tracking-[0.25em] text-primary-foreground"
+                  className="group inline-flex items-center gap-3 rounded-md bg-primary px-8 py-5 mono text-xs uppercase tracking-[0.25em] text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
                 >
                   Send Enquiry
                   <Send size={14} className="transition-transform group-hover:translate-x-0.5" />
