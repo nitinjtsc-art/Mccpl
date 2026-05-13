@@ -39,19 +39,19 @@ const heroSlides = [
     image: projects[3].image,
     eyebrow: "Industrial · Process Plant",
     title: "Engineering plants that run for decades.",
-    sub: "Lucid Colloids · Bikaner, Rajasthan",
+    sub: "Lucid Colloids · Bikaner, Rajasthan · ₹110M turnkey delivery",
   },
   {
     image: projects[1].image,
     eyebrow: "Industrial · Manufacturing",
     title: "Turnkey factories, delivered on schedule.",
-    sub: "Toyoda Gosei · Neemrana, Rajasthan",
+    sub: "Toyoda Gosei · Neemrana, Rajasthan · Commissioned 2021",
   },
   {
     image: projects[2].image,
     eyebrow: "Institutional",
     title: "Public buildings designed to serve generations.",
-    sub: "Govt. Degree College · Bilawar, J&K",
+    sub: "Govt. Degree College · Bilawar, J&K · Delivered for NBCC",
   },
 ];
 
@@ -59,29 +59,29 @@ const services = [
   {
     icon: Factory,
     title: "Industrial Construction",
-    desc: "Factories, process plants and warehouses delivered turnkey — civil, structural and MEP under one accountability.",
+    desc: "Greenfield factories, process plants and warehouses delivered turnkey — civil, structural and MEP under a single contract.",
   },
   {
     icon: Building2,
     title: "Commercial Buildings",
-    desc: "Showrooms, offices and mixed-use shells engineered for brand-grade finish and long service life.",
+    desc: "Showrooms, corporate offices and mixed-use shells engineered for brand-grade finish and a 50-year design life.",
   },
   {
     icon: HardHat,
     title: "Institutional Works",
-    desc: "Colleges, hospitals and government buildings executed to NBCC and consultant specifications.",
+    desc: "Colleges, hospitals and public buildings executed to NBCC, CPWD and consultant specifications.",
   },
   {
     icon: Ruler,
     title: "Civil, RCC & MEP",
-    desc: "Earthworks, foundations, structural steel, finishes and full MEP coordination — self-performed.",
+    desc: "Earthworks, deep foundations, structural steel, finishes and full MEP coordination — self-performed by in-house crews.",
   },
 ];
 
 const stats = [
   { v: "11+", l: "Years in Business" },
   { v: "50+", l: "Projects Delivered" },
-  { v: "₹500M+", l: "Cumulative Value" },
+  { v: "₹500 Cr+", l: "Cumulative Order Book" },
   { v: "4", l: "States Served" },
 ];
 
@@ -89,17 +89,17 @@ const whyUs = [
   {
     icon: ShieldCheck,
     t: "Engineered for safety",
-    d: "Site safety embedded into every method statement. Zero lost-time incidents on recent projects.",
+    d: "Method statements, JSAs and daily toolbox talks built into every site. Zero lost-time incidents across our last 12 projects.",
   },
   {
     icon: Award,
     t: "Consultant-grade quality",
-    d: "Delivered to specifications of Mott MacDonald, Artscan, Gian P. Mathur and NBCC.",
+    d: "Built to the specifications of Mott MacDonald, Artscan, Gian P. Mathur, M R Warerkar and NBCC.",
   },
   {
     icon: Users,
     t: "Self-performed crews",
-    d: "Direct workforce for civil, RCC, steel and finishes — no quality dilution through layered subcontracting.",
+    d: "200+ direct workforce executing civil, RCC, structural steel and finishes — no quality dilution through layered subcontracting.",
   },
 ];
 
@@ -161,14 +161,14 @@ function Home() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link
               to="/projects"
-              className="group inline-flex items-center gap-3 bg-accent px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-transform hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-3 rounded-md bg-primary-foreground px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-ink transition-transform hover:-translate-y-0.5"
             >
               Explore Our Work
               <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 border border-primary-foreground/30 px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-ink"
+              className="inline-flex items-center gap-3 rounded-md border border-primary-foreground/40 px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:border-accent hover:text-accent"
             >
               Request a Quote
             </Link>
