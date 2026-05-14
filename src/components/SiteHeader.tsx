@@ -28,14 +28,14 @@ export function SiteHeader() {
       <div className="hidden bg-ink text-primary-foreground/80 md:block">
         <div className="container-x flex h-9 items-center justify-between text-[11px] tracking-wide">
           <span className="mono uppercase tracking-[0.18em] text-primary-foreground/60">
-            Mittal Construction Company · Est. 2013 · Bhiwadi, Rajasthan
+            Mittal Construction Company · Established 1997 · Pan-India EPC
           </span>
           <div className="flex items-center gap-6">
-            <a href="tel:+919876543210" className="inline-flex items-center gap-2 hover:text-accent">
-              <Phone size={11} /> +91 98765 43210
+            <a href="tel:+919887010003" className="inline-flex items-center gap-2 hover:text-accent">
+              <Phone size={11} /> +91 98870 10003
             </a>
-            <a href="mailto:hello@mittalconstruction.in" className="hover:text-accent">
-              hello@mittalconstruction.in
+            <a href="mailto:info@mcc.co.in" className="hover:text-accent">
+              info@mcc.co.in
             </a>
           </div>
         </div>
