@@ -6,8 +6,8 @@ import {
   ArrowRight,
   Building2,
   Factory,
-  HardHat,
-  Ruler,
+  Hotel,
+  Home as HomeIcon,
   ShieldCheck,
   Award,
   Users,
@@ -24,11 +24,11 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Mittal Construction Company — Industrial & Civil Builders, Rajasthan" },
+      { title: "Mittal Construction Company — Pan-India EPC & Civil Contractor" },
       {
         name: "description",
         content:
-          "Multi-disciplinary construction firm delivering industrial, institutional and commercial projects across North India since 2013. ₹500M+ delivered.",
+          "MCC is a leading Indian construction firm established in 1997. 100+ projects across 11 states & 2 UTs, 10M+ sq.ft. delivered for industrial, institutional, hospitality and commercial clients.",
       },
     ],
   }),
@@ -36,70 +36,70 @@ export const Route = createFileRoute("/")({
 
 const heroSlides = [
   {
-    image: projects[3].image,
-    eyebrow: "Industrial · Process Plant",
-    title: "Engineering plants that run for decades.",
-    sub: "Lucid Colloids · Bikaner, Rajasthan · ₹110M turnkey delivery",
-  },
-  {
-    image: projects[1].image,
-    eyebrow: "Industrial · Manufacturing",
-    title: "Turnkey factories, delivered on schedule.",
-    sub: "Toyoda Gosei · Neemrana, Rajasthan · Commissioned 2021",
-  },
-  {
     image: projects[2].image,
-    eyebrow: "Institutional",
-    title: "Public buildings designed to serve generations.",
-    sub: "Govt. Degree College · Bilawar, J&K · Delivered for NBCC",
+    eyebrow: "Integrated Industrial · Cement",
+    title: "Building plants, townships and the people who run them.",
+    sub: "Wonder Cement · Nimbahera, Chittorgarh — civil works, staff colony and on-site school.",
+  },
+  {
+    image: projects[3].image,
+    eyebrow: "Warehousing · 5,00,000 sq.ft.",
+    title: "Half a million square feet. Six months. Delivered.",
+    sub: "V-Mart Retail · Palwal, Haryana — completed ahead of schedule.",
+  },
+  {
+    image: projects[0].image,
+    eyebrow: "Institutional · Himalayan Terrain",
+    title: "Engineered for terrain. Built for generations.",
+    sub: "IIT Mandi · Kamand, Himachal Pradesh — terrain-adaptive structural execution.",
   },
 ];
 
-const services = [
+const sectors = [
   {
     icon: Factory,
-    title: "Industrial Construction",
-    desc: "Greenfield factories, process plants and warehouses delivered turnkey — civil, structural and MEP under a single contract.",
+    title: "Industrial & Warehousing",
+    desc: "Greenfield factories, process plants, PEB warehouses and industrial sheds for cement, FMCG, auto-ancillary, pharma and chemical clients.",
   },
   {
     icon: Building2,
-    title: "Commercial Buildings",
-    desc: "Showrooms, corporate offices and mixed-use shells engineered for brand-grade finish and a 50-year design life.",
+    title: "Commercial Spaces",
+    desc: "Showrooms, corporate offices and mixed-use shells engineered for brand-grade finish and long design life.",
   },
   {
-    icon: HardHat,
-    title: "Institutional Works",
-    desc: "Colleges, hospitals and public buildings executed to NBCC, CPWD and consultant specifications.",
+    icon: Hotel,
+    title: "Hospitality & Institutional",
+    desc: "Hotels, IITs, NITs and schools — executed under stringent consultant, NBCC and CPWD specifications.",
   },
   {
-    icon: Ruler,
-    title: "Civil, RCC & MEP",
-    desc: "Earthworks, deep foundations, structural steel, finishes and full MEP coordination — self-performed by in-house crews.",
+    icon: HomeIcon,
+    title: "Residential Projects",
+    desc: "Staff colonies, residential blocks and luxury renovations delivered with consistent quality and finish.",
   },
 ];
 
 const stats = [
-  { v: "11+", l: "Years in Business" },
-  { v: "50+", l: "Projects Delivered" },
-  { v: "₹500 Cr+", l: "Cumulative Order Book" },
-  { v: "4", l: "States Served" },
+  { v: "1997", l: "Established" },
+  { v: "100+", l: "Projects Delivered" },
+  { v: "10 Mn+", l: "Sq.Ft. Built-up" },
+  { v: "11+2", l: "States & UTs" },
 ];
 
 const whyUs = [
   {
     icon: ShieldCheck,
-    t: "Engineered for safety",
-    d: "Method statements, JSAs and daily toolbox talks built into every site. Zero lost-time incidents across our last 12 projects.",
+    t: "5M+ safe man-hours",
+    d: "An unblemished safety record across 100+ projects. Daily Tool Box Talks, on-site medical readiness and award-winning EHS practices.",
   },
   {
     icon: Award,
-    t: "Consultant-grade quality",
-    d: "Built to the specifications of Mott MacDonald, Artscan, Gian P. Mathur, M R Warerkar and NBCC.",
+    t: "Trusted by industry leaders",
+    d: "Adani, UltraTech, JK Cement, Wonder Cement, Pidilite, Coca-Cola HBL, Kansai Nerolac, GSK, Markem-Imaje, IIT Mandi, NBCC and more.",
   },
   {
     icon: Users,
-    t: "Self-performed crews",
-    d: "200+ direct workforce executing civil, RCC, structural steel and finishes — no quality dilution through layered subcontracting.",
+    t: "Three decades of leadership",
+    d: "Founded by Mr. Rajendra Mittal with 30+ years in civil infrastructure, supported by engineering and PM heads with 15–25 years of experience.",
   },
 ];
 
@@ -197,7 +197,7 @@ function Home() {
         </div>
       </section>
 
-      {/* MARQUEE — clients / consultants */}
+      {/* MARQUEE — clients */}
       <section className="border-y border-border bg-background">
         <div className="container-x flex items-center gap-8 py-5">
           <span className="mono shrink-0 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
@@ -208,15 +208,25 @@ function Home() {
               {Array.from({ length: 2 }).map((_, k) => (
                 <div key={k} className="flex shrink-0 items-center gap-12 pr-12">
                   {[
-                    "Greenply Industries",
-                    "Toyoda Gosei",
-                    "Lucid Colloids",
-                    "Surya Roshni",
-                    "R K Marble",
-                    "Mott MacDonald",
-                    "Artscan",
+                    "Adani Group",
+                    "UltraTech Cement",
+                    "JK Cement",
+                    "Wonder Cement",
+                    "Shree Cement",
+                    "Pidilite",
+                    "Coca-Cola HBL",
+                    "Kansai Nerolac",
+                    "GSK",
+                    "Markem-Imaje",
+                    "IIT Mandi",
+                    "NIT Patna",
                     "NBCC",
-                    "Gian P. Mathur",
+                    "Power Grid",
+                    "Safexpress",
+                    "Indospace",
+                    "V-Mart",
+                    "Prince Pipes",
+                    "Supreme Industries",
                   ].map((t) => (
                     <span
                       key={t}
@@ -244,9 +254,9 @@ function Home() {
                 className="aspect-[4/5] w-full object-cover"
               />
               <div className="absolute -bottom-px -right-px bg-accent px-7 py-6 text-accent-foreground">
-                <div className="display text-5xl font-semibold leading-none">11+</div>
+                <div className="display text-5xl font-semibold leading-none">28</div>
                 <div className="mono mt-2 text-[10px] uppercase tracking-[0.2em]">
-                  Years of Excellence
+                  Years of Building
                 </div>
               </div>
             </div>
@@ -261,25 +271,27 @@ function Home() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
-                Founded in 2013 in Bhiwadi, Rajasthan, Mittal Construction Company has
-                grown into a multi-disciplinary contractor delivering industrial plants,
-                institutional buildings and commercial structures across Rajasthan,
-                Haryana, Uttar Pradesh and Jammu & Kashmir.
+                Mittal Construction Company (MCC) is a leading civil
+                infrastructure firm established in 1997 by Mr. Rajendra Mittal.
+                Headquartered in Delhi-NCR, we have grown into a trusted EPC
+                partner delivering industrial, commercial, hospitality,
+                institutional and residential projects across India.
               </p>
               <p className="mt-5 max-w-2xl text-foreground/65">
-                We self-perform earthworks, RCC, structural steel, masonry and finishes —
-                while coordinating MEP services in close collaboration with leading
-                consultants. One contractor, one accountability line, one promise:
-                delivered as designed, on schedule.
+                Over 100 projects executed across 11 states and 2 union
+                territories, with a built-up area exceeding 10 million sq.ft.
+                We have served corporate clients across heavy machinery,
+                cement, food, chemicals, pharmaceuticals, hospitality,
+                automobile-ancillary and industrial-equipment sectors.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {[
-                  "Self-performed civil & RCC",
-                  "Consultant-led quality",
-                  "Industrial-grade safety",
-                  "On-time hand-over record",
+                  "Turnkey EPC delivery",
+                  "ISO-certified quality systems",
+                  "5M+ safe man-hours",
+                  "In-house ERP & resource tracking",
                 ].map((t) => (
                   <li key={t} className="flex items-center gap-3 text-sm">
                     <CheckCircle2 size={18} className="text-accent" />
@@ -312,26 +324,27 @@ function Home() {
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* SECTORS */}
       <section className="bg-sand py-24 md:py-32">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal className="md:col-span-7">
-              <div className="eyebrow mb-5">What we do</div>
+              <div className="eyebrow mb-5">Sector expertise</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
-                Capabilities across the full <span className="text-brand">construction lifecycle.</span>
+                Four sectors. <span className="text-brand">One contractor.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1} className="md:col-span-5">
               <p className="text-foreground/70">
-                From foundation pit to ribbon cutting — civil, structural, finishes and
-                MEP coordination handled in-house, supervised by a senior project team.
+                Engineering &amp; design, construction &amp; project execution,
+                turnkey delivery, retrofit &amp; renovation, and procurement —
+                all delivered under one accountable team.
               </p>
             </Reveal>
           </div>
 
           <div className="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
-            {services.map((s, i) => (
+            {sectors.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.08}>
                 <div className="group relative h-full bg-background p-8 transition-colors hover:bg-brand hover:text-brand-foreground">
                   <s.icon size={32} strokeWidth={1.4} className="text-brand transition-colors group-hover:text-accent" />
@@ -358,7 +371,7 @@ function Home() {
         <div className="container-x">
           <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <Reveal>
-              <div className="eyebrow mb-5">Selected Work</div>
+              <div className="eyebrow mb-5">Flagship projects</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
                 Recently <span className="text-brand">delivered.</span>
               </h2>
@@ -390,13 +403,13 @@ function Home() {
                     </div>
                     <div className="absolute inset-x-6 bottom-6 text-primary-foreground">
                       <div className="mono mb-2 text-[10px] uppercase tracking-[0.22em] text-primary-foreground/70">
-                        {p.location} · {p.year}
+                        {p.location}
                       </div>
                       <div className="display text-xl font-semibold leading-tight md:text-2xl">
                         {p.name}
                       </div>
                       <div className="mt-4 flex items-center justify-between border-t border-primary-foreground/20 pt-4 text-sm">
-                        <span className="text-primary-foreground/70">{p.value}</span>
+                        <span className="text-primary-foreground/70">{p.client}</span>
                         <ArrowUpRight
                           size={18}
                           className="text-accent transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -448,8 +461,9 @@ function Home() {
               Have a project on the <span className="text-accent">drawing board?</span>
             </h2>
             <p className="mt-6 max-w-xl text-primary-foreground/70">
-              Share your scope, drawings and timeline. We will revert with a detailed
-              proposal and a credible execution schedule.
+              Share your scope, drawings and timeline. We will revert with a
+              detailed proposal and a credible execution schedule — anywhere in
+              India.
             </p>
           </Reveal>
           <Reveal delay={0.1} className="md:col-span-4 md:justify-self-end">
