@@ -2,35 +2,41 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
-import { Factory, Building2, HardHat, Ruler, Wrench, ShieldCheck } from "lucide-react";
+import { Factory, Building2, Hotel, Home, Ruler, Wrench, ShieldCheck, PackageCheck } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — Mittal Construction" },
-      { name: "description", content: "Turnkey industrial, institutional, civil and MEP construction services by Mittal Construction." },
-      { property: "og:title", content: "Services — Mittal Construction" },
-      { property: "og:description", content: "Industrial, commercial, institutional, civil, MEP and refurbishment construction services." },
+      { title: "Services — Mittal Construction Company" },
+      { name: "description", content: "Engineering & design, turnkey EPC delivery, retrofit & renovation, procurement and project execution by MCC across industrial, hospitality, institutional, commercial and residential sectors." },
+      { property: "og:title", content: "MCC Services — Turnkey EPC Construction" },
+      { property: "og:description", content: "End-to-end construction services for industrial, commercial, hospitality, institutional and residential projects across India." },
     ],
   }),
 });
 
+const sectors = [
+  { i: Factory, t: "Industrial & Warehousing", d: "Greenfield factories, process plants, PEB sheds and large warehouses for cement, FMCG, pharma, chemical, auto-ancillary and logistics clients." },
+  { i: Building2, t: "Commercial Spaces", d: "Showrooms, corporate offices, retail shells and mixed-use blocks engineered for brand-grade finish and a long design life." },
+  { i: Hotel, t: "Hospitality & Institutional", d: "Hotels, IIT/NIT campuses, schools, government and CSR buildings — executed under stringent NBCC, CPWD and consultant specs." },
+  { i: Home, t: "Residential Projects", d: "Staff colonies, residential blocks, premium villa renovations and Power Grid-class housing refurbishment." },
+];
+
 const services = [
-  { i: Factory, t: "Industrial Construction", d: "Greenfield factories, processing plants, warehouses, heavy-foundation works, pre-engineered building erection." },
-  { i: Building2, t: "Commercial Buildings", d: "Showrooms, offices, retail shells, multi-tenant blocks built to consultant specifications." },
-  { i: HardHat, t: "Institutional Works", d: "Colleges, hospitals, government buildings executed under NBCC and PWD standards." },
-  { i: Ruler, t: "Civil & Structural", d: "Earthworks, RCC frame, masonry, structural steel fabrication and erection." },
-  { i: Wrench, t: "MEP & Finishing", d: "Plumbing, electrical, HVAC coordination, internal finishes, façade systems." },
-  { i: ShieldCheck, t: "Refurb & Retrofit", d: "Plant expansions, structural strengthening, life-extension retrofitting." },
+  { i: Ruler, t: "Engineering & Design", d: "In-house and consultant-led engineering — civil, structural, MEP — coordinated through a single project team." },
+  { i: Factory, t: "Construction & Project Execution", d: "Self-performed civil, RCC, structural steel, masonry, finishes and site supervision by long-tenured crew leaders." },
+  { i: PackageCheck, t: "Turnkey Project Delivery", d: "Single-point EPC accountability — design, procurement, construction, MEP, commissioning and hand-over." },
+  { i: Wrench, t: "Retrofit & Renovation", d: "Plant expansions, structural strengthening, residential refurbishment and life-extension works." },
+  { i: ShieldCheck, t: "Procurement", d: "Pan-India sourcing leveraging long-term vendor relationships — material quality, cost optimisation and on-time mobilisation." },
 ];
 
 const process = [
-  ["Brief", "Site visit, scope alignment, BoQ review."],
-  ["Estimate", "Transparent quote, schedule and milestones."],
+  ["Brief", "Site visit, scope alignment, BoQ and drawings review."],
+  ["Estimate", "Transparent quote, schedule and project milestones."],
   ["Mobilise", "Crew deployment, material logistics, safety setup."],
-  ["Build", "Daily progress logs, weekly client reviews."],
-  ["Hand-over", "Snag-list closure, as-built drawings, DLP support."],
+  ["Build", "Daily progress logs, weekly client reviews, QA/QC sign-offs."],
+  ["Hand-over", "Snag closure, as-built drawings, DLP support."],
 ];
 
 function ServicesPage() {
@@ -43,33 +49,59 @@ function ServicesPage() {
             Capabilities
           </div>
           <h1 className="display text-[clamp(3.5rem,11vw,10rem)] leading-[0.85] text-balance">
-            Full-stack<br />contractors.
+            Full-spectrum<br />EPC contractor.
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-            One team, end-to-end. From breaking ground to commissioning, we
-            self-perform the core trades and coordinate the rest.
+            From engineering to commissioning — civil, structural, MEP, finishes
+            and procurement under one accountable team. Four sectors. One
+            contractor. One promise: delivered as designed, on schedule.
           </p>
         </div>
       </section>
 
+      {/* Sector grid */}
       <section className="border-y border-border bg-card">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <Reveal key={s.t} delay={i * 0.05}>
-              <div className="group relative border-b border-r border-border p-10 transition-colors hover:bg-primary hover:text-primary-foreground">
-                <s.i size={36} strokeWidth={1.25} className="text-accent" />
-                <div className="mono mt-8 text-[10px] uppercase tracking-[0.25em] text-muted-foreground group-hover:text-accent">
-                  Service · 0{i + 1}
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <div className="mono mb-8 text-[11px] uppercase tracking-[0.3em] text-accent">Sector expertise</div>
+          <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-2">
+            {sectors.map((s, i) => (
+              <Reveal key={s.t} delay={i * 0.05}>
+                <div className="group relative h-full bg-card p-10 transition-colors hover:bg-primary hover:text-primary-foreground">
+                  <s.i size={36} strokeWidth={1.25} className="text-accent" />
+                  <div className="mono mt-8 text-[10px] uppercase tracking-[0.25em] text-muted-foreground group-hover:text-accent">
+                    Sector · 0{i + 1}
+                  </div>
+                  <h3 className="display mt-2 text-3xl">{s.t}</h3>
+                  <p className="mt-4 text-sm leading-relaxed opacity-80">{s.d}</p>
                 </div>
-                <h3 className="display mt-2 text-3xl">{s.t}</h3>
-                <p className="mt-4 text-sm leading-relaxed opacity-80">{s.d}</p>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="py-32">
+      {/* Services offered */}
+      <section className="bg-background">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <div className="mono mb-8 text-[11px] uppercase tracking-[0.3em] text-accent">Services offered</div>
+          <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
+            {services.map((s, i) => (
+              <Reveal key={s.t} delay={i * 0.05}>
+                <div className="group relative h-full bg-background p-10 transition-colors hover:bg-primary hover:text-primary-foreground">
+                  <s.i size={36} strokeWidth={1.25} className="text-accent" />
+                  <div className="mono mt-8 text-[10px] uppercase tracking-[0.25em] text-muted-foreground group-hover:text-accent">
+                    Service · 0{i + 1}
+                  </div>
+                  <h3 className="display mt-2 text-2xl">{s.t}</h3>
+                  <p className="mt-4 text-sm leading-relaxed opacity-80">{s.d}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-sand py-32">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
