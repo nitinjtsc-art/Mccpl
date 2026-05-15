@@ -28,14 +28,14 @@ export function SiteHeader() {
       <div className="hidden bg-ink text-primary-foreground/80 md:block">
         <div className="container-x flex h-9 items-center justify-between text-[11px] tracking-wide">
           <span className="mono uppercase tracking-[0.18em] text-primary-foreground/60">
-            Mittal Construction Company · Established 1997 · Pan-India EPC
+            Mittal Construction Company · Est. 2013 · Bhiwadi, Rajasthan
           </span>
           <div className="flex items-center gap-6">
-            <a href="tel:+919887010003" className="inline-flex items-center gap-2 hover:text-accent">
-              <Phone size={11} /> +91 98870 10003
+            <a href="tel:+919876543210" className="inline-flex items-center gap-2 hover:text-accent">
+              <Phone size={11} /> +91 98765 43210
             </a>
-            <a href="mailto:info@mcc.co.in" className="hover:text-accent">
-              info@mcc.co.in
+            <a href="mailto:hello@mittalconstruction.in" className="hover:text-accent">
+              hello@mittalconstruction.in
             </a>
           </div>
         </div>
@@ -76,7 +76,7 @@ export function SiteHeader() {
 
           <Link
             to="/contact"
-            className="hidden items-center gap-2 rounded-md bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground transition-colors hover:bg-accent hover:text-accent-foreground md:inline-flex"
+            className="hidden items-center gap-2 bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground transition-colors hover:bg-ink md:inline-flex"
           >
             Get a Quote
           </Link>
@@ -107,7 +107,7 @@ export function SiteHeader() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground"
+              className="mt-4 inline-flex items-center justify-center bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground"
             >
               Get a Quote
             </Link>

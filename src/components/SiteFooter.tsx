@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, MapPin, Phone, Mail, Globe } from "lucide-react";
+import { ArrowUpRight, MapPin, Phone, Mail } from "lucide-react";
 import mccLogo from "@/assets/mcc-logo.jpeg";
 
 export function SiteFooter() {
@@ -11,11 +11,9 @@ export function SiteFooter() {
             <img src={mccLogo} alt="MCC" className="h-9 w-auto md:h-10" />
           </div>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-primary-foreground/70">
-            Established in 1997 by Mr. Rajendra Mittal, Mittal Construction
-            Company is a pan-India EPC contractor delivering industrial,
-            institutional, hospitality, commercial and residential projects —
-            100+ projects across 11 states and 2 union territories, with
-            10 million+ sq.ft. of built-up area.
+            Mittal Construction Company is a multi-disciplinary construction firm
+            delivering industrial, institutional and commercial projects across
+            North India since 2013.
           </p>
           <Link
             to="/contact"
@@ -42,10 +40,10 @@ export function SiteFooter() {
             Sectors
           </div>
           <ul className="space-y-3 text-sm text-primary-foreground/80">
-            <li>Industrial &amp; Warehousing</li>
-            <li>Hospitality &amp; Institutional</li>
-            <li>Commercial Spaces</li>
-            <li>Residential Projects</li>
+            <li>Industrial</li>
+            <li>Institutional</li>
+            <li>Commercial</li>
+            <li>Civil & MEP</li>
           </ul>
         </div>
 
@@ -54,11 +52,9 @@ export function SiteFooter() {
             Get in touch
           </div>
           <ul className="space-y-3 text-sm text-primary-foreground/80">
-            <li className="flex gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-accent" /><span><strong className="font-semibold text-primary-foreground">Head Office:</strong><br />A-168, Bhagat Singh Colony, Bhiwadi, Rajasthan 301019</span></li>
-            <li className="flex gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-accent" /><span><strong className="font-semibold text-primary-foreground">Delhi Office:</strong><br />L-84B, First Floor, Malviya Nagar, Delhi 110017</span></li>
-            <li className="flex gap-3"><Phone size={16} className="mt-0.5 shrink-0 text-accent" /><a href="tel:+919887010003" className="hover:text-accent">+91 98870 10003</a></li>
-            <li className="flex gap-3"><Mail size={16} className="mt-0.5 shrink-0 text-accent" /><a href="mailto:info@mcc.co.in" className="hover:text-accent">info@mcc.co.in</a></li>
-            <li className="flex gap-3"><Globe size={16} className="mt-0.5 shrink-0 text-accent" /><a href="https://www.mcc.co.in" className="hover:text-accent">www.mcc.co.in</a></li>
+            <li className="flex gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-accent" /> RIICO Industrial Area, Bhiwadi, Alwar, Rajasthan</li>
+            <li className="flex gap-3"><Phone size={16} className="mt-0.5 shrink-0 text-accent" /> +91 98765 43210</li>
+            <li className="flex gap-3"><Mail size={16} className="mt-0.5 shrink-0 text-accent" /> hello@mittalconstruction.in</li>
           </ul>
         </div>
       </div>
@@ -66,7 +62,7 @@ export function SiteFooter() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-x flex flex-col items-start justify-between gap-3 py-6 text-xs text-primary-foreground/50 md:flex-row md:items-center">
           <span>© {new Date().getFullYear()} Mittal Construction Company. All rights reserved.</span>
-          <span className="mono uppercase tracking-[0.2em]">Building since 1997</span>
+          <span className="mono uppercase tracking-[0.2em]">Building since 2013</span>
         </div>
       </div>
     </footer>

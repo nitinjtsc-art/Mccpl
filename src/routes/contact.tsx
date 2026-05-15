@@ -3,16 +3,16 @@ import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
-import { Phone, Mail, MapPin, Send, Globe } from "lucide-react";
+import { Phone, Mail, MapPin, Send } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact — Mittal Construction Company" },
-      { name: "description", content: "Reach Mittal Construction Company at our Bhiwadi head office or Delhi office. +91 98870 10003 · info@mcc.co.in" },
-      { property: "og:title", content: "Contact MCC — Mittal Construction Company" },
-      { property: "og:description", content: "Request a quote, share drawings, or visit our offices in Bhiwadi (Rajasthan) and Malviya Nagar (Delhi)." },
+      { title: "Contact — Mittal Construction" },
+      { name: "description", content: "Get a quote from Mittal Construction. Industrial and civil construction across North India." },
+      { property: "og:title", content: "Contact Mittal Construction" },
+      { property: "og:description", content: "Request a quote, share drawings, or visit the office in Bhiwadi, Rajasthan." },
     ],
   }),
 });
@@ -25,47 +25,30 @@ function ContactPage() {
       <section className="bg-primary pt-40 pb-20 text-primary-foreground">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
-            Let's build the future together
+            Let's talk
           </div>
           <h1 className="display text-[clamp(3.5rem,11vw,10rem)] leading-[0.85] text-balance">
             Tell us what<br />you're building.
           </h1>
-          <p className="mt-8 max-w-2xl text-primary-foreground/70">
-            Reach out for project discussions, business proposals or customised
-            EPC construction solutions tailored to your scope and schedule.
-          </p>
         </div>
       </section>
 
       <section className="py-24">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12">
-          <Reveal className="md:col-span-5 space-y-8">
-            <div className="border-l-2 border-accent pl-6">
-              <MapPin size={20} className="text-accent" />
-              <div className="mono mt-4 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Head Office</div>
-              <div className="mt-1 text-lg">A-168, Bhagat Singh Colony,<br />Bhiwadi, Rajasthan 301019</div>
-            </div>
-            <div className="border-l-2 border-accent pl-6">
-              <MapPin size={20} className="text-accent" />
-              <div className="mono mt-4 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Delhi Office</div>
-              <div className="mt-1 text-lg">L-84B, First Floor, Malviya Nagar,<br />Delhi 110017</div>
-            </div>
-            <div className="border-l-2 border-accent pl-6">
-              <Phone size={20} className="text-accent" />
-              <div className="mono mt-4 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Phone</div>
-              <a href="tel:+919887010003" className="mt-1 block text-lg hover:text-accent">+91 98870 10003</a>
-              <a href="tel:+911141653030" className="mt-1 block text-lg hover:text-accent">+91 11 4165 3030</a>
-            </div>
-            <div className="border-l-2 border-accent pl-6">
-              <Mail size={20} className="text-accent" />
-              <div className="mono mt-4 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Email</div>
-              <a href="mailto:info@mcc.co.in" className="mt-1 block text-lg hover:text-accent">info@mcc.co.in</a>
-            </div>
-            <div className="border-l-2 border-accent pl-6">
-              <Globe size={20} className="text-accent" />
-              <div className="mono mt-4 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Web</div>
-              <a href="https://www.mcc.co.in" className="mt-1 block text-lg hover:text-accent">www.mcc.co.in</a>
-            </div>
+          <Reveal className="md:col-span-5 space-y-10">
+            {[
+              { I: MapPin, t: "Office", v: "RIICO Industrial Area, Bhiwadi, Alwar, Rajasthan 301019" },
+              { I: Phone, t: "Phone", v: "+91 98765 43210" },
+              { I: Mail, t: "Email", v: "hello@mittalconstruction.in" },
+            ].map((c) => (
+              <div key={c.t} className="border-l-2 border-accent pl-6">
+                <c.I size={20} className="text-accent" />
+                <div className="mono mt-4 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+                  {c.t}
+                </div>
+                <div className="mt-1 text-lg">{c.v}</div>
+              </div>
+            ))}
           </Reveal>
 
           <Reveal delay={0.15} className="md:col-span-7">
@@ -114,7 +97,7 @@ function ContactPage() {
                 </div>
                 <button
                   type="submit"
-                  className="group inline-flex items-center gap-3 rounded-md bg-primary px-8 py-5 mono text-xs uppercase tracking-[0.25em] text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                  className="group inline-flex items-center gap-3 bg-primary px-8 py-5 mono text-xs uppercase tracking-[0.25em] text-primary-foreground"
                 >
                   Send Enquiry
                   <Send size={14} className="transition-transform group-hover:translate-x-0.5" />

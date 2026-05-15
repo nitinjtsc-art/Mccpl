@@ -1,9 +1,9 @@
-import iitMandi from "@/assets/project-iit-mandi.jpg";
-import markem from "@/assets/project-markem.jpg";
-import wonderCement from "@/assets/project-wonder-cement.jpg";
-import vmart from "@/assets/project-vmart.jpg";
-import princePipes from "@/assets/project-prince-pipes.jpg";
-import fortuneHotel from "@/assets/project-fortune-hotel.jpg";
+import greenply from "@/assets/project-greenply.jpg";
+import toyoda from "@/assets/project-toyoda.jpg";
+import college from "@/assets/project-college.jpg";
+import lucid from "@/assets/project-lucid.jpg";
+import surya from "@/assets/project-surya.jpg";
+import rkmarble from "@/assets/project-rkmarble.jpg";
 
 export type Project = {
   id: string;
@@ -15,86 +15,73 @@ export type Project = {
   category: string;
   image: string;
   year: string;
-  summary?: string;
 };
 
 export const projects: Project[] = [
   {
-    id: "iit-mandi",
-    name: "IIT Mandi Campus Infrastructure",
-    client: "Indian Institute of Technology Mandi",
-    location: "Kamand, Himachal Pradesh",
-    consultant: "Institutional consultants",
-    value: "Institutional",
+    id: "greenply",
+    name: "Greenply Industries Plant",
+    client: "Greenply Industries Ltd.",
+    location: "Behror, Rajasthan",
+    consultant: "M R Warerkar & Associates, New Delhi",
+    value: "₹80 Million",
+    category: "Industrial",
+    image: greenply,
+    year: "2022",
+  },
+  {
+    id: "toyoda",
+    name: "Toyoda Gosei Building",
+    client: "Toyoda Gosei India Pvt. Ltd.",
+    location: "Neemrana, Rajasthan",
+    consultant: "Artscan, New Delhi",
+    value: "₹100 Million",
+    category: "Industrial",
+    image: toyoda,
+    year: "2021",
+  },
+  {
+    id: "college",
+    name: "Govt. Degree College",
+    client: "Govt. Degree College",
+    location: "Bilawar, Jammu & Kashmir",
+    consultant: "National Building Construction Corp.",
+    value: "₹85 Million",
     category: "Institutional",
-    image: iitMandi,
-    year: "Flagship",
-    summary:
-      "Select infrastructure for a premier IIT campus built on challenging mountainous terrain. Required terrain-adaptive structural engineering for stability and longevity.",
+    image: college,
+    year: "2020",
   },
   {
-    id: "markem-imaje",
-    name: "Markem-Imaje Manufacturing Facility",
-    client: "Markem-Imaje (France)",
-    location: "Karoli, Rajasthan",
-    consultant: "Green-building consultants",
-    value: "Industrial",
+    id: "lucid",
+    name: "Lucid Colloids Plant",
+    client: "Lucid Colloids Ltd.",
+    location: "Bikaner, Rajasthan",
+    consultant: "Mott MacDonald India Ltd.",
+    value: "₹110 Million",
+    category: "Process Plant",
+    image: lucid,
+    year: "2023",
+  },
+  {
+    id: "surya",
+    name: "Surya Roshni Facility",
+    client: "Surya Roshni Pvt. Ltd.",
+    location: "Noida, Uttar Pradesh",
+    consultant: "Gian P. Mathur, New Delhi",
+    value: "₹95 Million",
     category: "Industrial",
-    image: markem,
-    year: "Flagship",
-    summary:
-      "Industrial ink manufacturing facility for the French specialist. Modern factory layout with premium specifications, certified as a green building.",
+    image: surya,
+    year: "2019",
   },
   {
-    id: "wonder-cement",
-    name: "Wonder Cement Integrated Township",
-    client: "Wonder Cement Ltd.",
-    location: "Nimbahera, Chittorgarh, Rajasthan",
-    consultant: "In-house & multi-discipline",
-    value: "Integrated",
-    category: "Industrial",
-    image: wonderCement,
-    year: "Flagship",
-    summary:
-      "Integrated development covering cement-plant civil works, external infrastructure, staff accommodation and an on-campus school.",
-  },
-  {
-    id: "vmart-palwal",
-    name: "V-Mart Retail Mega Warehouse",
-    client: "V-Mart Retail Ltd.",
-    location: "Palwal, Haryana",
-    consultant: "PEB & logistics consultants",
-    value: "₹54 Cr",
-    category: "Warehousing",
-    image: vmart,
-    year: "Delivered ahead of schedule",
-    summary:
-      "5,00,000 sqft warehousing development executed in a stringent 6-month window — delivered ahead of schedule with zero compromise on quality.",
-  },
-  {
-    id: "prince-pipes",
-    name: "Prince Pipes Greenfield Factory",
-    client: "Prince Pipes & Fittings Ltd.",
-    location: "Jaipur, Rajasthan",
-    consultant: "Industrial consultants",
-    value: "Industrial",
-    category: "Industrial",
-    image: princePipes,
-    year: "Flagship",
-    summary:
-      "Greenfield factory engineered for pipe and fitting production — efficient material flow, durable construction, industry-specific specifications.",
-  },
-  {
-    id: "fortune-park-orange",
-    name: "Fortune Park Orange Hotel",
-    client: "ITC Fortune Hotels",
-    location: "Gurugram, Haryana",
-    consultant: "Hospitality designers & PMC",
-    value: "Hospitality",
-    category: "Hospitality",
-    image: fortuneHotel,
-    year: "Flagship",
-    summary:
-      "Premium hospitality build executed with strict quality control and close coordination with designers — refined, guest-grade finishes throughout.",
+    id: "rkmarble",
+    name: "R K Marble Building",
+    client: "R K Marble",
+    location: "Kishangarh, Rajasthan",
+    consultant: "In-house design team",
+    value: "₹70 Million",
+    category: "Commercial",
+    image: rkmarble,
+    year: "2018",
   },
 ];
