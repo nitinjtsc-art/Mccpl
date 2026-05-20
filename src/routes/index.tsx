@@ -197,41 +197,8 @@ function Home() {
         </div>
       </section>
 
-      {/* MARQUEE — clients / consultants */}
-      <section className="border-y border-border bg-background">
-        <div className="container-x flex items-center gap-8 py-5">
-          <span className="mono shrink-0 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-            Trusted by
-          </span>
-          <div className="overflow-hidden">
-            <div className="marquee-track flex whitespace-nowrap">
-              {Array.from({ length: 2 }).map((_, k) => (
-                <div key={k} className="flex shrink-0 items-center gap-12 pr-12">
-                  {[
-                    "Greenply Industries",
-                    "Toyoda Gosei",
-                    "Lucid Colloids",
-                    "Surya Roshni",
-                    "R K Marble",
-                    "Mott MacDonald",
-                    "Artscan",
-                    "NBCC",
-                    "Gian P. Mathur",
-                  ].map((t) => (
-                    <span
-                      key={t}
-                      className="text-sm font-medium uppercase tracking-[0.18em] text-foreground/40"
-                    >
-                      {t}
-                      <span className="mx-12 inline-block h-1 w-1 rounded-full bg-accent" />
-                    </span>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
+
 
       {/* ABOUT */}
       <section className="bg-background py-24 md:py-32">
@@ -464,7 +431,44 @@ function Home() {
         </div>
       </section>
 
+      {/* MARQUEE — clients / consultants */}
+      <section className="border-y border-border bg-background">
+        <div className="container-x flex items-center gap-8 py-5">
+          <span className="mono shrink-0 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+            Trusted by
+          </span>
+          <div className="overflow-hidden">
+            <div className="marquee-track flex whitespace-nowrap">
+              {Array.from({ length: 2 }).map((_, k) => (
+                <div key={k} className="flex shrink-0 items-center gap-12 pr-12">
+                  {[
+                    "Greenply Industries",
+                    "Toyoda Gosei",
+                    "Lucid Colloids",
+                    "Surya Roshni",
+                    "R K Marble",
+                    "Mott MacDonald",
+                    "Artscan",
+                    "NBCC",
+                    "Gian P. Mathur",
+                  ].map((t) => (
+                    <span
+                      key={t}
+                      className="text-sm font-medium uppercase tracking-[0.18em] text-foreground/40"
+                    >
+                      {t}
+                      <span className="mx-12 inline-block h-1 w-1 rounded-full bg-accent" />
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <SiteFooter />
+
     </>
   );
 }
