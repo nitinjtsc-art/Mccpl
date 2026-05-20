@@ -3,9 +3,15 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import mccLogo from "@/assets/mcc-logo.jpeg";
 
+const aboutChildren = [
+  { to: "/about", label: "Overview" },
+  { to: "/our-team", label: "Our Team" },
+  { to: "/director-message", label: "Director's Message" },
+] as const;
+
 const links = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
+  { to: "/about", label: "About", children: aboutChildren },
   { to: "/services", label: "Services" },
   { to: "/projects", label: "Projects" },
   { to: "/contact", label: "Contact" },
@@ -61,16 +67,33 @@ export function SiteHeader() {
 
           <nav className="hidden items-center gap-9 md:flex">
             {links.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                className="group relative text-sm font-medium text-foreground/75 transition-colors hover:text-brand"
-                activeProps={{ className: "text-brand" }}
-                activeOptions={{ exact: l.to === "/" }}
-              >
-                {l.label}
-                <span className="absolute -bottom-1.5 left-0 h-0.5 w-full origin-right scale-x-0 bg-accent transition-transform duration-500 group-hover:origin-left group-hover:scale-x-100" />
-              </Link>
+              <div key={l.to} className="group relative">
+                <Link
+                  to={l.to}
+                  className="relative text-sm font-medium text-foreground/75 transition-colors hover:text-brand inline-flex items-center gap-1"
+                  activeProps={{ className: "text-brand" }}
+                  activeOptions={{ exact: l.to === "/" }}
+                >
+                  {l.label}
+                  <span className="absolute -bottom-1.5 left-0 h-0.5 w-full origin-right scale-x-0 bg-accent transition-transform duration-500 group-hover:origin-left group-hover:scale-x-100" />
+                </Link>
+                {"children" in l && l.children && (
+                  <div className="invisible absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                    <div className="overflow-hidden border border-border bg-background shadow-soft">
+                      {l.children.map((c) => (
+                        <Link
+                          key={c.to}
+                          to={c.to}
+                          className="block px-4 py-3 text-sm text-foreground/80 transition-colors hover:bg-muted hover:text-brand"
+                          activeProps={{ className: "text-brand bg-muted" }}
+                        >
+                          {c.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 
