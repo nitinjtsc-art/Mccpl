@@ -3,9 +3,15 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import mccLogo from "@/assets/mcc-logo.jpeg";
 
+const aboutChildren = [
+  { to: "/about", label: "Overview" },
+  { to: "/our-team", label: "Our Team" },
+  { to: "/director-message", label: "Director's Message" },
+] as const;
+
 const links = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
+  { to: "/about", label: "About", children: aboutChildren },
   { to: "/services", label: "Services" },
   { to: "/projects", label: "Projects" },
   { to: "/contact", label: "Contact" },
