@@ -3,7 +3,10 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import mccLogo from "@/assets/mcc-logo.jpeg";
 
-const aboutMenu = [
+type AboutItem = { to: "/about" | "/services" | "/projects"; hash?: string; label: string; desc: string };
+type AboutCol = { heading: string; items: AboutItem[] };
+
+const aboutMenu: AboutCol[] = [
   {
     heading: "The Company",
     items: [
@@ -16,11 +19,11 @@ const aboutMenu = [
     heading: "How We Work",
     items: [
       { to: "/about", hash: "values", label: "Values & Approach", desc: "Self-perform, schedule-first, zero-harm." },
-      { to: "/services", hash: "", label: "Capabilities", desc: "RCC, steel, MEP, turnkey industrial." },
-      { to: "/projects", hash: "", label: "Completed Projects", desc: "Plants, institutions, infrastructure." },
+      { to: "/services", label: "Capabilities", desc: "RCC, steel, MEP, turnkey industrial." },
+      { to: "/projects", label: "Completed Projects", desc: "Plants, institutions, infrastructure." },
     ],
   },
-] as const;
+];
 
 const links = [
   { to: "/", label: "Home" },
