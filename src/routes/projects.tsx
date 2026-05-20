@@ -61,10 +61,12 @@ function ProjectsPage() {
                   </h2>
                   <dl className="mt-8 grid grid-cols-1 gap-y-5 border-t border-border pt-6">
                     {[
+                      ["Project Type", p.category],
+                      ["Year", p.year],
                       ["Client", p.client],
                       ["Location", p.location],
                       ["Consultant", p.consultant],
-                      ["Contract Value", p.value],
+                      ["Project Value", p.value],
                     ].map(([k, v]) => (
                       <div key={k} className="grid grid-cols-3 gap-4 border-b border-border/60 pb-4">
                         <dt className="mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
