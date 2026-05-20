@@ -141,37 +141,33 @@ export function SiteHeader() {
                       </Link>
                     </div>
 
-                    {/* Right columns */}
-                    <div className="grid grid-cols-1 gap-px bg-border sm:grid-cols-2">
-                      {aboutMenu.map((col) => (
-                        <div key={col.heading} className="bg-background p-6">
-                          <div className="mono mb-4 text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
-                            {col.heading}
-                          </div>
-                          <ul className="space-y-3">
-                            {col.items.map((it) => (
-                              <li key={it.label}>
-                                <Link
-                                  to={it.to}
-                                  hash={it.hash || undefined}
-                                  onClick={() => setAboutOpen(false)}
-                                  className="group block"
-                                >
-                                  <div className="flex items-center justify-between text-sm font-semibold text-foreground transition-colors group-hover:text-brand">
-                                    {it.label}
-                                    <span className="text-accent opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
-                                      →
-                                    </span>
-                                  </div>
-                                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                                    {it.desc}
-                                  </p>
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
+                    {/* Right column - single list */}
+                    <div className="bg-background p-6">
+                      <div className="mono mb-4 text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
+                        About MCC
+                      </div>
+                      <ul className="space-y-3">
+                        {aboutMenu.map((it) => (
+                          <li key={it.label}>
+                            <Link
+                              to={it.to}
+                              hash={it.hash}
+                              onClick={() => setAboutOpen(false)}
+                              className="group block border-b border-border/60 pb-3 last:border-b-0"
+                            >
+                              <div className="flex items-center justify-between text-sm font-semibold text-foreground transition-colors group-hover:text-brand">
+                                {it.label}
+                                <span className="text-accent opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
+                                  →
+                                </span>
+                              </div>
+                              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                                {it.desc}
+                              </p>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
