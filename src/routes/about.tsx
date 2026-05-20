@@ -35,7 +35,7 @@ function AboutPage() {
   return (
     <>
       <SiteHeader />
-      <section className="relative grid min-h-[80vh] grid-cols-1 md:grid-cols-2">
+      <section id="overview" className="relative grid min-h-[80vh] grid-cols-1 md:grid-cols-2 scroll-mt-32">
         <div className="flex flex-col justify-end bg-background px-6 py-24 md:px-16 md:pt-40">
           <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
             Since 2013
@@ -54,7 +54,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="py-32">
+      <section id="story" className="py-32 scroll-mt-32">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12">
           <Reveal className="md:col-span-5">
             <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
@@ -80,7 +80,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-card border-y border-border">
+      <section id="values" className="bg-card border-y border-border scroll-mt-32">
         <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2">
           {values.map((v, i) => (
             <Reveal key={v[0]} delay={i * 0.05}>
@@ -94,7 +94,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="py-32">
+      <section id="timeline" className="py-32 scroll-mt-32">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
