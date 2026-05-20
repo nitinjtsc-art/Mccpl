@@ -28,22 +28,24 @@ export function SiteFooter() {
             Company
           </div>
           <ul className="space-y-3 text-sm">
-            <li><Link to="/about" className="text-primary-foreground/80 hover:text-accent">About Us</Link></li>
-            <li><Link to="/services" className="text-primary-foreground/80 hover:text-accent">Services</Link></li>
-            <li><Link to="/projects" className="text-primary-foreground/80 hover:text-accent">Projects</Link></li>
-            <li><Link to="/contact" className="text-primary-foreground/80 hover:text-accent">Contact</Link></li>
+            <li><Link to="/about" className="text-primary-foreground/80 hover:text-accent">Overview</Link></li>
+            <li><Link to="/director-message" className="text-primary-foreground/80 hover:text-accent">Director's Message</Link></li>
+            <li><Link to="/our-team" className="text-primary-foreground/80 hover:text-accent">Our Team</Link></li>
+            <li><Link to="/csr" className="text-primary-foreground/80 hover:text-accent">CSR</Link></li>
+            <li><Link to="/careers" className="text-primary-foreground/80 hover:text-accent">Careers</Link></li>
           </ul>
         </div>
 
         <div className="md:col-span-2">
           <div className="mono mb-5 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/50">
-            Sectors
+            Explore
           </div>
-          <ul className="space-y-3 text-sm text-primary-foreground/80">
-            <li>Industrial</li>
-            <li>Institutional</li>
-            <li>Commercial</li>
-            <li>Civil & MEP</li>
+          <ul className="space-y-3 text-sm">
+            <li><Link to="/services" className="text-primary-foreground/80 hover:text-accent">Services</Link></li>
+            <li><Link to="/projects" className="text-primary-foreground/80 hover:text-accent">Projects</Link></li>
+            <li><Link to="/clients" className="text-primary-foreground/80 hover:text-accent">Clients</Link></li>
+            <li><Link to="/gallery" className="text-primary-foreground/80 hover:text-accent">Gallery</Link></li>
+            <li><Link to="/contact" className="text-primary-foreground/80 hover:text-accent">Contact</Link></li>
           </ul>
         </div>
 
@@ -52,9 +54,10 @@ export function SiteFooter() {
             Get in touch
           </div>
           <ul className="space-y-3 text-sm text-primary-foreground/80">
-            <li className="flex gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-accent" /> RIICO Industrial Area, Bhiwadi, Alwar, Rajasthan</li>
+            <li className="flex gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-accent" /> Head Office: RIICO Industrial Area, Bhiwadi, Rajasthan</li>
+            <li className="flex gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-accent" /> Delhi Office: Nehru Place, New Delhi</li>
             <li className="flex gap-3"><Phone size={16} className="mt-0.5 shrink-0 text-accent" /> +91 98765 43210</li>
-            <li className="flex gap-3"><Mail size={16} className="mt-0.5 shrink-0 text-accent" /> hello@mittalconstruction.in</li>
+            <li className="flex gap-3"><Mail size={16} className="mt-0.5 shrink-0 text-accent" /> info@mcc.co.in</li>
           </ul>
         </div>
       </div>
