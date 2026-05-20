@@ -121,8 +121,18 @@ function AboutPage() {
         </div>
       </section>
 
-      <section id="values" className="bg-card border-y border-border scroll-mt-32">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2">
+      <section id="values" className="bg-card border-y border-border py-24 scroll-mt-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+              Our Values · Why Us
+            </div>
+            <h2 className="display text-5xl md:text-6xl text-balance">
+              The reasons clients<br />come back.
+            </h2>
+          </Reveal>
+        </div>
+        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 md:grid-cols-2">
           {values.map((v, i) => (
             <Reveal key={v[0]} delay={i * 0.05}>
               <div className="border-b border-r border-border p-10 md:p-16">
