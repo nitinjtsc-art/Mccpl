@@ -219,11 +219,11 @@ export function SiteHeader() {
                 About <ChevronDown size={14} />
               </summary>
               <div className="pb-3 pl-3">
-                {aboutMenu.flatMap((c) => c.items).map((it) => (
+                {aboutMenu.map((it) => (
                   <Link
                     key={it.label}
                     to={it.to}
-                    hash={it.hash || undefined}
+                    hash={it.hash}
                     onClick={() => setOpen(false)}
                     className="block py-2 text-sm text-foreground/75"
                   >
