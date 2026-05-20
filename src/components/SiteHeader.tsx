@@ -3,26 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import mccLogo from "@/assets/mcc-logo.jpeg";
 
-type AboutItem = { to: "/about" | "/services" | "/projects"; hash?: string; label: string; desc: string };
-type AboutCol = { heading: string; items: AboutItem[] };
+type AboutItem = { to: "/about"; hash: string; label: string; desc: string };
 
-const aboutMenu: AboutCol[] = [
-  {
-    heading: "The Company",
-    items: [
-      { to: "/about", hash: "overview", label: "Overview", desc: "Who we are and what we stand for." },
-      { to: "/about", hash: "story", label: "Our Story", desc: "Eleven years, one trade." },
-      { to: "/about", hash: "timeline", label: "Milestones", desc: "Key moments since 2013." },
-    ],
-  },
-  {
-    heading: "How We Work",
-    items: [
-      { to: "/about", hash: "values", label: "Values & Approach", desc: "Self-perform, schedule-first, zero-harm." },
-      { to: "/services", label: "Capabilities", desc: "RCC, steel, MEP, turnkey industrial." },
-      { to: "/projects", label: "Completed Projects", desc: "Plants, institutions, infrastructure." },
-    ],
-  },
+const aboutMenu: AboutItem[] = [
+  { to: "/about", hash: "overview", label: "Overview", desc: "Who we are and what we stand for." },
+  { to: "/about", hash: "team", label: "Our Team", desc: "The people behind every project." },
+  { to: "/about", hash: "directors-message", label: "Director's Message", desc: "A note from our founding director." },
 ];
 
 const links = [
@@ -155,37 +141,33 @@ export function SiteHeader() {
                       </Link>
                     </div>
 
-                    {/* Right columns */}
-                    <div className="grid grid-cols-1 gap-px bg-border sm:grid-cols-2">
-                      {aboutMenu.map((col) => (
-                        <div key={col.heading} className="bg-background p-6">
-                          <div className="mono mb-4 text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
-                            {col.heading}
-                          </div>
-                          <ul className="space-y-3">
-                            {col.items.map((it) => (
-                              <li key={it.label}>
-                                <Link
-                                  to={it.to}
-                                  hash={it.hash || undefined}
-                                  onClick={() => setAboutOpen(false)}
-                                  className="group block"
-                                >
-                                  <div className="flex items-center justify-between text-sm font-semibold text-foreground transition-colors group-hover:text-brand">
-                                    {it.label}
-                                    <span className="text-accent opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
-                                      →
-                                    </span>
-                                  </div>
-                                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                                    {it.desc}
-                                  </p>
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
+                    {/* Right column - single list */}
+                    <div className="bg-background p-6">
+                      <div className="mono mb-4 text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
+                        About MCC
+                      </div>
+                      <ul className="space-y-3">
+                        {aboutMenu.map((it) => (
+                          <li key={it.label}>
+                            <Link
+                              to={it.to}
+                              hash={it.hash}
+                              onClick={() => setAboutOpen(false)}
+                              className="group block border-b border-border/60 pb-3 last:border-b-0"
+                            >
+                              <div className="flex items-center justify-between text-sm font-semibold text-foreground transition-colors group-hover:text-brand">
+                                {it.label}
+                                <span className="text-accent opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
+                                  →
+                                </span>
+                              </div>
+                              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                                {it.desc}
+                              </p>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -237,11 +219,11 @@ export function SiteHeader() {
                 About <ChevronDown size={14} />
               </summary>
               <div className="pb-3 pl-3">
-                {aboutMenu.flatMap((c) => c.items).map((it) => (
+                {aboutMenu.map((it) => (
                   <Link
                     key={it.label}
                     to={it.to}
-                    hash={it.hash || undefined}
+                    hash={it.hash}
                     onClick={() => setOpen(false)}
                     className="block py-2 text-sm text-foreground/75"
                   >
