@@ -3,26 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import mccLogo from "@/assets/mcc-logo.jpeg";
 
-type AboutItem = { to: "/about" | "/services" | "/projects"; hash?: string; label: string; desc: string };
-type AboutCol = { heading: string; items: AboutItem[] };
+type AboutItem = { to: "/about"; hash: string; label: string; desc: string };
 
-const aboutMenu: AboutCol[] = [
-  {
-    heading: "The Company",
-    items: [
-      { to: "/about", hash: "overview", label: "Overview", desc: "Who we are and what we stand for." },
-      { to: "/about", hash: "story", label: "Our Story", desc: "Eleven years, one trade." },
-      { to: "/about", hash: "timeline", label: "Milestones", desc: "Key moments since 2013." },
-    ],
-  },
-  {
-    heading: "How We Work",
-    items: [
-      { to: "/about", hash: "values", label: "Values & Approach", desc: "Self-perform, schedule-first, zero-harm." },
-      { to: "/services", label: "Capabilities", desc: "RCC, steel, MEP, turnkey industrial." },
-      { to: "/projects", label: "Completed Projects", desc: "Plants, institutions, infrastructure." },
-    ],
-  },
+const aboutMenu: AboutItem[] = [
+  { to: "/about", hash: "overview", label: "Overview", desc: "Who we are and what we stand for." },
+  { to: "/about", hash: "team", label: "Our Team", desc: "The people behind every project." },
+  { to: "/about", hash: "directors-message", label: "Director's Message", desc: "A note from our founding director." },
 ];
 
 const links = [
