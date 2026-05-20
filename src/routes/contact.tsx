@@ -35,20 +35,46 @@ function ContactPage() {
 
       <section className="py-24">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12">
-          <Reveal className="md:col-span-5 space-y-10">
-            {[
-              { I: MapPin, t: "Office", v: "RIICO Industrial Area, Bhiwadi, Alwar, Rajasthan 301019" },
-              { I: Phone, t: "Phone", v: "+91 98765 43210" },
-              { I: Mail, t: "Email", v: "hello@mittalconstruction.in" },
-            ].map((c) => (
-              <div key={c.t} className="border-l-2 border-accent pl-6">
-                <c.I size={20} className="text-accent" />
-                <div className="mono mt-4 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-                  {c.t}
-                </div>
-                <div className="mt-1 text-lg">{c.v}</div>
+          <Reveal className="md:col-span-5 space-y-8">
+            <div>
+              <div className="mono mb-3 text-[10px] uppercase tracking-[0.25em] text-accent">
+                Head Office — Bhiwadi
               </div>
-            ))}
+              <div className="space-y-3 border-l-2 border-accent pl-6">
+                <div className="flex items-start gap-3 text-sm">
+                  <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
+                  <span>RIICO Industrial Area, Bhiwadi, Alwar, Rajasthan 301019</span>
+                </div>
+                <div className="flex items-start gap-3 text-sm">
+                  <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
+                  <span>+91 98765 43210</span>
+                </div>
+                <div className="flex items-start gap-3 text-sm">
+                  <Mail size={16} className="mt-0.5 shrink-0 text-accent" />
+                  <span>info@mcc.co.in</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="mono mb-3 text-[10px] uppercase tracking-[0.25em] text-accent">
+                Delhi Office
+              </div>
+              <div className="space-y-3 border-l-2 border-accent pl-6">
+                <div className="flex items-start gap-3 text-sm">
+                  <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
+                  <span>New Delhi, NCR</span>
+                </div>
+                <div className="flex items-start gap-3 text-sm">
+                  <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
+                  <span>+91 98765 43211</span>
+                </div>
+                <div className="flex items-start gap-3 text-sm">
+                  <Mail size={16} className="mt-0.5 shrink-0 text-accent" />
+                  <span>info@mcc.co.in</span>
+                </div>
+              </div>
+            </div>
           </Reveal>
 
           <Reveal delay={0.15} className="md:col-span-7">

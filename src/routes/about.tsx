@@ -87,10 +87,52 @@ function AboutPage() {
             </p>
           </Reveal>
         </div>
+
+        {/* Vision / Mission */}
+        <div className="mx-auto mt-24 grid max-w-7xl gap-px bg-border px-6 md:grid-cols-2 md:px-0">
+          <Reveal>
+            <div className="bg-background p-10 md:p-16">
+              <div className="mono mb-4 text-[10px] uppercase tracking-[0.25em] text-accent">
+                Our Vision
+              </div>
+              <h3 className="display text-3xl md:text-4xl">
+                To be North India's most trusted self-performing contractor.
+              </h3>
+              <p className="mt-5 text-muted-foreground">
+                Known not for the size of our bid sheet, but for the certainty
+                of the date we sign against.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="bg-background p-10 md:p-16">
+              <div className="mono mb-4 text-[10px] uppercase tracking-[0.25em] text-accent">
+                Our Mission
+              </div>
+              <h3 className="display text-3xl md:text-4xl">
+                Deliver every project on the promised date, to the promised standard.
+              </h3>
+              <p className="mt-5 text-muted-foreground">
+                We do this by self-performing the core scope, employing our
+                supervisors directly, and keeping the office close to the site.
+              </p>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
-      <section id="values" className="bg-card border-y border-border scroll-mt-32">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2">
+      <section id="values" className="bg-card border-y border-border py-24 scroll-mt-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+              Our Values · Why Us
+            </div>
+            <h2 className="display text-5xl md:text-6xl text-balance">
+              The reasons clients<br />come back.
+            </h2>
+          </Reveal>
+        </div>
+        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 md:grid-cols-2">
           {values.map((v, i) => (
             <Reveal key={v[0]} delay={i * 0.05}>
               <div className="border-b border-r border-border p-10 md:p-16">
