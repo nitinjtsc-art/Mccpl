@@ -1,137 +1,118 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { AboutSubnav } from "@/components/AboutSubnav";
 import { Reveal } from "@/components/Reveal";
-import { Target, Compass, ShieldCheck, Award, Users, Hammer, TrendingUp } from "lucide-react";
 import aboutImg from "@/assets/about-team.jpg";
 
 export const Route = createFileRoute("/about")({
-  component: OverviewPage,
+  component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About — Overview · Mittal Construction" },
-      { name: "description", content: "Our vision, mission, values, and why clients choose Mittal Construction." },
+      { title: "About — Mittal Construction" },
+      { name: "description", content: "Founded in 2013, Mittal Construction is a Rajasthan-based industrial and civil contractor delivering across North India." },
+      { property: "og:title", content: "About Mittal Construction" },
+      { property: "og:description", content: "Eleven years of industrial and civil construction across North India." },
     ],
   }),
 });
 
 const values = [
-  { i: ShieldCheck, t: "Integrity", d: "Transparent quotes, transparent progress, transparent billing." },
-  { i: Hammer, t: "Craftsmanship", d: "Long-tenured crews who self-perform the core scope." },
-  { i: TrendingUp, t: "Schedule", d: "Critical path managed weekly; hand-overs on the promised date." },
-  { i: Users, t: "People First", d: "Zero-harm sites, fair labour, daily toolbox talks." },
+  ["Self-Perform", "Our crews execute the core scope. Less hand-off, less risk."],
+  ["Schedule First", "Critical path managed weekly. Hand-overs on the promised date."],
+  ["Safety Standard", "Zero-harm site protocols, full PPE, daily toolbox talks."],
+  ["Compliance", "ISO procedures, statutory clearances, full QA/QC documentation."],
 ];
 
-const why = [
-  ["11+ Years", "Operating since 2013 across Rajasthan, Haryana, UP & J&K."],
-  ["₹500M+", "Cumulative contract value delivered to date."],
-  ["200+", "On-roll and project workforce."],
-  ["Zero LTI", "Long-track safety record across active sites."],
+const timeline = [
+  ["2013", "Mittal Construction founded in Bhiwadi, Rajasthan."],
+  ["2015", "First industrial contract — Greenply, Behror."],
+  ["2018", "Expanded into institutional works with NBCC."],
+  ["2021", "Crossed ₹100M single-project benchmark — Toyoda Gosei."],
+  ["2024", "Active in Rajasthan, Haryana, UP, J&K with 200+ workforce."],
 ];
 
-function OverviewPage() {
+function AboutPage() {
   return (
     <>
       <SiteHeader />
-      <section className="relative grid min-h-[70vh] grid-cols-1 md:grid-cols-2">
+      <section className="relative grid min-h-[80vh] grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col justify-end bg-background px-6 py-24 md:px-16 md:pt-40">
           <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
-            About · Overview
+            Since 2013
           </div>
           <h1 className="display text-[clamp(3rem,8vw,7rem)] leading-[0.85] text-balance">
             Concrete,<br />steel,<br /><span className="text-accent">conviction.</span>
           </h1>
         </div>
         <div className="relative bg-primary">
-          <img src={aboutImg} alt="On site" loading="lazy" className="h-full w-full object-cover opacity-90" />
+          <img
+            src={aboutImg}
+            alt="Engineer on site"
+            loading="lazy"
+            className="h-full w-full object-cover opacity-90"
+          />
         </div>
       </section>
 
-      <AboutSubnav />
-
-      <section className="py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
-          <Reveal>
-            <div className="border-l-2 border-accent pl-6">
-              <Compass size={28} className="text-accent" />
-              <div className="mono mt-6 text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Our Vision</div>
-              <h2 className="display mt-2 text-4xl">To be North India's most trusted name in industrial and civil construction.</h2>
-              <p className="mt-5 text-foreground/75 leading-relaxed">
-                We aim to deliver projects that outlast their warranty period —
-                built with sound engineering, ethical practices, and a relentless focus
-                on the people who use them every day.
-              </p>
+      <section className="py-32">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12">
+          <Reveal className="md:col-span-5">
+            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+              The firm
             </div>
+            <h2 className="display text-5xl md:text-6xl">
+              Eleven years, one trade.
+            </h2>
           </Reveal>
-          <Reveal delay={0.1}>
-            <div className="border-l-2 border-accent pl-6">
-              <Target size={28} className="text-accent" />
-              <div className="mono mt-6 text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Our Mission</div>
-              <h2 className="display mt-2 text-4xl">Deliver every project on time, on budget, and to specification.</h2>
-              <p className="mt-5 text-foreground/75 leading-relaxed">
-                We self-perform core trades, run lean site teams, and invest in
-                long-term relationships with clients, consultants and craftspeople
-                — because predictable execution is the only sustainable edge.
-              </p>
-            </div>
+          <Reveal delay={0.15} className="space-y-5 md:col-span-7 text-foreground/80">
+            <p className="text-lg leading-relaxed">
+              Mittal Construction is a Bhiwadi-based general contractor founded
+              in 2013. We've built plants for Greenply, Toyoda Gosei, Lucid
+              Colloids and Surya Roshni — and institutional buildings under
+              NBCC supervision in Jammu & Kashmir.
+            </p>
+            <p>
+              We keep the office lean and the site heavy. Most of our scope is
+              self-performed by long-tenured crew supervisors, which is how we
+              keep schedule and quality predictable across geographies.
+            </p>
           </Reveal>
         </div>
       </section>
 
-      <section className="bg-card border-y border-border py-24">
+      <section className="bg-card border-y border-border">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2">
+          {values.map((v, i) => (
+            <Reveal key={v[0]} delay={i * 0.05}>
+              <div className="border-b border-r border-border p-10 md:p-16">
+                <div className="display text-6xl text-accent">0{i + 1}</div>
+                <div className="display mt-6 text-3xl">{v[0]}</div>
+                <p className="mt-3 max-w-md text-muted-foreground">{v[1]}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-32">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <div className="mono mb-3 text-[11px] uppercase tracking-[0.3em] text-accent">Our Values</div>
-            <h2 className="display text-5xl md:text-6xl">What we stand on.</h2>
+            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+              Milestones
+            </div>
+            <h2 className="display text-5xl md:text-7xl">Timeline.</h2>
           </Reveal>
-          <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
-            {values.map((v, i) => (
-              <Reveal key={v.t} delay={i * 0.05}>
-                <div className="h-full bg-card p-8">
-                  <v.i size={32} strokeWidth={1.25} className="text-accent" />
-                  <div className="display mt-6 text-2xl">{v.t}</div>
-                  <p className="mt-2 text-sm text-muted-foreground">{v.d}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal>
-            <div className="mono mb-3 text-[11px] uppercase tracking-[0.3em] text-accent">Why Us</div>
-            <h2 className="display text-5xl md:text-6xl">Why clients hire us again.</h2>
-          </Reveal>
-          <div className="mt-12 grid gap-8 md:grid-cols-4">
-            {why.map(([k, v], i) => (
-              <Reveal key={k} delay={i * 0.05}>
-                <div className="border-t-2 border-foreground pt-6">
-                  <div className="display text-5xl">{k}</div>
-                  <p className="mt-3 text-sm text-muted-foreground">{v}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal delay={0.2}>
-            <ul className="mt-14 grid gap-4 md:grid-cols-2">
-              {[
-                "Self-perform civil, RCC and finishing trades.",
-                "Single point of accountability — owner-led firm.",
-                "Documented QA/QC across every pour and weld.",
-                "ISO procedures with statutory clearances in place.",
-                "Pan-India mobilisation capability from Bhiwadi base.",
-                "Long-standing consultant relationships (NBCC, Mott MacDonald, M R Warerkar).",
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-3 text-foreground/85">
-                  <Award size={18} className="mt-1 shrink-0 text-accent" />
-                  <span>{t}</span>
+          <ol className="mt-16 border-l-2 border-accent">
+            {timeline.map(([y, t], i) => (
+              <Reveal key={y} delay={i * 0.05}>
+                <li className="relative pl-10 pb-12">
+                  <span className="absolute -left-[9px] top-2 h-4 w-4 bg-accent" />
+                  <div className="display text-4xl">{y}</div>
+                  <p className="mt-2 max-w-2xl text-foreground/70">{t}</p>
                 </li>
-              ))}
-            </ul>
-          </Reveal>
+              </Reveal>
+            ))}
+          </ol>
         </div>
       </section>
 
