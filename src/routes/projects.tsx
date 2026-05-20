@@ -8,9 +8,9 @@ export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
   head: () => ({
     meta: [
-      { title: "Projects — Mittal Construction" },
-      { name: "description", content: "Completed industrial, institutional and commercial projects by Mittal Construction across North India." },
-      { property: "og:title", content: "Projects — Mittal Construction" },
+      { title: "Completed Projects — Mittal Construction Company" },
+      { name: "description", content: "Completed industrial, institutional and commercial projects by Mittal Construction Company across North India." },
+      { property: "og:title", content: "Completed Projects — MCC" },
       { property: "og:description", content: "Selected completed projects: Greenply, Toyoda Gosei, Lucid Colloids, Surya Roshni, R K Marble and more." },
     ],
   }),
@@ -26,7 +26,7 @@ function ProjectsPage() {
             Portfolio · {projects.length} projects
           </div>
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.95] text-balance">
-            Built work,<br />on the ground.
+            Completed<br />Projects.
           </h1>
         </div>
         <div className="absolute inset-x-0 bottom-0 h-1 bg-accent" />
