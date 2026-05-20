@@ -31,8 +31,6 @@ export function SiteFooter() {
             <li><Link to="/about" className="text-primary-foreground/80 hover:text-accent">About Us</Link></li>
             <li><Link to="/services" className="text-primary-foreground/80 hover:text-accent">Services</Link></li>
             <li><Link to="/projects" className="text-primary-foreground/80 hover:text-accent">Projects</Link></li>
-            <li><Link to="/clients" className="text-primary-foreground/80 hover:text-accent">Clients</Link></li>
-            <li><Link to="/careers" className="text-primary-foreground/80 hover:text-accent">Careers</Link></li>
             <li><Link to="/contact" className="text-primary-foreground/80 hover:text-accent">Contact</Link></li>
           </ul>
         </div>
@@ -54,12 +52,11 @@ export function SiteFooter() {
             Get in touch
           </div>
           <ul className="space-y-3 text-sm text-primary-foreground/80">
-            <li className="flex gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-accent" /><span>RIICO Industrial Area, Bhiwadi, Alwar, Rajasthan</span></li>
-            <li className="flex gap-3"><Phone size={16} className="mt-0.5 shrink-0 text-accent" /><span>+91 98765 43210</span></li>
-            <li className="flex gap-3"><Mail size={16} className="mt-0.5 shrink-0 text-accent" /><span>info@mcc.co.in</span></li>
+            <li className="flex gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-accent" /> RIICO Industrial Area, Bhiwadi, Alwar, Rajasthan</li>
+            <li className="flex gap-3"><Phone size={16} className="mt-0.5 shrink-0 text-accent" /> +91 98765 43210</li>
+            <li className="flex gap-3"><Mail size={16} className="mt-0.5 shrink-0 text-accent" /> hello@mittalconstruction.in</li>
           </ul>
         </div>
-
       </div>
 
       <div className="border-t border-primary-foreground/10">

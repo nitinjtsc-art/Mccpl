@@ -11,17 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as ClientsRouteImport } from './routes/clients'
-import { Route as CareersRouteImport } from './routes/careers'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AboutIndexRouteImport } from './routes/about.index'
-import { Route as GalleryCsrRouteImport } from './routes/gallery.csr'
-import { Route as GalleryAwardsRouteImport } from './routes/gallery.awards'
-import { Route as AboutTeamRouteImport } from './routes/about.team'
-import { Route as AboutDirectorRouteImport } from './routes/about.director'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
@@ -33,24 +25,9 @@ const ProjectsRoute = ProjectsRouteImport.update({
   path: '/projects',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GalleryRoute = GalleryRouteImport.update({
-  id: '/gallery',
-  path: '/gallery',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ClientsRoute = ClientsRouteImport.update({
-  id: '/clients',
-  path: '/clients',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CareersRoute = CareersRouteImport.update({
-  id: '/careers',
-  path: '/careers',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -63,131 +40,41 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutIndexRoute = AboutIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => AboutRoute,
-} as any)
-const GalleryCsrRoute = GalleryCsrRouteImport.update({
-  id: '/csr',
-  path: '/csr',
-  getParentRoute: () => GalleryRoute,
-} as any)
-const GalleryAwardsRoute = GalleryAwardsRouteImport.update({
-  id: '/awards',
-  path: '/awards',
-  getParentRoute: () => GalleryRoute,
-} as any)
-const AboutTeamRoute = AboutTeamRouteImport.update({
-  id: '/team',
-  path: '/team',
-  getParentRoute: () => AboutRoute,
-} as any)
-const AboutDirectorRoute = AboutDirectorRouteImport.update({
-  id: '/director',
-  path: '/director',
-  getParentRoute: () => AboutRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRouteWithChildren
-  '/careers': typeof CareersRoute
-  '/clients': typeof ClientsRoute
+  '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/gallery': typeof GalleryRouteWithChildren
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
-  '/about/director': typeof AboutDirectorRoute
-  '/about/team': typeof AboutTeamRoute
-  '/gallery/awards': typeof GalleryAwardsRoute
-  '/gallery/csr': typeof GalleryCsrRoute
-  '/about/': typeof AboutIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/careers': typeof CareersRoute
-  '/clients': typeof ClientsRoute
+  '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/gallery': typeof GalleryRouteWithChildren
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
-  '/about/director': typeof AboutDirectorRoute
-  '/about/team': typeof AboutTeamRoute
-  '/gallery/awards': typeof GalleryAwardsRoute
-  '/gallery/csr': typeof GalleryCsrRoute
-  '/about': typeof AboutIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRouteWithChildren
-  '/careers': typeof CareersRoute
-  '/clients': typeof ClientsRoute
+  '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/gallery': typeof GalleryRouteWithChildren
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
-  '/about/director': typeof AboutDirectorRoute
-  '/about/team': typeof AboutTeamRoute
-  '/gallery/awards': typeof GalleryAwardsRoute
-  '/gallery/csr': typeof GalleryCsrRoute
-  '/about/': typeof AboutIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/about'
-    | '/careers'
-    | '/clients'
-    | '/contact'
-    | '/gallery'
-    | '/projects'
-    | '/services'
-    | '/about/director'
-    | '/about/team'
-    | '/gallery/awards'
-    | '/gallery/csr'
-    | '/about/'
+  fullPaths: '/' | '/about' | '/contact' | '/projects' | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/careers'
-    | '/clients'
-    | '/contact'
-    | '/gallery'
-    | '/projects'
-    | '/services'
-    | '/about/director'
-    | '/about/team'
-    | '/gallery/awards'
-    | '/gallery/csr'
-    | '/about'
-  id:
-    | '__root__'
-    | '/'
-    | '/about'
-    | '/careers'
-    | '/clients'
-    | '/contact'
-    | '/gallery'
-    | '/projects'
-    | '/services'
-    | '/about/director'
-    | '/about/team'
-    | '/gallery/awards'
-    | '/gallery/csr'
-    | '/about/'
+  to: '/' | '/about' | '/contact' | '/projects' | '/services'
+  id: '__root__' | '/' | '/about' | '/contact' | '/projects' | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRouteWithChildren
-  CareersRoute: typeof CareersRoute
-  ClientsRoute: typeof ClientsRoute
+  AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
-  GalleryRoute: typeof GalleryRouteWithChildren
   ProjectsRoute: typeof ProjectsRoute
   ServicesRoute: typeof ServicesRoute
 }
@@ -208,32 +95,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/gallery': {
-      id: '/gallery'
-      path: '/gallery'
-      fullPath: '/gallery'
-      preLoaderRoute: typeof GalleryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clients': {
-      id: '/clients'
-      path: '/clients'
-      fullPath: '/clients'
-      preLoaderRoute: typeof ClientsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/careers': {
-      id: '/careers'
-      path: '/careers'
-      fullPath: '/careers'
-      preLoaderRoute: typeof CareersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -250,78 +116,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/about/': {
-      id: '/about/'
-      path: '/'
-      fullPath: '/about/'
-      preLoaderRoute: typeof AboutIndexRouteImport
-      parentRoute: typeof AboutRoute
-    }
-    '/gallery/csr': {
-      id: '/gallery/csr'
-      path: '/csr'
-      fullPath: '/gallery/csr'
-      preLoaderRoute: typeof GalleryCsrRouteImport
-      parentRoute: typeof GalleryRoute
-    }
-    '/gallery/awards': {
-      id: '/gallery/awards'
-      path: '/awards'
-      fullPath: '/gallery/awards'
-      preLoaderRoute: typeof GalleryAwardsRouteImport
-      parentRoute: typeof GalleryRoute
-    }
-    '/about/team': {
-      id: '/about/team'
-      path: '/team'
-      fullPath: '/about/team'
-      preLoaderRoute: typeof AboutTeamRouteImport
-      parentRoute: typeof AboutRoute
-    }
-    '/about/director': {
-      id: '/about/director'
-      path: '/director'
-      fullPath: '/about/director'
-      preLoaderRoute: typeof AboutDirectorRouteImport
-      parentRoute: typeof AboutRoute
-    }
   }
 }
 
-interface AboutRouteChildren {
-  AboutDirectorRoute: typeof AboutDirectorRoute
-  AboutTeamRoute: typeof AboutTeamRoute
-  AboutIndexRoute: typeof AboutIndexRoute
-}
-
-const AboutRouteChildren: AboutRouteChildren = {
-  AboutDirectorRoute: AboutDirectorRoute,
-  AboutTeamRoute: AboutTeamRoute,
-  AboutIndexRoute: AboutIndexRoute,
-}
-
-const AboutRouteWithChildren = AboutRoute._addFileChildren(AboutRouteChildren)
-
-interface GalleryRouteChildren {
-  GalleryAwardsRoute: typeof GalleryAwardsRoute
-  GalleryCsrRoute: typeof GalleryCsrRoute
-}
-
-const GalleryRouteChildren: GalleryRouteChildren = {
-  GalleryAwardsRoute: GalleryAwardsRoute,
-  GalleryCsrRoute: GalleryCsrRoute,
-}
-
-const GalleryRouteWithChildren =
-  GalleryRoute._addFileChildren(GalleryRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRouteWithChildren,
-  CareersRoute: CareersRoute,
-  ClientsRoute: ClientsRoute,
+  AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
-  GalleryRoute: GalleryRouteWithChildren,
   ProjectsRoute: ProjectsRoute,
   ServicesRoute: ServicesRoute,
 }
