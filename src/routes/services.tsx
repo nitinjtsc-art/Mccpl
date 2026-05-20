@@ -17,12 +17,12 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { i: Factory, t: "Industrial Construction", d: "Greenfield factories, processing plants, warehouses, heavy-foundation works, pre-engineered building erection." },
-  { i: Building2, t: "Commercial Buildings", d: "Showrooms, offices, retail shells, multi-tenant blocks built to consultant specifications." },
-  { i: HardHat, t: "Institutional Works", d: "Colleges, hospitals, government buildings executed under NBCC and PWD standards." },
-  { i: Ruler, t: "Civil & Structural", d: "Earthworks, RCC frame, masonry, structural steel fabrication and erection." },
+  { i: Factory, t: "Industrial", d: "Greenfield factories, processing plants, warehouses, heavy-foundation works, pre-engineered building erection." },
+  { i: Building2, t: "Commercial", d: "Showrooms, offices, retail shells, multi-tenant blocks built to consultant specifications." },
+  { i: HardHat, t: "Institutional & Hospitality", d: "Colleges, hospitals, hotels and government buildings executed under NBCC and PWD standards." },
+  { i: Ruler, t: "Residential", d: "Villas, apartments, group housing and bespoke homes built to architectural intent." },
   { i: Wrench, t: "MEP & Finishing", d: "Plumbing, electrical, HVAC coordination, internal finishes, façade systems." },
-  { i: ShieldCheck, t: "Refurb & Retrofit", d: "Plant expansions, structural strengthening, life-extension retrofitting." },
+  { i: ShieldCheck, t: "Renovation & Retrofitting", d: "Plant expansions, structural strengthening, refurbishment and life-extension retrofitting." },
 ];
 
 const process = [
