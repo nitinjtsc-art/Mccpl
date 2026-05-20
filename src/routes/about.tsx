@@ -31,6 +31,15 @@ const timeline = [
   ["2024", "Active in Rajasthan, Haryana, UP, J&K with 200+ workforce."],
 ];
 
+const team = [
+  { name: "Rajesh Mittal", role: "Founder & Managing Director", initials: "RM" },
+  { name: "Anil Mittal", role: "Director — Operations", initials: "AM" },
+  { name: "Vikas Sharma", role: "Head of Projects", initials: "VS" },
+  { name: "Sunita Verma", role: "QA / QC Lead", initials: "SV" },
+  { name: "Deepak Yadav", role: "Site Safety Officer", initials: "DY" },
+  { name: "Priya Singh", role: "Procurement & Contracts", initials: "PS" },
+];
+
 function AboutPage() {
   return (
     <>
