@@ -1,0 +1,106 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { useMemo, useState } from "react";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { Reveal } from "@/components/Reveal";
+
+export const Route = createFileRoute("/clients")({
+  component: ClientsPage,
+  head: () => ({
+    meta: [
+      { title: "Clients — Mittal Construction" },
+      { name: "description", content: "Industrial, institutional, commercial and government clients served by Mittal Construction." },
+      { property: "og:title", content: "Our Clients — Mittal Construction" },
+      { property: "og:description", content: "Trusted by Greenply, Toyoda Gosei, Lucid Colloids, Surya Roshni, NBCC and more." },
+    ],
+  }),
+});
+
+type Sector = "Industrial" | "Institutional" | "Hospitality" | "Government" | "Commercial";
+
+const clients: { name: string; sector: Sector }[] = [
+  { name: "Greenply Industries", sector: "Industrial" },
+  { name: "Toyoda Gosei", sector: "Industrial" },
+  { name: "Lucid Colloids", sector: "Industrial" },
+  { name: "Surya Roshni", sector: "Industrial" },
+  { name: "R K Marble", sector: "Commercial" },
+  { name: "Havells India", sector: "Industrial" },
+  { name: "NBCC India", sector: "Government" },
+  { name: "PWD Rajasthan", sector: "Government" },
+  { name: "PWD J&K", sector: "Government" },
+  { name: "Govt. Degree College, Bilawar", sector: "Institutional" },
+  { name: "Apollo Hospitals", sector: "Institutional" },
+  { name: "Fortis Healthcare", sector: "Institutional" },
+  { name: "ITC Hotels", sector: "Hospitality" },
+  { name: "Lemon Tree Hotels", sector: "Hospitality" },
+  { name: "Bhiwadi Industries Assn.", sector: "Commercial" },
+  { name: "DLF Commercial", sector: "Commercial" },
+];
+
+const filters: ("All" | Sector)[] = ["All", "Industrial", "Commercial", "Institutional", "Hospitality", "Government"];
+
+function ClientsPage() {
+  const [active, setActive] = useState<(typeof filters)[number]>("All");
+  const list = useMemo(
+    () => (active === "All" ? clients : clients.filter((c) => c.sector === active)),
+    [active],
+  );
+
+  return (
+    <>
+      <SiteHeader />
+      <section className="bg-background pt-40 pb-16">
+        <div className="container-x">
+          <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
+            Our Clients
+          </div>
+          <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
+            Trusted by<br />the makers.
+          </h1>
+          <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
+            From multinationals to government bodies — a partial list of the
+            organisations whose projects we've delivered over the past decade.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-background pb-24">
+        <div className="container-x">
+          <div className="flex flex-wrap gap-2 border-b border-border py-6">
+            {filters.map((f) => (
+              <button
+                key={f}
+                onClick={() => setActive(f)}
+                className={`mono px-4 py-2 text-[11px] uppercase tracking-[0.2em] transition-colors ${
+                  active === f
+                    ? "bg-ink text-primary-foreground"
+                    : "border border-border text-foreground/70 hover:border-accent hover:text-accent"
+                }`}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-10 grid grid-cols-2 gap-px bg-border sm:grid-cols-3 lg:grid-cols-4">
+            {list.map((c, i) => (
+              <Reveal key={c.name} delay={(i % 8) * 0.04}>
+                <div className="group flex aspect-[5/3] flex-col items-center justify-center gap-3 bg-background p-6 text-center transition-colors hover:bg-card">
+                  <div className="flex h-14 w-14 items-center justify-center border border-border text-sm font-semibold text-foreground/70 transition-colors group-hover:border-accent group-hover:text-accent">
+                    {c.name.split(" ").slice(0, 2).map((w) => w[0]).join("")}
+                  </div>
+                  <div className="text-sm font-medium text-foreground">{c.name}</div>
+                  <div className="mono text-[9px] uppercase tracking-[0.22em] text-muted-foreground">
+                    {c.sector}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <SiteFooter />
+    </>
+  );
+}
