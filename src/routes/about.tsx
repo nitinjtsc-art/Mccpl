@@ -31,20 +31,11 @@ const timeline = [
   ["2024", "Active in Rajasthan, Haryana, UP, J&K with 200+ workforce."],
 ];
 
-const team = [
-  { name: "Rajesh Mittal", role: "Founder & Managing Director", initials: "RM" },
-  { name: "Anil Mittal", role: "Director — Operations", initials: "AM" },
-  { name: "Vikas Sharma", role: "Head of Projects", initials: "VS" },
-  { name: "Sunita Verma", role: "QA / QC Lead", initials: "SV" },
-  { name: "Deepak Yadav", role: "Site Safety Officer", initials: "DY" },
-  { name: "Priya Singh", role: "Procurement & Contracts", initials: "PS" },
-];
-
 function AboutPage() {
   return (
     <>
       <SiteHeader />
-      <section id="overview" className="relative grid min-h-[80vh] grid-cols-1 md:grid-cols-2 scroll-mt-32">
+      <section className="relative grid min-h-[80vh] grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col justify-end bg-background px-6 py-24 md:px-16 md:pt-40">
           <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
             Since 2013
@@ -63,7 +54,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section id="story" className="py-32 scroll-mt-32">
+      <section className="py-32">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12">
           <Reveal className="md:col-span-5">
             <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
@@ -87,52 +78,10 @@ function AboutPage() {
             </p>
           </Reveal>
         </div>
-
-        {/* Vision / Mission */}
-        <div className="mx-auto mt-24 grid max-w-7xl gap-px bg-border px-6 md:grid-cols-2 md:px-0">
-          <Reveal>
-            <div className="bg-background p-10 md:p-16">
-              <div className="mono mb-4 text-[10px] uppercase tracking-[0.25em] text-accent">
-                Our Vision
-              </div>
-              <h3 className="display text-3xl md:text-4xl">
-                To be North India's most trusted self-performing contractor.
-              </h3>
-              <p className="mt-5 text-muted-foreground">
-                Known not for the size of our bid sheet, but for the certainty
-                of the date we sign against.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div className="bg-background p-10 md:p-16">
-              <div className="mono mb-4 text-[10px] uppercase tracking-[0.25em] text-accent">
-                Our Mission
-              </div>
-              <h3 className="display text-3xl md:text-4xl">
-                Deliver every project on the promised date, to the promised standard.
-              </h3>
-              <p className="mt-5 text-muted-foreground">
-                We do this by self-performing the core scope, employing our
-                supervisors directly, and keeping the office close to the site.
-              </p>
-            </div>
-          </Reveal>
-        </div>
       </section>
 
-      <section id="values" className="bg-card border-y border-border py-24 scroll-mt-32">
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal>
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
-              Our Values · Why Us
-            </div>
-            <h2 className="display text-5xl md:text-6xl text-balance">
-              The reasons clients<br />come back.
-            </h2>
-          </Reveal>
-        </div>
-        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 md:grid-cols-2">
+      <section className="bg-card border-y border-border">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2">
           {values.map((v, i) => (
             <Reveal key={v[0]} delay={i * 0.05}>
               <div className="border-b border-r border-border p-10 md:p-16">
@@ -145,7 +94,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section id="timeline" className="py-32 scroll-mt-32">
+      <section className="py-32">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
@@ -164,86 +113,6 @@ function AboutPage() {
               </Reveal>
             ))}
           </ol>
-        </div>
-      </section>
-
-      {/* Director's Message */}
-      <section id="directors-message" className="bg-ink text-primary-foreground scroll-mt-32">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 py-32 md:grid-cols-12">
-          <Reveal className="md:col-span-4">
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
-              From the desk of
-            </div>
-            <h2 className="display text-5xl md:text-6xl leading-[0.9]">
-              Director's<br />
-              <span className="text-accent">Message.</span>
-            </h2>
-            <div className="mt-10 flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center border border-accent text-lg font-semibold text-accent">
-                RM
-              </div>
-              <div>
-                <div className="text-base font-semibold">Rajesh Mittal</div>
-                <div className="mono text-[11px] uppercase tracking-[0.2em] text-primary-foreground/60">
-                  Founder & Managing Director
-                </div>
-              </div>
-            </div>
-          </Reveal>
-          <Reveal delay={0.15} className="space-y-6 md:col-span-8 text-primary-foreground/80">
-            <p className="display text-2xl leading-snug text-primary-foreground">
-              "Construction is a business of promises — of dates, of drawings,
-              of the people who trust us with their capital. We've built this
-              company by keeping those promises, one pour at a time."
-            </p>
-            <p className="leading-relaxed">
-              When we started in 2013, we made a simple decision: stay small
-              enough to remain accountable, large enough to take on serious
-              industrial work. A decade later, that philosophy still defines us.
-              We self-perform the core scope, employ our supervisors directly,
-              and put our name on every handover.
-            </p>
-            <p className="leading-relaxed">
-              The clients we're proudest of — Greenply, Toyoda Gosei, Lucid
-              Colloids, Surya Roshni — came back to us not because we were the
-              cheapest bid, but because we delivered on the date we promised.
-              That's the legacy we're building, and the standard we owe every
-              future project.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Our Team */}
-      <section id="team" className="py-32 scroll-mt-32">
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal>
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
-              The people
-            </div>
-            <h2 className="display text-5xl md:text-7xl">Our Team.</h2>
-            <p className="mt-6 max-w-2xl text-foreground/70">
-              Long-tenured engineers and site supervisors who self-perform the
-              core scope of every project.
-            </p>
-          </Reveal>
-          <div className="mt-16 grid grid-cols-1 gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
-            {team.map((m, i) => (
-              <Reveal key={m.name} delay={i * 0.05}>
-                <div className="group flex items-center gap-5 bg-background p-8 transition-colors hover:bg-card">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center bg-ink text-base font-semibold text-accent transition-colors group-hover:bg-accent group-hover:text-ink">
-                    {m.initials}
-                  </div>
-                  <div>
-                    <div className="display text-xl">{m.name}</div>
-                    <div className="mono mt-1 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-                      {m.role}
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
