@@ -379,7 +379,7 @@ function Home() {
       </section>
 
       {/* WHY US */}
-      <section className="bg-sand py-24 md:py-32">
+      <section className="bg-background py-24 md:py-32">
         <div className="container-x">
           <Reveal className="max-w-3xl">
             <div className="eyebrow mb-5">Why MCC</div>
