@@ -24,7 +24,7 @@ function ContactPage() {
       <SiteHeader />
       <section className="bg-primary pt-40 pb-20 text-primary-foreground">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
+          <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Let's talk
           </div>
           <h1 className="display text-[clamp(3.5rem,11vw,10rem)] leading-[0.85] text-balance">
