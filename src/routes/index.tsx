@@ -146,7 +146,7 @@ function Home() {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="max-w-3xl text-primary-foreground"
             >
-              <div className="mono mb-5 text-[11px] uppercase tracking-[0.3em] text-accent">
+              <div className="mono mb-5 text-[12px] font-bold uppercase tracking-[0.3em] text-accent">
                 {heroSlides[active].eyebrow}
               </div>
               <h1 className="display text-balance text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] text-primary-foreground">
@@ -280,7 +280,7 @@ function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-sand py-24 md:py-32">
+      <section className="bg-background py-24 md:py-32">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal className="md:col-span-7">
@@ -379,7 +379,7 @@ function Home() {
       </section>
 
       {/* WHY US */}
-      <section className="bg-sand py-24 md:py-32">
+      <section className="bg-background py-24 md:py-32">
         <div className="container-x">
           <Reveal className="max-w-3xl">
             <div className="eyebrow mb-5">Why MCC</div>
@@ -454,7 +454,7 @@ function Home() {
                   ].map((t) => (
                     <span
                       key={t}
-                      className="text-sm font-medium uppercase tracking-[0.18em] text-foreground/40"
+                      className="text-sm font-medium uppercase tracking-[0.18em] text-foreground"
                     >
                       {t}
                       <span className="mx-12 inline-block h-1 w-1 rounded-full bg-accent" />

@@ -75,9 +75,7 @@ export function SiteHeader() {
       {/* Main nav */}
       <div
         className={`transition-all duration-300 ${
-          scrolled
-            ? "bg-background/95 backdrop-blur shadow-soft"
-            : "bg-background/80 backdrop-blur-sm"
+          scrolled ? "bg-white shadow-soft" : "bg-white"
         }`}
       >
         <div className="container-x flex h-16 items-center justify-between md:h-20">
@@ -291,26 +289,26 @@ function Dropdown({
       </Link>
 
       <div
-        className={`fixed left-1/2 top-[calc(2.25rem+5rem)] z-40 w-[min(880px,92vw)] -translate-x-1/2 transition-all duration-300 ${
+        className={`fixed left-1/2 top-[calc(2.25rem+5rem)] z-40 w-[min(680px,92vw)] -translate-x-1/2 transition-all duration-300 ${
           isOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"
         }`}
         {...handlers}
       >
         <div className="overflow-hidden border border-border bg-background shadow-soft">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr]">
-            <div className="relative hidden bg-ink p-8 text-primary-foreground md:block">
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr]">
+            <div className="relative hidden bg-ink p-6 text-primary-foreground md:block">
               <div className="mono text-[10px] uppercase tracking-[0.28em] text-accent">{teaserEyebrow}</div>
-              <h3 className="display mt-4 text-3xl leading-[0.95]">{teaserTitle}</h3>
-              <p className="mt-4 text-sm text-primary-foreground/70">{teaserText}</p>
+              <h3 className="display mt-3 text-2xl leading-[1]">{teaserTitle}</h3>
+              <p className="mt-3 text-xs text-primary-foreground/70">{teaserText}</p>
               <Link
                 to={teaserCtaTo}
                 onClick={() => setIsOpen(false)}
-                className="mono mt-8 inline-flex items-center gap-2 border-b border-accent pb-1 text-[11px] uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all"
+                className="mono mt-6 inline-flex items-center gap-2 border-b border-accent pb-1 text-[10px] uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all"
               >
                 {teaserCta} →
               </Link>
             </div>
-            <div className="bg-background p-6">
+            <div className="bg-background p-5">
               <div className="mono mb-4 text-[10px] uppercase tracking-[0.24em] text-muted-foreground">{eyebrow}</div>
               <ul className="space-y-3">
                 {items.map((it) => (

@@ -4,7 +4,7 @@ import mccLogo from "@/assets/mcc-logo.jpeg";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-ink text-primary-foreground">
+    <footer className="bg-black text-primary-foreground">
       <div className="container-x grid gap-12 py-20 md:grid-cols-12">
         <div className="md:col-span-5">
           <div className="inline-flex rounded-md bg-primary-foreground p-3">
