@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import mccLogo from "@/assets/mcc-logo.jpeg";
@@ -31,6 +31,10 @@ export function SiteHeader() {
   const [galleryOpen, setGalleryOpen] = useState(false);
   const aboutTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const galleryTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isAwards = useRouterState({ select: (s) => s.location.pathname === "/gallery/awards" });
+  const ctaClass = isAwards
+    ? "bg-accent text-accent-foreground hover:bg-accent/90"
+    : "bg-brand text-brand-foreground hover:bg-ink";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -179,7 +183,7 @@ export function SiteHeader() {
 
           <Link
             to="/contact"
-            className="hidden items-center gap-2 bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground transition-colors hover:bg-ink md:inline-flex"
+            className={`hidden items-center gap-2 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] transition-colors md:inline-flex ${ctaClass}`}
           >
             Get a Quote
           </Link>
@@ -237,7 +241,7 @@ export function SiteHeader() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground"
+              className={`mt-4 inline-flex items-center justify-center px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] ${ctaClass}`}
             >
               Get a Quote
             </Link>
