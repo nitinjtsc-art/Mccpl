@@ -1,16 +1,16 @@
-### Scope
-Remove the "Government" filter option and all Government-sector clients from the `/clients` page, and update the page metadata.
+## Change
 
-### Changes
-1. **src/routes/clients.tsx**
-   - Remove `"Government"` from the `Sector` type union.
-   - Remove the 3 Government clients from the `clients` array: NBCC India, PWD Rajasthan, PWD J&K.
-   - Remove `"Government"` from the `filters` array.
-   - Update `meta` description and `og:description` to remove the "government" mention.
+In `src/routes/clients.tsx`, line 51, update the "Our Clients" label styling:
 
-2. **src/data/projects.ts**
-   - No Government-category projects exist in the dataset; no changes needed here.
+- Add `font-bold` class
+- Increase font size from `text-[11px]` to `text-[15px]` (4px larger)
 
-### Out of scope
-- No routing or navigation changes.
-- No visual redesign beyond removing the filter tab and associated client cards.
+```text
+Before:
+  <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
+
+After:
+  <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
+```
+
+No other changes needed.
