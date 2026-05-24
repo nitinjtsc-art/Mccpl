@@ -241,7 +241,7 @@ export function SiteHeader() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground"
+              className={`mt-4 inline-flex items-center justify-center px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] ${ctaClass}`}
             >
               Get a Quote
             </Link>
