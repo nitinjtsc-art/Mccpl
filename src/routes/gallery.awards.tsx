@@ -28,7 +28,7 @@ function AwardsPage() {
       <SiteHeader />
       <section className="bg-background pt-40 pb-16">
         <div className="container-x">
-          <div className="mono mb-6 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+          <div className="mono mb-6 flex items-center gap-2 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
             Gallery · Awards & Recognitions
           </div>
