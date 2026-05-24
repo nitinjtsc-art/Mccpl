@@ -75,9 +75,7 @@ export function SiteHeader() {
       {/* Main nav */}
       <div
         className={`transition-all duration-300 ${
-          scrolled
-            ? "bg-background/95 backdrop-blur shadow-soft"
-            : "bg-background/80 backdrop-blur-sm"
+          scrolled ? "bg-white shadow-soft" : "bg-white"
         }`}
       >
         <div className="container-x flex h-16 items-center justify-between md:h-20">
