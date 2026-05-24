@@ -1,13 +1,7 @@
-# About page: 3 tweaks
+Increase vertical spacing in the About hero heading between "Concrete, steel," and "conviction."
 
-1. **Hero heading** — remove the thin orange horizontal line between "steel," and "conviction." so the heading reads as a single stacked phrase again.
+Current: the `<h1>` uses `leading-[0.85]`, so the two lines sit almost on top of each other.
 
-2. **Vision / Mission divider** — remove the gray line that currently sits between the two cards (caused by the `gap-px bg-border` divider trick). The two cards will sit flush with no gray strip.
+Fix: change the `<span>` wrapping "conviction." to a block element with a top margin (e.g. `block mt-6` or `mt-8`) while keeping the first line tight. This pushes the second line down without widening spacing inside either line.
 
-3. **Milestones timeline → horizontal**
-   - Replace the vertical left-bordered `<ol>` with a horizontal layout: 5 evenly-spaced milestones in a row.
-   - A single horizontal accent line runs through square markers; each item shows the year (display font) above and the short description below.
-   - Stacks back to vertical on mobile.
-
-## Out of scope
-No copy changes, no other pages, no logic changes.
+Single-file change: `src/routes/about.tsx` — lines 43–47.

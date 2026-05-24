@@ -42,8 +42,7 @@ function AboutPage() {
           </div>
           <h1 className="display text-[clamp(3rem,8vw,7rem)] leading-[0.85] text-balance">
             Concrete, steel,
-            <br />
-            <span className="text-accent">conviction.</span>
+            <span className="mt-6 block text-accent md:mt-8">conviction.</span>
           </h1>
         </div>
         <div className="relative bg-primary">
