@@ -1,73 +1,31 @@
-# Site Build-out Plan
+# Homepage refinements (from annotated PDF)
 
-Based on the brief sheet. Email wiring deferred; forms are UI-only for now. Projects/Clients data scaffolded with placeholders (sourced from the IndiaMART page where useful) — easy to swap later.
+Surgical, visual-only changes. No business logic touched.
 
-## Navigation (SiteHeader)
+1. **Main navbar row → white** (`SiteHeader.tsx`)
+   Change the main nav strip (logo + Home/About/Services/… + Get a Quote) background from the current gray to white. Top utility bar stays unchanged.
 
-Final nav order: Home · About · Services · Projects · Clients · Gallery · Careers · Contact
+2. **Hero eyebrow → bold** (`src/routes/index.tsx`)
+   Make the eyebrow label bold on all 3 hero slides ("Industrial · Process Plant", "Industrial · Institutional", "Manufacturing" — whatever the 3 current labels are; preserving existing text).
 
-- About — keep existing dropdown (Overview, Our Team, Director's Message). Done.
-- Services — plain link, no dropdown.
-- Projects — plain link to new page.
-- Clients — plain link to new page.
-- Gallery — dropdown (same pattern as About) with: Awards & Recognitions, CSR.
-- Careers — plain link to new page.
-- Contact — plain link to new page.
+3. **About mega-dropdown → rebalance 40/60** (`SiteHeader.tsx`)
+   Shorten the black left panel's width and tighten the white right panel so there is less empty space. Target proportions ~40% black / 60% white, with overall panel width reduced.
 
-## Pages
+4. **Gallery mega-dropdown → narrower** (`SiteHeader.tsx`)
+   Reduce overall panel width using the same pattern as About.
 
-### /services (update existing)
-- Keep current design and "delivery process" section.
-- Replace the 6 service cards with:
-  1. Industrial
-  2. Commercial
-  3. Institutional & Hospitality
-  4. Residential
-  5. MEP & Finishing
-  6. Renovation & Retrofitting
-- Keep short keyword/description line next to each (rewritten to match new names).
+5. **"Capabilities across the full construction lifecycle" section → white bg** (`src/routes/index.tsx`)
+   Swap the cream/beige background for white. Keep all content and cards unchanged.
 
-### /about (expand Overview section)
-Add to the existing Overview area (keep current Team, Director's Message, Why Us):
-- Overview blurb
-- Our Vision
-- Our Mission
-- Our Values
+6. **"Engineered to last. Delivered to plan." (Why MCC) section → white bg** (`src/routes/index.tsx`)
+   Same swap: cream → white.
 
-### /projects (new page — replaces current behaviour)
-"Completed Projects" listing. Card grid. Each card:
-- Project Type, Year, Name, Client, Location, Consultant, Project Value
-- Image when available
-Scaffold 8–10 placeholder entries; structure makes it easy to add real ones.
+7. **Trusted By marquee → black text** (component used on index)
+   Keep current background. Change logo/text color from light to black so it reads on the (now lighter) surrounding sections.
 
-### /clients (new page)
-- Grid of client logos (placeholder tiles for now).
-- Filter chips to segregate by business type (e.g. Industrial, Institutional, Hospitality, Government). Clicking a chip filters the grid.
+8. **Footer → pure black background** (`SiteFooter.tsx`)
+   Change the entire footer background from dark navy to `#000`. Adjust any token-based muted text colors only if contrast breaks.
 
-### /gallery/awards (new page)
-- Photo grid for awards & recognitions (placeholders).
-
-### /gallery/csr (new page)
-- Photo grid for CSR activities (placeholders).
-
-### /careers (new page)
-- Intro copy about culture at MCC.
-- Application form (UI only, no submission yet):
-  First Name, Last Name, Email, Phone, Address, Post Applying For, CV upload, About Yourself, Apply Now button.
-- Note placeholder: "Submissions will be emailed to hr@mcc.co.in" (wired later).
-
-### /contact (update existing)
-- Head Office and Delhi Office addresses with phone + email.
-- Keep current enquiry form (UI only). Note placeholder: "info@mcc.co.in".
-
-## Technical notes
-
-- New route files under `src/routes/`: `projects.tsx` (rewrite), `clients.tsx`, `gallery.awards.tsx`, `gallery.csr.tsx`, `careers.tsx`. About/Services/Contact edited in place.
-- `SiteHeader.tsx`: add Gallery mega-dropdown (mirror About implementation), reorder nav, update mobile menu.
-- `SiteFooter.tsx`: update link list to match new nav; fix existing hydration whitespace issue around the email link.
-- All forms are presentational (no backend). Email integration (Resend + Lovable Cloud) added in a later pass when you're ready.
-
-## Out of scope (this pass)
-- Actual email delivery for Careers/Contact forms.
-- OTP verification.
-- Real project photos, client logos, gallery images — placeholders only.
+## Out of scope
+- No content rewrites, no new sections, no route changes, no logic changes.
+- "BUILDING SINCE 2013" footer text stays as-is.
