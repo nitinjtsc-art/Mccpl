@@ -9,14 +9,14 @@ export const Route = createFileRoute("/clients")({
   head: () => ({
     meta: [
       { title: "Clients — Mittal Construction" },
-      { name: "description", content: "Industrial, institutional, commercial and government clients served by Mittal Construction." },
+      { name: "description", content: "Industrial, institutional, commercial and hospitality clients served by Mittal Construction." },
       { property: "og:title", content: "Our Clients — Mittal Construction" },
-      { property: "og:description", content: "Trusted by Greenply, Toyoda Gosei, Lucid Colloids, Surya Roshni, NBCC and more." },
+      { property: "og:description", content: "Trusted by Greenply, Toyoda Gosei, Lucid Colloids, Surya Roshni and more." },
     ],
   }),
 });
 
-type Sector = "Industrial" | "Institutional" | "Hospitality" | "Government" | "Commercial";
+type Sector = "Industrial" | "Institutional" | "Hospitality" | "Commercial";
 
 const clients: { name: string; sector: Sector }[] = [
   { name: "Greenply Industries", sector: "Industrial" },
@@ -25,9 +25,6 @@ const clients: { name: string; sector: Sector }[] = [
   { name: "Surya Roshni", sector: "Industrial" },
   { name: "R K Marble", sector: "Commercial" },
   { name: "Havells India", sector: "Industrial" },
-  { name: "NBCC India", sector: "Government" },
-  { name: "PWD Rajasthan", sector: "Government" },
-  { name: "PWD J&K", sector: "Government" },
   { name: "Govt. Degree College, Bilawar", sector: "Institutional" },
   { name: "Apollo Hospitals", sector: "Institutional" },
   { name: "Fortis Healthcare", sector: "Institutional" },
@@ -37,7 +34,7 @@ const clients: { name: string; sector: Sector }[] = [
   { name: "DLF Commercial", sector: "Commercial" },
 ];
 
-const filters: ("All" | Sector)[] = ["All", "Industrial", "Commercial", "Institutional", "Hospitality", "Government"];
+const filters: ("All" | Sector)[] = ["All", "Industrial", "Commercial", "Institutional", "Hospitality"];
 
 function ClientsPage() {
   const [active, setActive] = useState<(typeof filters)[number]>("All");
