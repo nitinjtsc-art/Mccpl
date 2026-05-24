@@ -18,6 +18,8 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as GalleryCsrRouteImport } from './routes/gallery.csr'
 import { Route as GalleryAwardsRouteImport } from './routes/gallery.awards'
+import { Route as AboutTeamRouteImport } from './routes/about_.team'
+import { Route as AboutDirectorsMessageRouteImport } from './routes/about_.directors-message'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
@@ -64,6 +66,16 @@ const GalleryAwardsRoute = GalleryAwardsRouteImport.update({
   path: '/gallery/awards',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutTeamRoute = AboutTeamRouteImport.update({
+  id: '/about_/team',
+  path: '/about/team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutDirectorsMessageRoute = AboutDirectorsMessageRouteImport.update({
+  id: '/about_/directors-message',
+  path: '/about/directors-message',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -73,6 +85,8 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
+  '/about/directors-message': typeof AboutDirectorsMessageRoute
+  '/about/team': typeof AboutTeamRoute
   '/gallery/awards': typeof GalleryAwardsRoute
   '/gallery/csr': typeof GalleryCsrRoute
 }
@@ -84,6 +98,8 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
+  '/about/directors-message': typeof AboutDirectorsMessageRoute
+  '/about/team': typeof AboutTeamRoute
   '/gallery/awards': typeof GalleryAwardsRoute
   '/gallery/csr': typeof GalleryCsrRoute
 }
@@ -96,6 +112,8 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
+  '/about_/directors-message': typeof AboutDirectorsMessageRoute
+  '/about_/team': typeof AboutTeamRoute
   '/gallery/awards': typeof GalleryAwardsRoute
   '/gallery/csr': typeof GalleryCsrRoute
 }
@@ -109,6 +127,8 @@ export interface FileRouteTypes {
     | '/contact'
     | '/projects'
     | '/services'
+    | '/about/directors-message'
+    | '/about/team'
     | '/gallery/awards'
     | '/gallery/csr'
   fileRoutesByTo: FileRoutesByTo
@@ -120,6 +140,8 @@ export interface FileRouteTypes {
     | '/contact'
     | '/projects'
     | '/services'
+    | '/about/directors-message'
+    | '/about/team'
     | '/gallery/awards'
     | '/gallery/csr'
   id:
@@ -131,6 +153,8 @@ export interface FileRouteTypes {
     | '/contact'
     | '/projects'
     | '/services'
+    | '/about_/directors-message'
+    | '/about_/team'
     | '/gallery/awards'
     | '/gallery/csr'
   fileRoutesById: FileRoutesById
@@ -143,6 +167,8 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   ProjectsRoute: typeof ProjectsRoute
   ServicesRoute: typeof ServicesRoute
+  AboutDirectorsMessageRoute: typeof AboutDirectorsMessageRoute
+  AboutTeamRoute: typeof AboutTeamRoute
   GalleryAwardsRoute: typeof GalleryAwardsRoute
   GalleryCsrRoute: typeof GalleryCsrRoute
 }
@@ -212,6 +238,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryAwardsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about_/team': {
+      id: '/about_/team'
+      path: '/about/team'
+      fullPath: '/about/team'
+      preLoaderRoute: typeof AboutTeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about_/directors-message': {
+      id: '/about_/directors-message'
+      path: '/about/directors-message'
+      fullPath: '/about/directors-message'
+      preLoaderRoute: typeof AboutDirectorsMessageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -223,6 +263,8 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   ProjectsRoute: ProjectsRoute,
   ServicesRoute: ServicesRoute,
+  AboutDirectorsMessageRoute: AboutDirectorsMessageRoute,
+  AboutTeamRoute: AboutTeamRoute,
   GalleryAwardsRoute: GalleryAwardsRoute,
   GalleryCsrRoute: GalleryCsrRoute,
 }
