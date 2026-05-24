@@ -454,7 +454,7 @@ function Home() {
                   ].map((t) => (
                     <span
                       key={t}
-                      className="text-sm font-medium uppercase tracking-[0.18em] text-foreground/40"
+                      className="text-sm font-medium uppercase tracking-[0.18em] text-foreground"
                     >
                       {t}
                       <span className="mx-12 inline-block h-1 w-1 rounded-full bg-accent" />
