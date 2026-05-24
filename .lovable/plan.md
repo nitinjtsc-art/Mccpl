@@ -1,31 +1,30 @@
-# Homepage refinements (from annotated PDF)
+# About page refinements
 
-Surgical, visual-only changes. No business logic touched.
+All changes are scoped to the About area only.
 
-1. **Main navbar row → white** (`SiteHeader.tsx`)
-   Change the main nav strip (logo + Home/About/Services/… + Get a Quote) background from the current gray to white. Top utility bar stays unchanged.
+1. **#11 — Hero heading layout**
+   "Concrete, steel, conviction." becomes two visual blocks:
+   `Concrete, steel` — then a thin horizontal divider line — then `conviction.` below.
 
-2. **Hero eyebrow → bold** (`src/routes/index.tsx`)
-   Make the eyebrow label bold on all 3 hero slides ("Industrial · Process Plant", "Industrial · Institutional", "Manufacturing" — whatever the 3 current labels are; preserving existing text).
+2. **#12 — (per annotation)** apply as marked on the PDF; visual-only tweak, no content change.
 
-3. **About mega-dropdown → rebalance 40/60** (`SiteHeader.tsx`)
-   Shorten the black left panel's width and tighten the white right panel so there is less empty space. Target proportions ~40% black / 60% white, with overall panel width reduced.
+3. **#13 — Why Us (01–04)**
+   Keep the numbered items but lay them out horizontally with a connecting line running through the numbers, so they read as a single progression.
 
-4. **Gallery mega-dropdown → narrower** (`SiteHeader.tsx`)
-   Reduce overall panel width using the same pattern as About.
+4. **#14 — (per annotation)** apply as marked; visual-only.
 
-5. **"Capabilities across the full construction lifecycle" section → white bg** (`src/routes/index.tsx`)
-   Swap the cream/beige background for white. Keep all content and cards unchanged.
+5. **#15 — Director's Message → its own page**
+   New route `/about/directors-message` with the existing content. Remove the Director's Message block from `/about` entirely.
 
-6. **"Engineered to last. Delivered to plan." (Why MCC) section → white bg** (`src/routes/index.tsx`)
-   Same swap: cream → white.
+6. **#16 — Our Team → its own page**
+   New route `/about/team` with the team content. Remove the Team block from `/about` entirely. Add both new pages to the About mega-dropdown in the header.
 
-7. **Trusted By marquee → black text** (component used on index)
-   Keep current background. Change logo/text color from light to black so it reads on the (now lighter) surrounding sections.
-
-8. **Footer → pure black background** (`SiteFooter.tsx`)
-   Change the entire footer background from dark navy to `#000`. Adjust any token-based muted text colors only if contrast breaks.
+7. **#17 — Team hierarchy (org chart)**
+   On the new `/about/team` page, render an org chart:
+   - Level 1: Rajesh Mittal (Founder)
+   - Level 2: Anil Mittal (Operations), Vikas Sharma (Projects)
+   - Level 3: Sunita Verma (QA/QC), Deepak Yadav (Safety), Priya Singh (Procurement)
 
 ## Out of scope
-- No content rewrites, no new sections, no route changes, no logic changes.
-- "BUILDING SINCE 2013" footer text stays as-is.
+- No copy rewrites beyond what's needed to move the two sections to their new pages.
+- No changes to other pages, no logic changes, no new dependencies.
