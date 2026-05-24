@@ -53,7 +53,7 @@ function ProjectsPage() {
                   </div>
                 </div>
                 <div className="md:col-span-5">
-                  <div className="mono text-[11px] uppercase tracking-[0.25em] text-accent">
+                  <div className="mono text-[15px] font-bold uppercase tracking-[0.25em] text-accent">
                     {p.category} · {p.year}
                   </div>
                   <h2 className="display mt-3 text-4xl md:text-5xl text-balance">
