@@ -1,30 +1,29 @@
-# About page refinements
+# Plan: Enlarge About Section Tiny Headings
 
-All changes are scoped to the About area only.
+## Scope
+All `.mono` uppercase section-label headings across the three About-area routes.
 
-1. **#11 — Hero heading layout**
-   "Concrete, steel, conviction." becomes two visual blocks:
-   `Concrete, steel` — then a thin horizontal divider line — then `conviction.` below.
+## What to change
+- `text-[11px]` → `text-[15px] font-bold`
+- `text-[10px]` → `text-[14px] font-bold`
 
-2. **#12 — (per annotation)** apply as marked on the PDF; visual-only tweak, no content change.
+## Files & exact lines
+1. **src/routes/about.tsx**
+   - Line 40: `Since 2013`
+   - Line 62: `The firm`
+   - Line 88: `Our Vision`
+   - Line 102: `Our Mission`
+   - Line 120: `Our Values · Why Us`
+   - Line 152: `Milestones`
 
-3. **#13 — Why Us (01–04)**
-   Keep the numbered items but lay them out horizontally with a connecting line running through the numbers, so they read as a single progression.
+2. **src/routes/about_.directors-message.tsx**
+   - Line 25: `From the desk of`
+   - Line 38: `Founder & Managing Director`
 
-4. **#14 — (per annotation)** apply as marked; visual-only.
-
-5. **#15 — Director's Message → its own page**
-   New route `/about/directors-message` with the existing content. Remove the Director's Message block from `/about` entirely.
-
-6. **#16 — Our Team → its own page**
-   New route `/about/team` with the team content. Remove the Team block from `/about` entirely. Add both new pages to the About mega-dropdown in the header.
-
-7. **#17 — Team hierarchy (org chart)**
-   On the new `/about/team` page, render an org chart:
-   - Level 1: Rajesh Mittal (Founder)
-   - Level 2: Anil Mittal (Operations), Vikas Sharma (Projects)
-   - Level 3: Sunita Verma (QA/QC), Deepak Yadav (Safety), Priya Singh (Procurement)
+3. **src/routes/about_.team.tsx**
+   - Line 45: role labels inside `Card` (e.g. `Founder & Managing Director`)
+   - Line 60: `The people`
+   - Line 76: `Leadership structure`
 
 ## Out of scope
-- No copy rewrites beyond what's needed to move the two sections to their new pages.
-- No changes to other pages, no logic changes, no new dependencies.
+- No copy changes, no layout changes, no other pages.

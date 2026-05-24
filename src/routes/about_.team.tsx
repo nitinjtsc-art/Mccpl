@@ -42,7 +42,7 @@ function Card({ m, accent = false }: { m: Member; accent?: boolean }) {
       </div>
       <div className="min-w-0">
         <div className="display truncate text-lg">{m.name}</div>
-        <div className="mono mt-1 text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+        <div className="mono mt-1 text-[14px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
           {m.role}
         </div>
       </div>
@@ -57,7 +57,7 @@ function TeamPage() {
       <section className="pt-40 pb-24 scroll-mt-32">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+            <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               The people
             </div>
             <h1 className="display text-5xl md:text-7xl">Our Team.</h1>
@@ -73,7 +73,7 @@ function TeamPage() {
       <section className="bg-card border-y border-border py-24">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <div className="mono mb-10 text-center text-[11px] uppercase tracking-[0.3em] text-accent">
+            <div className="mono mb-10 text-center text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               Leadership structure
             </div>
           </Reveal>
