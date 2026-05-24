@@ -1,7 +1,8 @@
-Increase vertical spacing in the About hero heading between "Concrete, steel," and "conviction."
+Two targeted edits on `src/routes/services.tsx`:
 
-Current: the `<h1>` uses `leading-[0.85]`, so the two lines sit almost on top of each other.
+1. **Bold + larger section labels**
+   - Change "Capabilities" (hero label) and "How we work" (process label) from `text-[11px]` to `text-[15px]` and add `font-bold`.
 
-Fix: change the `<span>` wrapping "conviction." to a block element with a top margin (e.g. `block mt-6` or `mt-8`) while keeping the first line tight. This pushes the second line down without widening spacing inside either line.
-
-Single-file change: `src/routes/about.tsx` — lines 43–47.
+2. **Remove "Service · 0X" verbiage from grid cards**
+   - Delete the `<div>` that renders `Service · 0{i + 1}` inside each service card.
+   - The grid sections, icons, titles and descriptions remain untouched.

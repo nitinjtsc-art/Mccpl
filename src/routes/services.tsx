@@ -39,7 +39,7 @@ function ServicesPage() {
       <SiteHeader />
       <section className="bg-background pt-40 pb-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
+          <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Capabilities
           </div>
           <h1 className="display text-[clamp(3.5rem,11vw,10rem)] leading-[0.85] text-balance">
@@ -58,9 +58,6 @@ function ServicesPage() {
             <Reveal key={s.t} delay={i * 0.05}>
               <div className="group relative border-b border-r border-border p-10 transition-colors hover:bg-primary hover:text-primary-foreground">
                 <s.i size={36} strokeWidth={1.25} className="text-accent" />
-                <div className="mono mt-8 text-[10px] uppercase tracking-[0.25em] text-muted-foreground group-hover:text-accent">
-                  Service · 0{i + 1}
-                </div>
                 <h3 className="display mt-2 text-3xl">{s.t}</h3>
                 <p className="mt-4 text-sm leading-relaxed opacity-80">{s.d}</p>
               </div>
@@ -72,7 +69,7 @@ function ServicesPage() {
       <section className="py-32">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+            <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               How we work
             </div>
             <h2 className="display text-5xl md:text-7xl text-balance">
