@@ -31,6 +31,10 @@ export function SiteHeader() {
   const [galleryOpen, setGalleryOpen] = useState(false);
   const aboutTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const galleryTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isAwards = useRouterState({ select: (s) => s.location.pathname === "/gallery/awards" });
+  const ctaClass = isAwards
+    ? "bg-accent text-accent-foreground hover:bg-accent/90"
+    : "bg-brand text-brand-foreground hover:bg-ink";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
