@@ -183,7 +183,7 @@ export function SiteHeader() {
 
           <Link
             to="/contact"
-            className="hidden items-center gap-2 bg-brand px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-foreground transition-colors hover:bg-ink md:inline-flex"
+            className={`hidden items-center gap-2 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] transition-colors md:inline-flex ${ctaClass}`}
           >
             Get a Quote
           </Link>
