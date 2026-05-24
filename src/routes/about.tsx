@@ -42,7 +42,7 @@ function AboutPage() {
           </div>
           <h1 className="display text-[clamp(3rem,8vw,7rem)] leading-[0.85] text-balance">
             Concrete, steel,
-            <span className="my-4 block h-px w-24 bg-accent" aria-hidden="true" />
+            <br />
             <span className="text-accent">conviction.</span>
           </h1>
         </div>
@@ -82,7 +82,7 @@ function AboutPage() {
         </div>
 
         {/* Vision / Mission */}
-        <div className="mx-auto mt-24 grid max-w-7xl gap-px bg-border px-6 md:grid-cols-2 md:px-0">
+        <div className="mx-auto mt-24 grid max-w-7xl px-6 md:grid-cols-2 md:px-0">
           <Reveal>
             <div className="bg-background p-10 md:p-16">
               <div className="mono mb-4 text-[14px] font-bold uppercase tracking-[0.25em] text-accent">
@@ -154,13 +154,17 @@ function AboutPage() {
             </div>
             <h2 className="display text-5xl md:text-7xl">Timeline.</h2>
           </Reveal>
-          <ol className="mt-16 border-l-2 border-accent">
+          <ol className="relative mt-16 grid grid-cols-1 gap-12 md:grid-cols-5 md:gap-6">
+            <div
+              className="pointer-events-none absolute left-0 right-0 top-2 hidden h-px bg-accent md:block"
+              aria-hidden="true"
+            />
             {timeline.map(([y, t], i) => (
               <Reveal key={y} delay={i * 0.05}>
-                <li className="relative pl-10 pb-12">
-                  <span className="absolute -left-[9px] top-2 h-4 w-4 bg-accent" />
-                  <div className="display text-4xl">{y}</div>
-                  <p className="mt-2 max-w-2xl text-foreground/70">{t}</p>
+                <li className="relative md:pt-8">
+                  <span className="absolute left-0 top-0 h-4 w-4 bg-accent md:left-0 md:-top-[7px]" />
+                  <div className="display mt-6 text-4xl md:mt-0">{y}</div>
+                  <p className="mt-2 text-foreground/70">{t}</p>
                 </li>
               </Reveal>
             ))}
