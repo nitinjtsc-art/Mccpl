@@ -52,11 +52,11 @@ function ServicesPage() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-card">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <section className="border-y border-border bg-border">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.t} delay={i * 0.05}>
-              <div className="group relative border-b border-r border-border p-10 transition-colors hover:bg-primary hover:text-primary-foreground">
+              <div className="group relative h-full bg-card p-10 transition-colors hover:bg-primary hover:text-primary-foreground">
                 <s.i size={36} strokeWidth={1.25} className="text-accent" />
                 <h3 className="display mt-2 text-3xl">{s.t}</h3>
                 <p className="mt-4 text-sm leading-relaxed opacity-80">{s.d}</p>
