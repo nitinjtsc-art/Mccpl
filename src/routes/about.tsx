@@ -37,7 +37,7 @@ function AboutPage() {
       <SiteHeader />
       <section id="overview" className="relative grid min-h-[80vh] grid-cols-1 md:grid-cols-2 scroll-mt-32">
         <div className="flex flex-col justify-end bg-background px-6 py-24 md:px-16 md:pt-40">
-          <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
+          <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Since 2013
           </div>
           <h1 className="display text-[clamp(3rem,8vw,7rem)] leading-[0.85] text-balance">
@@ -59,7 +59,7 @@ function AboutPage() {
       <section id="story" className="py-32 scroll-mt-32">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12">
           <Reveal className="md:col-span-5">
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+            <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               The firm
             </div>
             <h2 className="display text-5xl md:text-6xl">
@@ -85,7 +85,7 @@ function AboutPage() {
         <div className="mx-auto mt-24 grid max-w-7xl gap-px bg-border px-6 md:grid-cols-2 md:px-0">
           <Reveal>
             <div className="bg-background p-10 md:p-16">
-              <div className="mono mb-4 text-[10px] uppercase tracking-[0.25em] text-accent">
+              <div className="mono mb-4 text-[14px] font-bold uppercase tracking-[0.25em] text-accent">
                 Our Vision
               </div>
               <h3 className="display text-3xl md:text-4xl">
@@ -99,7 +99,7 @@ function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="bg-background p-10 md:p-16">
-              <div className="mono mb-4 text-[10px] uppercase tracking-[0.25em] text-accent">
+              <div className="mono mb-4 text-[14px] font-bold uppercase tracking-[0.25em] text-accent">
                 Our Mission
               </div>
               <h3 className="display text-3xl md:text-4xl">
@@ -117,7 +117,7 @@ function AboutPage() {
       <section id="values" className="bg-card border-y border-border py-24 scroll-mt-32">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+            <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               Our Values · Why Us
             </div>
             <h2 className="display text-5xl md:text-6xl text-balance">
@@ -149,7 +149,7 @@ function AboutPage() {
       <section id="timeline" className="py-32 scroll-mt-32">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+            <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               Milestones
             </div>
             <h2 className="display text-5xl md:text-7xl">Timeline.</h2>

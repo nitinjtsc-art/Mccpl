@@ -22,7 +22,7 @@ function DirectorsMessagePage() {
       <section className="bg-ink text-primary-foreground pt-40 scroll-mt-32">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 py-32 md:grid-cols-12">
           <Reveal className="md:col-span-4">
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+            <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               From the desk of
             </div>
             <h1 className="display text-5xl md:text-6xl leading-[0.9]">
@@ -35,7 +35,7 @@ function DirectorsMessagePage() {
               </div>
               <div>
                 <div className="text-base font-semibold">Rajesh Mittal</div>
-                <div className="mono text-[11px] uppercase tracking-[0.2em] text-primary-foreground/60">
+                <div className="mono text-[15px] font-bold uppercase tracking-[0.2em] text-primary-foreground/60">
                   Founder &amp; Managing Director
                 </div>
               </div>
