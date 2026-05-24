@@ -280,7 +280,7 @@ function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-sand py-24 md:py-32">
+      <section className="bg-background py-24 md:py-32">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal className="md:col-span-7">
