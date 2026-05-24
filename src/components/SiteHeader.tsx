@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import mccLogo from "@/assets/mcc-logo.jpeg";
