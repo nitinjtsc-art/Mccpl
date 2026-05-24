@@ -1,29 +1,13 @@
-# Plan: Enlarge About Section Tiny Headings
+# About page: 3 tweaks
 
-## Scope
-All `.mono` uppercase section-label headings across the three About-area routes.
+1. **Hero heading** — remove the thin orange horizontal line between "steel," and "conviction." so the heading reads as a single stacked phrase again.
 
-## What to change
-- `text-[11px]` → `text-[15px] font-bold`
-- `text-[10px]` → `text-[14px] font-bold`
+2. **Vision / Mission divider** — remove the gray line that currently sits between the two cards (caused by the `gap-px bg-border` divider trick). The two cards will sit flush with no gray strip.
 
-## Files & exact lines
-1. **src/routes/about.tsx**
-   - Line 40: `Since 2013`
-   - Line 62: `The firm`
-   - Line 88: `Our Vision`
-   - Line 102: `Our Mission`
-   - Line 120: `Our Values · Why Us`
-   - Line 152: `Milestones`
-
-2. **src/routes/about_.directors-message.tsx**
-   - Line 25: `From the desk of`
-   - Line 38: `Founder & Managing Director`
-
-3. **src/routes/about_.team.tsx**
-   - Line 45: role labels inside `Card` (e.g. `Founder & Managing Director`)
-   - Line 60: `The people`
-   - Line 76: `Leadership structure`
+3. **Milestones timeline → horizontal**
+   - Replace the vertical left-bordered `<ol>` with a horizontal layout: 5 evenly-spaced milestones in a row.
+   - A single horizontal accent line runs through square markers; each item shows the year (display font) above and the short description below.
+   - Stacks back to vertical on mobile.
 
 ## Out of scope
-- No copy changes, no layout changes, no other pages.
+No copy changes, no other pages, no logic changes.
