@@ -1,11 +1,16 @@
 ## Plan
 
-Apply the same eyebrow-label treatment used previously (bold + font size up 4px, from `text-[11px]` → `text-[15px]`) to three pages, matching the pattern of the attached PDFs:
+Three small, targeted UI fixes:
 
-1. **`src/routes/gallery.awards.tsx`** line 31 — eyebrow `Gallery · Awards & Recognitions`: add `font-bold`, change `text-[11px]` → `text-[15px]`.
-2. **`src/routes/careers.tsx`** line 29 — eyebrow `CAREERS` (marked **BOLD** in careers.pdf): same change.
-3. **`src/routes/contact.tsx`** line 27 — eyebrow `LET'S TALK` (per Contact_us.pdf): same change.
+### 1. Careers — Full-width intro paragraph
+**File:** `src/routes/careers.tsx`
+- Remove `max-w-2xl` from the paragraph on line 35 so the text spans the full container width.
 
-The second eyebrow in careers.tsx (line 65, the `APPLY` section) is left untouched unless requested.
+### 2. Careers — Bring "Browse" closer to the CV/Resume field
+**File:** `src/routes/careers.tsx`
+- The CV/Resume upload label uses `justify-between` (line 106), pushing "Browse" to the far right.
+- Change to `justify-start gap-4` so "Browse" sits right next to the filename/upload text.
 
-No other changes.
+### 3. Contact — Bold office headings
+**File:** `src/routes/contact.tsx`
+- Add `font-bold` to the "Head Office — Bhiwadi" label (line 40) and the "Delhi Office" label (line 60).

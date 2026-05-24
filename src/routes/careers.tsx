@@ -32,7 +32,7 @@ function CareersPage() {
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
             Build your<br />career on site.
           </h1>
-          <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
+          <p className="mt-8 text-lg text-muted-foreground">
             We hire engineers, supervisors and project managers who want a
             long-term seat in a firm that self-performs the core scope. Our
             culture is direct, accountable, and built around delivery — on
@@ -103,7 +103,7 @@ function CareersPage() {
                   <label className="mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
                     CV / Resume
                   </label>
-                  <label className="mt-2 flex cursor-pointer items-center justify-between border-2 border-dashed border-border px-4 py-4 transition-colors hover:border-accent">
+                  <label className="mt-2 flex cursor-pointer items-center justify-start gap-4 border-2 border-dashed border-border px-4 py-4 transition-colors hover:border-accent">
                     <span className="flex items-center gap-3 text-sm">
                       <Upload size={16} className="text-accent" />
                       {fileName ?? "Upload your CV (PDF, DOC)"}

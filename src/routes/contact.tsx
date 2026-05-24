@@ -37,7 +37,7 @@ function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12">
           <Reveal className="md:col-span-5 space-y-8">
             <div>
-              <div className="mono mb-3 text-[10px] uppercase tracking-[0.25em] text-accent">
+              <div className="mono mb-3 text-[10px] font-bold uppercase tracking-[0.25em] text-accent">
                 Head Office — Bhiwadi
               </div>
               <div className="space-y-3 border-l-2 border-accent pl-6">
@@ -57,7 +57,7 @@ function ContactPage() {
             </div>
 
             <div>
-              <div className="mono mb-3 text-[10px] uppercase tracking-[0.25em] text-accent">
+              <div className="mono mb-3 text-[10px] font-bold uppercase tracking-[0.25em] text-accent">
                 Delhi Office
               </div>
               <div className="space-y-3 border-l-2 border-accent pl-6">
