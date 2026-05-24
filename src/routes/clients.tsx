@@ -48,7 +48,7 @@ function ClientsPage() {
       <SiteHeader />
       <section className="bg-background pt-40 pb-16">
         <div className="container-x">
-          <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
+          <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Our Clients
           </div>
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
