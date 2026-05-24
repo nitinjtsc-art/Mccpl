@@ -280,7 +280,7 @@ function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-background py-24 md:py-32">
+      <section className="bg-background pt-24 md:pt-32 pb-12 md:pb-16">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal className="md:col-span-7">
@@ -321,7 +321,7 @@ function Home() {
       </section>
 
       {/* PROJECTS */}
-      <section className="bg-background py-24 md:py-32">
+      <section className="bg-background pt-12 md:pt-16 pb-12 md:pb-16">
         <div className="container-x">
           <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <Reveal>
@@ -379,7 +379,7 @@ function Home() {
       </section>
 
       {/* WHY US */}
-      <section className="bg-background py-24 md:py-32">
+      <section className="bg-background pt-12 md:pt-16 pb-24 md:pb-32">
         <div className="container-x">
           <Reveal className="max-w-3xl">
             <div className="eyebrow mb-5">Why MCC</div>

@@ -1,16 +1,8 @@
-## Plan
+Reduce excessive vertical whitespace between three adjacent sections on the homepage by adjusting Tailwind padding classes in `src/routes/index.tsx`.
 
-Three small, targeted UI fixes:
+Changes:
+1. **SERVICES ("What we do")** — change `py-24 md:py-32` to `pt-24 md:pt-32 pb-12 md:pb-16` (keep top, halve bottom)
+2. **PROJECTS ("Selected Work")** — change `py-24 md:py-32` to `pt-12 md:pt-16 pb-12 md:pb-16` (halve both)
+3. **WHY US ("Why MCC")** — change `py-24 md:py-32` to `pt-12 md:pt-16 pb-24 md:pb-32` (halve top, keep bottom)
 
-### 1. Careers — Full-width intro paragraph
-**File:** `src/routes/careers.tsx`
-- Remove `max-w-2xl` from the paragraph on line 35 so the text spans the full container width.
-
-### 2. Careers — Bring "Browse" closer to the CV/Resume field
-**File:** `src/routes/careers.tsx`
-- The CV/Resume upload label uses `justify-between` (line 106), pushing "Browse" to the far right.
-- Change to `justify-start gap-4` so "Browse" sits right next to the filename/upload text.
-
-### 3. Contact — Bold office headings
-**File:** `src/routes/contact.tsx`
-- Add `font-bold` to the "Head Office — Bhiwadi" label (line 40) and the "Delhi Office" label (line 60).
+This preserves breathing room within each section while cutting the dead space between them by roughly half.
