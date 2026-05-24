@@ -6,9 +6,9 @@ import mccLogo from "@/assets/mcc-logo.jpeg";
 type DropItem = { to: string; hash?: string; label: string; desc: string };
 
 const aboutMenu: DropItem[] = [
-  { to: "/about", hash: "overview", label: "Overview", desc: "Who we are and what we stand for." },
-  { to: "/about", hash: "team", label: "Our Team", desc: "The people behind every project." },
-  { to: "/about", hash: "directors-message", label: "Director's Message", desc: "A note from our founding director." },
+  { to: "/about", label: "Overview", desc: "Who we are and what we stand for." },
+  { to: "/about/team", label: "Our Team", desc: "The people behind every project." },
+  { to: "/about/directors-message", label: "Director's Message", desc: "A note from our founding director." },
 ];
 
 const galleryMenu: DropItem[] = [
