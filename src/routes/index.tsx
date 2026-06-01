@@ -291,13 +291,13 @@ function Home() {
             <Reveal className="md:col-span-7">
               <div className="eyebrow mb-5">What we do</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
-                Capabilities across the full <span className="text-brand">construction lifecycle.</span>
+                One partner for your complete <span className="text-brand">construction journey.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1} className="md:col-span-5">
               <p className="text-foreground/70">
-                From foundation pit to ribbon cutting — civil, structural, finishes and
-                MEP coordination handled in-house, supervised by a senior project team.
+                From groundbreaking ceremony to ribbon cutting — we manage every stage of
+                your project with the same commitment and care.
               </p>
             </Reveal>
           </div>
