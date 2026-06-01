@@ -12,6 +12,11 @@ import {
   Award,
   Users,
   CheckCircle2,
+  Package,
+  Repeat,
+  Clock,
+  Wrench,
+  ClipboardCheck,
 } from "lucide-react";
 import heroImg from "@/assets/hero-construction.jpg";
 import aboutImg from "@/assets/about-team.jpg";
