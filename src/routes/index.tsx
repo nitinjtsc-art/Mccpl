@@ -152,7 +152,7 @@ function Home() {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="max-w-3xl text-primary-foreground"
             >
-              <div className="mono mb-5 text-[12px] font-bold uppercase tracking-[0.3em] text-accent">
+              <div className="mono mb-5 text-[13px] font-bold uppercase tracking-[0.32em] text-accent">
                 {heroSlides[active].eyebrow}
               </div>
               <h1 className="display text-balance text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] text-primary-foreground">
