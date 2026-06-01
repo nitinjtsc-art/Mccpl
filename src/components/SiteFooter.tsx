@@ -43,8 +43,10 @@ export function SiteFooter() {
           </div>
           <ul className="space-y-3 text-sm text-primary-foreground/80">
             <li>Industrial</li>
+            <li>Warehousing</li>
             <li>Commercial</li>
-            <li>Institutional &amp; Hospitality</li>
+            <li>Institutional</li>
+            <li>Hospitality</li>
             <li>Residential</li>
             <li>MEP &amp; Finishing</li>
             <li>Renovation &amp; Retrofitting</li>
