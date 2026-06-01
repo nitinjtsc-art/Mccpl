@@ -302,15 +302,15 @@ function Dropdown({
         {...handlers}
       >
         <div className="overflow-hidden border border-border bg-background shadow-soft">
-          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr]">
-            <div className="relative hidden bg-ink p-6 text-primary-foreground md:block">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr]">
+            <div className="relative hidden bg-ink p-5 text-primary-foreground md:block">
               <div className="mono text-[10px] uppercase tracking-[0.28em] text-accent">{teaserEyebrow}</div>
-              <h3 className="display mt-3 text-2xl leading-[1]">{teaserTitle}</h3>
+              <h3 className="display mt-3 text-xl leading-[1.05]">{teaserTitle}</h3>
               <p className="mt-3 text-xs text-primary-foreground/70">{teaserText}</p>
               <Link
                 to={teaserCtaTo}
                 onClick={() => setIsOpen(false)}
-                className="mono mt-6 inline-flex items-center gap-2 border-b border-accent pb-1 text-[10px] uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all"
+                className="mono mt-5 inline-flex items-center gap-2 border-b border-accent pb-1 text-[10px] uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all"
               >
                 {teaserCta} →
               </Link>
