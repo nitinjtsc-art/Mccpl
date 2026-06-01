@@ -12,8 +12,8 @@ export function SiteFooter() {
           </div>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-primary-foreground/70">
             Mittal Construction Company is a multi-disciplinary construction firm
-            delivering industrial, institutional and commercial projects across
-            North India since 2013.
+            delivering industrial, commercial, institutional, hospitality and
+            residential projects across India since 1997.
           </p>
           <Link
             to="/contact"
