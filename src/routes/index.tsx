@@ -62,49 +62,54 @@ const heroSlides = [
 
 const services = [
   {
-    icon: Factory,
-    title: "Industrial Construction",
-    desc: "Factories, process plants and warehouses delivered turnkey — civil, structural and MEP under one accountability.",
-  },
-  {
-    icon: Building2,
-    title: "Commercial Buildings",
-    desc: "Showrooms, offices and mixed-use shells engineered for brand-grade finish and long service life.",
+    icon: Ruler,
+    title: "Engineering & Design",
+    desc: "The foundation of every good project is a good plan.",
   },
   {
     icon: HardHat,
-    title: "Institutional Works",
-    desc: "Colleges, hospitals and government buildings executed to NBCC and consultant specifications.",
+    title: "Construction & Project Execution",
+    desc: "Experienced teams delivering on every commitment.",
   },
   {
-    icon: Ruler,
-    title: "Civil, RCC & MEP",
-    desc: "Earthworks, foundations, structural steel, finishes and full MEP coordination — self-performed.",
+    icon: Factory,
+    title: "Turnkey Project Delivery",
+    desc: "You share your vision, we handle everything else.",
+  },
+  {
+    icon: Building2,
+    title: "Retrofit & Renovation",
+    desc: "Old building, new potential — we make it happen.",
+  },
+  {
+    icon: Package,
+    title: "Procurement",
+    desc: "Sourcing the right materials, at the right price.",
   },
 ];
 
 const stats = [
-  { v: "11+", l: "Years in Business" },
-  { v: "50+", l: "Projects Delivered" },
-  { v: "₹500M+", l: "Cumulative Value" },
-  { v: "4", l: "States Served" },
+  { v: "28+", l: "Years in Business" },
+  { v: "100+", l: "Projects Delivered" },
+  { v: "₹1000 Cr+", l: "Cumulative Value" },
+  { v: "13", l: "States Served" },
 ];
 
 const whyUs = [
   {
-    icon: ShieldCheck,
-    t: "Engineered for safety",
-    d: "Site safety embedded into every method statement. Zero lost-time incidents on recent projects.",
-  },
-  {
-    icon: Award,
-    t: "Consultant-grade quality",
-    d: "Delivered to specifications of Mott MacDonald, Artscan, Gian P. Mathur and NBCC.",
-  },
-  {
     icon: Users,
-    t: "Self-performed crews",
-    d: "Direct workforce for civil, RCC, steel and finishes — no quality dilution through layered subcontracting.",
+    t: "Proven Client List",
+    d: "From multinationals to government institutions — India's most demanding clients trust MCC with their projects.",
+  },
+  {
+    icon: Repeat,
+    t: "Repeat Business",
+    d: "We earn the next project by delivering the first one right.",
+  },
+  {
+    icon: Clock,
+    t: "On-time Delivery",
+    d: "Behind every deadline is a business waiting to start. We make sure they never wait.",
   },
 ];
 
