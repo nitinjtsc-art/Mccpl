@@ -302,7 +302,7 @@ function Home() {
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.08}>
                 <div className="group relative h-full bg-background p-8 transition-colors hover:bg-brand hover:text-brand-foreground">
