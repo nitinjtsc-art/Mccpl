@@ -60,14 +60,17 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       {/* Top utility bar */}
-      <div className="hidden bg-ink text-primary-foreground/80 md:block">
+      <div className="hidden bg-ink text-primary-foreground md:block">
         <div className="container-x flex h-9 items-center justify-between text-[11px] tracking-wide">
-          <span className="mono uppercase tracking-[0.18em] text-primary-foreground/60">
-            Mittal Construction Company · Est. 2013 · Bhiwadi, Rajasthan
+          <span className="mono uppercase tracking-[0.18em] text-primary-foreground">
+            Mittal Construction Company · Est. 1997 · Delhi-NCR
           </span>
-          <div className="flex items-center gap-6">
-            <a href="tel:+919876543210" className="inline-flex items-center gap-2 hover:text-accent">
-              <Phone size={11} /> +91 98765 43210
+          <div className="flex items-center gap-5">
+            <a href="tel:+919887010003" className="inline-flex items-center gap-2 hover:text-accent">
+              <Phone size={11} /> +91 98870 10003 <span className="text-primary-foreground/60">(Bhiwadi)</span>
+            </a>
+            <a href="tel:+911141653030" className="inline-flex items-center gap-2 hover:text-accent">
+              <Phone size={11} /> +91 11 41653030 <span className="text-primary-foreground/60">(Delhi)</span>
             </a>
             <a href="mailto:info@mcc.co.in" className="hover:text-accent">
               info@mcc.co.in
