@@ -217,7 +217,7 @@ function Home() {
                 className="aspect-[4/5] w-full object-cover"
               />
               <div className="absolute -bottom-px -right-px bg-accent px-7 py-6 text-accent-foreground">
-                <div className="display text-5xl font-semibold leading-none">11+</div>
+                <div className="display text-5xl font-semibold leading-none">28+</div>
                 <div className="mono mt-2 text-[10px] uppercase tracking-[0.2em]">
                   Years of Excellence
                 </div>
@@ -229,33 +229,32 @@ function Home() {
               <div className="eyebrow mb-5">About MCC</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
                 A construction partner built on{" "}
-                <span className="text-brand">trust, precision and delivery.</span>
+                <span className="text-brand">experience, trust and delivery.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
-                Founded in 2013 in Bhiwadi, Rajasthan, Mittal Construction Company has
-                grown into a multi-disciplinary contractor delivering industrial plants,
-                institutional buildings and commercial structures across Rajasthan,
-                Haryana, Uttar Pradesh and Jammu & Kashmir.
+                Founded in 1997 by Mr. Rajendra Mittal, MCC has spent nearly three decades
+                doing one thing well — building. From large industrial plants and warehouses
+                to institutional campuses and hospitality projects, we have earned the trust
+                of some of India's most demanding clients.
               </p>
               <p className="mt-5 max-w-2xl text-foreground/65">
-                We self-perform earthworks, RCC, structural steel, masonry and finishes —
-                while coordinating MEP services in close collaboration with leading
-                consultants. One contractor, one accountability line, one promise:
-                delivered as designed, on schedule.
+                We manage the full construction lifecycle — engineering, procurement,
+                execution and handover — with a focus on quality, safety and on-time
+                delivery.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {[
-                  "Self-performed civil & RCC",
-                  "Consultant-led quality",
-                  "Industrial-grade safety",
-                  "On-time hand-over record",
+                  "Trusted by leading Indian & multinational corporations",
+                  "Long-standing relationships with clients and consultants",
+                  "End-to-end project delivery under one roof",
+                  "A track record built on timely, quality delivery",
                 ].map((t) => (
-                  <li key={t} className="flex items-center gap-3 text-sm">
-                    <CheckCircle2 size={18} className="text-accent" />
+                  <li key={t} className="flex items-start gap-3 text-sm">
+                    <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent" />
                     {t}
                   </li>
                 ))}
