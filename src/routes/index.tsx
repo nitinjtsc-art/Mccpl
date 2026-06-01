@@ -8,10 +8,11 @@ import {
   Factory,
   HardHat,
   Ruler,
-  ShieldCheck,
-  Award,
   Users,
   CheckCircle2,
+  Package,
+  Repeat,
+  Clock,
 } from "lucide-react";
 import heroImg from "@/assets/hero-construction.jpg";
 import aboutImg from "@/assets/about-team.jpg";
@@ -28,7 +29,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Multi-disciplinary construction firm delivering industrial, institutional and commercial projects across North India since 2013. ₹500M+ delivered.",
+          "Multi-disciplinary construction firm delivering industrial, commercial, institutional, hospitality and residential projects across India since 1997. ₹1000 Cr+ delivered.",
       },
     ],
   }),
@@ -57,49 +58,54 @@ const heroSlides = [
 
 const services = [
   {
-    icon: Factory,
-    title: "Industrial Construction",
-    desc: "Factories, process plants and warehouses delivered turnkey — civil, structural and MEP under one accountability.",
-  },
-  {
-    icon: Building2,
-    title: "Commercial Buildings",
-    desc: "Showrooms, offices and mixed-use shells engineered for brand-grade finish and long service life.",
+    icon: Ruler,
+    title: "Engineering & Design",
+    desc: "The foundation of every good project is a good plan.",
   },
   {
     icon: HardHat,
-    title: "Institutional Works",
-    desc: "Colleges, hospitals and government buildings executed to NBCC and consultant specifications.",
+    title: "Construction & Project Execution",
+    desc: "Experienced teams delivering on every commitment.",
   },
   {
-    icon: Ruler,
-    title: "Civil, RCC & MEP",
-    desc: "Earthworks, foundations, structural steel, finishes and full MEP coordination — self-performed.",
+    icon: Factory,
+    title: "Turnkey Project Delivery",
+    desc: "You share your vision, we handle everything else.",
+  },
+  {
+    icon: Building2,
+    title: "Retrofit & Renovation",
+    desc: "Old building, new potential — we make it happen.",
+  },
+  {
+    icon: Package,
+    title: "Procurement",
+    desc: "Sourcing the right materials, at the right price.",
   },
 ];
 
 const stats = [
-  { v: "11+", l: "Years in Business" },
-  { v: "50+", l: "Projects Delivered" },
-  { v: "₹500M+", l: "Cumulative Value" },
-  { v: "4", l: "States Served" },
+  { v: "28+", l: "Years in Business" },
+  { v: "100+", l: "Projects Delivered" },
+  { v: "₹1000 Cr+", l: "Cumulative Value" },
+  { v: "13", l: "States Served" },
 ];
 
 const whyUs = [
   {
-    icon: ShieldCheck,
-    t: "Engineered for safety",
-    d: "Site safety embedded into every method statement. Zero lost-time incidents on recent projects.",
-  },
-  {
-    icon: Award,
-    t: "Consultant-grade quality",
-    d: "Delivered to specifications of Mott MacDonald, Artscan, Gian P. Mathur and NBCC.",
-  },
-  {
     icon: Users,
-    t: "Self-performed crews",
-    d: "Direct workforce for civil, RCC, steel and finishes — no quality dilution through layered subcontracting.",
+    t: "Proven Client List",
+    d: "From multinationals to government institutions — India's most demanding clients trust MCC with their projects.",
+  },
+  {
+    icon: Repeat,
+    t: "Repeat Business",
+    d: "We earn the next project by delivering the first one right.",
+  },
+  {
+    icon: Clock,
+    t: "On-time Delivery",
+    d: "Behind every deadline is a business waiting to start. We make sure they never wait.",
   },
 ];
 
@@ -146,7 +152,7 @@ function Home() {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="max-w-3xl text-primary-foreground"
             >
-              <div className="mono mb-5 text-[12px] font-bold uppercase tracking-[0.3em] text-accent">
+              <div className="mono mb-5 text-[13px] font-bold uppercase tracking-[0.32em] text-accent">
                 {heroSlides[active].eyebrow}
               </div>
               <h1 className="display text-balance text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] text-primary-foreground">
@@ -211,7 +217,7 @@ function Home() {
                 className="aspect-[4/5] w-full object-cover"
               />
               <div className="absolute -bottom-px -right-px bg-accent px-7 py-6 text-accent-foreground">
-                <div className="display text-5xl font-semibold leading-none">11+</div>
+                <div className="display text-5xl font-semibold leading-none">28+</div>
                 <div className="mono mt-2 text-[10px] uppercase tracking-[0.2em]">
                   Years of Excellence
                 </div>
@@ -223,33 +229,32 @@ function Home() {
               <div className="eyebrow mb-5">About MCC</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
                 A construction partner built on{" "}
-                <span className="text-brand">trust, precision and delivery.</span>
+                <span className="text-brand">experience, trust and delivery.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
-                Founded in 2013 in Bhiwadi, Rajasthan, Mittal Construction Company has
-                grown into a multi-disciplinary contractor delivering industrial plants,
-                institutional buildings and commercial structures across Rajasthan,
-                Haryana, Uttar Pradesh and Jammu & Kashmir.
+                Founded in 1997 by Mr. Rajendra Mittal, MCC has spent nearly three decades
+                doing one thing well — building. From large industrial plants and warehouses
+                to institutional campuses and hospitality projects, we have earned the trust
+                of some of India's most demanding clients.
               </p>
               <p className="mt-5 max-w-2xl text-foreground/65">
-                We self-perform earthworks, RCC, structural steel, masonry and finishes —
-                while coordinating MEP services in close collaboration with leading
-                consultants. One contractor, one accountability line, one promise:
-                delivered as designed, on schedule.
+                We manage the full construction lifecycle — engineering, procurement,
+                execution and handover — with a focus on quality, safety and on-time
+                delivery.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {[
-                  "Self-performed civil & RCC",
-                  "Consultant-led quality",
-                  "Industrial-grade safety",
-                  "On-time hand-over record",
+                  "Trusted by leading Indian & multinational corporations",
+                  "Long-standing relationships with clients and consultants",
+                  "End-to-end project delivery under one roof",
+                  "A track record built on timely, quality delivery",
                 ].map((t) => (
-                  <li key={t} className="flex items-center gap-3 text-sm">
-                    <CheckCircle2 size={18} className="text-accent" />
+                  <li key={t} className="flex items-start gap-3 text-sm">
+                    <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent" />
                     {t}
                   </li>
                 ))}
@@ -271,7 +276,7 @@ function Home() {
           {stats.map((s, i) => (
             <Reveal key={s.l} delay={i * 0.08} className="px-2 py-12 md:px-8 md:py-16">
               <div className="display text-5xl font-semibold md:text-6xl">{s.v}</div>
-              <div className="mono mt-4 text-[10px] uppercase tracking-[0.22em] text-primary-foreground/65">
+              <div className="mono mt-4 text-[10px] uppercase tracking-[0.22em] text-primary-foreground">
                 {s.l}
               </div>
             </Reveal>
@@ -286,18 +291,18 @@ function Home() {
             <Reveal className="md:col-span-7">
               <div className="eyebrow mb-5">What we do</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
-                Capabilities across the full <span className="text-brand">construction lifecycle.</span>
+                One partner for your complete <span className="text-brand">construction journey.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1} className="md:col-span-5">
               <p className="text-foreground/70">
-                From foundation pit to ribbon cutting — civil, structural, finishes and
-                MEP coordination handled in-house, supervised by a senior project team.
+                From groundbreaking ceremony to ribbon cutting — we manage every stage of
+                your project with the same commitment and care.
               </p>
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.08}>
                 <div className="group relative h-full bg-background p-8 transition-colors hover:bg-brand hover:text-brand-foreground">
@@ -381,12 +386,21 @@ function Home() {
       {/* WHY US */}
       <section className="bg-background pt-12 md:pt-16 pb-24 md:pb-32">
         <div className="container-x">
-          <Reveal className="max-w-3xl">
-            <div className="eyebrow mb-5">Why MCC</div>
-            <h2 className="display text-balance text-4xl md:text-6xl">
-              Engineered to last. <span className="text-brand">Delivered to plan.</span>
-            </h2>
-          </Reveal>
+          <div className="grid gap-10 md:grid-cols-12 md:items-end">
+            <Reveal className="md:col-span-7">
+              <div className="eyebrow mb-5">Why MCC</div>
+              <h2 className="display text-balance text-4xl md:text-6xl">
+                We don't just build structures, <span className="text-brand">we build relationships.</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1} className="md:col-span-5">
+              <p className="text-foreground/70">
+                With nearly three decades of experience, MCC has built a reputation that
+                speaks for itself — trusted by some of India's leading corporations and
+                institutions, project after project.
+              </p>
+            </Reveal>
+          </div>
 
           <div className="mt-16 grid gap-10 md:grid-cols-3">
             {whyUs.map((w, i) => (
@@ -414,9 +428,9 @@ function Home() {
             <h2 className="display text-balance text-4xl md:text-6xl">
               Have a project on the <span className="text-accent">drawing board?</span>
             </h2>
-            <p className="mt-6 max-w-xl text-primary-foreground/70">
-              Share your scope, drawings and timeline. We will revert with a detailed
-              proposal and a credible execution schedule.
+            <p className="mt-6 max-w-xl text-primary-foreground/90">
+              Share your scope, drawings and timeline. We will get back to you with a
+              detailed proposal and a clear execution schedule.
             </p>
           </Reveal>
           <Reveal delay={0.1} className="md:col-span-4 md:justify-self-end">

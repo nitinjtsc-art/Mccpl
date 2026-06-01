@@ -12,8 +12,8 @@ export function SiteFooter() {
           </div>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-primary-foreground/70">
             Mittal Construction Company is a multi-disciplinary construction firm
-            delivering industrial, institutional and commercial projects across
-            North India since 2013.
+            delivering industrial, commercial, institutional, hospitality and
+            residential projects across India since 1997.
           </p>
           <Link
             to="/contact"
@@ -43,8 +43,10 @@ export function SiteFooter() {
           </div>
           <ul className="space-y-3 text-sm text-primary-foreground/80">
             <li>Industrial</li>
+            <li>Warehousing</li>
             <li>Commercial</li>
-            <li>Institutional &amp; Hospitality</li>
+            <li>Institutional</li>
+            <li>Hospitality</li>
             <li>Residential</li>
             <li>MEP &amp; Finishing</li>
             <li>Renovation &amp; Retrofitting</li>
@@ -58,15 +60,29 @@ export function SiteFooter() {
           <ul className="space-y-3 text-sm text-primary-foreground/80">
             <li className="flex gap-3">
               <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-              <span>RIICO Industrial Area, Bhiwadi, Alwar, Rajasthan</span>
+              <span>
+                <span className="block text-primary-foreground/60 text-[11px] uppercase tracking-[0.18em]">Head Office</span>
+                A-168, Bhagat Singh Colony, Bhiwadi, Rajasthan - 301019
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
+              <span>
+                <span className="block text-primary-foreground/60 text-[11px] uppercase tracking-[0.18em]">Delhi Office</span>
+                L-84B, First Floor, Malviya Nagar, Delhi - 110017
+              </span>
             </li>
             <li className="flex gap-3">
               <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
-              <span>+91 98765 43210</span>
+              <a href="tel:+919887010003" className="hover:text-accent">+91 98870 10003</a>
+            </li>
+            <li className="flex gap-3">
+              <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
+              <a href="tel:+911141653030" className="hover:text-accent">+91 11 41653030</a>
             </li>
             <li className="flex gap-3">
               <Mail size={16} className="mt-0.5 shrink-0 text-accent" />
-              <span>info@mcc.co.in</span>
+              <a href="mailto:info@mcc.co.in" className="hover:text-accent">info@mcc.co.in</a>
             </li>
           </ul>
         </div>
@@ -75,7 +91,7 @@ export function SiteFooter() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-x flex flex-col items-start justify-between gap-3 py-6 text-xs text-primary-foreground/50 md:flex-row md:items-center">
           <span>© {new Date().getFullYear()} Mittal Construction Company. All rights reserved.</span>
-          <span className="mono uppercase tracking-[0.2em]">Building since 2013</span>
+          <span className="mono uppercase tracking-[0.2em]">Building since 1997</span>
         </div>
       </div>
     </footer>

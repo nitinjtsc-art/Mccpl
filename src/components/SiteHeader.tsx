@@ -60,14 +60,17 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       {/* Top utility bar */}
-      <div className="hidden bg-ink text-primary-foreground/80 md:block">
+      <div className="hidden bg-ink text-primary-foreground md:block">
         <div className="container-x flex h-9 items-center justify-between text-[11px] tracking-wide">
-          <span className="mono uppercase tracking-[0.18em] text-primary-foreground/60">
-            Mittal Construction Company · Est. 2013 · Bhiwadi, Rajasthan
+          <span className="mono uppercase tracking-[0.18em] text-primary-foreground">
+            Mittal Construction Company · Est. 1997 · Delhi-NCR
           </span>
-          <div className="flex items-center gap-6">
-            <a href="tel:+919876543210" className="inline-flex items-center gap-2 hover:text-accent">
-              <Phone size={11} /> +91 98765 43210
+          <div className="flex items-center gap-5">
+            <a href="tel:+919887010003" className="inline-flex items-center gap-2 hover:text-accent">
+              <Phone size={11} /> +91 98870 10003 <span className="text-primary-foreground/60">(Bhiwadi)</span>
+            </a>
+            <a href="tel:+911141653030" className="inline-flex items-center gap-2 hover:text-accent">
+              <Phone size={11} /> +91 11 41653030 <span className="text-primary-foreground/60">(Delhi)</span>
             </a>
             <a href="mailto:info@mcc.co.in" className="hover:text-accent">
               info@mcc.co.in
@@ -299,15 +302,15 @@ function Dropdown({
         {...handlers}
       >
         <div className="overflow-hidden border border-border bg-background shadow-soft">
-          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr]">
-            <div className="relative hidden bg-ink p-6 text-primary-foreground md:block">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr]">
+            <div className="relative hidden bg-ink p-5 text-primary-foreground md:block">
               <div className="mono text-[10px] uppercase tracking-[0.28em] text-accent">{teaserEyebrow}</div>
-              <h3 className="display mt-3 text-2xl leading-[1]">{teaserTitle}</h3>
+              <h3 className="display mt-3 text-xl leading-[1.05]">{teaserTitle}</h3>
               <p className="mt-3 text-xs text-primary-foreground/70">{teaserText}</p>
               <Link
                 to={teaserCtaTo}
                 onClick={() => setIsOpen(false)}
-                className="mono mt-6 inline-flex items-center gap-2 border-b border-accent pb-1 text-[10px] uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all"
+                className="mono mt-5 inline-flex items-center gap-2 border-b border-accent pb-1 text-[10px] uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all"
               >
                 {teaserCta} →
               </Link>
