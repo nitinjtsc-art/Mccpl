@@ -91,7 +91,7 @@ export function SiteFooter() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-x flex flex-col items-start justify-between gap-3 py-6 text-xs text-primary-foreground/50 md:flex-row md:items-center">
           <span>© {new Date().getFullYear()} Mittal Construction Company. All rights reserved.</span>
-          <span className="mono uppercase tracking-[0.2em]">Building since 2013</span>
+          <span className="mono uppercase tracking-[0.2em]">Building since 1997</span>
         </div>
       </div>
     </footer>
