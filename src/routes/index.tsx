@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Multi-disciplinary construction firm delivering industrial, institutional and commercial projects across North India since 2013. ₹500M+ delivered.",
+          "Multi-disciplinary construction firm delivering industrial, commercial, institutional, hospitality and residential projects across India since 1997. ₹1000 Cr+ delivered.",
       },
     ],
   }),
