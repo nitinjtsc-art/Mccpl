@@ -428,9 +428,9 @@ function Home() {
             <h2 className="display text-balance text-4xl md:text-6xl">
               Have a project on the <span className="text-accent">drawing board?</span>
             </h2>
-            <p className="mt-6 max-w-xl text-primary-foreground/70">
-              Share your scope, drawings and timeline. We will revert with a detailed
-              proposal and a credible execution schedule.
+            <p className="mt-6 max-w-xl text-primary-foreground/90">
+              Share your scope, drawings and timeline. We will get back to you with a
+              detailed proposal and a clear execution schedule.
             </p>
           </Reveal>
           <Reveal delay={0.1} className="md:col-span-4 md:justify-self-end">
