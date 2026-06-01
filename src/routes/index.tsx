@@ -276,7 +276,7 @@ function Home() {
           {stats.map((s, i) => (
             <Reveal key={s.l} delay={i * 0.08} className="px-2 py-12 md:px-8 md:py-16">
               <div className="display text-5xl font-semibold md:text-6xl">{s.v}</div>
-              <div className="mono mt-4 text-[10px] uppercase tracking-[0.22em] text-primary-foreground/65">
+              <div className="mono mt-4 text-[10px] uppercase tracking-[0.22em] text-primary-foreground">
                 {s.l}
               </div>
             </Reveal>
