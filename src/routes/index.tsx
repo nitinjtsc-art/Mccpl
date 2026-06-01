@@ -386,12 +386,21 @@ function Home() {
       {/* WHY US */}
       <section className="bg-background pt-12 md:pt-16 pb-24 md:pb-32">
         <div className="container-x">
-          <Reveal className="max-w-3xl">
-            <div className="eyebrow mb-5">Why MCC</div>
-            <h2 className="display text-balance text-4xl md:text-6xl">
-              Engineered to last. <span className="text-brand">Delivered to plan.</span>
-            </h2>
-          </Reveal>
+          <div className="grid gap-10 md:grid-cols-12 md:items-end">
+            <Reveal className="md:col-span-7">
+              <div className="eyebrow mb-5">Why MCC</div>
+              <h2 className="display text-balance text-4xl md:text-6xl">
+                We don't just build structures, <span className="text-brand">we build relationships.</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1} className="md:col-span-5">
+              <p className="text-foreground/70">
+                With nearly three decades of experience, MCC has built a reputation that
+                speaks for itself — trusted by some of India's leading corporations and
+                institutions, project after project.
+              </p>
+            </Reveal>
+          </div>
 
           <div className="mt-16 grid gap-10 md:grid-cols-3">
             {whyUs.map((w, i) => (
