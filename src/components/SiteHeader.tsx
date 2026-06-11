@@ -12,7 +12,7 @@ const aboutMenu: DropItem[] = [
 ];
 
 const galleryMenu: DropItem[] = [
-  { to: "/gallery/awards", label: "Awards & Recognitions", desc: "Honours, certifications, and milestones." },
+  { to: "/gallery/awards", label: "Awards & Recognitions", desc: "Honours, certifications and achievements." },
   { to: "/gallery/csr", label: "CSR", desc: "Our community and social initiatives." },
 ];
 
@@ -115,11 +115,11 @@ export function SiteHeader() {
               handlers={hoverHandlers(setAboutOpen, aboutTimer)}
               items={aboutMenu}
               teaserTitle={<>Built on <span className="text-accent">trust,</span> measured in milestones.</>}
-              teaserText="A Bhiwadi-based contractor delivering industrial and institutional projects across North India."
+              teaserText=""
               teaserCta="Explore About"
               teaserCtaTo="/about"
               eyebrow="About MCC"
-              teaserEyebrow="Since 2013"
+              teaserEyebrow="Since 1997"
             />
 
             <Link
@@ -158,7 +158,7 @@ export function SiteHeader() {
               handlers={hoverHandlers(setGalleryOpen, galleryTimer)}
               items={galleryMenu}
               teaserTitle={<>Our work, <span className="text-accent">recognised.</span></>}
-              teaserText="A look at awards earned on site, and the CSR work that goes beyond the brief."
+              teaserText=""
               teaserCta="View Gallery"
               teaserCtaTo="/gallery/awards"
               eyebrow="Gallery"
@@ -306,7 +306,7 @@ function Dropdown({
             <div className="relative hidden bg-ink p-5 text-primary-foreground md:block">
               <div className="mono text-[10px] uppercase tracking-[0.28em] text-accent">{teaserEyebrow}</div>
               <h3 className="display mt-3 text-xl leading-[1.05]">{teaserTitle}</h3>
-              <p className="mt-3 text-xs text-primary-foreground/70">{teaserText}</p>
+              {teaserText && <p className="mt-3 text-xs text-primary-foreground/70">{teaserText}</p>}
               <Link
                 to={teaserCtaTo}
                 onClick={() => setIsOpen(false)}

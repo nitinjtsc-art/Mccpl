@@ -9,22 +9,23 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Mittal Construction" },
-      { name: "description", content: "Founded in 2013, Mittal Construction is a Rajasthan-based industrial and civil contractor delivering across North India." },
+      { name: "description", content: "Founded in 1997 by Mr. Rajendra Mittal, MCC delivers industrial, institutional, hospitality and residential projects across India." },
       { property: "og:title", content: "About Mittal Construction" },
-      { property: "og:description", content: "Eleven years of industrial and civil construction across North India." },
+      { property: "og:description", content: "Nearly three decades of trusted construction across 13 states of India." },
     ],
   }),
 });
 
 const values = [
-  ["Self-Perform", "Our crews execute the core scope. Less hand-off, less risk."],
-  ["Schedule First", "Critical path managed weekly. Hand-overs on the promised date."],
-  ["Safety Standard", "Zero-harm site protocols, full PPE, daily toolbox talks."],
-  ["Compliance", "ISO procedures, statutory clearances, full QA/QC documentation."],
+  ["Quality", "Uncompromising commitment to quality that shows in everything we build."],
+  ["Trust & Reliability", "The trust our clients place in us is something we earn on every project and protect on every site."],
+  ["Safety", "We have never treated safety as a cost — we treat it as a commitment."],
+  ["Client-Centric Approach", "We measure our success not by the structures we build but by the satisfaction of the clients we build them for."],
 ];
 
+// TODO: Years and descriptions for entries 2–5 are placeholders pending client confirmation.
 const timeline = [
-  ["2013", "Mittal Construction founded in Bhiwadi, Rajasthan."],
+  ["1997", "Mittal Construction Company founded by Mr. Rajendra Mittal in Bhiwadi, Rajasthan."],
   ["2015", "First industrial contract — Greenply, Behror."],
   ["2018", "Expanded into institutional works with NBCC."],
   ["2021", "Crossed ₹100M single-project benchmark — Toyoda Gosei."],
@@ -38,7 +39,7 @@ function AboutPage() {
       <section id="overview" className="relative grid min-h-[80vh] grid-cols-1 md:grid-cols-2 scroll-mt-32">
         <div className="flex flex-col justify-end bg-background px-6 py-24 md:px-16 md:pt-40">
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
-            Since 2013
+            Since 1997
           </div>
           <h1 className="display text-[clamp(3rem,8vw,7rem)] leading-[0.85] text-balance">
             Concrete, steel,
@@ -62,20 +63,27 @@ function AboutPage() {
               The firm
             </div>
             <h2 className="display text-5xl md:text-6xl">
-              Eleven years, one trade.
+              Built to Last.
             </h2>
           </Reveal>
           <Reveal delay={0.15} className="space-y-5 md:col-span-7 text-foreground/80">
             <p className="text-lg leading-relaxed">
-              Mittal Construction is a Bhiwadi-based general contractor founded
-              in 2013. We've built plants for Greenply, Toyoda Gosei, Lucid
-              Colloids and Surya Roshni — and institutional buildings under
-              NBCC supervision in Jammu & Kashmir.
+              Founded in 1997 by Mr. Rajendra Mittal, MCC has grown from a
+              regional contractor into a trusted pan-India construction firm —
+              built on a simple belief that good construction is built on
+              trust, hard work and accountability.
             </p>
             <p>
-              We keep the office lean and the site heavy. Most of our scope is
-              self-performed by long-tenured crew supervisors, which is how we
-              keep schedule and quality predictable across geographies.
+              Over nearly three decades, we have delivered industrial plants,
+              warehouses, institutional campuses, hospitality projects and
+              residential developments across 13 states, for clients who value
+              quality, reliability and on-time delivery above everything else.
+            </p>
+            <p>
+              Today, with 100+ projects to our name, we are trusted by
+              multinational corporations, government institutions and leading
+              Indian businesses alike — for clients who demand nothing but the
+              best.
             </p>
           </Reveal>
         </div>
@@ -88,11 +96,11 @@ function AboutPage() {
                 Our Vision
               </div>
               <h3 className="display text-3xl md:text-4xl">
-                To be North India's most trusted self-performing contractor.
+                To build a legacy as strong as our structures.
               </h3>
               <p className="mt-5 text-muted-foreground">
-                Known not for the size of our bid sheet, but for the certainty
-                of the date we sign against.
+                A legacy measured in the trust we earned, the standards we
+                kept and the relationships we built along the way.
               </p>
             </div>
           </Reveal>
@@ -102,11 +110,11 @@ function AboutPage() {
                 Our Mission
               </div>
               <h3 className="display text-3xl md:text-4xl">
-                Deliver every project on the promised date, to the promised standard.
+                To hand over every project better than promised.
               </h3>
               <p className="mt-5 text-muted-foreground">
-                We do this by self-performing the core scope, employing our
-                supervisors directly, and keeping the office close to the site.
+                By putting the right professionals, the right resources and
+                the right values behind everything we build.
               </p>
             </div>
           </Reveal>
@@ -120,7 +128,7 @@ function AboutPage() {
               Our Values · Why Us
             </div>
             <h2 className="display text-5xl md:text-6xl text-balance">
-              The reasons clients<br />come back.
+              Built on the right<br />foundations.
             </h2>
           </Reveal>
         </div>

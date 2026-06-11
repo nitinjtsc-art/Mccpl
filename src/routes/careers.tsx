@@ -30,13 +30,12 @@ function CareersPage() {
             Careers
           </div>
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
-            Build your<br />career on site.
+            Great projects need<br />great people.
           </h1>
           <p className="mt-8 text-lg text-muted-foreground">
-            We hire engineers, supervisors and project managers who want a
-            long-term seat in a firm that self-performs the core scope. Our
-            culture is direct, accountable, and built around delivery — on
-            schedule, every time.
+            At MCC, we invest in our people as much as we invest in our
+            projects — offering a professional environment where you can grow,
+            learn and build a career that adds real value to your profile.
           </p>
         </div>
       </section>
@@ -44,9 +43,9 @@ function CareersPage() {
       <section className="border-y border-border bg-card py-20">
         <div className="container-x grid gap-12 md:grid-cols-3">
           {[
-            ["Direct ownership", "You own a milestone, not a ticket. Decisions happen close to the site."],
-            ["Long tenure", "Most of our supervisors have been with MCC for 5+ years."],
-            ["Build to last", "Industrial projects with measurable, photograph-able outcomes."],
+            ["Built to last", "We hire for the future, not just for today."],
+            ["Room to grow", "Your potential does not have a ceiling here — only a ladder."],
+            ["Lead from the front", "Take charge, influence outcomes, make a difference."],
           ].map(([t, d], i) => (
             <Reveal key={t} delay={i * 0.05}>
               <div>
@@ -69,9 +68,8 @@ function CareersPage() {
               Send us your application.
             </h2>
             <p className="mt-6 text-sm text-muted-foreground">
-              Your details are received by our HR team and reviewed within five
-              working days. Submissions are routed to{" "}
-              <a className="text-accent" href="mailto:hr@mcc.co.in">hr@mcc.co.in</a>.
+              We are always looking for driven professionals across all
+              functions and disciplines.
             </p>
           </Reveal>
 

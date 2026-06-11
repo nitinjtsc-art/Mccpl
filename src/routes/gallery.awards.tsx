@@ -37,7 +37,7 @@ function AwardsPage() {
           </h1>
           <p className="mt-8 max-w-2xl border-l-2 border-accent pl-5 text-lg text-muted-foreground">
             A growing record of awards, client commendations and certifications
-            earned across a decade of building.
+            earned through years of dedicated hard work.
           </p>
         </div>
       </section>
