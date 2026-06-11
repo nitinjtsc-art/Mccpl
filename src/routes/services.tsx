@@ -17,20 +17,20 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { i: Factory, t: "Industrial", d: "Greenfield factories, processing plants, warehouses, heavy-foundation works, pre-engineered building erection." },
-  { i: Building2, t: "Commercial", d: "Showrooms, offices, retail shells, multi-tenant blocks built to consultant specifications." },
-  { i: HardHat, t: "Institutional & Hospitality", d: "Colleges, hospitals, hotels and government buildings executed under NBCC and PWD standards." },
-  { i: Ruler, t: "Residential", d: "Villas, apartments, group housing and bespoke homes built to architectural intent." },
-  { i: Wrench, t: "MEP & Finishing", d: "Plumbing, electrical, HVAC coordination, internal finishes, façade systems." },
-  { i: ShieldCheck, t: "Renovation & Retrofitting", d: "Plant expansions, structural strengthening, refurbishment and life-extension retrofitting." },
+  { i: Factory, t: "Industrial", d: "Factories, processing plants, warehouses and heavy-foundation works." },
+  { i: Building2, t: "Commercial", d: "Office buildings, retail spaces and mixed-use developments." },
+  { i: HardHat, t: "Institutional & Hospitality", d: "Schools, colleges, govt. buildings, hotels and hospitals." },
+  { i: Ruler, t: "Residential", d: "Housing complexes, staff quarters and villas." },
+  { i: Wrench, t: "MEP & Finishing", d: "Plumbing, electrical, HVAC coordination, internal finishes and facade systems." },
+  { i: ShieldCheck, t: "Renovation & Retrofitting", d: "Plant expansions, building renovations, structural upgrades and strengthening." },
 ];
 
 const process = [
-  ["Brief", "Site visit, scope alignment, BoQ review."],
+  ["Brief", "Site visit, scope discussion and BOQ review."],
   ["Estimate", "Transparent quote, schedule and milestones."],
-  ["Mobilise", "Crew deployment, material logistics, safety setup."],
-  ["Build", "Daily progress logs, weekly client reviews."],
-  ["Hand-over", "Snag-list closure, as-built drawings, DLP support."],
+  ["Mobilise", "Team deployment, material procurement and safety setup."],
+  ["Build", "Daily progress reports and regular client reviews."],
+  ["Hand-over", "Snag list closure and DLP support."],
 ];
 
 function ServicesPage() {
@@ -43,11 +43,11 @@ function ServicesPage() {
             Capabilities
           </div>
           <h1 className="display text-[clamp(3.5rem,11vw,10rem)] leading-[0.85] text-balance">
-            Full-stack<br />contractors.
+            Full-stack<br /><span className="text-accent">contractors.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-            One team, end-to-end. From breaking ground to commissioning, we
-            self-perform the core trades and coordinate the rest.
+            You bring the vision. We handle the execution. From groundbreaking
+            ceremony to ribbon cutting — we take care of everything.
           </p>
         </div>
       </section>
@@ -73,7 +73,7 @@ function ServicesPage() {
               How we work
             </div>
             <h2 className="display text-5xl md:text-7xl text-balance">
-              A predictable<br />delivery process.
+              A transparent<br />delivery process.
             </h2>
           </Reveal>
           <div className="mt-16 grid gap-px bg-border md:grid-cols-5">

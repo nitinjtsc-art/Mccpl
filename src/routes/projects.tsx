@@ -9,9 +9,9 @@ export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
       { title: "Projects — Mittal Construction" },
-      { name: "description", content: "Completed industrial, institutional and commercial projects by Mittal Construction across North India." },
+      { name: "description", content: "The structures behind our story — completed industrial, institutional and commercial projects by Mittal Construction across India." },
       { property: "og:title", content: "Projects — Mittal Construction" },
-      { property: "og:description", content: "Selected completed projects: Greenply, Toyoda Gosei, Lucid Colloids, Surya Roshni, R K Marble and more." },
+      { property: "og:description", content: "The structures behind our story — selected completed projects by MCC." },
     ],
   }),
 });
@@ -25,8 +25,9 @@ function ProjectsPage() {
           <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
             Portfolio · {projects.length} projects
           </div>
+          {/* TODO: Project list, photos and contract values (Crores) to be swapped from client Excel sheet. */}
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.95] text-balance">
-            Built work,<br />on the ground.
+            The structures<br />behind our story.
           </h1>
         </div>
         <div className="absolute inset-x-0 bottom-0 h-1 bg-accent" />

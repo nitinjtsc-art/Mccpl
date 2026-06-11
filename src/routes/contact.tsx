@@ -43,15 +43,15 @@ function ContactPage() {
               <div className="space-y-3 border-l-2 border-accent pl-6">
                 <div className="flex items-start gap-3 text-sm">
                   <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>RIICO Industrial Area, Bhiwadi, Alwar, Rajasthan 301019</span>
+                  <span>A-168, Bhagat Singh Colony, Bhiwadi, Rajasthan – 301019</span>
                 </div>
                 <div className="flex items-start gap-3 text-sm">
                   <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>+91 98765 43210</span>
+                  <a href="tel:+919887010003" className="hover:text-accent">+91 98870 10003</a>
                 </div>
                 <div className="flex items-start gap-3 text-sm">
                   <Mail size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>info@mcc.co.in</span>
+                  <a href="mailto:info@mcc.co.in" className="hover:text-accent">info@mcc.co.in</a>
                 </div>
               </div>
             </div>
@@ -63,15 +63,15 @@ function ContactPage() {
               <div className="space-y-3 border-l-2 border-accent pl-6">
                 <div className="flex items-start gap-3 text-sm">
                   <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>New Delhi, NCR</span>
+                  <span>L-84B, First Floor, Malviya Nagar, Delhi – 110017</span>
                 </div>
                 <div className="flex items-start gap-3 text-sm">
                   <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>+91 98765 43211</span>
+                  <a href="tel:+911141653030" className="hover:text-accent">+91 11 41653030</a>
                 </div>
                 <div className="flex items-start gap-3 text-sm">
                   <Mail size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>info@mcc.co.in</span>
+                  <a href="mailto:info@mcc.co.in" className="hover:text-accent">info@mcc.co.in</a>
                 </div>
               </div>
             </div>

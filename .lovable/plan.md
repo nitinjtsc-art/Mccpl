@@ -1,80 +1,81 @@
 
-Two PDFs combined: **Home.pdf** has visual annotations (color tweaks, bold, spacing, black/white ratios) and **Home-2.pdf** has approved text/content rewrites (1997 founding, new stats, new copy, +1 service card). Below is one consolidated change list, grouped by file.
+Apply all approved text/copy changes from the 8 PDFs. Home + Footer + Header phone/email/Est. were already done in earlier turns — skipping those. Project data swap (Excel sheet) and image replacements are out of scope (assets not provided). Form-to-email pipeline (Careers/Contact) is a separate request — not included.
 
 ## 1. `src/components/SiteHeader.tsx`
+- **About dropdown teaser** (line 117–122): keep `teaserTitle` ("Built on trust, measured in milestones."), change `teaserEyebrow` `"Since 2013"` → `"Since 1997"`, and remove the teaser description (set `teaserText=""` and skip rendering `<p>` when empty).
+- **Gallery dropdown teaser** (line 160–165): remove teaser description text (same empty-string treatment).
+- **Gallery menu Awards desc** (line 15): `"Honours, certifications, and milestones."` → `"Honours, certifications and achievements."`
+- Render guard: in `Dropdown`, only render the `<p>` when `teaserText` is non-empty.
 
-**Top utility bar (black strip):**
-- Tagline: `Est. 2013 · Bhiwadi, Rajasthan` → `Est. 1997 · Delhi-NCR`.
-- Phone: replace single `+91 98765 43210` with two numbers — `+91 98870 10003 (Bhiwadi)` and `+91 11 41653030 (Delhi)`, each as its own `tel:` link.
-- Email stays `info@mcc.co.in`.
-- Color polish per Home.pdf "this should be of white colour": brighten the bar text from `text-primary-foreground/80` / `/60` → solid `text-primary-foreground` for the brand line so it reads as crisp white on black.
+## 2. `src/routes/about.tsx`
+- Hero eyebrow: `Since 2013` → `Since 1997`.
+- "The firm" section: headline `Eleven years, one trade.` → `Built to Last.`; replace both paragraphs with new 1997-founding copy (single long paragraph from PDF).
+- Vision card: headline → `To build a legacy as strong as our structures.`; body → `A legacy measured in the trust we earned, the standards we kept and the relationships we built along the way.`
+- Mission card: headline → `To hand over every project better than promised.`; body → `By putting the right professionals, the right resources and the right values behind everything we build.`
+- Values: headline `The reasons clients come back.` → `Built on the right foundations.`; replace 4 cards:
+  - 01 Quality / "Uncompromising commitment to quality that shows in everything we build."
+  - 02 Trust & Reliability / "The trust our clients place in us is something we earn on every project and protect on every site."
+  - 03 Safety / "We have never treated safety as a cost — we treat it as a commitment."
+  - 04 Client-Centric Approach / "We measure our success not by the structures we build but by the satisfaction of the clients we build them for."
+- Timeline entry 1: `2013` → `1997 / Mittal Construction Company founded by Mr. Rajendra Mittal in Bhiwadi, Rajasthan.` Entries 2–5 keep current placeholder years but PDF marks them as TBD — leave as-is with a `// TODO` comment noting they need real years from client.
+- Update meta description to reflect 1997 / pan-India.
 
-**About dropdown panel ("shorten width of black", "too much empty space"):**
-- Change grid template `md:grid-cols-[2fr_3fr]` → `md:grid-cols-[1fr_2fr]` so the dark teaser column is narrower (~33%) and the link list takes the rest. This achieves the requested 40% black / 60% white feel and removes the empty space.
-- Tighten dark panel padding (`p-6` → `p-5`) and teaser title size (`text-2xl` → `text-xl`) so the content fills the slimmer column.
+## 3. `src/routes/services.tsx`
+- Hero headline: wrap `contractors.` span in `text-accent`.
+- Hero body → `You bring the vision. We handle the execution. From groundbreaking ceremony to ribbon cutting — we take care of everything.`
+- Services array — shorten descriptions:
+  - Industrial → `Factories, processing plants, warehouses and heavy-foundation works.`
+  - Commercial → `Office buildings, retail spaces and mixed-use developments.`
+  - Institutional & Hospitality → `Schools, colleges, govt. buildings, hotels and hospitals.`
+  - Residential → `Housing complexes, staff quarters and villas.`
+  - MEP & Finishing → `Plumbing, electrical, HVAC coordination, internal finishes and facade systems.`
+  - Renovation & Retrofitting → `Plant expansions, building renovations, structural upgrades and strengthening.`
+- "How we work" headline `A predictable delivery process.` → `A transparent delivery process.`
+- Process step descriptions:
+  - Brief → `Site visit, scope discussion and BOQ review.`
+  - Estimate → (unchanged)
+  - Mobilise → `Team deployment, material procurement and safety setup.`
+  - Build → `Daily progress reports and regular client reviews.`
+  - Hand-over → `Snag list closure and DLP support.`
 
-## 2. `src/routes/index.tsx`
+## 4. `src/routes/projects.tsx`
+- Hero eyebrow: `Portfolio · {projects.length} projects` → keep dynamic count, just rename label format (`PORTFOLIO · {N} PROJECTS` — already matches).
+- Hero headline: `Built work, on the ground.` → `The structures behind our story.`
+- Update meta description to match.
+- Add `// TODO` comment near the import noting project data & images need swap from Excel and values should become Crores.
 
-**Hero eyebrow (Home.pdf "try making it bold"):**
-- `mono mb-5 text-[12px] font-bold ... text-accent` already has `font-bold` — bump weight visually by adding `tracking-[0.32em]` and `text-[13px]` so the eyebrow reads bolder/heavier as intended. (Keep accent orange.)
+## 5. `src/routes/clients.tsx`
+- Headline `Trusted by the makers.` → `Trusted by those who build India.`
+- Body → `Quality construction attracts quality clients. Every name on this list represents a project delivered, a promise kept and a client satisfied.`
+- Filters tuple: add `"Warehousing"` between `Industrial` and `Commercial`; widen `Sector` type accordingly. (Existing client list has no Warehousing entries — filter will simply show 0; acceptable until logos arrive.)
 
-**ABOUT section — text rewrites (Home-2.pdf §1):**
-- Headline → `A construction partner built on experience, trust and delivery.` Keep the brand-color span on the last three words.
-- Stat badge `11+` → `28+` (Years of Excellence label unchanged).
-- Paragraph 1 → "Founded in 1997 by Mr. Rajendra Mittal, MCC has spent nearly three decades doing one thing well — building. From large industrial plants and warehouses to institutional campuses and hospitality projects, we have earned the trust of some of India's most demanding clients."
-- Paragraph 2 → "We manage the full construction lifecycle — engineering, procurement, execution and handover — with a focus on quality, safety and on-time delivery."
-- 4 bullet list → `Trusted by leading Indian & multinational corporations`, `Long-standing relationships with clients and consultants`, `End-to-end project delivery under one roof`, `A track record built on timely, quality delivery`.
+## 6. `src/routes/careers.tsx`
+- Hero headline `Build your career on site.` → `Great projects need great people.`
+- Hero body → `At MCC, we invest in our people as much as we invest in our projects — offering a professional environment where you can grow, learn and build a career that adds real value to your profile.`
+- 3 cards:
+  - 01 Built to last / "We hire for the future, not just for today."
+  - 02 Room to grow / "Your potential does not have a ceiling here — only a ladder."
+  - 03 Lead from the front / "Take charge, influence outcomes, make a difference."
+- Apply-block body → `We are always looking for driven professionals across all functions and disciplines.` Remove the `hr@mcc.co.in` link from public display.
 
-**STATS strip (Home-2.pdf §2):**
-- Update `stats` array values: `11+`, `50+`, `₹500M+`, `4` → `28+`, `100+`, `₹1000 Cr+`, `13`.
-- Home.pdf "make this white": stat labels are currently `text-primary-foreground/65`; raise to solid `text-primary-foreground` so the labels read as full white on the orange brand strip.
+## 7. `src/routes/contact.tsx`
+- Head Office address → `A-168, Bhagat Singh Colony, Bhiwadi, Rajasthan – 301019`
+- Head Office phone → `+91 98870 10003` (as `tel:` link)
+- Delhi Office address → `L-84B, First Floor, Malviya Nagar, Delhi – 110017`
+- Delhi Office phone → `+91 11 41653030` (as `tel:` link)
+- Delhi Office email row → keep `info@mcc.co.in`.
 
-**SERVICES section — copy + new 5th card (Home-2.pdf §3):**
-- Heading → `One partner for your complete construction journey.` (brand span on `construction journey.`).
-- Subcopy → "From groundbreaking ceremony to ribbon cutting — we manage every stage of your project with the same commitment and care."
-- Replace the 4-item `services` array with 5 cards (title + tagline). Icon mapping:
-  - 01 Engineering & Design — `Ruler` — "The foundation of every good project is a good plan."
-  - 02 Construction & Project Execution — `HardHat` — "Experienced teams delivering on every commitment."
-  - 03 Turnkey Project Delivery — `Factory` — "You share your vision, we handle everything else."
-  - 04 Retrofit & Renovation — `Building2` — "Old building, new potential — we make it happen."
-  - 05 Procurement — `Package` (import from lucide-react) — "Sourcing the right materials, at the right price."
-- Grid: change `lg:grid-cols-4` → `lg:grid-cols-3 xl:grid-cols-5` (or keep `lg:grid-cols-3` with the 5th wrapping) so 5 cards lay out cleanly; pick `lg:grid-cols-3` for tidy 3+2 layout on desktop while keeping the hairline-divider look.
+## 8. `src/routes/gallery.awards.tsx`
+- Body text → `A growing record of awards, client commendations and certifications earned through years of dedicated hard work.`
 
-**SELECTED WORK:**
-- Leave the heading/labels. Add a one-line TODO comment in the file noting that project cards + photos need to be swapped from the Excel sheet (no functional change this turn — user hasn't sent the sheet).
+## 9. `src/routes/gallery.csr.tsx`
+- Body text → `MCC believes in building more than structures. Our CSR initiatives focus on education, healthcare, plantation drives and the wellbeing of the communities we work with.`
 
-**WHY MCC (Home-2.pdf §5 + Home.pdf "make this white"):**
-- Heading → `We don't just build structures, we build relationships.` (brand span on `we build relationships.`).
-- Add intro paragraph next to heading: "With nearly three decades of experience, MCC has built a reputation that speaks for itself — trusted by some of India's leading corporations and institutions, project after project." Restructure the top row to `md:grid-cols-12`: heading `md:col-span-7`, paragraph `md:col-span-5`, matching the Services section pattern.
-- Replace `whyUs` cards:
-  - Proven Client List (icon `Users`) — "From multinationals to government institutions — India's most demanding clients trust MCC with their projects."
-  - Repeat Business (icon `Award`) — "We earn the next project by delivering the first one right."
-  - On-time Delivery (icon `ShieldCheck`) — "Behind every deadline is a business waiting to start. We make sure they never wait."
-- "Make this white" note: the why-us cards currently sit on `bg-background` (already light). The annotation refers to the title color — keep titles in `text-foreground` (already correct); ensure body copy is `text-foreground/70` for legibility.
-
-**CTA "Have a project" (Home-2.pdf §6 + Home.pdf "make the text black"):**
-- Body copy → "Share your scope, drawings and timeline. We will get back to you with a detailed proposal and a clear execution schedule."
-- Home.pdf "make text black": the request is about the body paragraph contrast. Lighten the over-dark treatment by bumping `text-primary-foreground/70` → `text-primary-foreground/90`, and the eyebrow/heading already use accent + white. (We keep the section on `bg-ink` since the design intent is the dark CTA band; raising the paragraph opacity gives the punchier read the annotation asks for.)
-
-## 3. `src/components/SiteFooter.tsx`
-
-- Brief under logo → "Mittal Construction Company is a multi-disciplinary construction firm delivering industrial, commercial, institutional, hospitality and residential projects across India since 1997."
-- **Sectors list** → `Industrial`, `Warehousing`, `Commercial`, `Institutional`, `Hospitality`, `Residential`, `MEP & Finishing`, `Renovation & Retrofitting` (split "Institutional & Hospitality" into two, add Warehousing). The "what else is written here" question in Home.pdf is answered by this updated list.
-- **Get in touch** block — replace the single address + phone with:
-  - Head Office: A-168, Bhagat Singh Colony, Bhiwadi, Rajasthan - 301019
-  - Delhi Office: L-84B, First Floor, Malviya Nagar, Delhi - 110017
-  - +91 98870 10003
-  - +91 11 41653030
-  - info@mcc.co.in
-  
-  Render the two offices as two `MapPin` lines and the two numbers as two `Phone` lines (each a `tel:` link).
-- Bottom-line tag → `Building since 2013` → `Building since 1997`.
-- Home.pdf "make this black": footer background is already `bg-black`. The annotation reads as "keep/confirm it dark" — no change needed here, but ensure the new contact lines keep the same `text-primary-foreground/80` so they remain readable on black. The copyright line stays at the smaller `/50` muted shade.
-
-## Out of scope this turn (flagged but not edited)
-
-- Replacing project card photos / project list with content from the Excel sheet — user hasn't shared the sheet yet.
-- "Trusted by" ticker client logo list update on the CTA section — same reason.
-- Careers form → email pipeline (separate request, awaits go-ahead to enable Lovable Cloud + email).
+## Out of scope (flagged)
+- Project list + photos from Excel sheet
+- Client logos / "Trusted by" ticker
+- Award and CSR card content (placeholders awaiting client assets)
+- About timeline entries 2–5 (years/descriptions TBD)
+- Careers form → `hr@mcc.co.in` email pipeline (needs Lovable Cloud + email integration; ask before enabling)
 
 Confirm and I'll implement.

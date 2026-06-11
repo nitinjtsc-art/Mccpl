@@ -16,7 +16,7 @@ export const Route = createFileRoute("/clients")({
   }),
 });
 
-type Sector = "Industrial" | "Institutional" | "Hospitality" | "Commercial";
+type Sector = "Industrial" | "Warehousing" | "Institutional" | "Hospitality" | "Commercial";
 
 const clients: { name: string; sector: Sector }[] = [
   { name: "Greenply Industries", sector: "Industrial" },
@@ -34,7 +34,7 @@ const clients: { name: string; sector: Sector }[] = [
   { name: "DLF Commercial", sector: "Commercial" },
 ];
 
-const filters: ("All" | Sector)[] = ["All", "Industrial", "Commercial", "Institutional", "Hospitality"];
+const filters: ("All" | Sector)[] = ["All", "Industrial", "Warehousing", "Commercial", "Institutional", "Hospitality"];
 
 function ClientsPage() {
   const [active, setActive] = useState<(typeof filters)[number]>("All");
@@ -52,11 +52,12 @@ function ClientsPage() {
             Our Clients
           </div>
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
-            Trusted by<br />the makers.
+            Trusted by those<br />who build India.
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-            From multinationals to government bodies — a partial list of the
-            organisations whose projects we've delivered over the past decade.
+            Quality construction attracts quality clients. Every name on this
+            list represents a project delivered, a promise kept and a client
+            satisfied.
           </p>
         </div>
       </section>

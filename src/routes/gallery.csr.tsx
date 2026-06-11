@@ -34,8 +34,9 @@ function CsrPage() {
             Building beyond<br />the brief.
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-            Education, healthcare and community-development initiatives the MCC
-            family supports alongside its construction work.
+            MCC believes in building more than structures. Our CSR initiatives
+            focus on education, healthcare, plantation drives and the wellbeing
+            of the communities we work with.
           </p>
         </div>
       </section>
