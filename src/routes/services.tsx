@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
-import { Factory, Building2, School, Home, Wrench, ShieldCheck } from "lucide-react";
+import { Factory, Building2, HardHat, Ruler, Wrench, ShieldCheck } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
@@ -19,8 +19,8 @@ export const Route = createFileRoute("/services")({
 const services = [
   { i: Factory, t: "Industrial", d: "Factories, processing plants, warehouses and heavy-foundation works." },
   { i: Building2, t: "Commercial", d: "Office buildings, retail spaces and mixed-use developments." },
-  { i: School, t: "Institutional & Hospitality", d: "Schools, colleges, govt. buildings, hotels and hospitals." },
-  { i: Home, t: "Residential", d: "Housing complexes, staff quarters and villas." },
+  { i: HardHat, t: "Institutional & Hospitality", d: "Schools, colleges, govt. buildings, hotels and hospitals." },
+  { i: Ruler, t: "Residential", d: "Housing complexes, staff quarters and villas." },
   { i: Wrench, t: "MEP & Finishing", d: "Plumbing, electrical, HVAC coordination, internal finishes and facade systems." },
   { i: ShieldCheck, t: "Renovation & Retrofitting", d: "Plant expansions, building renovations, structural upgrades and strengthening." },
 ];
@@ -52,21 +52,17 @@ function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-background">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-2 lg:grid-cols-3 border border-border">
-            {services.map((s, i) => (
-              <Reveal key={s.t} delay={i * 0.05}>
-                <div className="group relative h-full bg-card p-10 transition-colors hover:bg-primary hover:text-primary-foreground">
-                  <div className="flex items-center gap-4">
-                    <s.i size={32} strokeWidth={1.25} className="shrink-0 text-accent" />
-                    <h3 className="display text-2xl md:text-3xl">{s.t}</h3>
-                  </div>
-                  <p className="mt-4 text-sm leading-relaxed opacity-80">{s.d}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+      <section className="border-y border-border bg-border">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
+          {services.map((s, i) => (
+            <Reveal key={s.t} delay={i * 0.05}>
+              <div className="group relative h-full bg-card p-10 transition-colors hover:bg-primary hover:text-primary-foreground">
+                <s.i size={36} strokeWidth={1.25} className="text-accent" />
+                <h3 className="display mt-2 text-3xl">{s.t}</h3>
+                <p className="mt-4 text-sm leading-relaxed opacity-80">{s.d}</p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
@@ -76,7 +72,7 @@ function ServicesPage() {
             <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               How we work
             </div>
-            <h2 className="display text-6xl md:text-8xl font-bold leading-[0.9] text-balance">
+            <h2 className="display text-5xl md:text-7xl text-balance">
               A transparent<br />delivery process.
             </h2>
           </Reveal>
@@ -85,7 +81,7 @@ function ServicesPage() {
               <Reveal key={t} delay={i * 0.07}>
                 <div className="h-full bg-background p-8">
                   <div className="display text-5xl text-accent">0{i + 1}</div>
-                  <h3 className="display mt-6 text-2xl md:text-3xl font-bold">{t}</h3>
+                  <div className="display mt-6 text-2xl">{t}</div>
                   <p className="mt-2 text-sm text-muted-foreground">{d}</p>
                 </div>
               </Reveal>

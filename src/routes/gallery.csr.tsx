@@ -27,20 +27,19 @@ function CsrPage() {
       <SiteHeader />
       <section className="bg-background pt-40 pb-16">
         <div className="container-x">
-          <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
+          <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
             Gallery · CSR
           </div>
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
-            Building<br />beyond the brief.
+            Building beyond<br />the brief.
           </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
             MCC believes in building more than structures. Our CSR initiatives
             focus on education, healthcare, plantation drives and the wellbeing
             of the communities we work with.
           </p>
         </div>
       </section>
-
 
       <section className="border-t border-border pb-24">
         <div className="container-x mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

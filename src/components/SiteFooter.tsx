@@ -6,7 +6,7 @@ export function SiteFooter() {
   return (
     <footer className="bg-black text-primary-foreground">
       <div className="container-x grid gap-12 py-20 md:grid-cols-12">
-        <div className="md:col-span-4">
+        <div className="md:col-span-5">
           <div className="inline-flex rounded-md bg-primary-foreground p-3">
             <img src={mccLogo} alt="MCC" className="h-9 w-auto md:h-10" />
           </div>
@@ -23,7 +23,7 @@ export function SiteFooter() {
           </Link>
         </div>
 
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 md:col-start-7">
           <div className="mono mb-5 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/50">
             Company
           </div>
@@ -37,65 +37,54 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        <div className="md:col-span-3">
+        <div className="md:col-span-2">
           <div className="mono mb-5 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/50">
-            Get in touch
+            Sectors
           </div>
-          <div className="space-y-6 text-sm text-primary-foreground/80">
-            <div>
-              <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary-foreground">
-                Head Office — Bhiwadi
-              </div>
-              <div className="flex gap-3">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                <span>
-                  A-168, Bhagat Singh Colony,<br />
-                  Bhiwadi, Rajasthan – 301019
-                </span>
-              </div>
-              <div className="mt-2 flex gap-3">
-                <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
-                <a href="tel:+919887010003" className="hover:text-accent">+91 98870 10003</a>
-              </div>
-            </div>
-
-            <div>
-              <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary-foreground">
-                Delhi Office
-              </div>
-              <div className="flex gap-3">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                <span>
-                  L-84B, First Floor,<br />
-                  Malviya Nagar, Delhi – 110017
-                </span>
-              </div>
-              <div className="mt-2 flex gap-3">
-                <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
-                <a href="tel:+911141653030" className="hover:text-accent">+91 11 41653030</a>
-              </div>
-            </div>
-
-            <div className="flex gap-3 border-t border-primary-foreground/10 pt-4">
-              <Mail size={16} className="mt-0.5 shrink-0 text-accent" />
-              <a href="mailto:info@mcc.co.in" className="hover:text-accent">info@mcc.co.in</a>
-            </div>
-          </div>
+          <ul className="space-y-3 text-sm text-primary-foreground/80">
+            <li>Industrial</li>
+            <li>Warehousing</li>
+            <li>Commercial</li>
+            <li>Institutional</li>
+            <li>Hospitality</li>
+            <li>Residential</li>
+            <li>MEP &amp; Finishing</li>
+            <li>Renovation &amp; Retrofitting</li>
+          </ul>
         </div>
 
         <div className="md:col-span-3">
           <div className="mono mb-5 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/50">
-            Find Us
+            Get in touch
           </div>
-          <div className="overflow-hidden border border-primary-foreground/10">
-            <iframe
-              title="MCC Head Office — Bhiwadi"
-              src="https://www.google.com/maps?q=A-168,+Bhagat+Singh+Colony,+Bhiwadi,+Rajasthan+301019&output=embed"
-              loading="lazy"
-              className="h-64 w-full grayscale-[0.4] contrast-[1.05]"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+          <ul className="space-y-3 text-sm text-primary-foreground/80">
+            <li className="flex gap-3">
+              <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
+              <span>
+                <span className="block text-primary-foreground/60 text-[11px] uppercase tracking-[0.18em]">Head Office</span>
+                A-168, Bhagat Singh Colony, Bhiwadi, Rajasthan - 301019
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
+              <span>
+                <span className="block text-primary-foreground/60 text-[11px] uppercase tracking-[0.18em]">Delhi Office</span>
+                L-84B, First Floor, Malviya Nagar, Delhi - 110017
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
+              <a href="tel:+919887010003" className="hover:text-accent">+91 98870 10003</a>
+            </li>
+            <li className="flex gap-3">
+              <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
+              <a href="tel:+911141653030" className="hover:text-accent">+91 11 41653030</a>
+            </li>
+            <li className="flex gap-3">
+              <Mail size={16} className="mt-0.5 shrink-0 text-accent" />
+              <a href="mailto:info@mcc.co.in" className="hover:text-accent">info@mcc.co.in</a>
+            </li>
+          </ul>
         </div>
       </div>
 

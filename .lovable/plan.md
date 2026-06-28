@@ -1,81 +1,81 @@
 
-Apply every change listed in MCC_UI_Changes.pdf. Strictly visual/text/layout — no business-logic or data changes.
+Apply all approved text/copy changes from the 8 PDFs. Home + Footer + Header phone/email/Est. were already done in earlier turns — skipping those. Project data swap (Excel sheet) and image replacements are out of scope (assets not provided). Form-to-email pipeline (Careers/Contact) is a separate request — not included.
 
-## Global header — `src/components/SiteHeader.tsx`
-- **H1**: enlarge logo (increase `h-8`/equivalent to roughly `h-12 md:h-14`), preserve aspect ratio.
-- **H2**: top-bar location text → `EST. 1997 · BHIWADI · DELHI`.
-- **H3**: drop `(Bhiwadi)` / `(Delhi)` labels from phone strings; add a `Mail` icon before `info@mcc.co.in` matching the phone-icon style.
-- **About dropdown** (About-page items 1–4):
-  - Reduce panel padding/width so it's more compact.
-  - Push "EXPLORE ABOUT" CTA toward the bottom of the teaser column (flex column + `mt-auto`).
-  - Increase teaser headline ("Built on trust, measured in milestones.") font size to fill the panel.
-  - Strip trailing full stops from Overview / Our Team / Director's Message descriptions.
-- **Gallery dropdown** (Gallery items 3–6):
-  - Enlarge "Our work, recognised." headline.
-  - Push "VIEW GALLERY" CTA lower.
-  - Reduce dropdown panel width (eliminate right-side empty space).
-  - Strip trailing full stops from Awards & Recognitions and CSR descriptions.
+## 1. `src/components/SiteHeader.tsx`
+- **About dropdown teaser** (line 117–122): keep `teaserTitle` ("Built on trust, measured in milestones."), change `teaserEyebrow` `"Since 2013"` → `"Since 1997"`, and remove the teaser description (set `teaserText=""` and skip rendering `<p>` when empty).
+- **Gallery dropdown teaser** (line 160–165): remove teaser description text (same empty-string treatment).
+- **Gallery menu Awards desc** (line 15): `"Honours, certifications, and milestones."` → `"Honours, certifications and achievements."`
+- Render guard: in `Dropdown`, only render the `<p>` when `teaserText` is non-empty.
 
-## Home — `src/routes/index.tsx`
-- **H4**: unify About-MCC paragraph block to one consistent size and colour (e.g. `text-base text-muted-foreground` for both paragraphs).
-- **H5**: align/space the 4-item checklist evenly (grid with consistent gap, identical icon + text styles).
-- **H6, H8, H9, H12, H14**: make section eyebrows `ABOUT MCC`, `WHAT WE DO` (x2), `WHY MCC`, `LET'S BUILD` **bold** (`font-bold`) without enlarging.
-- **H7**: stats bar — keep `₹1000 Cr+` on a single line (`whitespace-nowrap`) and tighten spacing so all 4 cards distribute evenly.
-- **H10**: "WHAT WE DO" headline — enlarge + bold, reduce surrounding whitespace.
-- **H11**: services grid currently shows 5 cards with an empty 6th cell. Switch to `lg:grid-cols-3` with the last 2 cards centred (wrapper trick: `lg:grid-cols-6` + `lg:col-span-2`, last row offset).
-- **H13**: "WHY MCC" headline — wrap **"build relationships"** in `text-accent` (#F5821F), enlarge, bold; reduces right-side whitespace.
-- **H15**: footer "GET IN TOUCH" block — split into 2 columns (Bhiwadi office | Delhi office) with phone clearly under each.
-- **H16**: fill the empty right area of the footer with an **embedded Google Maps iframe** (no API key needed) pinning the Bhiwadi head office.
+## 2. `src/routes/about.tsx`
+- Hero eyebrow: `Since 2013` → `Since 1997`.
+- "The firm" section: headline `Eleven years, one trade.` → `Built to Last.`; replace both paragraphs with new 1997-founding copy (single long paragraph from PDF).
+- Vision card: headline → `To build a legacy as strong as our structures.`; body → `A legacy measured in the trust we earned, the standards we kept and the relationships we built along the way.`
+- Mission card: headline → `To hand over every project better than promised.`; body → `By putting the right professionals, the right resources and the right values behind everything we build.`
+- Values: headline `The reasons clients come back.` → `Built on the right foundations.`; replace 4 cards:
+  - 01 Quality / "Uncompromising commitment to quality that shows in everything we build."
+  - 02 Trust & Reliability / "The trust our clients place in us is something we earn on every project and protect on every site."
+  - 03 Safety / "We have never treated safety as a cost — we treat it as a commitment."
+  - 04 Client-Centric Approach / "We measure our success not by the structures we build but by the satisfaction of the clients we build them for."
+- Timeline entry 1: `2013` → `1997 / Mittal Construction Company founded by Mr. Rajendra Mittal in Bhiwadi, Rajasthan.` Entries 2–5 keep current placeholder years but PDF marks them as TBD — leave as-is with a `// TODO` comment noting they need real years from client.
+- Update meta description to reflect 1997 / pan-India.
 
-## About — `src/routes/about.tsx`
-- **A5**: fix hero headline kerning — replace the wide `tracking` on `conviction.` so its letter/word spacing matches the lines above.
-- **A6**: "Built to Last." — enlarge heading (e.g. `text-6xl md:text-8xl`), let it fill the left column.
-- **A7**: right-side paragraph block — unify size & colour across all 3 paragraphs (`text-base text-muted-foreground leading-relaxed`).
-- **A8**: make "OUR VISION" and "OUR MISSION" eyebrows identical in size, weight, colour, tracking.
-- **A9**: "Built on the right foundations." — enlarge, reduce whitespace.
-- **A10**: trim the horizontal connector line so it ends exactly at point 04 (cap the absolute line at `right` of the 4th col, not full container width).
-- **A11**: 4 value headings (Quality, Trust & Reliability, Safety, Client-Centric Approach) — increase font size slightly + bold.
-- **A12**: "Timeline." heading — enlarge slightly + bold; reduce whitespace.
+## 3. `src/routes/services.tsx`
+- Hero headline: wrap `contractors.` span in `text-accent`.
+- Hero body → `You bring the vision. We handle the execution. From groundbreaking ceremony to ribbon cutting — we take care of everything.`
+- Services array — shorten descriptions:
+  - Industrial → `Factories, processing plants, warehouses and heavy-foundation works.`
+  - Commercial → `Office buildings, retail spaces and mixed-use developments.`
+  - Institutional & Hospitality → `Schools, colleges, govt. buildings, hotels and hospitals.`
+  - Residential → `Housing complexes, staff quarters and villas.`
+  - MEP & Finishing → `Plumbing, electrical, HVAC coordination, internal finishes and facade systems.`
+  - Renovation & Retrofitting → `Plant expansions, building renovations, structural upgrades and strengthening.`
+- "How we work" headline `A predictable delivery process.` → `A transparent delivery process.`
+- Process step descriptions:
+  - Brief → `Site visit, scope discussion and BOQ review.`
+  - Estimate → (unchanged)
+  - Mobilise → `Team deployment, material procurement and safety setup.`
+  - Build → `Daily progress reports and regular client reviews.`
+  - Hand-over → `Snag list closure and DLP support.`
 
-## Services — `src/routes/services.tsx`
-- **S1**: left-edge align `CAPABILITIES`, headline `Full-stack contractors.`, and body paragraph so all start at the same `pl-0` baseline within the container.
-- **S2**: services array — render icon **inline** beside heading (`flex items-center gap-3`) instead of above.
-- **S3**: swap Residential icon → `Home` (house) from lucide.
-- **S4**: swap Institutional & Hospitality icon → `School` or `Hotel` from lucide.
-- **S5, S6**: remove grey background bands on left & right edges of the card grid — set section background to `bg-background` (white).
-- **S7**: "A transparent delivery process." — enlarge / bold to fill the block.
-- **S8**: 5 step sub-headings (Brief, Estimate, Mobilise, Build, Hand-over) — increase font size + bold.
+## 4. `src/routes/projects.tsx`
+- Hero eyebrow: `Portfolio · {projects.length} projects` → keep dynamic count, just rename label format (`PORTFOLIO · {N} PROJECTS` — already matches).
+- Hero headline: `Built work, on the ground.` → `The structures behind our story.`
+- Update meta description to match.
+- Add `// TODO` comment near the import noting project data & images need swap from Excel and values should become Crores.
 
-## Clients — `src/routes/clients.tsx`
-- **C1**: headline bold; wrap `build India` in `text-accent` (#F5821F).
-- **C2**: sub-paragraph alignment — match heading's left edge (`pl-0`, container alignment).
-- **C3**: add `Residential` filter button to the existing filter tuple `[All, Industrial, Warehousing, Commercial, Institutional, Hospitality, Residential]`; widen `Sector` type.
+## 5. `src/routes/clients.tsx`
+- Headline `Trusted by the makers.` → `Trusted by those who build India.`
+- Body → `Quality construction attracts quality clients. Every name on this list represents a project delivered, a promise kept and a client satisfied.`
+- Filters tuple: add `"Warehousing"` between `Industrial` and `Commercial`; widen `Sector` type accordingly. (Existing client list has no Warehousing entries — filter will simply show 0; acceptable until logos arrive.)
 
-## Gallery — `src/routes/gallery.awards.tsx`
-- **G1**: change `GET A QUOTE` button colour to navy (match other pages — `bg-primary text-primary-foreground` instead of any orange variant).
-- **G2**: fix sub-paragraph formatting & alignment to match other hero sub-paragraphs.
+## 6. `src/routes/careers.tsx`
+- Hero headline `Build your career on site.` → `Great projects need great people.`
+- Hero body → `At MCC, we invest in our people as much as we invest in our projects — offering a professional environment where you can grow, learn and build a career that adds real value to your profile.`
+- 3 cards:
+  - 01 Built to last / "We hire for the future, not just for today."
+  - 02 Room to grow / "Your potential does not have a ceiling here — only a ladder."
+  - 03 Lead from the front / "Take charge, influence outcomes, make a difference."
+- Apply-block body → `We are always looking for driven professionals across all functions and disciplines.` Remove the `hr@mcc.co.in` link from public display.
 
-## Gallery — `src/routes/gallery.csr.tsx`
-- **G7**: bold the `GALLERY · CSR` eyebrow.
-- **G8**: fix sub-paragraph formatting & alignment.
-- **G9**: force line break — `Building` line 1, `beyond the brief.` line 2 (`<br/>` between words).
+## 7. `src/routes/contact.tsx`
+- Head Office address → `A-168, Bhagat Singh Colony, Bhiwadi, Rajasthan – 301019`
+- Head Office phone → `+91 98870 10003` (as `tel:` link)
+- Delhi Office address → `L-84B, First Floor, Malviya Nagar, Delhi – 110017`
+- Delhi Office phone → `+91 11 41653030` (as `tel:` link)
+- Delhi Office email row → keep `info@mcc.co.in`.
 
-## Careers — `src/routes/careers.tsx`
-- **CA1**: wrap `great people` in `text-accent` (#F5821F).
-- **CA2**: fix hero sub-paragraph alignment under heading.
-- **CA3**: enlarge 3 card sub-headings (Built to last, Room to grow, Lead from the front) + bold.
-- **CA4**: bold the `APPLY` eyebrow.
-- **CA5**: enlarge `Send us your application.` heading + bold.
-- **CA6**: move BROWSE button to the right end of the upload field (`justify-between` instead of `justify-start`).
+## 8. `src/routes/gallery.awards.tsx`
+- Body text → `A growing record of awards, client commendations and certifications earned through years of dedicated hard work.`
 
-## Contact — `src/routes/contact.tsx`
-- **CT1**: change hero background from navy (`bg-primary`) to **black** (`bg-ink` or `bg-black`); keep heading text unchanged.
-- **CT3**: Bhiwadi address — break onto 2 lines: line 1 `A-168, Bhagat Singh Colony,`, line 2 `Bhiwadi, Rajasthan – 301019`.
-- **CT4**: Delhi address — break onto 2 lines: line 1 `L-84B, First Floor,`, line 2 `Malviya Nagar, Delhi – 110017`.
+## 9. `src/routes/gallery.csr.tsx`
+- Body text → `MCC believes in building more than structures. Our CSR initiatives focus on education, healthcare, plantation drives and the wellbeing of the communities we work with.`
 
-## Technical notes
-- Footer map: plain `<iframe src="https://www.google.com/maps?q=...&output=embed">` — no Google Maps Platform connector needed.
-- All colours via existing tokens: `text-accent` = #F5821F, `bg-primary` = #0F2A4A navy, `bg-ink`/`bg-black` for the new Contact hero.
-- No new dependencies. No route additions. No data/business-logic changes.
+## Out of scope (flagged)
+- Project list + photos from Excel sheet
+- Client logos / "Trusted by" ticker
+- Award and CSR card content (placeholders awaiting client assets)
+- About timeline entries 2–5 (years/descriptions TBD)
+- Careers form → `hr@mcc.co.in` email pipeline (needs Lovable Cloud + email integration; ask before enabling)
 
-Confirm and I'll implement in a single pass.
+Confirm and I'll implement.

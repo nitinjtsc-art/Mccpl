@@ -16,7 +16,7 @@ export const Route = createFileRoute("/clients")({
   }),
 });
 
-type Sector = "Industrial" | "Warehousing" | "Institutional" | "Hospitality" | "Commercial" | "Residential";
+type Sector = "Industrial" | "Warehousing" | "Institutional" | "Hospitality" | "Commercial";
 
 const clients: { name: string; sector: Sector }[] = [
   { name: "Greenply Industries", sector: "Industrial" },
@@ -34,8 +34,7 @@ const clients: { name: string; sector: Sector }[] = [
   { name: "DLF Commercial", sector: "Commercial" },
 ];
 
-const filters: ("All" | Sector)[] = ["All", "Industrial", "Warehousing", "Commercial", "Institutional", "Hospitality", "Residential"];
-
+const filters: ("All" | Sector)[] = ["All", "Industrial", "Warehousing", "Commercial", "Institutional", "Hospitality"];
 
 function ClientsPage() {
   const [active, setActive] = useState<(typeof filters)[number]>("All");
@@ -52,15 +51,14 @@ function ClientsPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Our Clients
           </div>
-          <h1 className="display text-[clamp(3rem,9vw,8rem)] font-bold leading-[0.9] text-balance">
-            Trusted by those<br />who <span className="text-accent">build India.</span>
+          <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
+            Trusted by those<br />who build India.
           </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
             Quality construction attracts quality clients. Every name on this
             list represents a project delivered, a promise kept and a client
             satisfied.
           </p>
-
         </div>
       </section>
 

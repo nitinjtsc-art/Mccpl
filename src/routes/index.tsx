@@ -226,36 +226,36 @@ function Home() {
           </Reveal>
           <div className="md:col-span-7 md:pt-6">
             <Reveal>
-              <div className="eyebrow font-bold mb-5">About MCC</div>
+              <div className="eyebrow mb-5">About MCC</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
                 A construction partner built on{" "}
                 <span className="text-brand">experience, trust and delivery.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
                 Founded in 1997 by Mr. Rajendra Mittal, MCC has spent nearly three decades
                 doing one thing well — building. From large industrial plants and warehouses
                 to institutional campuses and hospitality projects, we have earned the trust
                 of some of India's most demanding clients.
               </p>
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              <p className="mt-5 max-w-2xl text-foreground/65">
                 We manage the full construction lifecycle — engineering, procurement,
                 execution and handover — with a focus on quality, safety and on-time
                 delivery.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+              <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {[
                   "Trusted by leading Indian & multinational corporations",
                   "Long-standing relationships with clients and consultants",
                   "End-to-end project delivery under one roof",
                   "A track record built on timely, quality delivery",
                 ].map((t) => (
-                  <li key={t} className="flex items-start gap-3 text-sm leading-relaxed">
+                  <li key={t} className="flex items-start gap-3 text-sm">
                     <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent" />
-                    <span>{t}</span>
+                    {t}
                   </li>
                 ))}
               </ul>
@@ -267,7 +267,6 @@ function Home() {
               </Link>
             </Reveal>
           </div>
-
         </div>
       </section>
 
@@ -275,8 +274,8 @@ function Home() {
       <section className="bg-brand text-brand-foreground">
         <div className="container-x grid grid-cols-2 divide-y divide-x divide-primary-foreground/10 md:grid-cols-4 md:divide-y-0">
           {stats.map((s, i) => (
-            <Reveal key={s.l} delay={i * 0.08} className="px-4 py-12 md:px-6 md:py-16">
-              <div className="display whitespace-nowrap text-4xl font-semibold md:text-5xl lg:text-6xl">{s.v}</div>
+            <Reveal key={s.l} delay={i * 0.08} className="px-2 py-12 md:px-8 md:py-16">
+              <div className="display text-5xl font-semibold md:text-6xl">{s.v}</div>
               <div className="mono mt-4 text-[10px] uppercase tracking-[0.22em] text-primary-foreground">
                 {s.l}
               </div>
@@ -285,14 +284,13 @@ function Home() {
         </div>
       </section>
 
-
       {/* SERVICES */}
       <section className="bg-background pt-24 md:pt-32 pb-12 md:pb-16">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal className="md:col-span-7">
-              <div className="eyebrow font-bold mb-5">What we do</div>
-              <h2 className="display text-balance text-5xl md:text-7xl font-bold">
+              <div className="eyebrow mb-5">What we do</div>
+              <h2 className="display text-balance text-4xl md:text-6xl">
                 One partner for your complete <span className="text-brand">construction journey.</span>
               </h2>
             </Reveal>
@@ -304,38 +302,35 @@ function Home() {
             </Reveal>
           </div>
 
-          {/* 5-card grid: 3 on top, 2 centred on bottom */}
-          <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-6">
-            {services.map((s, i) => {
-              const isLastRow = i >= 3;
-              const colSpan = isLastRow ? "lg:col-span-3" : "lg:col-span-2";
-              return (
-                <Reveal key={s.title} delay={i * 0.08} className={colSpan}>
-                  <div className="group relative h-full bg-background p-8 transition-colors hover:bg-brand hover:text-brand-foreground">
-                    <s.icon size={32} strokeWidth={1.4} className="text-brand transition-colors group-hover:text-accent" />
-                    <h3 className="mt-10 text-xl font-semibold">{s.title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-foreground/65 transition-colors group-hover:text-primary-foreground/75">
-                      {s.desc}
-                    </p>
-                    <ArrowUpRight
-                      size={20}
-                      className="absolute right-7 top-7 text-foreground/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
-                    />
+          <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s, i) => (
+              <Reveal key={s.title} delay={i * 0.08}>
+                <div className="group relative h-full bg-background p-8 transition-colors hover:bg-brand hover:text-brand-foreground">
+                  <s.icon size={32} strokeWidth={1.4} className="text-brand transition-colors group-hover:text-accent" />
+                  <h3 className="mt-10 text-xl font-semibold">{s.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/65 transition-colors group-hover:text-primary-foreground/75">
+                    {s.desc}
+                  </p>
+                  <div className="mono mt-8 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-foreground/40 transition-colors group-hover:text-accent">
+                    /0{i + 1}
                   </div>
-                </Reveal>
-              );
-            })}
+                  <ArrowUpRight
+                    size={20}
+                    className="absolute right-7 top-7 text-foreground/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
+                  />
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
-
 
       {/* PROJECTS */}
       <section className="bg-background pt-12 md:pt-16 pb-12 md:pb-16">
         <div className="container-x">
           <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <Reveal>
-              <div className="eyebrow font-bold mb-5">Selected Work</div>
+              <div className="eyebrow mb-5">Selected Work</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
                 Recently <span className="text-brand">delivered.</span>
               </h2>
@@ -392,15 +387,13 @@ function Home() {
       <section className="bg-background pt-12 md:pt-16 pb-24 md:pb-32">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
-            <Reveal className="md:col-span-8">
-              <div className="eyebrow font-bold mb-5">Why MCC</div>
-              <h2 className="display text-balance text-5xl md:text-7xl font-bold">
-                We don't just build structures, <span className="text-accent">we build relationships.</span>
+            <Reveal className="md:col-span-7">
+              <div className="eyebrow mb-5">Why MCC</div>
+              <h2 className="display text-balance text-4xl md:text-6xl">
+                We don't just build structures, <span className="text-brand">we build relationships.</span>
               </h2>
-
             </Reveal>
-            <Reveal delay={0.1} className="md:col-span-4">
-
+            <Reveal delay={0.1} className="md:col-span-5">
               <p className="text-foreground/70">
                 With nearly three decades of experience, MCC has built a reputation that
                 speaks for itself — trusted by some of India's leading corporations and
@@ -431,7 +424,7 @@ function Home() {
         </div>
         <div className="container-x relative grid gap-10 md:grid-cols-12 md:items-center">
           <Reveal className="md:col-span-8">
-            <div className="eyebrow font-bold mb-5 !text-accent before:bg-accent">Let's build</div>
+            <div className="eyebrow mb-5 !text-accent before:bg-accent">Let's build</div>
             <h2 className="display text-balance text-4xl md:text-6xl">
               Have a project on the <span className="text-accent">drawing board?</span>
             </h2>

@@ -30,9 +30,9 @@ function CareersPage() {
             Careers
           </div>
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
-            Great projects need<br /><span className="text-accent">great people.</span>
+            Great projects need<br />great people.
           </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-8 text-lg text-muted-foreground">
             At MCC, we invest in our people as much as we invest in our
             projects — offering a professional environment where you can grow,
             learn and build a career that adds real value to your profile.
@@ -50,7 +50,7 @@ function CareersPage() {
             <Reveal key={t} delay={i * 0.05}>
               <div>
                 <div className="display text-5xl text-accent">0{i + 1}</div>
-                <h3 className="display mt-6 text-3xl md:text-4xl font-bold">{t}</h3>
+                <div className="display mt-6 text-2xl">{t}</div>
                 <p className="mt-3 text-sm text-muted-foreground">{d}</p>
               </div>
             </Reveal>
@@ -58,14 +58,13 @@ function CareersPage() {
         </div>
       </section>
 
-
       <section className="py-24">
         <div className="container-x grid gap-12 md:grid-cols-12">
           <Reveal className="md:col-span-4">
-            <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
+            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
               Apply
             </div>
-            <h2 className="display text-5xl md:text-6xl font-bold leading-[0.95] text-balance">
+            <h2 className="display text-4xl md:text-5xl text-balance">
               Send us your application.
             </h2>
             <p className="mt-6 text-sm text-muted-foreground">
@@ -73,7 +72,6 @@ function CareersPage() {
               functions and disciplines.
             </p>
           </Reveal>
-
 
           <Reveal delay={0.15} className="md:col-span-8">
             {sent ? (
@@ -103,7 +101,7 @@ function CareersPage() {
                   <label className="mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
                     CV / Resume
                   </label>
-                  <label className="mt-2 flex cursor-pointer items-center justify-between gap-4 border-2 border-dashed border-border px-4 py-4 transition-colors hover:border-accent">
+                  <label className="mt-2 flex cursor-pointer items-center justify-start gap-4 border-2 border-dashed border-border px-4 py-4 transition-colors hover:border-accent">
                     <span className="flex items-center gap-3 text-sm">
                       <Upload size={16} className="text-accent" />
                       {fileName ?? "Upload your CV (PDF, DOC)"}
@@ -118,7 +116,6 @@ function CareersPage() {
                       onChange={(e) => setFileName(e.target.files?.[0]?.name ?? null)}
                     />
                   </label>
-
                 </div>
 
                 <div className="sm:col-span-2">
