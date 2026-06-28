@@ -62,10 +62,10 @@ function CareersPage() {
       <section className="py-24">
         <div className="container-x grid gap-12 md:grid-cols-12">
           <Reveal className="md:col-span-4">
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+            <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               Apply
             </div>
-            <h2 className="display text-4xl md:text-5xl text-balance">
+            <h2 className="display text-5xl md:text-6xl font-bold leading-[0.95] text-balance">
               Send us your application.
             </h2>
             <p className="mt-6 text-sm text-muted-foreground">
@@ -73,6 +73,7 @@ function CareersPage() {
               functions and disciplines.
             </p>
           </Reveal>
+
 
           <Reveal delay={0.15} className="md:col-span-8">
             {sent ? (
@@ -102,7 +103,7 @@ function CareersPage() {
                   <label className="mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
                     CV / Resume
                   </label>
-                  <label className="mt-2 flex cursor-pointer items-center justify-start gap-4 border-2 border-dashed border-border px-4 py-4 transition-colors hover:border-accent">
+                  <label className="mt-2 flex cursor-pointer items-center justify-between gap-4 border-2 border-dashed border-border px-4 py-4 transition-colors hover:border-accent">
                     <span className="flex items-center gap-3 text-sm">
                       <Upload size={16} className="text-accent" />
                       {fileName ?? "Upload your CV (PDF, DOC)"}
@@ -117,6 +118,7 @@ function CareersPage() {
                       onChange={(e) => setFileName(e.target.files?.[0]?.name ?? null)}
                     />
                   </label>
+
                 </div>
 
                 <div className="sm:col-span-2">

@@ -22,7 +22,7 @@ function ContactPage() {
   return (
     <>
       <SiteHeader />
-      <section className="bg-primary pt-40 pb-20 text-primary-foreground">
+      <section className="bg-black pt-40 pb-20 text-primary-foreground">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Let's talk
@@ -32,6 +32,7 @@ function ContactPage() {
           </h1>
         </div>
       </section>
+
 
       <section className="py-24">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12">
@@ -43,8 +44,12 @@ function ContactPage() {
               <div className="space-y-3 border-l-2 border-accent pl-6">
                 <div className="flex items-start gap-3 text-sm">
                   <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>A-168, Bhagat Singh Colony, Bhiwadi, Rajasthan – 301019</span>
+                  <span>
+                    A-168, Bhagat Singh Colony,<br />
+                    Bhiwadi, Rajasthan – 301019
+                  </span>
                 </div>
+
                 <div className="flex items-start gap-3 text-sm">
                   <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
                   <a href="tel:+919887010003" className="hover:text-accent">+91 98870 10003</a>
