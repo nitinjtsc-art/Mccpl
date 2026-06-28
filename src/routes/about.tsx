@@ -41,10 +41,11 @@ function AboutPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Since 1997
           </div>
-          <h1 className="display text-[clamp(3rem,8vw,7rem)] leading-[0.85] text-balance">
+          <h1 className="display text-[clamp(3rem,8vw,7rem)] leading-[0.85] tracking-tight text-balance">
             Concrete, steel,
-            <span className="mt-6 block text-accent md:mt-8">conviction.</span>
+            <span className="mt-6 block tracking-tight text-accent md:mt-8">conviction.</span>
           </h1>
+
         </div>
         <div className="relative bg-primary">
           <img
@@ -62,30 +63,31 @@ function AboutPage() {
             <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               The firm
             </div>
-            <h2 className="display text-5xl md:text-6xl">
+            <h2 className="display text-6xl md:text-8xl font-bold leading-[0.9]">
               Built to Last.
             </h2>
           </Reveal>
-          <Reveal delay={0.15} className="space-y-5 md:col-span-7 text-foreground/80">
-            <p className="text-lg leading-relaxed">
+          <Reveal delay={0.15} className="space-y-5 md:col-span-7 text-muted-foreground">
+            <p className="text-base leading-relaxed text-muted-foreground">
               Founded in 1997 by Mr. Rajendra Mittal, MCC has grown from a
               regional contractor into a trusted pan-India construction firm —
               built on a simple belief that good construction is built on
               trust, hard work and accountability.
             </p>
-            <p>
+            <p className="text-base leading-relaxed text-muted-foreground">
               Over nearly three decades, we have delivered industrial plants,
               warehouses, institutional campuses, hospitality projects and
               residential developments across 13 states, for clients who value
               quality, reliability and on-time delivery above everything else.
             </p>
-            <p>
+            <p className="text-base leading-relaxed text-muted-foreground">
               Today, with 100+ projects to our name, we are trusted by
               multinational corporations, government institutions and leading
               Indian businesses alike — for clients who demand nothing but the
               best.
             </p>
           </Reveal>
+
         </div>
 
         {/* Vision / Mission */}
