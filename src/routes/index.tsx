@@ -399,7 +399,8 @@ function Home() {
               </h2>
 
             </Reveal>
-            <Reveal delay={0.1} className="md:col-span-5">
+            <Reveal delay={0.1} className="md:col-span-4">
+
               <p className="text-foreground/70">
                 With nearly three decades of experience, MCC has built a reputation that
                 speaks for itself — trusted by some of India's leading corporations and
