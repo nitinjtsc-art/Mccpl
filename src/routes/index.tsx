@@ -291,8 +291,8 @@ function Home() {
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal className="md:col-span-7">
-              <div className="eyebrow mb-5">What we do</div>
-              <h2 className="display text-balance text-4xl md:text-6xl">
+              <div className="eyebrow font-bold mb-5">What we do</div>
+              <h2 className="display text-balance text-5xl md:text-7xl font-bold">
                 One partner for your complete <span className="text-brand">construction journey.</span>
               </h2>
             </Reveal>
@@ -304,28 +304,31 @@ function Home() {
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s, i) => (
-              <Reveal key={s.title} delay={i * 0.08}>
-                <div className="group relative h-full bg-background p-8 transition-colors hover:bg-brand hover:text-brand-foreground">
-                  <s.icon size={32} strokeWidth={1.4} className="text-brand transition-colors group-hover:text-accent" />
-                  <h3 className="mt-10 text-xl font-semibold">{s.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/65 transition-colors group-hover:text-primary-foreground/75">
-                    {s.desc}
-                  </p>
-                  <div className="mono mt-8 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-foreground/40 transition-colors group-hover:text-accent">
-                    /0{i + 1}
+          {/* 5-card grid: 3 on top, 2 centred on bottom */}
+          <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-6">
+            {services.map((s, i) => {
+              const isLastRow = i >= 3;
+              const colSpan = isLastRow ? "lg:col-span-3" : "lg:col-span-2";
+              return (
+                <Reveal key={s.title} delay={i * 0.08} className={colSpan}>
+                  <div className="group relative h-full bg-background p-8 transition-colors hover:bg-brand hover:text-brand-foreground">
+                    <s.icon size={32} strokeWidth={1.4} className="text-brand transition-colors group-hover:text-accent" />
+                    <h3 className="mt-10 text-xl font-semibold">{s.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-foreground/65 transition-colors group-hover:text-primary-foreground/75">
+                      {s.desc}
+                    </p>
+                    <ArrowUpRight
+                      size={20}
+                      className="absolute right-7 top-7 text-foreground/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
+                    />
                   </div>
-                  <ArrowUpRight
-                    size={20}
-                    className="absolute right-7 top-7 text-foreground/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
-                  />
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
+
 
       {/* PROJECTS */}
       <section className="bg-background pt-12 md:pt-16 pb-12 md:pb-16">
