@@ -94,9 +94,10 @@ function AboutPage() {
         <div className="mx-auto mt-24 grid max-w-7xl px-6 md:grid-cols-2 md:px-0">
           <Reveal>
             <div className="bg-background p-10 md:p-16">
-              <div className="mono mb-4 text-[14px] font-bold uppercase tracking-[0.25em] text-accent">
+              <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
                 Our Vision
               </div>
+
               <h3 className="display text-3xl md:text-4xl">
                 To build a legacy as strong as our structures.
               </h3>
@@ -108,9 +109,10 @@ function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="bg-background p-10 md:p-16">
-              <div className="mono mb-4 text-[14px] font-bold uppercase tracking-[0.25em] text-accent">
+              <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
                 Our Mission
               </div>
+
               <h3 className="display text-3xl md:text-4xl">
                 To hand over every project better than promised.
               </h3>
@@ -129,15 +131,16 @@ function AboutPage() {
             <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               Our Values · Why Us
             </div>
-            <h2 className="display text-5xl md:text-6xl text-balance">
+            <h2 className="display text-6xl md:text-8xl font-bold leading-[0.9] text-balance">
               Built on the right<br />foundations.
             </h2>
           </Reveal>
         </div>
         <div className="mx-auto mt-16 max-w-7xl px-6">
           <div className="relative grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-6">
+            {/* connector line trimmed: starts at centre of 01, ends at centre of 04 */}
             <div
-              className="pointer-events-none absolute left-6 right-6 top-8 hidden h-px bg-accent/40 md:block"
+              className="pointer-events-none absolute left-[calc((100%/8)+0px)] right-[calc((100%/8)+0px)] top-8 hidden h-px bg-accent/40 md:block"
               aria-hidden="true"
             />
             {values.map((v, i) => (
@@ -146,7 +149,7 @@ function AboutPage() {
                   <div className="display relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-accent bg-card text-2xl text-accent">
                     0{i + 1}
                   </div>
-                  <div className="display mt-6 text-2xl">{v[0]}</div>
+                  <h3 className="display mt-6 text-2xl md:text-3xl font-bold">{v[0]}</h3>
                   <p className="mt-3 max-w-sm text-muted-foreground">{v[1]}</p>
                 </div>
               </Reveal>
@@ -155,13 +158,14 @@ function AboutPage() {
         </div>
       </section>
 
+
       <section id="timeline" className="py-32 scroll-mt-32">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               Milestones
             </div>
-            <h2 className="display text-5xl md:text-7xl">Timeline.</h2>
+            <h2 className="display text-6xl md:text-8xl font-bold">Timeline.</h2>
           </Reveal>
           <ol className="relative mt-16 grid grid-cols-1 gap-12 md:grid-cols-5 md:gap-6">
             <div
