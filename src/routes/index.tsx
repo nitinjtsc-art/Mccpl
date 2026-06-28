@@ -335,7 +335,7 @@ function Home() {
         <div className="container-x">
           <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <Reveal>
-              <div className="eyebrow mb-5">Selected Work</div>
+              <div className="eyebrow font-bold mb-5">Selected Work</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
                 Recently <span className="text-brand">delivered.</span>
               </h2>
@@ -392,11 +392,12 @@ function Home() {
       <section className="bg-background pt-12 md:pt-16 pb-24 md:pb-32">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
-            <Reveal className="md:col-span-7">
-              <div className="eyebrow mb-5">Why MCC</div>
-              <h2 className="display text-balance text-4xl md:text-6xl">
-                We don't just build structures, <span className="text-brand">we build relationships.</span>
+            <Reveal className="md:col-span-8">
+              <div className="eyebrow font-bold mb-5">Why MCC</div>
+              <h2 className="display text-balance text-5xl md:text-7xl font-bold">
+                We don't just build structures, <span className="text-accent">we build relationships.</span>
               </h2>
+
             </Reveal>
             <Reveal delay={0.1} className="md:col-span-5">
               <p className="text-foreground/70">
@@ -429,7 +430,7 @@ function Home() {
         </div>
         <div className="container-x relative grid gap-10 md:grid-cols-12 md:items-center">
           <Reveal className="md:col-span-8">
-            <div className="eyebrow mb-5 !text-accent before:bg-accent">Let's build</div>
+            <div className="eyebrow font-bold mb-5 !text-accent before:bg-accent">Let's build</div>
             <h2 className="display text-balance text-4xl md:text-6xl">
               Have a project on the <span className="text-accent">drawing board?</span>
             </h2>
