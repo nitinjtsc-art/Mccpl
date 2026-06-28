@@ -1,19 +1,19 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import mccLogo from "@/assets/mcc-logo.jpeg";
 
 type DropItem = { to: string; hash?: string; label: string; desc: string };
 
 const aboutMenu: DropItem[] = [
-  { to: "/about", label: "Overview", desc: "Who we are and what we stand for." },
-  { to: "/about/team", label: "Our Team", desc: "The people behind every project." },
-  { to: "/about/directors-message", label: "Director's Message", desc: "A note from our founding director." },
+  { to: "/about", label: "Overview", desc: "Who we are and what we stand for" },
+  { to: "/about/team", label: "Our Team", desc: "The people behind every project" },
+  { to: "/about/directors-message", label: "Director's Message", desc: "A note from our founding director" },
 ];
 
 const galleryMenu: DropItem[] = [
-  { to: "/gallery/awards", label: "Awards & Recognitions", desc: "Honours, certifications and achievements." },
-  { to: "/gallery/csr", label: "CSR", desc: "Our community and social initiatives." },
+  { to: "/gallery/awards", label: "Awards & Recognitions", desc: "Honours, certifications and achievements" },
+  { to: "/gallery/csr", label: "CSR", desc: "Our community and social initiatives" },
 ];
 
 const links = [
@@ -32,9 +32,10 @@ export function SiteHeader() {
   const aboutTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const galleryTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isAwards = useRouterState({ select: (s) => s.location.pathname === "/gallery/awards" });
-  const ctaClass = isAwards
-    ? "bg-accent text-accent-foreground hover:bg-accent/90"
-    : "bg-brand text-brand-foreground hover:bg-ink";
+  // Awards page intentionally uses the same navy CTA as the rest of the site
+  void isAwards;
+  const ctaClass = "bg-brand text-brand-foreground hover:bg-ink";
+
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -63,17 +64,17 @@ export function SiteHeader() {
       <div className="hidden bg-ink text-primary-foreground md:block">
         <div className="container-x flex h-9 items-center justify-between text-[11px] tracking-wide">
           <span className="mono uppercase tracking-[0.18em] text-primary-foreground">
-            Mittal Construction Company · Est. 1997 · Delhi-NCR
+            Mittal Construction Company · Est. 1997 · Bhiwadi · Delhi
           </span>
           <div className="flex items-center gap-5">
             <a href="tel:+919887010003" className="inline-flex items-center gap-2 hover:text-accent">
-              <Phone size={11} /> +91 98870 10003 <span className="text-primary-foreground/60">(Bhiwadi)</span>
+              <Phone size={11} /> +91 98870 10003
             </a>
             <a href="tel:+911141653030" className="inline-flex items-center gap-2 hover:text-accent">
-              <Phone size={11} /> +91 11 41653030 <span className="text-primary-foreground/60">(Delhi)</span>
+              <Phone size={11} /> +91 11 41653030
             </a>
-            <a href="mailto:info@mcc.co.in" className="hover:text-accent">
-              info@mcc.co.in
+            <a href="mailto:info@mcc.co.in" className="inline-flex items-center gap-2 hover:text-accent">
+              <Mail size={11} /> info@mcc.co.in
             </a>
           </div>
         </div>
@@ -85,12 +86,12 @@ export function SiteHeader() {
           scrolled ? "bg-white shadow-soft" : "bg-white"
         }`}
       >
-        <div className="container-x flex h-16 items-center justify-between md:h-20">
+        <div className="container-x flex h-20 items-center justify-between md:h-24">
           <Link to="/" className="flex items-center gap-3">
             <img
               src={mccLogo}
               alt="MCC — Mittal Construction Company"
-              className="h-8 w-auto md:h-10"
+              className="h-12 w-auto md:h-14"
               loading="eager"
             />
           </Link>
@@ -296,21 +297,21 @@ function Dropdown({
       </Link>
 
       <div
-        className={`fixed left-1/2 top-[calc(2.25rem+5rem)] z-40 w-[min(680px,92vw)] -translate-x-1/2 transition-all duration-300 ${
+        className={`fixed left-1/2 top-[calc(2.25rem+6rem)] z-40 w-[min(560px,92vw)] -translate-x-1/2 transition-all duration-300 ${
           isOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"
         }`}
         {...handlers}
       >
         <div className="overflow-hidden border border-border bg-background shadow-soft">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr]">
-            <div className="relative hidden bg-ink p-5 text-primary-foreground md:block">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr]">
+            <div className="relative hidden bg-ink p-5 text-primary-foreground md:flex md:flex-col">
               <div className="mono text-[10px] uppercase tracking-[0.28em] text-accent">{teaserEyebrow}</div>
-              <h3 className="display mt-3 text-xl leading-[1.05]">{teaserTitle}</h3>
+              <h3 className="display mt-3 text-2xl leading-[1.05]">{teaserTitle}</h3>
               {teaserText && <p className="mt-3 text-xs text-primary-foreground/70">{teaserText}</p>}
               <Link
                 to={teaserCtaTo}
                 onClick={() => setIsOpen(false)}
-                className="mono mt-5 inline-flex items-center gap-2 border-b border-accent pb-1 text-[10px] uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all"
+                className="mono mt-auto inline-flex items-center gap-2 border-b border-accent pb-1 text-[10px] uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all self-start pt-6"
               >
                 {teaserCta} →
               </Link>
