@@ -30,9 +30,9 @@ function CareersPage() {
             Careers
           </div>
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
-            Great projects need<br />great people.
+            Great projects need<br /><span className="text-accent">great people.</span>
           </h1>
-          <p className="mt-8 text-lg text-muted-foreground">
+          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
             At MCC, we invest in our people as much as we invest in our
             projects — offering a professional environment where you can grow,
             learn and build a career that adds real value to your profile.
@@ -50,13 +50,14 @@ function CareersPage() {
             <Reveal key={t} delay={i * 0.05}>
               <div>
                 <div className="display text-5xl text-accent">0{i + 1}</div>
-                <div className="display mt-6 text-2xl">{t}</div>
+                <h3 className="display mt-6 text-3xl md:text-4xl font-bold">{t}</h3>
                 <p className="mt-3 text-sm text-muted-foreground">{d}</p>
               </div>
             </Reveal>
           ))}
         </div>
       </section>
+
 
       <section className="py-24">
         <div className="container-x grid gap-12 md:grid-cols-12">

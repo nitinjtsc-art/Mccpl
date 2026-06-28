@@ -32,9 +32,10 @@ export function SiteHeader() {
   const aboutTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const galleryTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isAwards = useRouterState({ select: (s) => s.location.pathname === "/gallery/awards" });
-  const ctaClass = isAwards
-    ? "bg-accent text-accent-foreground hover:bg-accent/90"
-    : "bg-brand text-brand-foreground hover:bg-ink";
+  // Awards page intentionally uses the same navy CTA as the rest of the site
+  void isAwards;
+  const ctaClass = "bg-brand text-brand-foreground hover:bg-ink";
+
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
