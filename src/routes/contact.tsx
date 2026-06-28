@@ -68,7 +68,11 @@ function ContactPage() {
               <div className="space-y-3 border-l-2 border-accent pl-6">
                 <div className="flex items-start gap-3 text-sm">
                   <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>L-84B, First Floor, Malviya Nagar, Delhi – 110017</span>
+                  <span>
+                    L-84B, First Floor,<br />
+                    Malviya Nagar, Delhi – 110017
+                  </span>
+
                 </div>
                 <div className="flex items-start gap-3 text-sm">
                   <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
