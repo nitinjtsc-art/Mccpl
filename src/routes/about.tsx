@@ -19,7 +19,7 @@ export const Route = createFileRoute("/about")({
 const values = [
   ["Quality", "Uncompromising commitment to quality that shows in everything we build."],
   ["Trust & Reliability", "The trust our clients place in us is something we earn on every project and protect on every site."],
-  ["Safety", "We have never treated safety as a cost — we treat it as a commitment."],
+  ["Safety", "We have never treated safety as a cost : we treat it as a commitment."],
   ["Client-Centric Approach", "We measure our success not by the structures we build but by the satisfaction of the clients we build them for."],
 ];
 
