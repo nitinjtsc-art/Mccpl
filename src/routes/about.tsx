@@ -41,9 +41,8 @@ function AboutPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Since 1997
           </div>
-          <h1 className="display text-[clamp(3rem,8vw,7rem)] leading-[0.85] text-balance">
-            Concrete, steel,
-            <span className="mt-6 block text-accent md:mt-8">conviction.</span>
+          <h1 className="display text-[clamp(2rem,6vw,4rem)] leading-tight text-balance whitespace-pre-wrap">
+            {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            remove this\n\nVerify that the About headline shows the exact literal command text and that no other command-like phrases are displayed anywhere else on the page.`}
           </h1>
         </div>
         <div className="relative bg-primary">
