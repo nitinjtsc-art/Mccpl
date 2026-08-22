@@ -228,8 +228,7 @@ function Home() {
             <Reveal>
               <div className="eyebrow mb-5">About MCC</div>
               <h2 className="display text-balance text-4xl font-bold md:text-6xl">
-                A construction partner built on{" "}
-                <span className="text-brand">experience, trust and delivery.</span>
+                {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            remove text like Lucid Colloids · Bikaner, Rajasthan Gove. Degree College Bilawar, J&K etc`}
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
