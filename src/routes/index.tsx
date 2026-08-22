@@ -52,7 +52,7 @@ const heroSlides = [
     image: projects[2].image,
     eyebrow: "Institutional",
     title: "Public buildings designed to serve generations.",
-    sub: "Govt. Degree College · Bilawar, J&K",
+    sub: "Gove. Degree College Bilawar, J&K",
   },
 ];
 
@@ -228,8 +228,8 @@ function Home() {
             <Reveal>
               <div className="eyebrow mb-5">About MCC</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
-                A construction partner built on{" "}
-                <span className="text-brand">experience, trust and delivery.</span>
+                Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.
+                <span className="font-semibold text-brand"> 1. the initial banner which has mittal construction company est 1997 and it's background is black so this strip height reduce karo < 2. And height of the white strip as well, meaning which has company logo the whole strip height ko reduce karo 3. The names like Gove. Degree College Bilawar, J&K and other occurances of this names like lucid colloids, Bikaner, rajasthan 4. Remove em dashes from the website 5. Increase little bit of boldness of the text under about Mcc which is for example: A construction Partner Built on experience trust and delivery, not too much but should be professional 6.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
