@@ -228,7 +228,7 @@ function Home() {
             <Reveal>
               <div className="eyebrow mb-5">About MCC</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
-                A construction partner built on{"'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n hi"}
+                A construction partner built on{"'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            hi"}
                 <span className="text-brand">experience, trust and delivery.</span>
               </h2>
             </Reveal>
