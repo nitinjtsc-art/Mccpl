@@ -40,7 +40,7 @@ const heroSlides = [
     image: projects[3].image,
     eyebrow: "Industrial · Process Plant",
     title: "Engineering plants that run for decades.",
-    sub: "Lucid Colloids · Bikaner, Rajasthan",
+    sub: "\\n",
   },
   {
     image: projects[1].image,
@@ -52,7 +52,7 @@ const heroSlides = [
     image: projects[2].image,
     eyebrow: "Institutional",
     title: "Public buildings designed to serve generations.",
-    sub: "Govt. Degree College · Bilawar, J&K",
+    sub: "\\n",
   },
 ];
 
