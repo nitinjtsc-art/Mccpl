@@ -7,9 +7,9 @@ export const Route = createFileRoute("/about_/directors-message")({
   component: DirectorsMessagePage,
   head: () => ({
     meta: [
-      { title: "Director's Message — Mittal Construction" },
+      { title: "Director's Message : Mittal Construction" },
       { name: "description", content: "A note from Rajesh Mittal, Founder & Managing Director of Mittal Construction." },
-      { property: "og:title", content: "Director's Message — Mittal Construction" },
+      { property: "og:title", content: "Director's Message : Mittal Construction" },
       { property: "og:description", content: "A note from Rajesh Mittal, Founder & Managing Director." },
     ],
   }),

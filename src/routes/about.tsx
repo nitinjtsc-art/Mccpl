@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About — Mittal Construction" },
+      { title: "About : Mittal Construction" },
       { name: "description", content: "Founded in 1997 by Mr. Rajendra Mittal, MCC delivers industrial, institutional, hospitality and residential projects across India." },
       { property: "og:title", content: "About Mittal Construction" },
       { property: "og:description", content: "Nearly three decades of trusted construction across 13 states of India." },
@@ -26,9 +26,9 @@ const values = [
 // TODO: Years and descriptions for entries 2–5 are placeholders pending client confirmation.
 const timeline = [
   ["1997", "Mittal Construction Company founded by Mr. Rajendra Mittal in Bhiwadi, Rajasthan."],
-  ["2015", "First industrial contract — Greenply, Behror."],
+  ["2015", "First industrial contract : Greenply, Behror."],
   ["2018", "Expanded into institutional works with NBCC."],
-  ["2021", "Crossed ₹100M single-project benchmark — Toyoda Gosei."],
+  ["2021", "Crossed ₹100M single-project benchmark : Toyoda Gosei."],
   ["2024", "Active in Rajasthan, Haryana, UP, J&K with 200+ workforce."],
 ];
 

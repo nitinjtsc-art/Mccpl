@@ -8,9 +8,9 @@ export const Route = createFileRoute("/gallery/csr")({
   component: CsrPage,
   head: () => ({
     meta: [
-      { title: "CSR — Mittal Construction" },
+      { title: "CSR : Mittal Construction" },
       { name: "description", content: "Community and social initiatives by Mittal Construction." },
-      { property: "og:title", content: "CSR — MCC" },
+      { property: "og:title", content: "CSR : MCC" },
       { property: "og:description", content: "Education, health and community-development initiatives we support." },
     ],
   }),

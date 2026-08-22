@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Mittal Construction Company — Industrial & Civil Builders, Rajasthan" },
+      { title: "Mittal Construction Company : Industrial & Civil Builders, Rajasthan" },
       {
         name: "description",
         content:
@@ -75,7 +75,7 @@ const services = [
   {
     icon: Building2,
     title: "Retrofit & Renovation",
-    desc: "Old building, new potential — we make it happen.",
+    desc: "Old building, new potential : we make it happen.",
   },
   {
     icon: Package,
@@ -95,7 +95,7 @@ const whyUs = [
   {
     icon: Users,
     t: "Proven Client List",
-    d: "From multinationals to government institutions — India's most demanding clients trust MCC with their projects.",
+    d: "From multinationals to government institutions : India's most demanding clients trust MCC with their projects.",
   },
   {
     icon: Repeat,
@@ -240,8 +240,8 @@ function Home() {
                 of some of India's most demanding clients.
               </p>
               <p className="mt-5 max-w-2xl text-foreground/65">
-                We manage the full construction lifecycle — engineering, procurement,
-                execution and handover — with a focus on quality, safety and on-time
+                We manage the full construction lifecycle : engineering, procurement,
+                execution and handover : with a focus on quality, safety and on-time
                 delivery.
               </p>
             </Reveal>
