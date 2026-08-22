@@ -9,8 +9,8 @@ export const Route = createFileRoute("/careers")({
   component: CareersPage,
   head: () => ({
     meta: [
-      { title: "Careers — Mittal Construction" },
-      { name: "description", content: "Join Mittal Construction — open roles in engineering, project management, QA/QC and site execution." },
+      { title: "Careers : Mittal Construction" },
+      { name: "description", content: "Join Mittal Construction : open roles in engineering, project management, QA/QC and site execution." },
       { property: "og:title", content: "Careers at MCC" },
       { property: "og:description", content: "Build a long-term career with a contractor that self-performs the core scope." },
     ],
@@ -34,7 +34,7 @@ function CareersPage() {
           </h1>
           <p className="mt-8 text-lg text-muted-foreground">
             At MCC, we invest in our people as much as we invest in our
-            projects — offering a professional environment where you can grow,
+            projects : offering a professional environment where you can grow,
             learn and build a career that adds real value to your profile.
           </p>
         </div>
@@ -44,7 +44,7 @@ function CareersPage() {
         <div className="container-x grid gap-12 md:grid-cols-3">
           {[
             ["Built to last", "We hire for the future, not just for today."],
-            ["Room to grow", "Your potential does not have a ceiling here — only a ladder."],
+            ["Room to grow", "Your potential does not have a ceiling here : only a ladder."],
             ["Lead from the front", "Take charge, influence outcomes, make a difference."],
           ].map(([t, d], i) => (
             <Reveal key={t} delay={i * 0.05}>
@@ -78,7 +78,7 @@ function CareersPage() {
               <div className="border-2 border-accent bg-card p-10 text-center">
                 <div className="display text-4xl">Application received.</div>
                 <p className="mt-3 text-muted-foreground">
-                  Thanks for applying — we'll be in touch shortly.
+                  Thanks for applying : we'll be in touch shortly.
                 </p>
               </div>
             ) : (

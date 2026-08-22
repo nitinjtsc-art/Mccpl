@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Mittal Construction Company — Industrial & Civil Builders, Rajasthan" },
+      { title: "Mittal Construction Company : Industrial & Civil Builders, Rajasthan" },
       {
         name: "description",
         content:
@@ -52,7 +52,7 @@ const heroSlides = [
     image: projects[2].image,
     eyebrow: "Institutional",
     title: "Public buildings designed to serve generations.",
-    sub: "Govt. Degree College · Bilawar, J&K",
+    sub: "Gove. Degree College Bilawar, J&K",
   },
 ];
 
@@ -75,7 +75,7 @@ const services = [
   {
     icon: Building2,
     title: "Retrofit & Renovation",
-    desc: "Old building, new potential — we make it happen.",
+    desc: "Old building, new potential : we make it happen.",
   },
   {
     icon: Package,
@@ -95,7 +95,7 @@ const whyUs = [
   {
     icon: Users,
     t: "Proven Client List",
-    d: "From multinationals to government institutions — India's most demanding clients trust MCC with their projects.",
+    d: "From multinationals to government institutions : India's most demanding clients trust MCC with their projects.",
   },
   {
     icon: Repeat,
@@ -227,7 +227,7 @@ function Home() {
           <div className="md:col-span-7 md:pt-6">
             <Reveal>
               <div className="eyebrow mb-5">About MCC</div>
-              <h2 className="display text-balance text-4xl md:text-6xl">
+              <h2 className="display text-balance text-4xl font-bold md:text-6xl">
                 A construction partner built on{" "}
                 <span className="text-brand">experience, trust and delivery.</span>
               </h2>
@@ -235,13 +235,13 @@ function Home() {
             <Reveal delay={0.1}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
                 Founded in 1997 by Mr. Rajendra Mittal, MCC has spent nearly three decades
-                doing one thing well — building. From large industrial plants and warehouses
+                doing one thing well: building. From large industrial plants and warehouses
                 to institutional campuses and hospitality projects, we have earned the trust
                 of some of India's most demanding clients.
               </p>
               <p className="mt-5 max-w-2xl text-foreground/65">
-                We manage the full construction lifecycle — engineering, procurement,
-                execution and handover — with a focus on quality, safety and on-time
+                We manage the full construction lifecycle : engineering, procurement,
+                execution and handover : with a focus on quality, safety and on-time
                 delivery.
               </p>
             </Reveal>
@@ -296,7 +296,7 @@ function Home() {
             </Reveal>
             <Reveal delay={0.1} className="md:col-span-5">
               <p className="text-foreground/70">
-                From groundbreaking ceremony to ribbon cutting — we manage every stage of
+                From groundbreaking ceremony to ribbon cutting : we manage every stage of
                 your project with the same commitment and care.
               </p>
             </Reveal>
@@ -396,7 +396,7 @@ function Home() {
             <Reveal delay={0.1} className="md:col-span-5">
               <p className="text-foreground/70">
                 With nearly three decades of experience, MCC has built a reputation that
-                speaks for itself — trusted by some of India's leading corporations and
+                speaks for itself : trusted by some of India's leading corporations and
                 institutions, project after project.
               </p>
             </Reveal>

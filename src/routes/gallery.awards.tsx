@@ -8,9 +8,9 @@ export const Route = createFileRoute("/gallery/awards")({
   component: AwardsPage,
   head: () => ({
     meta: [
-      { title: "Awards & Recognitions — Mittal Construction" },
+      { title: "Awards & Recognitions : Mittal Construction" },
       { name: "description", content: "Honours, certifications and recognitions earned by Mittal Construction." },
-      { property: "og:title", content: "Awards & Recognitions — MCC" },
+      { property: "og:title", content: "Awards & Recognitions : MCC" },
       { property: "og:description", content: "A look at the milestones, honours and certifications earned across a decade of building." },
     ],
   }),

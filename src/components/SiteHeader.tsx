@@ -61,7 +61,7 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-50">
       {/* Top utility bar */}
       <div className="hidden bg-ink text-primary-foreground md:block">
-        <div className="container-x flex h-9 items-center justify-between text-[11px] tracking-wide">
+        <div className="container-x flex h-8 items-center justify-between text-[11px] tracking-wide">
           <span className="mono uppercase tracking-[0.18em] text-primary-foreground">
             Mittal Construction Company · Est. 1997 · Delhi-NCR
           </span>
@@ -85,11 +85,11 @@ export function SiteHeader() {
           scrolled ? "bg-white shadow-soft" : "bg-white"
         }`}
       >
-        <div className="container-x flex h-16 items-center justify-between md:h-20">
+        <div className="container-x flex h-14 items-center justify-between md:h-16">
           <Link to="/" className="flex items-center gap-3">
             <img
               src={mccLogo}
-              alt="MCC — Mittal Construction Company"
+              alt="MCC Mittal Construction Company"
               className="h-8 w-auto md:h-10"
               loading="eager"
             />
