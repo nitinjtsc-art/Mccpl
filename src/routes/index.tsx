@@ -227,14 +227,15 @@ function Home() {
           <div className="md:col-span-7 md:pt-6">
             <Reveal>
               <div className="eyebrow mb-5">About MCC</div>
-              <h2 className="display text-balance text-4xl md:text-6xl">
-                {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            1. the initial banner which has mittal construction company est 1997 and it's background is black so this strip height reduce karo < \n\n2. And height of the white strip as well, meaning which has company logo the whole strip height ko reduce karo\n\n3. The names like Gove. Degree College Bilawar, J&K and other occurances of this names like lucid colloids, Bikaner, rajasthan\n\n4. Remove em dashes from the website\n\n5. Increase little bit of boldness of the text under about Mcc which is for example: A construction Partner Built on experience trust and delivery, not too much but should be professional\n\n6.`}
+              <h2 className="display text-balance text-4xl font-bold md:text-6xl">
+                A construction partner built on{" "}
+                <span className="text-brand">experience, trust and delivery.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
                 Founded in 1997 by Mr. Rajendra Mittal, MCC has spent nearly three decades
-                doing one thing well — building. From large industrial plants and warehouses
+                doing one thing well: building. From large industrial plants and warehouses
                 to institutional campuses and hospitality projects, we have earned the trust
                 of some of India's most demanding clients.
               </p>

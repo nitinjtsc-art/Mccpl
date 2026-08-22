@@ -69,7 +69,7 @@ function AboutPage() {
           <Reveal delay={0.15} className="space-y-5 md:col-span-7 text-foreground/80">
             <p className="text-lg leading-relaxed">
               Founded in 1997 by Mr. Rajendra Mittal, MCC has grown from a
-              regional contractor into a trusted pan-India construction firm —
+              regional contractor into a trusted pan-India construction firm
               built on a simple belief that good construction is built on
               trust, hard work and accountability.
             </p>
@@ -82,7 +82,7 @@ function AboutPage() {
             <p>
               Today, with 100+ projects to our name, we are trusted by
               multinational corporations, government institutions and leading
-              Indian businesses alike — for clients who demand nothing but the
+              Indian businesses alike: for clients who demand nothing but the
               best.
             </p>
           </Reveal>

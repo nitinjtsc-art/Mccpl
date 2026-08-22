@@ -42,9 +42,9 @@ export const projects: Project[] = [
   },
   {
     id: "college",
-    name: "Gove. Degree College Bilawar, J&K",
-    client: "Gove. Degree College",
-    location: "Bilawar, Jammu & Kashmir",
+    name: "Govt. Degree College",
+    client: "Govt. Degree College",
+    location: "Bilawar, J&K",
     consultant: "National Building Construction Corp.",
     value: "₹85 Million",
     category: "Institutional",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
   },
   {
     id: "lucid",
-    name: "lucid colloids, Bikaner, rajasthan",
+    name: "Lucid Colloids Plant",
     client: "Lucid Colloids Ltd.",
     location: "Bikaner, Rajasthan",
     consultant: "Mott MacDonald India Ltd.",
