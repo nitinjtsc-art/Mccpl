@@ -42,7 +42,7 @@ function AboutPage() {
             Since 1997
           </div>
           <h1 className="display text-[clamp(2rem,6vw,4rem)] leading-tight text-balance whitespace-pre-wrap">
-            {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            remove em dashes from the whole app —`}
+            {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            Founded in 1997 by Mr. Rajendra Mittal, MCC has spent nearly three decades doing one thing well  building. From large industrial plants and warehouses to institutional campuses and hospitality projects, we have earned the trust of some of India's most demanding clients.\n\nWe manage the full construction lifecycle  engineering, procurement, execution and handover  with a focus on quality, safety and on-time delivery.\n\nreplace this text`}
           </h1>
         </div>
         <div className="relative bg-primary">
