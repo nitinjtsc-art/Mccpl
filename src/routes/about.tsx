@@ -96,7 +96,10 @@ function AboutPage() {
                 Our Vision
               </div>
               <h3 className="display text-3xl md:text-4xl">
-                To build a legacy as strong as our structures.
+                '''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''
+                                        
+                                            
+                                            hi
               </h3>
               <p className="mt-5 text-muted-foreground">
                 A legacy measured in the trust we earned, the standards we
