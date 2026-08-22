@@ -7,9 +7,9 @@ export const Route = createFileRoute("/about_/directors-message")({
   component: DirectorsMessagePage,
   head: () => ({
     meta: [
-      { title: "Director's Message : Mittal Construction" },
+      { title: "Director's Message — Mittal Construction" },
       { name: "description", content: "A note from Rajesh Mittal, Founder & Managing Director of Mittal Construction." },
-      { property: "og:title", content: "Director's Message : Mittal Construction" },
+      { property: "og:title", content: "Director's Message — Mittal Construction" },
       { property: "og:description", content: "A note from Rajesh Mittal, Founder & Managing Director." },
     ],
   }),
@@ -55,7 +55,7 @@ function DirectorsMessagePage() {
             <Reveal delay={0.2} className="md:col-span-8">
               <div className="border-l-2 border-accent pl-8">
                 <p className="display text-2xl md:text-3xl leading-snug text-foreground text-balance">
-                  "Construction is a business of promises : of dates, of
+                  "Construction is a business of promises — of dates, of
                   drawings, of the people who trust us with their capital.
                   We've built this company by keeping those promises, one
                   pour at a time."
@@ -72,8 +72,8 @@ function DirectorsMessagePage() {
                   handover.
                 </p>
                 <p>
-                  The clients we're proudest of : Greenply, Toyoda Gosei,
-                  Lucid Colloids, Surya Roshni : came back to us not because
+                  The clients we're proudest of — Greenply, Toyoda Gosei,
+                  Lucid Colloids, Surya Roshni — came back to us not because
                   we were the cheapest bid, but because we delivered on the
                   date we promised. That's the legacy we're building, and
                   the standard we owe every future project.

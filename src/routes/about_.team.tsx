@@ -7,9 +7,9 @@ export const Route = createFileRoute("/about_/team")({
   component: TeamPage,
   head: () => ({
     meta: [
-      { title: "Our Team : Mittal Construction" },
-      { name: "description", content: "The people behind every Mittal Construction project : leadership, operations, projects, QA/QC, safety and procurement." },
-      { property: "og:title", content: "Our Team : Mittal Construction" },
+      { title: "Our Team — Mittal Construction" },
+      { name: "description", content: "The people behind every Mittal Construction project — leadership, operations, projects, QA/QC, safety and procurement." },
+      { property: "og:title", content: "Our Team — Mittal Construction" },
       { property: "og:description", content: "Leadership and site team behind Mittal Construction." },
     ],
   }),
@@ -19,7 +19,7 @@ type Member = { name: string; role: string; initials: string };
 
 const founder: Member = { name: "Rajesh Mittal", role: "Founder & Managing Director", initials: "RM" };
 const directors: Member[] = [
-  { name: "Anil Mittal", role: "Director : Operations", initials: "AM" },
+  { name: "Anil Mittal", role: "Director — Operations", initials: "AM" },
   { name: "Vikas Sharma", role: "Head of Projects", initials: "VS" },
 ];
 const leads: Member[] = [

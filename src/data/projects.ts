@@ -44,7 +44,7 @@ export const projects: Project[] = [
     id: "college",
     name: "Govt. Degree College",
     client: "Govt. Degree College",
-    location: "Bilawar, J&K",
+    location: "Bilawar, Jammu & Kashmir",
     consultant: "National Building Construction Corp.",
     value: "₹85 Million",
     category: "Institutional",

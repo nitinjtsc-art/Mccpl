@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About : Mittal Construction" },
+      { title: "About — Mittal Construction" },
       { name: "description", content: "Founded in 1997 by Mr. Rajendra Mittal, MCC delivers industrial, institutional, hospitality and residential projects across India." },
       { property: "og:title", content: "About Mittal Construction" },
       { property: "og:description", content: "Nearly three decades of trusted construction across 13 states of India." },
@@ -19,16 +19,16 @@ export const Route = createFileRoute("/about")({
 const values = [
   ["Quality", "Uncompromising commitment to quality that shows in everything we build."],
   ["Trust & Reliability", "The trust our clients place in us is something we earn on every project and protect on every site."],
-  ["Safety", "We have never treated safety as a cost : we treat it as a commitment."],
+  ["Safety", "We have never treated safety as a cost — we treat it as a commitment."],
   ["Client-Centric Approach", "We measure our success not by the structures we build but by the satisfaction of the clients we build them for."],
 ];
 
 // TODO: Years and descriptions for entries 2–5 are placeholders pending client confirmation.
 const timeline = [
   ["1997", "Mittal Construction Company founded by Mr. Rajendra Mittal in Bhiwadi, Rajasthan."],
-  ["2015", "First industrial contract : Greenply, Behror."],
+  ["2015", "First industrial contract — Greenply, Behror."],
   ["2018", "Expanded into institutional works with NBCC."],
-  ["2021", "Crossed ₹100M single-project benchmark : Toyoda Gosei."],
+  ["2021", "Crossed ₹100M single-project benchmark — Toyoda Gosei."],
   ["2024", "Active in Rajasthan, Haryana, UP, J&K with 200+ workforce."],
 ];
 
@@ -69,7 +69,7 @@ function AboutPage() {
           <Reveal delay={0.15} className="space-y-5 md:col-span-7 text-foreground/80">
             <p className="text-lg leading-relaxed">
               Founded in 1997 by Mr. Rajendra Mittal, MCC has grown from a
-              regional contractor into a trusted pan-India construction firm
+              regional contractor into a trusted pan-India construction firm —
               built on a simple belief that good construction is built on
               trust, hard work and accountability.
             </p>
@@ -82,7 +82,7 @@ function AboutPage() {
             <p>
               Today, with 100+ projects to our name, we are trusted by
               multinational corporations, government institutions and leading
-              Indian businesses alike: for clients who demand nothing but the
+              Indian businesses alike — for clients who demand nothing but the
               best.
             </p>
           </Reveal>
