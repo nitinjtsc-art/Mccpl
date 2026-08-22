@@ -296,7 +296,7 @@ function Home() {
             </Reveal>
             <Reveal delay={0.1} className="md:col-span-5">
               <p className="text-foreground/70">
-                From groundbreaking ceremony to ribbon cutting — we manage every stage of
+                From groundbreaking ceremony to ribbon cutting : we manage every stage of
                 your project with the same commitment and care.
               </p>
             </Reveal>
@@ -396,7 +396,7 @@ function Home() {
             <Reveal delay={0.1} className="md:col-span-5">
               <p className="text-foreground/70">
                 With nearly three decades of experience, MCC has built a reputation that
-                speaks for itself — trusted by some of India's leading corporations and
+                speaks for itself : trusted by some of India's leading corporations and
                 institutions, project after project.
               </p>
             </Reveal>

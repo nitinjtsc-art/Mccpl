@@ -73,7 +73,7 @@ function DirectorsMessagePage() {
                 </p>
                 <p>
                   The clients we're proudest of : Greenply, Toyoda Gosei,
-                  Lucid Colloids, Surya Roshni — came back to us not because
+                  Lucid Colloids, Surya Roshni : came back to us not because
                   we were the cheapest bid, but because we delivered on the
                   date we promised. That's the legacy we're building, and
                   the standard we owe every future project.
