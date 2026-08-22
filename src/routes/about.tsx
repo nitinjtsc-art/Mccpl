@@ -42,7 +42,7 @@ function AboutPage() {
             Since 1997
           </div>
           <h1 className="display text-[clamp(2rem,6vw,4rem)] leading-tight text-balance whitespace-pre-wrap">
-            {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            remove this`}
+            {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            remove this sected text completely`}
           </h1>
         </div>
         <div className="relative bg-primary">
