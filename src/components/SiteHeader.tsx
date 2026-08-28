@@ -160,7 +160,7 @@ export function SiteHeader() {
               teaserCta="View Gallery"
               teaserCtaTo="/gallery/awards"
               eyebrow="Gallery"
-              teaserEyebrow="In the spotlight"
+
             />
 
             <Link
