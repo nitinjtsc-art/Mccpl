@@ -329,9 +329,10 @@ function Home() {
           <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <Reveal>
               <div className="eyebrow mb-5">Selected Work</div>
-              <h2 className="display text-balance text-4xl md:text-6xl">
+              <h2 className="display text-balance text-4xl font-semibold md:text-6xl">
                 Recently <span className="text-brand">delivered.</span>
               </h2>
+
             </Reveal>
             <Reveal delay={0.1}>
               <Link
