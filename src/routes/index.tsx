@@ -222,7 +222,7 @@ function Home() {
           <div className="md:col-span-7 md:pt-6">
             <Reveal>
               <div className="eyebrow mb-5">About MCC</div>
-              <h2 className="display text-balance text-4xl md:text-6xl">
+              <h2 className="display text-balance text-4xl font-semibold md:text-6xl">
                 A construction partner built on{" "}
                 <span className="text-brand">experience, trust and delivery.</span>
               </h2>
@@ -230,15 +230,16 @@ function Home() {
             <Reveal delay={0.1}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
                 Founded in 1997 by Mr. Rajendra Mittal, MCC has spent nearly three decades
-                doing one thing well, building. From large industrial plants and warehouses
+                doing one thing well: building. From large industrial plants and warehouses
                 to institutional campuses and hospitality projects, we have earned the trust
                 of some of India's most demanding clients.
               </p>
               <p className="mt-5 max-w-2xl text-foreground/65">
-                We manage the full construction lifecycle, engineering, procurement,
-                execution and handover, with a focus on quality, safety and on-time
+                We manage the full construction lifecycle, from engineering and procurement
+                to execution and handover, with a focus on quality, safety and on-time
                 delivery.
               </p>
+
             </Reveal>
             <Reveal delay={0.2}>
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
