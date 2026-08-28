@@ -8,9 +8,9 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — Mittal Construction" },
+      { title: "Services | Mittal Construction" },
       { name: "description", content: "Turnkey industrial, institutional, civil and MEP construction services by Mittal Construction." },
-      { property: "og:title", content: "Services — Mittal Construction" },
+      { property: "og:title", content: "Services, Mittal Construction" },
       { property: "og:description", content: "Industrial, commercial, institutional, civil, MEP and refurbishment construction services." },
     ],
   }),
@@ -47,7 +47,7 @@ function ServicesPage() {
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
             You bring the vision. We handle the execution. From groundbreaking
-            ceremony to ribbon cutting — we take care of everything.
+            ceremony to ribbon cutting, we take care of everything.
           </p>
         </div>
       </section>

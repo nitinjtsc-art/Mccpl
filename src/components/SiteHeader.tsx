@@ -61,7 +61,7 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-50">
       {/* Top utility bar */}
       <div className="hidden bg-ink text-primary-foreground md:block">
-        <div className="container-x flex h-9 items-center justify-between text-[11px] tracking-wide">
+        <div className="container-x flex h-7 items-center justify-between text-[11px] tracking-wide">
           <span className="mono uppercase tracking-[0.18em] text-primary-foreground">
             Mittal Construction Company · Est. 1997 · Delhi-NCR
           </span>
@@ -85,11 +85,11 @@ export function SiteHeader() {
           scrolled ? "bg-white shadow-soft" : "bg-white"
         }`}
       >
-        <div className="container-x flex h-16 items-center justify-between md:h-20">
+        <div className="container-x flex h-14 items-center justify-between md:h-16">
           <Link to="/" className="flex items-center gap-3">
             <img
               src={mccLogo}
-              alt="MCC — Mittal Construction Company"
+              alt="MCC | Mittal Construction Company"
               className="h-8 w-auto md:h-10"
               loading="eager"
             />
@@ -116,10 +116,8 @@ export function SiteHeader() {
               items={aboutMenu}
               teaserTitle={<>Built on <span className="text-accent">trust,</span> measured in milestones.</>}
               teaserText=""
-              teaserCta="Explore About"
               teaserCtaTo="/about"
               eyebrow="About MCC"
-              teaserEyebrow="Since 1997"
             />
 
             <Link
@@ -162,7 +160,7 @@ export function SiteHeader() {
               teaserCta="View Gallery"
               teaserCtaTo="/gallery/awards"
               eyebrow="Gallery"
-              teaserEyebrow="In the spotlight"
+
             />
 
             <Link
@@ -277,10 +275,10 @@ function Dropdown({
   items: DropItem[];
   teaserTitle: React.ReactNode;
   teaserText: string;
-  teaserCta: string;
+  teaserCta?: string;
   teaserCtaTo: string;
   eyebrow: string;
-  teaserEyebrow: string;
+  teaserEyebrow?: string;
 }) {
   return (
     <div className="relative" {...handlers}>
@@ -296,7 +294,7 @@ function Dropdown({
       </Link>
 
       <div
-        className={`fixed left-1/2 top-[calc(2.25rem+5rem)] z-40 w-[min(680px,92vw)] -translate-x-1/2 transition-all duration-300 ${
+        className={`fixed left-1/2 top-[calc(1.75rem+4rem)] z-40 w-[min(680px,92vw)] -translate-x-1/2 transition-all duration-300 ${
           isOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"
         }`}
         {...handlers}
@@ -304,16 +302,20 @@ function Dropdown({
         <div className="overflow-hidden border border-border bg-background shadow-soft">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr]">
             <div className="relative hidden bg-ink p-5 text-primary-foreground md:block">
-              <div className="mono text-[10px] uppercase tracking-[0.28em] text-accent">{teaserEyebrow}</div>
-              <h3 className="display mt-3 text-xl leading-[1.05]">{teaserTitle}</h3>
+              {teaserEyebrow && (
+                <div className="mono text-[10px] uppercase tracking-[0.28em] text-accent">{teaserEyebrow}</div>
+              )}
+              <h3 className="display text-2xl leading-[1.1]">{teaserTitle}</h3>
               {teaserText && <p className="mt-3 text-xs text-primary-foreground/70">{teaserText}</p>}
-              <Link
-                to={teaserCtaTo}
-                onClick={() => setIsOpen(false)}
-                className="mono mt-5 inline-flex items-center gap-2 border-b border-accent pb-1 text-[10px] uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all"
-              >
-                {teaserCta} →
-              </Link>
+              {teaserCta && (
+                <Link
+                  to={teaserCtaTo}
+                  onClick={() => setIsOpen(false)}
+                  className="mono mt-5 inline-flex items-center gap-2 border-b border-accent pb-1 text-[10px] uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all"
+                >
+                  {teaserCta} →
+                </Link>
+              )}
             </div>
             <div className="bg-background p-5">
               <div className="mono mb-4 text-[10px] uppercase tracking-[0.24em] text-muted-foreground">{eyebrow}</div>

@@ -8,9 +8,9 @@ export const Route = createFileRoute("/clients")({
   component: ClientsPage,
   head: () => ({
     meta: [
-      { title: "Clients — Mittal Construction" },
+      { title: "Clients | Mittal Construction" },
       { name: "description", content: "Industrial, institutional, commercial and hospitality clients served by Mittal Construction." },
-      { property: "og:title", content: "Our Clients — Mittal Construction" },
+      { property: "og:title", content: "Our Clients, Mittal Construction" },
       { property: "og:description", content: "Trusted by Greenply, Toyoda Gosei, Lucid Colloids, Surya Roshni and more." },
     ],
   }),
