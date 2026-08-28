@@ -120,7 +120,7 @@ function Home() {
       <SiteHeader />
 
       {/* HERO, full bleed image carousel */}
-      <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-ink pt-20 md:pt-28">
+      <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-ink pt-16 md:pt-24">
         <AnimatePresence>
           <motion.div
             key={active}
