@@ -361,11 +361,12 @@ function Home() {
                     </div>
                     <div className="absolute inset-x-6 bottom-6 text-primary-foreground">
                       <div className="mono mb-2 text-[10px] uppercase tracking-[0.22em] text-primary-foreground/70">
-                        {p.location} · {p.year}
+                        {p.year}
                       </div>
                       <div className="display text-xl font-semibold leading-tight md:text-2xl">
                         {p.name}
                       </div>
+
                       <div className="mt-4 flex items-center justify-between border-t border-primary-foreground/20 pt-4 text-sm">
                         <span className="text-primary-foreground/70">{p.value}</span>
                         <ArrowUpRight
