@@ -156,9 +156,6 @@ function Home() {
               <h1 className="display text-balance text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] text-primary-foreground">
                 {heroSlides[active].title}
               </h1>
-              <p className="mt-5 max-w-xl text-base text-primary-foreground/70 md:text-lg">
-                {heroSlides[active].sub}
-              </p>
             </motion.div>
           </AnimatePresence>
 
