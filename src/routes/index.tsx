@@ -449,7 +449,7 @@ function Home() {
 
       {/* MARQUEE, clients / consultants */}
       <section className="border-y border-border bg-background">
-        <div className="container-x flex items-center gap-8 py-5">
+        <div className="container-x flex items-center gap-8 py-2.5">
           <span className="mono shrink-0 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
             Trusted by
           </span>
