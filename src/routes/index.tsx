@@ -284,20 +284,21 @@ function Home() {
       {/* SERVICES */}
       <section className="bg-background pt-24 md:pt-32 pb-12 md:pb-16">
         <div className="container-x">
-          <div className="grid gap-10 md:grid-cols-12 md:items-end">
-            <Reveal className="md:col-span-7">
+          <div className="grid gap-6 md:grid-cols-12">
+            <Reveal className="md:col-span-12">
               <div className="eyebrow mb-5">What we do</div>
-              <h2 className="display text-balance text-4xl md:text-6xl">
+              <h2 className="display text-balance text-4xl font-semibold md:text-6xl">
                 One partner for your complete <span className="text-brand">construction journey.</span>
               </h2>
             </Reveal>
-            <Reveal delay={0.1} className="md:col-span-5">
-              <p className="text-foreground/70">
+            <Reveal delay={0.1} className="md:col-span-12">
+              <p className="text-lg text-foreground/70">
                 From groundbreaking ceremony to ribbon cutting, we manage every stage of
                 your project with the same commitment and care.
               </p>
             </Reveal>
           </div>
+
 
           <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
