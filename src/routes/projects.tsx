@@ -8,10 +8,10 @@ export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
   head: () => ({
     meta: [
-      { title: "Projects — Mittal Construction" },
-      { name: "description", content: "The structures behind our story — completed industrial, institutional and commercial projects by Mittal Construction across India." },
-      { property: "og:title", content: "Projects — Mittal Construction" },
-      { property: "og:description", content: "The structures behind our story — selected completed projects by MCC." },
+      { title: "Projects | Mittal Construction" },
+      { name: "description", content: "The structures behind our story, completed industrial, institutional and commercial projects by Mittal Construction across India." },
+      { property: "og:title", content: "Projects, Mittal Construction" },
+      { property: "og:description", content: "The structures behind our story, selected completed projects by MCC." },
     ],
   }),
 });

@@ -89,7 +89,7 @@ export function SiteHeader() {
           <Link to="/" className="flex items-center gap-3">
             <img
               src={mccLogo}
-              alt="MCC — Mittal Construction Company"
+              alt="MCC | Mittal Construction Company"
               className="h-8 w-auto md:h-10"
               loading="eager"
             />

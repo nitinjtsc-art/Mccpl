@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Mittal Construction Company — Industrial & Civil Builders, Rajasthan" },
+      { title: "Mittal Construction Company | Industrial & Civil Builders, Rajasthan" },
       {
         name: "description",
         content:
@@ -75,7 +75,7 @@ const services = [
   {
     icon: Building2,
     title: "Retrofit & Renovation",
-    desc: "Old building, new potential — we make it happen.",
+    desc: "Old building, new potential, we make it happen.",
   },
   {
     icon: Package,
@@ -95,7 +95,7 @@ const whyUs = [
   {
     icon: Users,
     t: "Proven Client List",
-    d: "From multinationals to government institutions — India's most demanding clients trust MCC with their projects.",
+    d: "From multinationals to government institutions, India's most demanding clients trust MCC with their projects.",
   },
   {
     icon: Repeat,
@@ -121,7 +121,7 @@ function Home() {
     <>
       <SiteHeader />
 
-      {/* HERO — full bleed image carousel */}
+      {/* HERO, full bleed image carousel */}
       <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-ink pt-20 md:pt-28">
         <AnimatePresence>
           <motion.div
@@ -235,13 +235,13 @@ function Home() {
             <Reveal delay={0.1}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
                 Founded in 1997 by Mr. Rajendra Mittal, MCC has spent nearly three decades
-                doing one thing well — building. From large industrial plants and warehouses
+                doing one thing well, building. From large industrial plants and warehouses
                 to institutional campuses and hospitality projects, we have earned the trust
                 of some of India's most demanding clients.
               </p>
               <p className="mt-5 max-w-2xl text-foreground/65">
-                We manage the full construction lifecycle — engineering, procurement,
-                execution and handover — with a focus on quality, safety and on-time
+                We manage the full construction lifecycle, engineering, procurement,
+                execution and handover, with a focus on quality, safety and on-time
                 delivery.
               </p>
             </Reveal>
@@ -296,7 +296,7 @@ function Home() {
             </Reveal>
             <Reveal delay={0.1} className="md:col-span-5">
               <p className="text-foreground/70">
-                From groundbreaking ceremony to ribbon cutting — we manage every stage of
+                From groundbreaking ceremony to ribbon cutting, we manage every stage of
                 your project with the same commitment and care.
               </p>
             </Reveal>
@@ -396,7 +396,7 @@ function Home() {
             <Reveal delay={0.1} className="md:col-span-5">
               <p className="text-foreground/70">
                 With nearly three decades of experience, MCC has built a reputation that
-                speaks for itself — trusted by some of India's leading corporations and
+                speaks for itself, trusted by some of India's leading corporations and
                 institutions, project after project.
               </p>
             </Reveal>
@@ -445,7 +445,7 @@ function Home() {
         </div>
       </section>
 
-      {/* MARQUEE — clients / consultants */}
+      {/* MARQUEE, clients / consultants */}
       <section className="border-y border-border bg-background">
         <div className="container-x flex items-center gap-8 py-5">
           <span className="mono shrink-0 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
