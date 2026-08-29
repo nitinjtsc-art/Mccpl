@@ -41,8 +41,8 @@ function AboutPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Since 1997
           </div>
-          <h1 className="display text-[clamp(2rem,6vw,4rem)] leading-tight text-balance whitespace-pre-wrap">
-            {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            remove \"a\" and add \"an\"4`}
+          <h1 className="display text-[clamp(2rem,6vw,4rem)] leading-[1.3] text-balance">
+            Concrete<br />Steel<br />Conviction
           </h1>
         </div>
         <div className="relative bg-primary">
@@ -133,10 +133,6 @@ function AboutPage() {
         </div>
         <div className="mx-auto mt-16 max-w-7xl px-6">
           <div className="relative grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-6">
-            <div
-              className="pointer-events-none absolute left-6 right-6 top-8 hidden h-px bg-accent/40 md:block"
-              aria-hidden="true"
-            />
             {values.map((v, i) => (
               <Reveal key={v[0]} delay={i * 0.06}>
                 <div className="relative">
@@ -162,7 +158,7 @@ function AboutPage() {
           </Reveal>
           <ol className="relative mt-16 grid grid-cols-1 gap-12 md:grid-cols-5 md:gap-6">
             <div
-              className="pointer-events-none absolute left-0 right-0 top-2 hidden h-px bg-accent md:block"
+              className="pointer-events-none absolute left-0 right-0 top-[1px] hidden h-px bg-accent md:block"
               aria-hidden="true"
             />
             {timeline.map(([y, t], i) => (

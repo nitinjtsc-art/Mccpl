@@ -51,7 +51,7 @@ function ClientsPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Our Clients
           </div>
-          <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
+          <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[1.05] text-balance">
             Trusted by those<br />who build India.
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
@@ -64,12 +64,12 @@ function ClientsPage() {
 
       <section className="border-t border-border bg-background pb-24">
         <div className="container-x">
-          <div className="flex flex-wrap gap-2 border-b border-border py-6">
+          <div className="flex flex-nowrap justify-center gap-2 overflow-x-auto border-b border-border py-6">
             {filters.map((f) => (
               <button
                 key={f}
                 onClick={() => setActive(f)}
-                className={`mono px-4 py-2 text-[11px] uppercase tracking-[0.2em] transition-colors ${
+                className={`mono whitespace-nowrap px-4 py-2 text-[11px] uppercase tracking-[0.2em] transition-colors ${
                   active === f
                     ? "bg-ink text-primary-foreground"
                     : "border border-border text-foreground/70 hover:border-accent hover:text-accent"

@@ -16,7 +16,7 @@ export const Route = createFileRoute("/gallery/awards")({
   }),
 });
 
-const items = Array.from({ length: 8 }, (_, i) => ({
+const items = Array.from({ length: 3 }, (_, i) => ({
   title: `Recognition ${i + 1}`,
   year: `${2017 + i}`,
   caption: "Photo to be added soon.",
@@ -55,8 +55,8 @@ function AwardsPage() {
                   </div>
                 </div>
                 <figcaption className="p-5">
-                  <div className="display text-xl transition-colors group-hover:text-accent">{it.title}</div>
-                  <div className="mt-1 text-xs text-muted-foreground">{it.caption}</div>
+                  <div className="display text-2xl transition-colors group-hover:text-accent">{it.title}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">{it.caption}</div>
                 </figcaption>
               </figure>
             </Reveal>
