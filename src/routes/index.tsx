@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "Mittal Construction Company | Industrial & Civil Builders, Rajasthan" },
+      { title: "Mittal Construction Company — Industrial & Civil Builders, Rajasthan" },
       {
         name: "description",
         content:
@@ -40,19 +40,21 @@ const heroSlides = [
     image: projects[3].image,
     eyebrow: "Industrial · Process Plant",
     title: "Engineering plants that run for decades.",
+    sub: "Lucid Colloids · Bikaner, Rajasthan",
   },
   {
     image: projects[1].image,
     eyebrow: "Industrial · Manufacturing",
     title: "Turnkey factories, delivered on schedule.",
+    sub: "Toyoda Gosei · Neemrana, Rajasthan",
   },
   {
     image: projects[2].image,
     eyebrow: "Institutional",
     title: "Public buildings designed to serve generations.",
+    sub: "Govt. Degree College · Bilawar, J&K",
   },
 ];
-
 
 const services = [
   {
@@ -73,7 +75,7 @@ const services = [
   {
     icon: Building2,
     title: "Retrofit & Renovation",
-    desc: "Old building, new potential, we make it happen.",
+    desc: "Old building, new potential — we make it happen.",
   },
   {
     icon: Package,
@@ -93,7 +95,7 @@ const whyUs = [
   {
     icon: Users,
     t: "Proven Client List",
-    d: "From multinationals to government institutions, India's most demanding clients trust MCC with their projects.",
+    d: "From multinationals to government institutions — India's most demanding clients trust MCC with their projects.",
   },
   {
     icon: Repeat,
@@ -119,8 +121,8 @@ function Home() {
     <>
       <SiteHeader />
 
-      {/* HERO, full bleed image carousel */}
-      <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-ink pt-16 md:pt-24">
+      {/* HERO — full bleed image carousel */}
+      <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-ink pt-20 md:pt-28">
         <AnimatePresence>
           <motion.div
             key={active}
@@ -156,6 +158,9 @@ function Home() {
               <h1 className="display text-balance text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] text-primary-foreground">
                 {heroSlides[active].title}
               </h1>
+              <p className="mt-5 max-w-xl text-base text-primary-foreground/70 md:text-lg">
+                {heroSlides[active].sub}
+              </p>
             </motion.div>
           </AnimatePresence>
 
@@ -222,7 +227,7 @@ function Home() {
           <div className="md:col-span-7 md:pt-6">
             <Reveal>
               <div className="eyebrow mb-5">About MCC</div>
-              <h2 className="display text-balance text-4xl font-semibold md:text-6xl">
+              <h2 className="display text-balance text-4xl md:text-6xl">
                 A construction partner built on{" "}
                 <span className="text-brand">experience, trust and delivery.</span>
               </h2>
@@ -230,16 +235,15 @@ function Home() {
             <Reveal delay={0.1}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
                 Founded in 1997 by Mr. Rajendra Mittal, MCC has spent nearly three decades
-                doing one thing well: building. From large industrial plants and warehouses
+                doing one thing well — building. From large industrial plants and warehouses
                 to institutional campuses and hospitality projects, we have earned the trust
                 of some of India's most demanding clients.
               </p>
               <p className="mt-5 max-w-2xl text-foreground/65">
-                We manage the full construction lifecycle, from engineering and procurement
-                to execution and handover, with a focus on quality, safety and on-time
+                We manage the full construction lifecycle — engineering, procurement,
+                execution and handover — with a focus on quality, safety and on-time
                 delivery.
               </p>
-
             </Reveal>
             <Reveal delay={0.2}>
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -270,13 +274,12 @@ function Home() {
       <section className="bg-brand text-brand-foreground">
         <div className="container-x grid grid-cols-2 divide-y divide-x divide-primary-foreground/10 md:grid-cols-4 md:divide-y-0">
           {stats.map((s, i) => (
-            <Reveal key={s.l} delay={i * 0.08} className="px-2 py-12 text-center md:px-8 md:py-16">
+            <Reveal key={s.l} delay={i * 0.08} className="px-2 py-12 md:px-8 md:py-16">
               <div className="display text-5xl font-semibold md:text-6xl">{s.v}</div>
-              <div className="mono mt-4 text-sm uppercase tracking-[0.18em] text-primary-foreground">
+              <div className="mono mt-4 text-[10px] uppercase tracking-[0.22em] text-primary-foreground">
                 {s.l}
               </div>
             </Reveal>
-
           ))}
         </div>
       </section>
@@ -284,21 +287,20 @@ function Home() {
       {/* SERVICES */}
       <section className="bg-background pt-24 md:pt-32 pb-12 md:pb-16">
         <div className="container-x">
-          <div className="grid gap-6 md:grid-cols-12">
-            <Reveal className="md:col-span-12">
+          <div className="grid gap-10 md:grid-cols-12 md:items-end">
+            <Reveal className="md:col-span-7">
               <div className="eyebrow mb-5">What we do</div>
-              <h2 className="display text-balance text-4xl font-semibold md:text-6xl">
+              <h2 className="display text-balance text-4xl md:text-6xl">
                 One partner for your complete <span className="text-brand">construction journey.</span>
               </h2>
             </Reveal>
-            <Reveal delay={0.1} className="md:col-span-12">
-              <p className="text-lg text-foreground/70">
-                From groundbreaking ceremony to ribbon cutting, we manage every stage of
+            <Reveal delay={0.1} className="md:col-span-5">
+              <p className="text-foreground/70">
+                From groundbreaking ceremony to ribbon cutting — we manage every stage of
                 your project with the same commitment and care.
               </p>
             </Reveal>
           </div>
-
 
           <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
@@ -329,10 +331,9 @@ function Home() {
           <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <Reveal>
               <div className="eyebrow mb-5">Selected Work</div>
-              <h2 className="display text-balance text-4xl font-semibold md:text-6xl">
+              <h2 className="display text-balance text-4xl md:text-6xl">
                 Recently <span className="text-brand">delivered.</span>
               </h2>
-
             </Reveal>
             <Reveal delay={0.1}>
               <Link
@@ -361,12 +362,11 @@ function Home() {
                     </div>
                     <div className="absolute inset-x-6 bottom-6 text-primary-foreground">
                       <div className="mono mb-2 text-[10px] uppercase tracking-[0.22em] text-primary-foreground/70">
-                        {p.year}
+                        {p.location} · {p.year}
                       </div>
                       <div className="display text-xl font-semibold leading-tight md:text-2xl">
                         {p.name}
                       </div>
-
                       <div className="mt-4 flex items-center justify-between border-t border-primary-foreground/20 pt-4 text-sm">
                         <span className="text-primary-foreground/70">{p.value}</span>
                         <ArrowUpRight
@@ -386,23 +386,21 @@ function Home() {
       {/* WHY US */}
       <section className="bg-background pt-12 md:pt-16 pb-24 md:pb-32">
         <div className="container-x">
-          <div className="grid gap-6 md:grid-cols-12">
-            <Reveal className="md:col-span-12">
+          <div className="grid gap-10 md:grid-cols-12 md:items-end">
+            <Reveal className="md:col-span-7">
               <div className="eyebrow mb-5">Why MCC</div>
-              <h2 className="display text-balance text-4xl font-semibold md:text-6xl">
-                We don't just build structures,<br />
-                <span className="text-brand">we build relationships.</span>
+              <h2 className="display text-balance text-4xl md:text-6xl">
+                We don't just build structures, <span className="text-brand">we build relationships.</span>
               </h2>
             </Reveal>
-            <Reveal delay={0.1} className="md:col-span-12">
-              <p className="text-lg text-foreground/70">
+            <Reveal delay={0.1} className="md:col-span-5">
+              <p className="text-foreground/70">
                 With nearly three decades of experience, MCC has built a reputation that
-                speaks for itself, trusted by some of India's leading corporations and
+                speaks for itself — trusted by some of India's leading corporations and
                 institutions, project after project.
               </p>
             </Reveal>
           </div>
-
 
           <div className="mt-16 grid gap-10 md:grid-cols-3">
             {whyUs.map((w, i) => (
@@ -447,9 +445,9 @@ function Home() {
         </div>
       </section>
 
-      {/* MARQUEE, clients / consultants */}
+      {/* MARQUEE — clients / consultants */}
       <section className="border-y border-border bg-background">
-        <div className="container-x flex items-center gap-8 py-2.5">
+        <div className="container-x flex items-center gap-8 py-5">
           <span className="mono shrink-0 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
             Trusted by
           </span>

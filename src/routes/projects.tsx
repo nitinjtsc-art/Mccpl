@@ -8,10 +8,10 @@ export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
   head: () => ({
     meta: [
-      { title: "Projects | Mittal Construction" },
-      { name: "description", content: "The structures behind our story, completed industrial, institutional and commercial projects by Mittal Construction across India." },
-      { property: "og:title", content: "Projects, Mittal Construction" },
-      { property: "og:description", content: "The structures behind our story, selected completed projects by MCC." },
+      { title: "Projects — Mittal Construction" },
+      { name: "description", content: "The structures behind our story — completed industrial, institutional and commercial projects by Mittal Construction across India." },
+      { property: "og:title", content: "Projects — Mittal Construction" },
+      { property: "og:description", content: "The structures behind our story — selected completed projects by MCC." },
     ],
   }),
 });
@@ -23,7 +23,7 @@ function ProjectsPage() {
       <section className="relative bg-ink pt-40 pb-24 text-primary-foreground">
         <div className="container-x relative">
           <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
-            Portfolio
+            Portfolio · {projects.length} projects
           </div>
           {/* TODO: Project list, photos and contract values (Crores) to be swapped from client Excel sheet. */}
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.95] text-balance">

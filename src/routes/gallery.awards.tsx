@@ -8,15 +8,15 @@ export const Route = createFileRoute("/gallery/awards")({
   component: AwardsPage,
   head: () => ({
     meta: [
-      { title: "Awards & Recognitions | Mittal Construction" },
+      { title: "Awards & Recognitions — Mittal Construction" },
       { name: "description", content: "Honours, certifications and recognitions earned by Mittal Construction." },
-      { property: "og:title", content: "Awards & Recognitions, MCC" },
+      { property: "og:title", content: "Awards & Recognitions — MCC" },
       { property: "og:description", content: "A look at the milestones, honours and certifications earned across a decade of building." },
     ],
   }),
 });
 
-const items = Array.from({ length: 3 }, (_, i) => ({
+const items = Array.from({ length: 8 }, (_, i) => ({
   title: `Recognition ${i + 1}`,
   year: `${2017 + i}`,
   caption: "Photo to be added soon.",
@@ -55,8 +55,8 @@ function AwardsPage() {
                   </div>
                 </div>
                 <figcaption className="p-5">
-                  <div className="display text-2xl transition-colors group-hover:text-accent">{it.title}</div>
-                  <div className="mt-1 text-sm text-muted-foreground">{it.caption}</div>
+                  <div className="display text-xl transition-colors group-hover:text-accent">{it.title}</div>
+                  <div className="mt-1 text-xs text-muted-foreground">{it.caption}</div>
                 </figcaption>
               </figure>
             </Reveal>

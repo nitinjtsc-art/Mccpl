@@ -24,7 +24,7 @@ export function SiteFooter() {
         </div>
 
         <div className="md:col-span-2 md:col-start-7">
-          <div className="mono mb-5 text-sm uppercase tracking-[0.25em] text-primary-foreground/50">
+          <div className="mono mb-5 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/50">
             Company
           </div>
           <ul className="space-y-3 text-sm">
@@ -38,7 +38,7 @@ export function SiteFooter() {
         </div>
 
         <div className="md:col-span-2">
-          <div className="mono mb-5 text-sm uppercase tracking-[0.25em] text-primary-foreground/50">
+          <div className="mono mb-5 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/50">
             Sectors
           </div>
           <ul className="space-y-3 text-sm text-primary-foreground/80">
@@ -54,43 +54,35 @@ export function SiteFooter() {
         </div>
 
         <div className="md:col-span-3">
-          <div className="mono mb-5 text-sm uppercase tracking-[0.25em] text-primary-foreground/50">
+          <div className="mono mb-5 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/50">
             Get in touch
           </div>
-          <ul className="space-y-7 text-sm text-primary-foreground/80">
-            <li>
-              <ul className="space-y-3">
-                <li className="flex gap-3">
-                  <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>
-                    <span className="block text-primary-foreground/60 text-[11px] uppercase tracking-[0.18em]">Head Office</span>
-                    A-168, Bhagat Singh Colony, Bhiwadi, Rajasthan - 301019
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <a href="tel:+919887010003" className="hover:text-accent">+91 98870 10003</a>
-                </li>
-                <li className="flex gap-3">
-                  <Mail size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <a href="mailto:info@mcc.co.in" className="hover:text-accent">info@mcc.co.in</a>
-                </li>
-              </ul>
+          <ul className="space-y-3 text-sm text-primary-foreground/80">
+            <li className="flex gap-3">
+              <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
+              <span>
+                <span className="block text-primary-foreground/60 text-[11px] uppercase tracking-[0.18em]">Head Office</span>
+                A-168, Bhagat Singh Colony, Bhiwadi, Rajasthan - 301019
+              </span>
             </li>
-            <li>
-              <ul className="space-y-3">
-                <li className="flex gap-3">
-                  <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>
-                    <span className="block text-primary-foreground/60 text-[11px] uppercase tracking-[0.18em]">Delhi Office</span>
-                    L-84B, First Floor, Malviya Nagar, Delhi - 110017
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <a href="tel:+911141653030" className="hover:text-accent">+91 11 41653030</a>
-                </li>
-              </ul>
+            <li className="flex gap-3">
+              <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
+              <span>
+                <span className="block text-primary-foreground/60 text-[11px] uppercase tracking-[0.18em]">Delhi Office</span>
+                L-84B, First Floor, Malviya Nagar, Delhi - 110017
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
+              <a href="tel:+919887010003" className="hover:text-accent">+91 98870 10003</a>
+            </li>
+            <li className="flex gap-3">
+              <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
+              <a href="tel:+911141653030" className="hover:text-accent">+91 11 41653030</a>
+            </li>
+            <li className="flex gap-3">
+              <Mail size={16} className="mt-0.5 shrink-0 text-accent" />
+              <a href="mailto:info@mcc.co.in" className="hover:text-accent">info@mcc.co.in</a>
             </li>
           </ul>
         </div>

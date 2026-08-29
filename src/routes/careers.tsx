@@ -3,14 +3,14 @@ import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
-import { Upload } from "lucide-react";
+import { Send, Upload } from "lucide-react";
 
 export const Route = createFileRoute("/careers")({
   component: CareersPage,
   head: () => ({
     meta: [
-      { title: "Careers | Mittal Construction" },
-      { name: "description", content: "Join Mittal Construction, open roles in engineering, project management, QA/QC and site execution." },
+      { title: "Careers — Mittal Construction" },
+      { name: "description", content: "Join Mittal Construction — open roles in engineering, project management, QA/QC and site execution." },
       { property: "og:title", content: "Careers at MCC" },
       { property: "og:description", content: "Build a long-term career with a contractor that self-performs the core scope." },
     ],
@@ -33,16 +33,18 @@ function CareersPage() {
             Great projects need<br />great people.
           </h1>
           <p className="mt-8 text-lg text-muted-foreground">
-            We invest in our people as much as we invest in our projects.
+            At MCC, we invest in our people as much as we invest in our
+            projects — offering a professional environment where you can grow,
+            learn and build a career that adds real value to your profile.
           </p>
         </div>
       </section>
 
       <section className="border-y border-border bg-card py-20">
-        <div className="container-x grid gap-12 md:grid-cols-3 md:divide-x md:divide-border md:[&>div+div]:pl-12">
+        <div className="container-x grid gap-12 md:grid-cols-3">
           {[
             ["Built to last", "We hire for the future, not just for today."],
-            ["Room to grow", "Your potential does not have a ceiling here, only a ladder."],
+            ["Room to grow", "Your potential does not have a ceiling here — only a ladder."],
             ["Lead from the front", "Take charge, influence outcomes, make a difference."],
           ].map(([t, d], i) => (
             <Reveal key={t} delay={i * 0.05}>
@@ -76,7 +78,7 @@ function CareersPage() {
               <div className="border-2 border-accent bg-card p-10 text-center">
                 <div className="display text-4xl">Application received.</div>
                 <p className="mt-3 text-muted-foreground">
-                  Thanks for applying, we'll be in touch shortly.
+                  Thanks for applying — we'll be in touch shortly.
                 </p>
               </div>
             ) : (
@@ -133,6 +135,7 @@ function CareersPage() {
                     className="group inline-flex items-center gap-3 bg-primary px-8 py-5 mono text-xs uppercase tracking-[0.25em] text-primary-foreground transition-colors hover:bg-ink"
                   >
                     Apply Now
+                    <Send size={14} className="transition-transform group-hover:translate-x-0.5" />
                   </button>
                 </div>
               </form>

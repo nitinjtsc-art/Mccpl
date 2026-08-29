@@ -8,9 +8,9 @@ export const Route = createFileRoute("/gallery/csr")({
   component: CsrPage,
   head: () => ({
     meta: [
-      { title: "CSR | Mittal Construction" },
+      { title: "CSR — Mittal Construction" },
       { name: "description", content: "Community and social initiatives by Mittal Construction." },
-      { property: "og:title", content: "CSR, MCC" },
+      { property: "og:title", content: "CSR — MCC" },
       { property: "og:description", content: "Education, health and community-development initiatives we support." },
     ],
   }),
@@ -27,15 +27,16 @@ function CsrPage() {
       <SiteHeader />
       <section className="bg-background pt-40 pb-16">
         <div className="container-x">
-          <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
+          <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
             Gallery · CSR
           </div>
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
             Building beyond<br />the brief.
           </h1>
-          <p className="mt-10 max-w-2xl text-lg text-muted-foreground">
-            MCC believes in building more than structures, supporting
-            education, healthcare and the communities we work with.
+          <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
+            MCC believes in building more than structures. Our CSR initiatives
+            focus on education, healthcare, plantation drives and the wellbeing
+            of the communities we work with.
           </p>
         </div>
       </section>

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact | Mittal Construction" },
+      { title: "Contact — Mittal Construction" },
       { name: "description", content: "Get a quote from Mittal Construction. Industrial and civil construction across North India." },
       { property: "og:title", content: "Contact Mittal Construction" },
       { property: "og:description", content: "Request a quote, share drawings, or visit the office in Bhiwadi, Rajasthan." },
@@ -38,7 +38,7 @@ function ContactPage() {
           <Reveal className="md:col-span-5 space-y-8">
             <div>
               <div className="mono mb-3 text-[10px] font-bold uppercase tracking-[0.25em] text-accent">
-                Head Office, Bhiwadi
+                Head Office — Bhiwadi
               </div>
               <div className="space-y-3 border-l-2 border-accent pl-6">
                 <div className="flex items-start gap-3 text-sm">
