@@ -3,7 +3,7 @@ import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
-import { Send, Upload } from "lucide-react";
+import { Upload } from "lucide-react";
 
 export const Route = createFileRoute("/careers")({
   component: CareersPage,
