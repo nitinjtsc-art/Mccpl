@@ -23,7 +23,7 @@ function ProjectsPage() {
       <section className="relative bg-ink pt-40 pb-24 text-primary-foreground">
         <div className="container-x relative">
           <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
-            Portfolio · {projects.length} projects
+            Portfolio
           </div>
           {/* TODO: Project list, photos and contract values (Crores) to be swapped from client Excel sheet. */}
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.95] text-balance">

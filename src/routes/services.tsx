@@ -46,8 +46,8 @@ function ServicesPage() {
             Full-stack<br /><span className="text-accent">contractors.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-            You bring the vision. We handle the execution. From groundbreaking
-            ceremony to ribbon cutting, we take care of everything.
+            You bring the vision. We handle the execution.<br />
+            From groundbreaking ceremony to ribbon cutting, we take care of everything.
           </p>
         </div>
       </section>
