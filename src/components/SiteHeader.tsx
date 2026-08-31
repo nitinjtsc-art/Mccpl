@@ -63,14 +63,11 @@ export function SiteHeader() {
       <div className="hidden bg-ink text-primary-foreground md:block">
         <div className="container-x flex h-9 items-center justify-between text-[11px] tracking-wide">
           <span className="mono uppercase tracking-[0.18em] text-primary-foreground">
-            Mittal Construction Company · Est. 1997 · Delhi-NCR
+            Mittal Construction Company · Est. 1997
           </span>
-          <div className="flex items-center gap-5">
-            <a href="tel:+919887010003" className="inline-flex items-center gap-2 hover:text-accent">
-              <Phone size={11} /> +91 98870 10003 <span className="text-primary-foreground/60">(Bhiwadi)</span>
-            </a>
+          <div className="flex items-center gap-7">
             <a href="tel:+911141653030" className="inline-flex items-center gap-2 hover:text-accent">
-              <Phone size={11} /> +91 11 41653030 <span className="text-primary-foreground/60">(Delhi)</span>
+              <Phone size={11} /> +91 11 41653030
             </a>
             <a href="mailto:info@mcc.co.in" className="hover:text-accent">
               info@mcc.co.in
@@ -90,7 +87,7 @@ export function SiteHeader() {
             <img
               src={mccLogo}
               alt="MCC — Mittal Construction Company"
-              className="h-8 w-auto md:h-10"
+              className="h-10 w-auto md:h-12"
               loading="eager"
             />
           </Link>
@@ -296,24 +293,17 @@ function Dropdown({
       </Link>
 
       <div
-        className={`fixed left-1/2 top-[calc(2.25rem+5rem)] z-40 w-[min(680px,92vw)] -translate-x-1/2 transition-all duration-300 ${
+        className={`fixed left-1/2 top-[calc(2.25rem+5rem)] z-40 w-[min(560px,92vw)] -translate-x-1/2 transition-all duration-300 ${
           isOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"
         }`}
         {...handlers}
       >
         <div className="overflow-hidden border border-border bg-background shadow-soft">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr]">
-            <div className="relative hidden bg-ink p-5 text-primary-foreground md:block">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr]">
+            <div className="relative hidden bg-ink p-6 text-primary-foreground md:block">
               <div className="mono text-[10px] uppercase tracking-[0.28em] text-accent">{teaserEyebrow}</div>
-              <h3 className="display mt-3 text-xl leading-[1.05]">{teaserTitle}</h3>
+              <h3 className="display mt-3 text-2xl leading-[1.1]">{teaserTitle}</h3>
               {teaserText && <p className="mt-3 text-xs text-primary-foreground/70">{teaserText}</p>}
-              <Link
-                to={teaserCtaTo}
-                onClick={() => setIsOpen(false)}
-                className="mono mt-5 inline-flex items-center gap-2 border-b border-accent pb-1 text-[10px] uppercase tracking-[0.22em] text-accent hover:gap-3 transition-all"
-              >
-                {teaserCta} →
-              </Link>
             </div>
             <div className="bg-background p-5">
               <div className="mono mb-4 text-[10px] uppercase tracking-[0.24em] text-muted-foreground">{eyebrow}</div>

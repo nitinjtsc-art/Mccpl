@@ -5,8 +5,8 @@ import mccLogo from "@/assets/mcc-logo.jpeg";
 export function SiteFooter() {
   return (
     <footer className="bg-black text-primary-foreground">
-      <div className="container-x grid gap-12 py-20 md:grid-cols-12">
-        <div className="md:col-span-5">
+      <div className="container-x grid gap-12 pb-12 pt-14 md:grid-cols-12">
+        <div className="md:col-span-4">
           <div className="inline-flex rounded-md bg-primary-foreground p-3">
             <img src={mccLogo} alt="MCC" className="h-9 w-auto md:h-10" />
           </div>
@@ -17,13 +17,13 @@ export function SiteFooter() {
           </p>
           <Link
             to="/contact"
-            className="mt-8 inline-flex items-center gap-2 border-b border-accent pb-1 text-sm font-medium text-accent"
+            className="mt-6 inline-flex items-center gap-2 border-b border-accent pb-1 text-sm font-medium text-accent"
           >
             Start a project with us <ArrowUpRight size={16} />
           </Link>
         </div>
 
-        <div className="md:col-span-2 md:col-start-7">
+        <div className="md:col-span-2 md:col-start-6">
           <div className="mono mb-5 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/50">
             Company
           </div>
