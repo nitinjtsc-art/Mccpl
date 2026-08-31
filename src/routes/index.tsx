@@ -40,19 +40,16 @@ const heroSlides = [
     image: projects[3].image,
     eyebrow: "Industrial · Process Plant",
     title: "Engineering plants that run for decades.",
-    sub: "Lucid Colloids · Bikaner, Rajasthan",
   },
   {
     image: projects[1].image,
     eyebrow: "Industrial · Manufacturing",
     title: "Turnkey factories, delivered on schedule.",
-    sub: "Toyoda Gosei · Neemrana, Rajasthan",
   },
   {
     image: projects[2].image,
     eyebrow: "Institutional",
     title: "Public buildings designed to serve generations.",
-    sub: "Govt. Degree College · Bilawar, J&K",
   },
 ];
 
@@ -158,9 +155,6 @@ function Home() {
               <h1 className="display text-balance text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] text-primary-foreground">
                 {heroSlides[active].title}
               </h1>
-              <p className="mt-5 max-w-xl text-base text-primary-foreground/70 md:text-lg">
-                {heroSlides[active].sub}
-              </p>
             </motion.div>
           </AnimatePresence>
 
@@ -208,7 +202,7 @@ function Home() {
 
       {/* ABOUT */}
       <section className="bg-background py-24 md:py-32">
-        <div className="container-x grid gap-16 md:grid-cols-12">
+        <div className="container-x grid items-start gap-16 md:grid-cols-12">
           <Reveal className="md:col-span-5">
             <div className="relative overflow-hidden">
               <img
@@ -224,7 +218,7 @@ function Home() {
               </div>
             </div>
           </Reveal>
-          <div className="md:col-span-7 md:pt-6">
+          <div className="md:col-span-7">
             <Reveal>
               <div className="eyebrow mb-5">About MCC</div>
               <h2 className="display text-balance text-4xl md:text-6xl">
@@ -233,28 +227,28 @@ function Home() {
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
+              <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground/80">
                 Founded in 1997 by Mr. Rajendra Mittal, MCC has spent nearly three decades
-                doing one thing well — building. From large industrial plants and warehouses
+                doing one thing well, building. From large industrial plants and warehouses
                 to institutional campuses and hospitality projects, we have earned the trust
                 of some of India's most demanding clients.
               </p>
-              <p className="mt-5 max-w-2xl text-foreground/65">
-                We manage the full construction lifecycle — engineering, procurement,
-                execution and handover — with a focus on quality, safety and on-time
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/80">
+                We manage the full construction lifecycle, engineering, procurement,
+                execution and handover, with a focus on quality, safety and on-time
                 delivery.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
                 {[
                   "Trusted by leading Indian & multinational corporations",
                   "Long-standing relationships with clients and consultants",
                   "End-to-end project delivery under one roof",
                   "A track record built on timely, quality delivery",
                 ].map((t) => (
-                  <li key={t} className="flex items-start gap-3 text-sm">
-                    <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent" />
+                  <li key={t} className="flex items-start gap-3 text-base leading-relaxed text-foreground/80">
+                    <CheckCircle2 size={18} className="mt-1 shrink-0 text-accent" />
                     {t}
                   </li>
                 ))}
@@ -272,11 +266,19 @@ function Home() {
 
       {/* STATS */}
       <section className="bg-brand text-brand-foreground">
-        <div className="container-x grid grid-cols-2 divide-y divide-x divide-primary-foreground/10 md:grid-cols-4 md:divide-y-0">
+        <div className="container-x grid grid-cols-2 md:grid-cols-4">
           {stats.map((s, i) => (
-            <Reveal key={s.l} delay={i * 0.08} className="px-2 py-12 md:px-8 md:py-16">
-              <div className="display text-5xl font-semibold md:text-6xl">{s.v}</div>
-              <div className="mono mt-4 text-[10px] uppercase tracking-[0.22em] text-primary-foreground">
+            <Reveal
+              key={s.l}
+              delay={i * 0.08}
+              className={`px-2 py-12 md:px-8 md:py-16 ${
+                i > 0 ? "border-l border-primary-foreground/10" : ""
+              } ${i > 1 ? "max-md:border-t max-md:border-primary-foreground/10" : ""} ${
+                i === 2 ? "max-md:border-l-0" : ""
+              }`}
+            >
+              <div className="display whitespace-nowrap text-4xl font-semibold md:text-6xl">{s.v}</div>
+              <div className="mono mt-4 text-sm uppercase tracking-[0.22em] text-primary-foreground">
                 {s.l}
               </div>
             </Reveal>
