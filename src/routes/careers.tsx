@@ -29,28 +29,28 @@ function CareersPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Careers
           </div>
-          <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
+          <h1 className="display text-[clamp(2.8rem,8.3vw,7.4rem)] leading-[0.9] text-balance">
             Great projects need<br />great people.
           </h1>
           <p className="mt-8 text-lg text-muted-foreground">
-            At MCC, we invest in our people as much as we invest in our
-            projects — offering a professional environment where you can grow,
-            learn and build a career that adds real value to your profile.
+            We invest in our people as much as we invest in our projects,
+            offering a professional environment where you can grow, learn and
+            build a career that adds real value to your profile.
           </p>
         </div>
       </section>
 
-      <section className="border-y border-border bg-card py-20">
+      <section className="border-y border-border bg-card py-16">
         <div className="container-x grid gap-12 md:grid-cols-3">
           {[
             ["Built to last", "We hire for the future, not just for today."],
-            ["Room to grow", "Your potential does not have a ceiling here — only a ladder."],
+            ["Room to grow", "Your potential does not have a ceiling here, only a ladder."],
             ["Lead from the front", "Take charge, influence outcomes, make a difference."],
           ].map(([t, d], i) => (
             <Reveal key={t} delay={i * 0.05}>
               <div>
                 <div className="display text-5xl text-accent">0{i + 1}</div>
-                <div className="display mt-6 text-2xl">{t}</div>
+                <div className="display mt-6 text-4xl">{t}</div>
                 <p className="mt-3 text-sm text-muted-foreground">{d}</p>
               </div>
             </Reveal>
@@ -61,14 +61,14 @@ function CareersPage() {
       <section className="py-24">
         <div className="container-x grid gap-12 md:grid-cols-12">
           <Reveal className="md:col-span-4">
-            <div className="mono mb-4 text-[11px] uppercase tracking-[0.3em] text-accent">
+            <div className="mono mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-accent">
               Apply
             </div>
-            <h2 className="display text-4xl md:text-5xl text-balance">
+            <h2 className="display text-5xl md:text-6xl text-balance">
               Send us your application.
             </h2>
             <p className="mt-6 text-sm text-muted-foreground">
-              We are always looking for driven professionals across all
+              We are always looking for driven professionals<br />across all
               functions and disciplines.
             </p>
           </Reveal>
@@ -101,7 +101,7 @@ function CareersPage() {
                   <label className="mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
                     CV / Resume
                   </label>
-                  <label className="mt-2 flex cursor-pointer items-center justify-start gap-4 border-2 border-dashed border-border px-4 py-4 transition-colors hover:border-accent">
+                  <label className="mt-2 flex cursor-pointer items-center justify-between gap-4 border-2 border-dashed border-border px-6 py-4 pr-10 transition-colors hover:border-accent">
                     <span className="flex items-center gap-3 text-sm">
                       <Upload size={16} className="text-accent" />
                       {fileName ?? "Upload your CV (PDF, DOC)"}
@@ -132,10 +132,9 @@ function CareersPage() {
                 <div className="sm:col-span-2">
                   <button
                     type="submit"
-                    className="group inline-flex items-center gap-3 bg-primary px-8 py-5 mono text-xs uppercase tracking-[0.25em] text-primary-foreground transition-colors hover:bg-ink"
+                    className="inline-flex items-center justify-center bg-primary px-8 py-5 mono text-xs uppercase tracking-[0.25em] text-primary-foreground transition-colors hover:bg-ink"
                   >
                     Apply Now
-                    <Send size={14} className="transition-transform group-hover:translate-x-0.5" />
                   </button>
                 </div>
               </form>

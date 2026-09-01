@@ -72,7 +72,7 @@ const services = [
   {
     icon: Building2,
     title: "Retrofit & Renovation",
-    desc: "Old building, new potential — we make it happen.",
+    desc: "Old building, new potential, we make it happen.",
   },
   {
     icon: Package,
@@ -92,7 +92,7 @@ const whyUs = [
   {
     icon: Users,
     t: "Proven Client List",
-    d: "From multinationals to government institutions — India's most demanding clients trust MCC with their projects.",
+    d: "From multinationals to government institutions, India's most demanding clients trust MCC with their projects.",
   },
   {
     icon: Repeat,
@@ -297,28 +297,30 @@ function Home() {
               </h2>
             </Reveal>
             <Reveal delay={0.1} className="md:col-span-5">
-              <p className="text-foreground/70">
-                From groundbreaking ceremony to ribbon cutting — we manage every stage of
+              <p className="max-w-none text-base leading-relaxed text-foreground/80">
+                From groundbreaking ceremony to ribbon cutting, we manage every stage of
                 your project with the same commitment and care.
               </p>
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-5">
             {services.map((s, i) => (
-              <Reveal key={s.title} delay={i * 0.08}>
-                <div className="group relative h-full bg-background p-8 transition-colors hover:bg-brand hover:text-brand-foreground">
-                  <s.icon size={32} strokeWidth={1.4} className="text-brand transition-colors group-hover:text-accent" />
-                  <h3 className="mt-10 text-xl font-semibold">{s.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/65 transition-colors group-hover:text-primary-foreground/75">
+              <Reveal key={s.title} delay={i * 0.08} className="h-full">
+                <div className="group relative flex h-full flex-col bg-background p-7 transition-colors hover:bg-brand hover:text-brand-foreground">
+                  <div className="flex items-center gap-3">
+                    <s.icon size={26} strokeWidth={1.4} className="shrink-0 text-brand transition-colors group-hover:text-accent" />
+                    <h3 className="text-lg font-semibold leading-snug">{s.title}</h3>
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-foreground/65 transition-colors group-hover:text-primary-foreground/75">
                     {s.desc}
                   </p>
-                  <div className="mono mt-8 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-foreground/40 transition-colors group-hover:text-accent">
+                  <div className="mono mt-auto inline-flex items-center gap-2 pt-8 text-[10px] uppercase tracking-[0.22em] text-foreground/40 transition-colors group-hover:text-accent">
                     /0{i + 1}
                   </div>
                   <ArrowUpRight
                     size={20}
-                    className="absolute right-7 top-7 text-foreground/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
+                    className="absolute right-6 top-6 text-foreground/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
                   />
                 </div>
               </Reveal>
@@ -391,14 +393,15 @@ function Home() {
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal className="md:col-span-7">
               <div className="eyebrow mb-5">Why MCC</div>
-              <h2 className="display text-balance text-4xl md:text-6xl">
-                We don't just build structures, <span className="text-brand">we build relationships.</span>
+              <h2 className="display text-5xl leading-[1.05] md:text-7xl">
+                We don't just build structures,<br />
+                <span className="text-accent">we build relationships.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1} className="md:col-span-5">
-              <p className="text-foreground/70">
+              <p className="text-base leading-relaxed text-foreground/80">
                 With nearly three decades of experience, MCC has built a reputation that
-                speaks for itself — trusted by some of India's leading corporations and
+                speaks for itself, trusted by some of India's leading corporations and
                 institutions, project after project.
               </p>
             </Reveal>
@@ -407,10 +410,12 @@ function Home() {
           <div className="mt-16 grid gap-10 md:grid-cols-3">
             {whyUs.map((w, i) => (
               <Reveal key={w.t} delay={i * 0.08}>
-                <div className="border-t-2 border-brand pt-8">
-                  <w.icon size={28} strokeWidth={1.4} className="text-brand" />
-                  <h3 className="mt-6 text-2xl font-semibold">{w.t}</h3>
-                  <p className="mt-3 text-foreground/65">{w.d}</p>
+                <div className="border-t border-brand pt-7">
+                  <div className="flex items-center gap-3.5">
+                    <w.icon size={26} strokeWidth={1.4} className="shrink-0 text-brand" />
+                    <h3 className="text-2xl font-semibold">{w.t}</h3>
+                  </div>
+                  <p className="mt-4 text-base leading-relaxed text-foreground/80">{w.d}</p>
                 </div>
               </Reveal>
             ))}
@@ -449,7 +454,7 @@ function Home() {
 
       {/* MARQUEE — clients / consultants */}
       <section className="border-y border-border bg-background">
-        <div className="container-x flex items-center gap-8 py-5">
+        <div className="container-x flex items-center gap-8 py-3.5">
           <span className="mono shrink-0 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
             Trusted by
           </span>

@@ -35,7 +35,7 @@ function AwardsPage() {
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
             Recognised<br /><span className="text-accent">on site.</span>
           </h1>
-          <p className="mt-8 max-w-2xl border-l-2 border-accent pl-5 text-lg text-muted-foreground">
+          <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
             A growing record of awards, client commendations and certifications
             earned through years of dedicated hard work.
           </p>
