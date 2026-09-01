@@ -127,7 +127,7 @@ function AboutPage() {
             <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               Our Values · Why Us
             </div>
-            <h2 className="display text-5xl md:text-6xl text-balance">
+            <h2 className="display font-semibold text-6xl md:text-7xl text-balance">
               Built on the right<br />foundations.
             </h2>
           </Reveal>
@@ -135,7 +135,7 @@ function AboutPage() {
         <div className="mx-auto mt-16 max-w-7xl px-6">
           <div className="relative grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-6">
             <div
-              className="pointer-events-none absolute left-6 right-6 top-8 hidden h-px bg-accent/40 md:block"
+              className="pointer-events-none absolute left-8 right-[calc(25%-1.5rem)] top-8 hidden h-px bg-accent/40 md:block"
               aria-hidden="true"
             />
             {values.map((v, i) => (
@@ -161,15 +161,15 @@ function AboutPage() {
             </div>
             <h2 className="display text-5xl md:text-7xl">Timeline.</h2>
           </Reveal>
-          <ol className="relative mt-16 grid grid-cols-1 gap-12 md:grid-cols-5 md:gap-6">
+          <ol className="relative mt-28 grid grid-cols-1 gap-12 md:grid-cols-5 md:gap-6">
             <div
-              className="pointer-events-none absolute left-0 right-0 top-2 hidden h-px bg-accent md:block"
+              className="pointer-events-none absolute left-2 right-[calc(20%-0.375rem)] top-2 hidden h-px bg-accent md:block"
               aria-hidden="true"
             />
             {timeline.map(([y, t], i) => (
               <Reveal key={y} delay={i * 0.05}>
                 <li className="relative md:pt-8">
-                  <span className="absolute left-0 top-0 h-4 w-4 bg-accent md:left-0 md:-top-[7px]" />
+                  <span className="absolute left-0 top-0 h-4 w-4 rounded-full bg-accent md:left-0 md:top-0" />
                   <div className="display mt-6 text-4xl md:mt-0">{y}</div>
                   <p className="mt-2 text-foreground/70">{t}</p>
                 </li>

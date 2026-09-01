@@ -42,23 +42,25 @@ function ServicesPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Capabilities
           </div>
-          <h1 className="display text-[clamp(3.5rem,11vw,10rem)] leading-[0.85] text-balance">
+          <h1 className="display text-[clamp(3.3rem,10.4vw,9.5rem)] leading-[0.85] text-balance">
             Full-stack<br /><span className="text-accent">contractors.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-            You bring the vision. We handle the execution. From groundbreaking
-            ceremony to ribbon cutting — we take care of everything.
+            Your vision. Our execution. From groundbreaking ceremony to ribbon
+            cutting, we take care of everything.
           </p>
         </div>
       </section>
 
-      <section className="border-y border-border bg-border">
+      <section className="border-y border-border bg-card">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
-            <Reveal key={s.t} delay={i * 0.05}>
-              <div className="group relative h-full bg-card p-10 transition-colors hover:bg-primary hover:text-primary-foreground">
-                <s.i size={36} strokeWidth={1.25} className="text-accent" />
-                <h3 className="display mt-2 text-3xl">{s.t}</h3>
+            <Reveal key={s.t} delay={i * 0.05} className="h-full">
+              <div className="group relative h-full bg-card p-8 transition-colors hover:bg-primary hover:text-primary-foreground">
+                <div className="flex items-center gap-4">
+                  <s.i size={28} strokeWidth={1.25} className="shrink-0 text-accent" />
+                  <h3 className="display text-2xl">{s.t}</h3>
+                </div>
                 <p className="mt-4 text-sm leading-relaxed opacity-80">{s.d}</p>
               </div>
             </Reveal>
@@ -72,7 +74,7 @@ function ServicesPage() {
             <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               How we work
             </div>
-            <h2 className="display text-5xl md:text-7xl text-balance">
+            <h2 className="display text-6xl md:text-8xl text-balance">
               A transparent<br />delivery process.
             </h2>
           </Reveal>
