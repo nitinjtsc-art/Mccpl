@@ -51,8 +51,8 @@ function ClientsPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Our Clients
           </div>
-          <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
-            Trusted by those<br />who build India.
+          <h1 className="display text-[clamp(2.8rem,8.4vw,7.5rem)] leading-[0.9] text-balance">
+            Trusted by those<br />who <span className="text-accent">build India.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
             Quality construction attracts quality clients. Every name on this
@@ -69,7 +69,7 @@ function ClientsPage() {
               <button
                 key={f}
                 onClick={() => setActive(f)}
-                className={`mono px-4 py-2 text-[11px] uppercase tracking-[0.2em] transition-colors ${
+                className={`px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] transition-colors ${
                   active === f
                     ? "bg-ink text-primary-foreground"
                     : "border border-border text-foreground/70 hover:border-accent hover:text-accent"

@@ -23,7 +23,7 @@ function ProjectsPage() {
       <section className="relative bg-ink pt-40 pb-24 text-primary-foreground">
         <div className="container-x relative">
           <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
-            Portfolio · {projects.length} projects
+            Portfolio
           </div>
           {/* TODO: Project list, photos and contract values (Crores) to be swapped from client Excel sheet. */}
           <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.95] text-balance">
@@ -50,7 +50,7 @@ function ProjectsPage() {
                     />
                   </div>
                   <div className="mono absolute -top-3 -left-3 bg-accent px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-accent-foreground shadow-soft">
-                    0{i + 1} / {projects.length}
+                    0{i + 1}
                   </div>
                 </div>
                 <div className="md:col-span-5">
