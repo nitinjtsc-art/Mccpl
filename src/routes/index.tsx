@@ -72,7 +72,7 @@ const services = [
   {
     icon: Building2,
     title: "Retrofit & Renovation",
-    desc: "Old building, new potential — we make it happen.",
+    desc: "Old building, new potential, we make it happen.",
   },
   {
     icon: Package,
@@ -92,7 +92,7 @@ const whyUs = [
   {
     icon: Users,
     t: "Proven Client List",
-    d: "From multinationals to government institutions — India's most demanding clients trust MCC with their projects.",
+    d: "From multinationals to government institutions, India's most demanding clients trust MCC with their projects.",
   },
   {
     icon: Repeat,

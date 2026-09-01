@@ -19,16 +19,16 @@ export const Route = createFileRoute("/about")({
 const values = [
   ["Quality", "Uncompromising commitment to quality that shows in everything we build."],
   ["Trust & Reliability", "The trust our clients place in us is something we earn on every project and protect on every site."],
-  ["Safety", "We have never treated safety as a cost — we treat it as a commitment."],
+  ["Safety", "We have never treated safety as a cost, we treat it as a commitment."],
   ["Client-Centric Approach", "We measure our success not by the structures we build but by the satisfaction of the clients we build them for."],
 ];
 
-// TODO: Years and descriptions for entries 2–5 are placeholders pending client confirmation.
+// TODO: Years and descriptions for entries 2-5 are placeholders pending client confirmation.
 const timeline = [
   ["1997", "Mittal Construction Company founded by Mr. Rajendra Mittal in Bhiwadi, Rajasthan."],
-  ["2015", "First industrial contract — Greenply, Behror."],
+  ["2015", "First industrial contract, Greenply, Behror."],
   ["2018", "Expanded into institutional works with NBCC."],
-  ["2021", "Crossed ₹100M single-project benchmark — Toyoda Gosei."],
+  ["2021", "Crossed ₹100M single-project benchmark, Toyoda Gosei."],
   ["2024", "Active in Rajasthan, Haryana, UP, J&K with 200+ workforce."],
 ];
 
@@ -41,9 +41,9 @@ function AboutPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Since 1997
           </div>
-          <h1 className="display text-[clamp(3rem,8vw,7rem)] leading-[0.85] text-balance">
-            Concrete, steel,
-            <span className="mt-6 block text-accent md:mt-8">conviction.</span>
+          <h1 className="display text-[clamp(3.5rem,9vw,8.5rem)] font-bold leading-[0.85] text-balance">
+            Concrete, Steel,
+            <span className="mt-6 block text-accent md:mt-8">Conviction.</span>
           </h1>
         </div>
         <div className="relative bg-primary">
@@ -62,27 +62,27 @@ function AboutPage() {
             <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               The firm
             </div>
-            <h2 className="display text-5xl md:text-6xl">
-              Built to Last.
+            <h2 className="display text-6xl md:text-7xl">
+              Built to<br />Last.
             </h2>
           </Reveal>
-          <Reveal delay={0.15} className="space-y-5 md:col-span-7 text-foreground/80">
-            <p className="text-lg leading-relaxed">
+          <Reveal delay={0.15} className="space-y-5 md:col-span-7">
+            <p className="text-base leading-relaxed text-foreground/80">
               Founded in 1997 by Mr. Rajendra Mittal, MCC has grown from a
-              regional contractor into a trusted pan-India construction firm —
+              regional contractor into a trusted pan-India construction firm,
               built on a simple belief that good construction is built on
               trust, hard work and accountability.
             </p>
-            <p>
+            <p className="text-base leading-relaxed text-foreground/80">
               Over nearly three decades, we have delivered industrial plants,
               warehouses, institutional campuses, hospitality projects and
               residential developments across 13 states, for clients who value
               quality, reliability and on-time delivery above everything else.
             </p>
-            <p>
+            <p className="text-base leading-relaxed text-foreground/80">
               Today, with 100+ projects to our name, we are trusted by
               multinational corporations, government institutions and leading
-              Indian businesses alike — for clients who demand nothing but the
+              Indian businesses alike, for clients who demand nothing but the
               best.
             </p>
           </Reveal>
