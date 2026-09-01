@@ -30,7 +30,7 @@ function CsrPage() {
           <div className="mono mb-6 text-[11px] uppercase tracking-[0.3em] text-accent">
             Gallery · CSR
           </div>
-          <h1 className="display text-[clamp(2.85rem,8.55vw,7.6rem)] leading-[0.9] text-balance">
+          <h1 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-balance">
             Building<br />beyond the brief.
           </h1>
           <p className="mt-8 max-w-4xl text-lg text-muted-foreground">
