@@ -19,7 +19,7 @@ type Member = { name: string; role: string; initials: string };
 
 const founder: Member = { name: "Rajesh Mittal", role: "Founder & Managing Director", initials: "RM" };
 const directors: Member[] = [
-  { name: "Anil Mittal", role: "Director — Operations", initials: "AM" },
+  { name: "Anil Mittal", role: "Director, Operations", initials: "AM" },
   { name: "Vikas Sharma", role: "Head of Projects", initials: "VS" },
 ];
 const leads: Member[] = [

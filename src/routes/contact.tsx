@@ -27,7 +27,7 @@ function ContactPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Let's talk
           </div>
-          <h1 className="display text-[clamp(3.5rem,11vw,10rem)] leading-[0.85] text-balance">
+          <h1 className="display text-[clamp(3.3rem,10.4vw,9.5rem)] leading-[0.85] text-balance">
             Tell us what<br />you're building.
           </h1>
         </div>
@@ -38,12 +38,12 @@ function ContactPage() {
           <Reveal className="md:col-span-5 space-y-8">
             <div>
               <div className="mono mb-3 text-[10px] font-bold uppercase tracking-[0.25em] text-accent">
-                Head Office — Bhiwadi
+                Head Office, Bhiwadi
               </div>
               <div className="space-y-3 border-l-2 border-accent pl-6">
                 <div className="flex items-start gap-3 text-sm">
                   <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>A-168, Bhagat Singh Colony, Bhiwadi, Rajasthan – 301019</span>
+                  <span>A-168, Bhagat Singh Colony,<br />Bhiwadi, Rajasthan – 301019</span>
                 </div>
                 <div className="flex items-start gap-3 text-sm">
                   <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
@@ -63,7 +63,7 @@ function ContactPage() {
               <div className="space-y-3 border-l-2 border-accent pl-6">
                 <div className="flex items-start gap-3 text-sm">
                   <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                  <span>L-84B, First Floor, Malviya Nagar, Delhi – 110017</span>
+                  <span>L-84B, First Floor,<br />Malviya Nagar, Delhi – 110017</span>
                 </div>
                 <div className="flex items-start gap-3 text-sm">
                   <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
