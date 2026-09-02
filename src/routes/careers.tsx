@@ -78,7 +78,7 @@ function CareersPage() {
               <div className="border-2 border-accent bg-card p-10 text-center">
                 <div className="display text-4xl">Application received.</div>
                 <p className="mt-3 text-muted-foreground">
-                  Thanks for applying — we'll be in touch shortly.
+                  Thanks for applying, we'll be in touch shortly.
                 </p>
               </div>
             ) : (
