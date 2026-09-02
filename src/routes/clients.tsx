@@ -3,6 +3,17 @@ import { useMemo, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
+import mahindra from "@/assets/clients/mahindra.png.asset.json";
+import adani from "@/assets/clients/adani-defence.png.asset.json";
+import gsk from "@/assets/clients/gsk.jpeg.asset.json";
+import wonderCement from "@/assets/clients/wonder-cement.png.asset.json";
+import paracoat from "@/assets/clients/paracoat.png.asset.json";
+import markem from "@/assets/clients/markem-imaje.png.asset.json";
+import indospace from "@/assets/clients/indospace.jpg.asset.json";
+import propus from "@/assets/clients/propus.png.asset.json";
+import gyanBharati from "@/assets/clients/gyan-bharati.png.asset.json";
+import lkSinghania from "@/assets/clients/lk-singhania.jpg.asset.json";
+
 
 export const Route = createFileRoute("/clients")({
   component: ClientsPage,
