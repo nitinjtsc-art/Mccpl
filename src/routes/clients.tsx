@@ -92,15 +92,25 @@ function ClientsPage() {
           <div className="mt-10 grid grid-cols-2 gap-px bg-border sm:grid-cols-3 lg:grid-cols-4">
             {list.map((c, i) => (
               <Reveal key={c.name} delay={(i % 8) * 0.04}>
-                <div className="group flex aspect-[5/3] flex-col items-center justify-center gap-3 bg-background p-6 text-center transition-colors hover:bg-card">
-                  <div className="flex h-14 w-14 items-center justify-center border border-border text-sm font-semibold text-foreground/70 transition-colors group-hover:border-accent group-hover:text-accent">
-                    {c.name.split(" ").slice(0, 2).map((w) => w[0]).join("")}
-                  </div>
+                <div className="group flex aspect-[5/3] flex-col items-center justify-center gap-4 bg-background p-6 text-center transition-colors hover:bg-card">
+                  {c.logo ? (
+                    <img
+                      src={c.logo}
+                      alt={`${c.name} logo`}
+                      loading="lazy"
+                      className="h-14 w-auto max-w-[70%] object-contain grayscale transition-all duration-500 group-hover:grayscale-0"
+                    />
+                  ) : (
+                    <div className="flex h-14 w-14 items-center justify-center border border-border text-sm font-semibold text-foreground/70 transition-colors group-hover:border-accent group-hover:text-accent">
+                      {c.name.split(" ").slice(0, 2).map((w) => w[0]).join("")}
+                    </div>
+                  )}
                   <div className="text-sm font-medium text-foreground">{c.name}</div>
                   <div className="mono text-[9px] uppercase tracking-[0.22em] text-muted-foreground">
                     {c.sector}
                   </div>
                 </div>
+
               </Reveal>
             ))}
           </div>
