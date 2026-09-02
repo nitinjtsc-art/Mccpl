@@ -427,7 +427,7 @@ function Home() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-ink py-24 text-primary-foreground md:py-32">
+      <section className="relative overflow-hidden bg-ink py-16 text-primary-foreground md:py-24">
         <div className="absolute inset-0 opacity-25">
           <img src={heroImg} alt="" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
