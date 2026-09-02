@@ -201,7 +201,7 @@ function Home() {
 
 
       {/* ABOUT */}
-      <section className="bg-background py-24 md:py-32">
+      <section className="bg-background py-16 md:py-24">
         <div className="container-x grid items-start gap-16 md:grid-cols-12">
           <Reveal className="md:col-span-5">
             <div className="relative overflow-hidden">
@@ -290,7 +290,7 @@ function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-background pt-24 md:pt-32 pb-12 md:pb-16">
+      <section className="bg-background pt-16 md:pt-24 pb-12 md:pb-16">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal className="md:col-span-7">
@@ -391,7 +391,7 @@ function Home() {
       </section>
 
       {/* WHY US */}
-      <section className="bg-background pt-12 md:pt-16 pb-24 md:pb-32">
+      <section className="bg-background pt-12 md:pt-16 pb-16 md:pb-24">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal className="md:col-span-7">
