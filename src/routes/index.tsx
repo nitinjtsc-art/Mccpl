@@ -271,19 +271,22 @@ function Home() {
             <Reveal
               key={s.l}
               delay={i * 0.08}
-              className={`px-2 py-12 md:px-8 md:py-16 ${
+              className={`flex min-w-0 flex-col items-center justify-center px-3 py-10 text-center md:px-6 md:py-14 ${
                 i > 0 ? "border-l border-primary-foreground/10" : ""
               } ${i > 1 ? "max-md:border-t max-md:border-primary-foreground/10" : ""} ${
                 i === 2 ? "max-md:border-l-0" : ""
               }`}
             >
-              <div className="display whitespace-nowrap text-4xl font-semibold md:text-6xl">{s.v}</div>
-              <div className="mono mt-4 text-sm uppercase tracking-[0.22em] text-primary-foreground">
+              <div className="display w-full whitespace-nowrap text-[clamp(1.5rem,4.2vw,3.25rem)] font-semibold leading-none">
+                {s.v}
+              </div>
+              <div className="mono mt-3 text-[11px] uppercase leading-relaxed tracking-[0.18em] text-primary-foreground md:text-xs">
                 {s.l}
               </div>
             </Reveal>
           ))}
         </div>
+
       </section>
 
       {/* SERVICES */}
