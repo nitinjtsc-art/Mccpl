@@ -201,7 +201,7 @@ function Home() {
 
 
       {/* ABOUT */}
-      <section className="bg-background py-24 md:py-32">
+      <section className="bg-background py-16 md:py-24">
         <div className="container-x grid items-start gap-16 md:grid-cols-12">
           <Reveal className="md:col-span-5">
             <div className="relative overflow-hidden">
@@ -271,23 +271,26 @@ function Home() {
             <Reveal
               key={s.l}
               delay={i * 0.08}
-              className={`px-2 py-12 md:px-8 md:py-16 ${
+              className={`flex min-w-0 flex-col items-center justify-center px-3 py-10 text-center md:px-6 md:py-14 ${
                 i > 0 ? "border-l border-primary-foreground/10" : ""
               } ${i > 1 ? "max-md:border-t max-md:border-primary-foreground/10" : ""} ${
                 i === 2 ? "max-md:border-l-0" : ""
               }`}
             >
-              <div className="display whitespace-nowrap text-4xl font-semibold md:text-6xl">{s.v}</div>
-              <div className="mono mt-4 text-sm uppercase tracking-[0.22em] text-primary-foreground">
+              <div className="display w-full whitespace-nowrap text-[clamp(1.5rem,4.2vw,3.25rem)] font-semibold leading-none">
+                {s.v}
+              </div>
+              <div className="mono mt-3 text-[11px] uppercase leading-relaxed tracking-[0.18em] text-primary-foreground md:text-xs">
                 {s.l}
               </div>
             </Reveal>
           ))}
         </div>
+
       </section>
 
       {/* SERVICES */}
-      <section className="bg-background pt-24 md:pt-32 pb-12 md:pb-16">
+      <section className="bg-background pt-16 md:pt-24 pb-12 md:pb-16">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal className="md:col-span-7">
@@ -388,7 +391,7 @@ function Home() {
       </section>
 
       {/* WHY US */}
-      <section className="bg-background pt-12 md:pt-16 pb-24 md:pb-32">
+      <section className="bg-background pt-12 md:pt-16 pb-16 md:pb-24">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal className="md:col-span-7">
@@ -424,7 +427,7 @@ function Home() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-ink py-24 text-primary-foreground md:py-32">
+      <section className="relative overflow-hidden bg-ink py-16 text-primary-foreground md:py-24">
         <div className="absolute inset-0 opacity-25">
           <img src={heroImg} alt="" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
