@@ -18,21 +18,19 @@ export const Route = createFileRoute("/clients")({
 
 type Sector = "Industrial" | "Warehousing" | "Institutional" | "Hospitality" | "Commercial";
 
-const clients: { name: string; sector: Sector }[] = [
-  { name: "Greenply Industries", sector: "Industrial" },
-  { name: "Toyoda Gosei", sector: "Industrial" },
-  { name: "Lucid Colloids", sector: "Industrial" },
-  { name: "Surya Roshni", sector: "Industrial" },
-  { name: "R K Marble", sector: "Commercial" },
-  { name: "Havells India", sector: "Industrial" },
-  { name: "Govt. Degree College, Bilawar", sector: "Institutional" },
-  { name: "Apollo Hospitals", sector: "Institutional" },
-  { name: "Fortis Healthcare", sector: "Institutional" },
-  { name: "ITC Hotels", sector: "Hospitality" },
-  { name: "Lemon Tree Hotels", sector: "Hospitality" },
-  { name: "Bhiwadi Industries Assn.", sector: "Commercial" },
-  { name: "DLF Commercial", sector: "Commercial" },
+const clients: { name: string; sector: Sector; logo?: string }[] = [
+  { name: "Mahindra & Mahindra", sector: "Industrial", logo: mahindra.url },
+  { name: "Adani Defence & Aerospace", sector: "Industrial", logo: adani.url },
+  { name: "GSK", sector: "Industrial", logo: gsk.url },
+  { name: "Wonder Cement", sector: "Industrial", logo: wonderCement.url },
+  { name: "Paracoat Products", sector: "Industrial", logo: paracoat.url },
+  { name: "Markem-Imaje", sector: "Industrial", logo: markem.url },
+  { name: "IndoSpace", sector: "Warehousing", logo: indospace.url },
+  { name: "Propus", sector: "Commercial", logo: propus.url },
+  { name: "Gyan Bharati School", sector: "Institutional", logo: gyanBharati.url },
+  { name: "L.K. Singhania Education Centre", sector: "Institutional", logo: lkSinghania.url },
 ];
+
 
 const filters: ("All" | Sector)[] = ["All", "Industrial", "Warehousing", "Commercial", "Institutional", "Hospitality"];
 
