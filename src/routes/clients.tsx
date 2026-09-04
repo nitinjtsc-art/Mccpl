@@ -129,10 +129,10 @@ function ClientsPage() {
             ))}
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-px bg-border sm:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {list.map((c, i) => (
               <Reveal key={c.name} delay={(i % 8) * 0.04}>
-                <div className="group flex aspect-[5/3] flex-col items-center justify-center gap-4 bg-background p-6 text-center transition-colors hover:bg-card">
+                <div className="group flex aspect-[5/3] flex-col items-center justify-center gap-3 border border-border bg-background p-6 text-center transition-colors hover:border-accent hover:bg-card">
                   {c.logo ? (
                     <img
                       src={c.logo}
