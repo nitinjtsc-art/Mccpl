@@ -22,7 +22,7 @@ import unitedSpirits from "@/assets/clients/united-spirits.png.asset.json";
 import kansaiNerolac from "@/assets/clients/kansai-nerolac.png.asset.json";
 import lucidColloids from "@/assets/clients/lucid-colloids.png.asset.json";
 import micromax from "@/assets/clients/micromax.jpg.asset.json";
-import vMart from "@/assets/clients/v-mart.jpg.asset.json";
+import vMart from "@/assets/clients/v-mart.png.asset.json";
 import rkMarble from "@/assets/clients/rk-marble.png.asset.json";
 import powerGrid from "@/assets/clients/power-grid.png.asset.json";
 import kusumHealthcare from "@/assets/clients/kusum-healthcare.jpg.asset.json";
