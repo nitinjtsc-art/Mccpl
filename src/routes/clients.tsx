@@ -13,6 +13,16 @@ import indospace from "@/assets/clients/indospace.jpg.asset.json";
 import propus from "@/assets/clients/propus.png.asset.json";
 import gyanBharati from "@/assets/clients/gyan-bharati.png.asset.json";
 import lkSinghania from "@/assets/clients/lk-singhania.jpg.asset.json";
+import rkMarble from "@/assets/clients/rk-marble.png.asset.json";
+import powerGrid from "@/assets/clients/power-grid.png.asset.json";
+import kusumHealthcare from "@/assets/clients/kusum-healthcare.jpg.asset.json";
+import adaniWilmar from "@/assets/clients/adani-wilmar.jpg.asset.json";
+import adaniGroup from "@/assets/clients/adani.png.asset.json";
+import ardex from "@/assets/clients/ardex.png.asset.json";
+import fenesta from "@/assets/clients/fenesta.png.asset.json";
+import unicharm from "@/assets/clients/unicharm.png.asset.json";
+import jbm from "@/assets/clients/jbma.png.asset.json";
+import supreme from "@/assets/clients/supreme.png.asset.json";
 
 
 export const Route = createFileRoute("/clients")({
@@ -32,11 +42,21 @@ type Sector = "Industrial" | "Warehousing" | "Institutional" | "Hospitality" | "
 const clients: { name: string; sector: Sector; logo?: string }[] = [
   { name: "Mahindra & Mahindra", sector: "Industrial", logo: mahindra.url },
   { name: "Adani Defence & Aerospace", sector: "Industrial", logo: adani.url },
+  { name: "Adani Group", sector: "Industrial", logo: adaniGroup.url },
+  { name: "Adani Wilmar", sector: "Industrial", logo: adaniWilmar.url },
   { name: "GSK", sector: "Industrial", logo: gsk.url },
   { name: "Wonder Cement", sector: "Industrial", logo: wonderCement.url },
+  { name: "RK Marble", sector: "Industrial", logo: rkMarble.url },
   { name: "Paracoat Products", sector: "Industrial", logo: paracoat.url },
   { name: "Markem-Imaje", sector: "Industrial", logo: markem.url },
+  { name: "Ardex Group", sector: "Industrial", logo: ardex.url },
+  { name: "Power Grid Corporation of India", sector: "Industrial", logo: powerGrid.url },
+  { name: "JBM Group", sector: "Industrial", logo: jbm.url },
+  { name: "Unicharm", sector: "Industrial", logo: unicharm.url },
+  { name: "Kusum Healthcare", sector: "Industrial", logo: kusumHealthcare.url },
+  { name: "Supreme", sector: "Industrial", logo: supreme.url },
   { name: "IndoSpace", sector: "Warehousing", logo: indospace.url },
+  { name: "Fenesta", sector: "Commercial", logo: fenesta.url },
   { name: "Propus", sector: "Commercial", logo: propus.url },
   { name: "Gyan Bharati School", sector: "Institutional", logo: gyanBharati.url },
   { name: "L.K. Singhania Education Centre", sector: "Institutional", logo: lkSinghania.url },
