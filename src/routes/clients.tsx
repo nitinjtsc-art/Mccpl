@@ -13,6 +13,16 @@ import indospace from "@/assets/clients/indospace.jpg.asset.json";
 import propus from "@/assets/clients/propus.png.asset.json";
 import gyanBharati from "@/assets/clients/gyan-bharati.png.asset.json";
 import lkSinghania from "@/assets/clients/lk-singhania.jpg.asset.json";
+import princePipes from "@/assets/clients/prince-pipes.png.asset.json";
+import pidilite from "@/assets/clients/pidilite.jpg.asset.json";
+import toyodaGosei from "@/assets/clients/toyoda-gosei.png.asset.json";
+import greenply from "@/assets/clients/greenply.png.asset.json";
+import safexpress from "@/assets/clients/safexpress.png.asset.json";
+import unitedSpirits from "@/assets/clients/united-spirits.png.asset.json";
+import kansaiNerolac from "@/assets/clients/kansai-nerolac.png.asset.json";
+import lucidColloids from "@/assets/clients/lucid-colloids.png.asset.json";
+import micromax from "@/assets/clients/micromax.jpg.asset.json";
+import vMart from "@/assets/clients/v-mart.png.asset.json";
 import rkMarble from "@/assets/clients/rk-marble.png.asset.json";
 import powerGrid from "@/assets/clients/power-grid.png.asset.json";
 import kusumHealthcare from "@/assets/clients/kusum-healthcare.jpg.asset.json";
@@ -55,8 +65,18 @@ const clients: { name: string; sector: Sector; logo?: string }[] = [
   { name: "Unicharm", sector: "Industrial", logo: unicharm.url },
   { name: "Kusum Healthcare", sector: "Industrial", logo: kusumHealthcare.url },
   { name: "Supreme", sector: "Industrial", logo: supreme.url },
+  { name: "Prince Pipes", sector: "Industrial", logo: princePipes.url },
+  { name: "Pidilite", sector: "Industrial", logo: pidilite.url },
+  { name: "Toyoda Gosei", sector: "Industrial", logo: toyodaGosei.url },
+  { name: "Greenply", sector: "Industrial", logo: greenply.url },
+  { name: "United Spirits", sector: "Industrial", logo: unitedSpirits.url },
+  { name: "Kansai Nerolac", sector: "Industrial", logo: kansaiNerolac.url },
+  { name: "Lucid Colloids", sector: "Industrial", logo: lucidColloids.url },
+  { name: "Micromax", sector: "Industrial", logo: micromax.url },
   { name: "IndoSpace", sector: "Warehousing", logo: indospace.url },
+  { name: "Safexpress", sector: "Warehousing", logo: safexpress.url },
   { name: "Fenesta", sector: "Commercial", logo: fenesta.url },
+  { name: "V Mart", sector: "Commercial", logo: vMart.url },
   { name: "Propus", sector: "Commercial", logo: propus.url },
   { name: "Gyan Bharati School", sector: "Institutional", logo: gyanBharati.url },
   { name: "L.K. Singhania Education Centre", sector: "Institutional", logo: lkSinghania.url },
@@ -109,10 +129,10 @@ function ClientsPage() {
             ))}
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-px bg-border sm:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {list.map((c, i) => (
               <Reveal key={c.name} delay={(i % 8) * 0.04}>
-                <div className="group flex aspect-[5/3] flex-col items-center justify-center gap-4 bg-background p-6 text-center transition-colors hover:bg-card">
+                <div className="group flex aspect-[5/3] flex-col items-center justify-center gap-3 border border-border bg-background p-6 text-center transition-colors hover:border-accent hover:bg-card">
                   {c.logo ? (
                     <img
                       src={c.logo}
