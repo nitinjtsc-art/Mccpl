@@ -158,7 +158,7 @@ function ClientsPage() {
                       src={c.logo}
                       alt={`${c.name} logo`}
                       loading="lazy"
-                      className="h-14 w-auto max-w-[70%] object-contain grayscale transition-all duration-500 group-hover:grayscale-0"
+                      className="h-14 w-auto max-w-[70%] object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (
                     <div className="flex h-14 w-14 items-center justify-center border border-border text-sm font-semibold text-foreground/70 transition-colors group-hover:border-accent group-hover:text-accent">
