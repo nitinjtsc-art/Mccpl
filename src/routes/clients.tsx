@@ -33,6 +33,16 @@ import fenesta from "@/assets/clients/fenesta.png.asset.json";
 import unicharm from "@/assets/clients/unicharm.png.asset.json";
 import jbm from "@/assets/clients/jbma.png.asset.json";
 import supreme from "@/assets/clients/supreme.png.asset.json";
+import adaniPower from "@/assets/clients/adani-power.webp.asset.json";
+import nbcc from "@/assets/clients/nbcc.png.asset.json";
+import nitPatna from "@/assets/clients/nit-patna.jpeg.asset.json";
+import ashokLeyland from "@/assets/clients/ashok-leyland.png.asset.json";
+import jkCement from "@/assets/clients/jk-cement.png.asset.json";
+import shreeCement from "@/assets/clients/shree-cement.png.asset.json";
+import ultratech from "@/assets/clients/ultratech.png.asset.json";
+import dsGroup from "@/assets/clients/ds-group.png.asset.json";
+import cocaCola from "@/assets/clients/coca-cola.png.asset.json";
+import iitMandi from "@/assets/clients/iit-mandi.jpg.asset.json";
 
 
 export const Route = createFileRoute("/clients")({
