@@ -33,6 +33,16 @@ import fenesta from "@/assets/clients/fenesta.png.asset.json";
 import unicharm from "@/assets/clients/unicharm.png.asset.json";
 import jbm from "@/assets/clients/jbma.png.asset.json";
 import supreme from "@/assets/clients/supreme.png.asset.json";
+import adaniPower from "@/assets/clients/adani-power.webp.asset.json";
+import nbcc from "@/assets/clients/nbcc.png.asset.json";
+import nitPatna from "@/assets/clients/nit-patna.jpeg.asset.json";
+import ashokLeyland from "@/assets/clients/ashok-leyland.png.asset.json";
+import jkCement from "@/assets/clients/jk-cement.png.asset.json";
+import shreeCement from "@/assets/clients/shree-cement.png.asset.json";
+import ultratech from "@/assets/clients/ultratech.png.asset.json";
+import dsGroup from "@/assets/clients/ds-group.png.asset.json";
+import cocaCola from "@/assets/clients/coca-cola.png.asset.json";
+import iitMandi from "@/assets/clients/iit-mandi.jpg.asset.json";
 
 
 export const Route = createFileRoute("/clients")({
@@ -73,13 +83,23 @@ const clients: { name: string; sector: Sector; logo?: string }[] = [
   { name: "Kansai Nerolac", sector: "Industrial", logo: kansaiNerolac.url },
   { name: "Lucid Colloids", sector: "Industrial", logo: lucidColloids.url },
   { name: "Micromax", sector: "Industrial", logo: micromax.url },
+  { name: "Adani Power", sector: "Industrial", logo: adaniPower.url },
+  { name: "Ashok Leyland", sector: "Industrial", logo: ashokLeyland.url },
+  { name: "JK Cement", sector: "Industrial", logo: jkCement.url },
+  { name: "Shree Cement", sector: "Industrial", logo: shreeCement.url },
+  { name: "UltraTech Cement", sector: "Industrial", logo: ultratech.url },
+  { name: "DS Group", sector: "Industrial", logo: dsGroup.url },
+  { name: "Hindustan Coca-Cola Beverages", sector: "Industrial", logo: cocaCola.url },
   { name: "IndoSpace", sector: "Warehousing", logo: indospace.url },
   { name: "Safexpress", sector: "Warehousing", logo: safexpress.url },
   { name: "Fenesta", sector: "Commercial", logo: fenesta.url },
   { name: "V Mart", sector: "Commercial", logo: vMart.url },
   { name: "Propus", sector: "Commercial", logo: propus.url },
+  { name: "NBCC (India)", sector: "Commercial", logo: nbcc.url },
   { name: "Gyan Bharati School", sector: "Institutional", logo: gyanBharati.url },
   { name: "L.K. Singhania Education Centre", sector: "Institutional", logo: lkSinghania.url },
+  { name: "NIT Patna", sector: "Institutional", logo: nitPatna.url },
+  { name: "IIT Mandi", sector: "Institutional", logo: iitMandi.url },
 ];
 
 
@@ -138,7 +158,7 @@ function ClientsPage() {
                       src={c.logo}
                       alt={`${c.name} logo`}
                       loading="lazy"
-                      className="h-14 w-auto max-w-[70%] object-contain grayscale transition-all duration-500 group-hover:grayscale-0"
+                      className="h-14 w-auto max-w-[70%] object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (
                     <div className="flex h-14 w-14 items-center justify-center border border-border text-sm font-semibold text-foreground/70 transition-colors group-hover:border-accent group-hover:text-accent">
