@@ -163,7 +163,7 @@ function AboutPage() {
           </Reveal>
           <ol className="relative mt-28 grid grid-cols-1 gap-12 md:grid-cols-5 md:gap-6">
             <div
-              className="pointer-events-none absolute left-2 right-[calc(20%-0.375rem)] top-2 hidden h-px bg-accent md:block"
+              className="pointer-events-none absolute left-2 right-[calc(20%-1.2rem)] top-2 hidden h-px bg-accent md:block"
               aria-hidden="true"
             />
             {timeline.map(([y, t], i) => (
