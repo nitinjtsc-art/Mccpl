@@ -83,13 +83,23 @@ const clients: { name: string; sector: Sector; logo?: string }[] = [
   { name: "Kansai Nerolac", sector: "Industrial", logo: kansaiNerolac.url },
   { name: "Lucid Colloids", sector: "Industrial", logo: lucidColloids.url },
   { name: "Micromax", sector: "Industrial", logo: micromax.url },
+  { name: "Adani Power", sector: "Industrial", logo: adaniPower.url },
+  { name: "Ashok Leyland", sector: "Industrial", logo: ashokLeyland.url },
+  { name: "JK Cement", sector: "Industrial", logo: jkCement.url },
+  { name: "Shree Cement", sector: "Industrial", logo: shreeCement.url },
+  { name: "UltraTech Cement", sector: "Industrial", logo: ultratech.url },
+  { name: "DS Group", sector: "Industrial", logo: dsGroup.url },
+  { name: "Hindustan Coca-Cola Beverages", sector: "Industrial", logo: cocaCola.url },
   { name: "IndoSpace", sector: "Warehousing", logo: indospace.url },
   { name: "Safexpress", sector: "Warehousing", logo: safexpress.url },
   { name: "Fenesta", sector: "Commercial", logo: fenesta.url },
   { name: "V Mart", sector: "Commercial", logo: vMart.url },
   { name: "Propus", sector: "Commercial", logo: propus.url },
+  { name: "NBCC (India)", sector: "Commercial", logo: nbcc.url },
   { name: "Gyan Bharati School", sector: "Institutional", logo: gyanBharati.url },
   { name: "L.K. Singhania Education Centre", sector: "Institutional", logo: lkSinghania.url },
+  { name: "NIT Patna", sector: "Institutional", logo: nitPatna.url },
+  { name: "IIT Mandi", sector: "Institutional", logo: iitMandi.url },
 ];
 
 
