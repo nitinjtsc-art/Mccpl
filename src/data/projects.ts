@@ -8,6 +8,14 @@ import hellaAsset from "@/assets/projects/hella.png.asset.json";
 import passportAsset from "@/assets/projects/passport-office.jpg.asset.json";
 import patniAsset from "@/assets/projects/patni-school.jpg.asset.json";
 import fortuneAsset from "@/assets/projects/fortune-park.jpg.asset.json";
+import adaniPowerAsset from "@/assets/projects/adani-power.jpeg.asset.json";
+import propusAsset from "@/assets/projects/propus.jpg.asset.json";
+import iitMandiAsset from "@/assets/projects/iit-mandi.jpg.asset.json";
+import markemImajeAsset from "@/assets/projects/markem-imaje.jpg.asset.json";
+import kansaiNerolacAsset from "@/assets/projects/kansai-nerolac.jpg.asset.json";
+import princePipesAsset from "@/assets/projects/prince-pipes.jpeg.asset.json";
+import nitPatnaAsset from "@/assets/projects/nit-patna.jpg.asset.json";
+import toyodaGoseiAsset from "@/assets/projects/toyoda-gosei.jpg.asset.json";
 
 export type Project = {
   id: string;
