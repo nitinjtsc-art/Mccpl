@@ -8,6 +8,14 @@ import hellaAsset from "@/assets/projects/hella.png.asset.json";
 import passportAsset from "@/assets/projects/passport-office.jpg.asset.json";
 import patniAsset from "@/assets/projects/patni-school.jpg.asset.json";
 import fortuneAsset from "@/assets/projects/fortune-park.jpg.asset.json";
+import adaniPowerAsset from "@/assets/projects/adani-power.jpeg.asset.json";
+import propusAsset from "@/assets/projects/propus.jpg.asset.json";
+import iitMandiAsset from "@/assets/projects/iit-mandi.jpg.asset.json";
+import markemImajeAsset from "@/assets/projects/markem-imaje.jpg.asset.json";
+import kansaiNerolacAsset from "@/assets/projects/kansai-nerolac.jpg.asset.json";
+import princePipesAsset from "@/assets/projects/prince-pipes.jpeg.asset.json";
+import nitPatnaAsset from "@/assets/projects/nit-patna.jpg.asset.json";
+import toyodaGoseiAsset from "@/assets/projects/toyoda-gosei.jpg.asset.json";
 
 export type Project = {
   id: string;
@@ -43,6 +51,94 @@ export const projects: Project[] = [
     category: "Residential",
     image: ultratechAsset.url,
     year: "2024",
+  },
+  {
+    id: "adani-power",
+    name: "Adani Power",
+    client: "M/s Adani Power Ltd.",
+    location: "Singrauli, Madhya Pradesh",
+    consultant: "In-House",
+    value: "₹10 Cr",
+    category: "Residential",
+    image: adaniPowerAsset.url,
+    year: "2024",
+  },
+  {
+    id: "propus",
+    name: "Propus Designs & Display",
+    client: "M/s Propus Designs & Displays Pvt. Ltd.",
+    location: "Bhiwadi, Rajasthan",
+    consultant: "Shilpkaar Architects Pvt. Ltd.",
+    value: "₹6 Cr",
+    category: "Industrial",
+    image: propusAsset.url,
+    year: "2023",
+  },
+  {
+    id: "iit-mandi",
+    name: "IIT Mandi",
+    client: "M/s NBCC Ltd.",
+    location: "Kamand, Himachal Pradesh",
+    consultant: "STUP Consultants",
+    value: "₹155 Cr",
+    category: "Institutional",
+    image: iitMandiAsset.url,
+    year: "2020",
+  },
+  {
+    id: "markem-imaje",
+    name: "Markem Imaje",
+    client: "M/s Markem Imaje India Pvt. Ltd.",
+    location: "Karoli, Rajasthan",
+    consultant: "Archicon Associates",
+    value: "₹13 Cr",
+    category: "Industrial",
+    image: markemImajeAsset.url,
+    year: "2020",
+  },
+  {
+    id: "kansai-nerolac",
+    name: "Kansai Nerolac Paints",
+    client: "M/s Kansai Nerolac Paints India Ltd.",
+    location: "Goindwal Sahib, Punjab",
+    consultant: "Triplan India Pvt. Ltd.",
+    value: "₹9 Cr",
+    category: "Industrial",
+    image: kansaiNerolacAsset.url,
+    year: "2020",
+  },
+  {
+    id: "prince-pipes",
+    name: "Prince Pipes & Fittings",
+    client: "M/s Prince Pipes & Fittings Ltd.",
+    location: "Jaipur, Rajasthan",
+    consultant: "Semac Consultants",
+    value: "₹28 Cr",
+    category: "Industrial",
+    image: princePipesAsset.url,
+    year: "2019",
+  },
+  {
+    id: "nit-patna",
+    name: "NIT Patna",
+    client: "M/s NBCC Ltd.",
+    location: "Patna, Bihar",
+    consultant: "Axis Consultant",
+    value: "₹10 Cr",
+    category: "Institutional",
+    image: nitPatnaAsset.url,
+    year: "2015",
+  },
+  {
+    id: "toyoda-gosei",
+    name: "Toyoda Gosei",
+    client: "M/s Minda Projects",
+    location: "Neemrana, Rajasthan",
+    consultant: "Artscan Delhi",
+    value: "₹10 Cr",
+    category: "Industrial",
+    image: toyodaGoseiAsset.url,
+    year: "2014",
   },
   {
     id: "pidilite",
