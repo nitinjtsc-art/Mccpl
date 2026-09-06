@@ -16,6 +16,8 @@ import kansaiNerolacAsset from "@/assets/projects/kansai-nerolac.jpg.asset.json"
 import princePipesAsset from "@/assets/projects/prince-pipes.jpeg.asset.json";
 import nitPatnaAsset from "@/assets/projects/nit-patna.jpg.asset.json";
 import toyodaGoseiAsset from "@/assets/projects/toyoda-gosei.jpg.asset.json";
+import rkMarbleAsset from "@/assets/projects/rk-marble.jpg.asset.json";
+import lucidColloidsAsset from "@/assets/projects/lucid-colloids.png.asset.json";
 
 export type Project = {
   id: string;
