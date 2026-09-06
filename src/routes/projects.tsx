@@ -50,7 +50,7 @@ function ProjectsPage() {
                     />
                   </div>
                   <div className="mono absolute -top-3 -left-3 bg-accent px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-accent-foreground shadow-soft">
-                    0{i + 1}
+                    {String(i + 1).padStart(2, "0")}
                   </div>
                 </div>
                 <div className="md:col-span-5">
