@@ -16,6 +16,8 @@ import kansaiNerolacAsset from "@/assets/projects/kansai-nerolac.jpg.asset.json"
 import princePipesAsset from "@/assets/projects/prince-pipes.jpeg.asset.json";
 import nitPatnaAsset from "@/assets/projects/nit-patna.jpg.asset.json";
 import toyodaGoseiAsset from "@/assets/projects/toyoda-gosei.jpg.asset.json";
+import rkMarbleAsset from "@/assets/projects/rk-marble.jpg.asset.json";
+import lucidColloidsAsset from "@/assets/projects/lucid-colloids.png.asset.json";
 
 export type Project = {
   id: string;
@@ -205,6 +207,28 @@ export const projects: Project[] = [
     category: "Institutional",
     image: passportAsset.url,
     year: "2018",
+  },
+  {
+    id: "rk-marble",
+    name: "RK Marble",
+    client: "M/s RK Marble Ltd.",
+    location: "Nimbahera, Rajasthan",
+    consultant: "In-House",
+    value: "On request",
+    category: "Industrial",
+    image: rkMarbleAsset.url,
+    year: "2015",
+  },
+  {
+    id: "lucid-colloids",
+    name: "Lucid Colloids",
+    client: "M/s Lucid Colloids Ltd.",
+    location: "Jodhpur, Rajasthan",
+    consultant: "Mott MacDonald",
+    value: "₹21 Cr",
+    category: "Industrial",
+    image: lucidColloidsAsset.url,
+    year: "2014",
   },
   {
     id: "patni-school",
