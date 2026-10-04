@@ -56,7 +56,7 @@ function ServicesPage() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.t} delay={i * 0.05} className="h-full">
-              <div className="group relative h-full bg-card p-8 transition-colors hover:bg-primary hover:text-primary-foreground">
+              <div className="group relative h-full bg-card p-8">
                 <div className="flex items-center gap-4">
                   <s.i size={28} strokeWidth={1.25} className="shrink-0 text-accent" />
                   <h3 className="display text-2xl">{s.t}</h3>
