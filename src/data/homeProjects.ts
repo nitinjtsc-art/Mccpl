@@ -18,7 +18,7 @@ export type HomeProject = {
   summary?: string;
 };
 
-export const homeProjects: Project[] = [
+export const homeProjects: HomeProject[] = [
   {
     id: "iit-mandi",
     name: "IIT Mandi Campus Infrastructure",
