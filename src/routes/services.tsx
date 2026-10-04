@@ -56,7 +56,7 @@ function ServicesPage() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.t} delay={i * 0.05} className="h-full">
-              <div className="group relative h-full bg-card p-8 transition-colors hover:bg-primary hover:text-primary-foreground">
+              <div className="group relative h-full bg-card p-8">
                 <div className="flex items-center gap-4">
                   <s.i size={28} strokeWidth={1.25} className="shrink-0 text-accent" />
                   <h3 className="display text-2xl">{s.t}</h3>
@@ -78,10 +78,10 @@ function ServicesPage() {
               A transparent<br />delivery process.
             </h2>
           </Reveal>
-          <div className="mt-16 grid gap-px bg-border md:grid-cols-5">
+          <div className="mt-16 grid md:grid-cols-5">
             {process.map(([t, d], i) => (
               <Reveal key={t} delay={i * 0.07}>
-                <div className="h-full bg-background p-8">
+                <div className={`relative h-full bg-background p-8 ${i > 0 ? "md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-16 md:before:w-px md:before:-translate-y-1/2 md:before:bg-border" : ""}`}>
                   <div className="display text-5xl text-accent">0{i + 1}</div>
                   <div className="display mt-6 text-2xl">{t}</div>
                   <p className="mt-2 text-sm text-muted-foreground">{d}</p>

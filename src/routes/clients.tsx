@@ -120,7 +120,7 @@ function ClientsPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Our Clients
           </div>
-          <h1 className="display text-[clamp(2.8rem,8.4vw,7.5rem)] leading-[0.9] text-balance">
+          <h1 className="display text-[clamp(2.25rem,7vw,6.5rem)] leading-[1.05]">
             Trusted by those<br />who <span className="text-accent">build India.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">

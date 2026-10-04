@@ -41,9 +41,10 @@ function AboutPage() {
           <div className="mono mb-6 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
             Since 1997
           </div>
-          <h1 className="display text-[clamp(3.5rem,9vw,8.5rem)] font-bold leading-[0.85] text-balance">
-            Concrete, Steel,
-            <span className="mt-6 block text-accent md:mt-8">Conviction.</span>
+          <h1 className="display text-[clamp(3rem,7.5vw,7.5rem)] font-bold leading-[1.05]">
+            <span className="block">Concrete,</span>
+            <span className="block">Steel,</span>
+            <span className="block text-accent">Conviction.</span>
           </h1>
         </div>
         <div className="relative bg-primary">
@@ -57,16 +58,16 @@ function AboutPage() {
       </section>
 
       <section id="story" className="py-32 scroll-mt-32">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12">
-          <Reveal className="md:col-span-5">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-12 md:items-center">
+          <Reveal className="md:col-span-6">
             <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               The firm
             </div>
-            <h2 className="display text-6xl md:text-7xl">
+            <h2 className="display text-7xl leading-[0.95] md:text-8xl lg:text-9xl">
               Built to<br />Last.
             </h2>
           </Reveal>
-          <Reveal delay={0.15} className="space-y-5 md:col-span-7">
+          <Reveal delay={0.15} className="space-y-5 md:col-span-6">
             <p className="text-base leading-relaxed text-foreground/80">
               Founded in 1997 by Mr. Rajendra Mittal, MCC has grown from a
               regional contractor into a trusted pan-India construction firm,
