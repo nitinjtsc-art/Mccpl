@@ -19,7 +19,7 @@ import aboutImg from "@/assets/about-team.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
-import { projects } from "@/data/projects";
+import { homeProjects } from "@/data/homeProjects";
 import heroVmart from "@/assets/home/hero-vmart.jpg";
 import heroMarkem from "@/assets/home/hero-markem.jpg";
 import heroWonder from "@/assets/home/hero-wonder-cement.jpg";
@@ -352,7 +352,7 @@ function Home() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {projects.slice(0, 6).map((p, i) => (
+            {homeProjects.slice(0, 6).map((p, i) => (
               <Reveal key={p.id} delay={(i % 3) * 0.08}>
                 <Link to="/projects" className="group block">
                   <div className="relative aspect-[4/5] overflow-hidden bg-card">
