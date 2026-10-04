@@ -58,7 +58,7 @@ function AboutPage() {
       </section>
 
       <section id="story" className="py-32 scroll-mt-32">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-12 md:items-center">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:px-16 md:grid-cols-12 md:items-center">
           <Reveal className="md:col-span-6">
             <div className="mono mb-4 text-[15px] font-bold uppercase tracking-[0.3em] text-accent">
               The firm
