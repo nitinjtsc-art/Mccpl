@@ -20,6 +20,9 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { projects } from "@/data/projects";
+import heroVmart from "@/assets/home/hero-vmart.jpg";
+import heroMarkem from "@/assets/home/hero-markem.jpg";
+import heroWonder from "@/assets/home/hero-wonder-cement.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -37,17 +40,17 @@ export const Route = createFileRoute("/")({
 
 const heroSlides = [
   {
-    image: projects[3].image,
+    image: heroVmart,
     eyebrow: "Industrial · Process Plant",
     title: "Engineering plants that run for decades.",
   },
   {
-    image: projects[1].image,
+    image: heroMarkem,
     eyebrow: "Industrial · Manufacturing",
     title: "Turnkey factories, delivered on schedule.",
   },
   {
-    image: projects[2].image,
+    image: heroWonder,
     eyebrow: "Institutional",
     title: "Public buildings designed to serve generations.",
   },
@@ -310,21 +313,17 @@ function Home() {
           <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-5">
             {services.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.08} className="h-full">
-                <div className="group relative flex h-full flex-col bg-background p-7 transition-colors hover:bg-brand hover:text-brand-foreground">
+                <div className="group relative flex h-full flex-col bg-background p-7">
                   <div className="flex items-center gap-3">
-                    <s.icon size={26} strokeWidth={1.4} className="shrink-0 text-brand transition-colors group-hover:text-accent" />
+                    <s.icon size={26} strokeWidth={1.4} className="shrink-0 text-brand " />
                     <h3 className="text-lg font-semibold leading-snug">{s.title}</h3>
                   </div>
-                  <p className="mt-4 text-sm leading-relaxed text-foreground/65 transition-colors group-hover:text-primary-foreground/75">
+                  <p className="mt-4 text-sm leading-relaxed text-foreground/65">
                     {s.desc}
                   </p>
-                  <div className="mono mt-auto inline-flex items-center gap-2 pt-8 text-[10px] uppercase tracking-[0.22em] text-foreground/40 transition-colors group-hover:text-accent">
+                  <div className="mono mt-auto inline-flex items-center gap-2 pt-8 text-[10px] uppercase tracking-[0.22em] text-foreground/40">
                     /0{i + 1}
                   </div>
-                  <ArrowUpRight
-                    size={20}
-                    className="absolute right-6 top-6 text-foreground/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
-                  />
                 </div>
               </Reveal>
             ))}
@@ -394,14 +393,14 @@ function Home() {
       <section className="bg-background pt-12 md:pt-16 pb-16 md:pb-24">
         <div className="container-x">
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
-            <Reveal className="md:col-span-7">
+            <Reveal className="md:col-span-12">
               <div className="eyebrow mb-5">Why MCC</div>
-              <h2 className="display text-5xl leading-[1.05] md:text-7xl">
-                We don't just build structures,<br />
-                <span className="text-accent">we build relationships.</span>
+              <h2 className="display text-[clamp(1.6rem,4.6vw,4rem)] leading-[1.1]">
+                <span className="block sm:whitespace-nowrap">We don't just build structures,</span>
+                <span className="block text-accent sm:whitespace-nowrap">we build relationships.</span>
               </h2>
             </Reveal>
-            <Reveal delay={0.1} className="md:col-span-5">
+            <Reveal delay={0.1} className="md:col-span-8">
               <p className="text-base leading-relaxed text-foreground/80">
                 With nearly three decades of experience, MCC has built a reputation that
                 speaks for itself, trusted by some of India's leading corporations and

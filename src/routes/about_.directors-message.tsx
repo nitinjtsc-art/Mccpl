@@ -8,9 +8,9 @@ export const Route = createFileRoute("/about_/directors-message")({
   head: () => ({
     meta: [
       { title: "Director's Message — Mittal Construction" },
-      { name: "description", content: "A note from Rajesh Mittal, Founder & Managing Director of Mittal Construction." },
+      { name: "description", content: "A note from Rajendra Mittal, Founder & Managing Director of Mittal Construction." },
       { property: "og:title", content: "Director's Message — Mittal Construction" },
-      { property: "og:description", content: "A note from Rajesh Mittal, Founder & Managing Director." },
+      { property: "og:description", content: "A note from Rajendra Mittal, Founder & Managing Director." },
     ],
   }),
 });
@@ -39,7 +39,7 @@ function DirectorsMessagePage() {
                   RM
                 </div>
                 <div className="mt-6 display text-2xl leading-tight text-foreground">
-                  Rajesh Mittal
+                  Rajendra Mittal
                 </div>
                 <div className="mono mt-2 text-[11px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
                   Founder &amp; Managing Director
@@ -82,7 +82,7 @@ function DirectorsMessagePage() {
 
               <div className="mt-16 flex items-center gap-6">
                 <div className="display text-3xl text-foreground italic">
-                  Rajesh Mittal
+                  Rajendra Mittal
                 </div>
                 <div className="h-px flex-1 bg-border" />
                 <div className="mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
