@@ -20,9 +20,9 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { homeProjects } from "@/data/homeProjects";
-import heroVmart from "@/assets/home/hero-vmart.jpg";
-import heroMarkem from "@/assets/home/hero-markem.jpg";
-import heroWonder from "@/assets/home/hero-wonder-cement.jpg";
+import home2 from "@/assets/home/home-2.jpg.asset.json";
+import home3 from "@/assets/home/home-3.jpg.asset.json";
+import home4 from "@/assets/home/home-4.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -40,17 +40,17 @@ export const Route = createFileRoute("/")({
 
 const heroSlides = [
   {
-    image: heroVmart,
+    image: home4.url,
     eyebrow: "Industrial · Process Plant",
     title: "Engineering plants that run for decades.",
   },
   {
-    image: heroMarkem,
+    image: home2.url,
     eyebrow: "Industrial · Manufacturing",
     title: "Turnkey factories, delivered on schedule.",
   },
   {
-    image: heroWonder,
+    image: home3.url,
     eyebrow: "Institutional",
     title: "Public buildings designed to serve generations.",
   },

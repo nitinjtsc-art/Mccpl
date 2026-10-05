@@ -1,8 +1,8 @@
-import iitMandi from "@/assets/home/hero-iit-mandi.jpg";
-import markem from "@/assets/home/hero-markem.jpg";
-import wonderCement from "@/assets/home/hero-wonder-cement.jpg";
-import vmart from "@/assets/home/hero-vmart.jpg";
-import princePipes from "@/assets/home/hero-prince-pipes.jpg";
+import home1 from "@/assets/home/home-1.jpg.asset.json";
+import home2 from "@/assets/home/home-2.jpg.asset.json";
+import home3 from "@/assets/home/home-3.jpg.asset.json";
+import home4 from "@/assets/home/home-4.jpg.asset.json";
+import home5 from "@/assets/home/home-5.jpg.asset.json";
 import fortuneHotel from "@/assets/home/hero-fortune-hotel.jpg";
 
 export type HomeProject = {
@@ -27,7 +27,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "Institutional consultants",
     value: "Institutional",
     category: "Institutional",
-    image: iitMandi,
+    image: home3.url,
     year: "Flagship",
     summary:
       "Select infrastructure for a premier IIT campus built on challenging mountainous terrain. Required terrain-adaptive structural engineering for stability and longevity.",
@@ -40,7 +40,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "Green-building consultants",
     value: "Industrial",
     category: "Industrial",
-    image: markem,
+    image: home2.url,
     year: "Flagship",
     summary:
       "Industrial ink manufacturing facility for the French specialist. Modern factory layout with premium specifications, certified as a green building.",
@@ -53,7 +53,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "In-house & multi-discipline",
     value: "Integrated",
     category: "Industrial",
-    image: wonderCement,
+    image: home4.url,
     year: "Flagship",
     summary:
       "Integrated development covering cement-plant civil works, external infrastructure, staff accommodation and an on-campus school.",
@@ -66,7 +66,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "PEB & logistics consultants",
     value: "₹54 Cr",
     category: "Warehousing",
-    image: vmart,
+    image: home1.url,
     year: "Delivered ahead of schedule",
     summary:
       "5,00,000 sqft warehousing development executed in a stringent 6-month window — delivered ahead of schedule with zero compromise on quality.",
@@ -79,7 +79,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "Industrial consultants",
     value: "Industrial",
     category: "Industrial",
-    image: princePipes,
+    image: home5.url,
     year: "Flagship",
     summary:
       "Greenfield factory engineered for pipe and fitting production — efficient material flow, durable construction, industry-specific specifications.",
