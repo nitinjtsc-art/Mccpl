@@ -355,7 +355,7 @@ function Home() {
             {homeProjects.slice(0, 6).map((p, i) => (
               <Reveal key={p.id} delay={(i % 3) * 0.08}>
                 <Link to="/projects" className="group block">
-                  <div className="relative aspect-[4/5] overflow-hidden bg-card">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-card">
                     <img
                       src={p.image}
                       alt={p.name}
