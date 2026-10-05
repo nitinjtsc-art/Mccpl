@@ -130,7 +130,7 @@ function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.2 }}
-            className="absolute inset-x-0 bottom-0 top-20 md:top-28"
+            className="absolute inset-x-0 bottom-0 top-20 md:top-[116px]"
           >
             <img
               src={heroSlides[active].image}
