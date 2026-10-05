@@ -20,9 +20,11 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { homeProjects } from "@/data/homeProjects";
+import home1 from "@/assets/home/home-1.jpg.asset.json";
 import home2 from "@/assets/home/home-2.jpg.asset.json";
 import home3 from "@/assets/home/home-3.jpg.asset.json";
 import home4 from "@/assets/home/home-4.jpg.asset.json";
+import home5 from "@/assets/home/home-5.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -40,9 +42,9 @@ export const Route = createFileRoute("/")({
 
 const heroSlides = [
   {
-    image: home4.url,
-    eyebrow: "Industrial · Process Plant",
-    title: "Engineering plants that run for decades.",
+    image: home1.url,
+    eyebrow: "Industrial · Facilities",
+    title: "Modern industrial buildings, built to perform.",
   },
   {
     image: home2.url,
@@ -53,6 +55,16 @@ const heroSlides = [
     image: home3.url,
     eyebrow: "Institutional",
     title: "Public buildings designed to serve generations.",
+  },
+  {
+    image: home4.url,
+    eyebrow: "Industrial · Process Plant",
+    title: "Engineering plants that run for decades.",
+  },
+  {
+    image: home5.url,
+    eyebrow: "Commercial",
+    title: "Landmark facilities that stand out, day and night.",
   },
 ];
 
@@ -135,16 +147,10 @@ function Home() {
             <img
               src={heroSlides[active].image}
               alt=""
-              aria-hidden="true"
-              className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl"
+              className="h-full w-full object-cover object-center"
             />
-            <img
-              src={heroSlides[active].image}
-              alt=""
-              className="relative h-full w-full object-contain object-right"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/20" />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink/60 via-ink/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
           </motion.div>
         </AnimatePresence>
 
