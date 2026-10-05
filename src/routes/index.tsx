@@ -130,12 +130,18 @@ function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.2 }}
-            className="absolute inset-0"
+            className="absolute inset-x-0 bottom-0 top-20 md:top-28"
           >
             <img
               src={heroSlides[active].image}
               alt=""
-              className="ken-burns h-full w-full object-cover"
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl"
+            />
+            <img
+              src={heroSlides[active].image}
+              alt=""
+              className="relative h-full w-full object-contain object-right"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/20" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent" />
