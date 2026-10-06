@@ -46,7 +46,7 @@ function ProjectsPage() {
                       src={p.image}
                       alt={p.name}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-1000 hover:scale-105"
+                      className="h-full w-full object-contain"
                     />
                   </div>
                   <div className="mono absolute -top-3 -left-3 bg-accent px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-accent-foreground shadow-soft">
