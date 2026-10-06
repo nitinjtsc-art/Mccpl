@@ -36,6 +36,14 @@ export const Route = createFileRoute("/")({
         content:
           "Multi-disciplinary construction firm delivering industrial, commercial, institutional, hospitality and residential projects across India since 1997. ₹1000 Cr+ delivered.",
       },
+      { property: "og:title", content: "Mittal Construction Company — Industrial & Civil Builders" },
+      {
+        property: "og:description",
+        content:
+          "Multi-disciplinary construction firm delivering industrial, commercial, institutional, hospitality and residential projects across India since 1997.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
 });
@@ -149,7 +157,7 @@ function Home() {
               alt=""
               className="h-full w-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink/60 via-ink/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink/35 via-ink/15 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
           </motion.div>
         </AnimatePresence>
