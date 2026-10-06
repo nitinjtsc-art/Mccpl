@@ -9,41 +9,21 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as ClientsRouteImport } from './routes/clients'
-import { Route as CareersRouteImport } from './routes/careers'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as GalleryCsrRouteImport } from './routes/gallery.csr'
-import { Route as GalleryAwardsRouteImport } from './routes/gallery.awards'
-import { Route as AboutTeamRouteImport } from './routes/about_.team'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CareersRouteImport } from './routes/careers'
+import { Route as ClientsRouteImport } from './routes/clients'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as ServicesRouteImport } from './routes/services'
 import { Route as AboutDirectorsMessageRouteImport } from './routes/about_.directors-message'
+import { Route as AboutTeamRouteImport } from './routes/about_.team'
+import { Route as GalleryAwardsRouteImport } from './routes/gallery.awards'
+import { Route as GalleryCsrRouteImport } from './routes/gallery.csr'
 
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ClientsRoute = ClientsRouteImport.update({
-  id: '/clients',
-  path: '/clients',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CareersRoute = CareersRouteImport.update({
-  id: '/careers',
-  path: '/careers',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -51,19 +31,34 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const CareersRoute = CareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GalleryCsrRoute = GalleryCsrRouteImport.update({
-  id: '/gallery/csr',
-  path: '/gallery/csr',
+const ClientsRoute = ClientsRouteImport.update({
+  id: '/clients',
+  path: '/clients',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GalleryAwardsRoute = GalleryAwardsRouteImport.update({
-  id: '/gallery/awards',
-  path: '/gallery/awards',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutDirectorsMessageRoute = AboutDirectorsMessageRouteImport.update({
+  id: '/about_/directors-message',
+  path: '/about/directors-message',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutTeamRoute = AboutTeamRouteImport.update({
@@ -71,9 +66,14 @@ const AboutTeamRoute = AboutTeamRouteImport.update({
   path: '/about/team',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutDirectorsMessageRoute = AboutDirectorsMessageRouteImport.update({
-  id: '/about_/directors-message',
-  path: '/about/directors-message',
+const GalleryAwardsRoute = GalleryAwardsRouteImport.update({
+  id: '/gallery/awards',
+  path: '/gallery/awards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryCsrRoute = GalleryCsrRouteImport.update({
+  id: '/gallery/csr',
+  path: '/gallery/csr',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -175,39 +175,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clients': {
-      id: '/clients'
-      path: '/clients'
-      fullPath: '/clients'
-      preLoaderRoute: typeof ClientsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/careers': {
-      id: '/careers'
-      path: '/careers'
-      fullPath: '/careers'
-      preLoaderRoute: typeof CareersRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -217,25 +189,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/careers': {
+      id: '/careers'
+      path: '/careers'
+      fullPath: '/careers'
+      preLoaderRoute: typeof CareersRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/gallery/csr': {
-      id: '/gallery/csr'
-      path: '/gallery/csr'
-      fullPath: '/gallery/csr'
-      preLoaderRoute: typeof GalleryCsrRouteImport
+    '/clients': {
+      id: '/clients'
+      path: '/clients'
+      fullPath: '/clients'
+      preLoaderRoute: typeof ClientsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/gallery/awards': {
-      id: '/gallery/awards'
-      path: '/gallery/awards'
-      fullPath: '/gallery/awards'
-      preLoaderRoute: typeof GalleryAwardsRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about_/directors-message': {
+      id: '/about_/directors-message'
+      path: '/about/directors-message'
+      fullPath: '/about/directors-message'
+      preLoaderRoute: typeof AboutDirectorsMessageRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about_/team': {
@@ -245,11 +238,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutTeamRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/about_/directors-message': {
-      id: '/about_/directors-message'
-      path: '/about/directors-message'
-      fullPath: '/about/directors-message'
-      preLoaderRoute: typeof AboutDirectorsMessageRouteImport
+    '/gallery/awards': {
+      id: '/gallery/awards'
+      path: '/gallery/awards'
+      fullPath: '/gallery/awards'
+      preLoaderRoute: typeof GalleryAwardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery/csr': {
+      id: '/gallery/csr'
+      path: '/gallery/csr'
+      fullPath: '/gallery/csr'
+      preLoaderRoute: typeof GalleryCsrRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
