@@ -154,12 +154,14 @@ function ClientsPage() {
               <Reveal key={c.name} delay={(i % 8) * 0.04} className="h-full">
                 <div className="group flex h-full min-h-[180px] flex-col items-center justify-center gap-3 border border-border bg-background p-6 text-center transition-colors hover:border-accent hover:bg-card">
                   {c.logo ? (
-                    <img
-                      src={c.logo}
-                      alt={`${c.name} logo`}
-                      loading="lazy"
-                      className="h-14 w-auto max-w-[70%] object-contain transition-transform duration-500 group-hover:scale-105"
-                    />
+                    <div className="flex h-16 w-full shrink-0 items-center justify-center">
+                      <img
+                        src={c.logo}
+                        alt={`${c.name} logo`}
+                        loading="lazy"
+                        className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
                   ) : (
                     <div className="flex h-14 w-14 items-center justify-center border border-border text-sm font-semibold text-foreground/70 transition-colors group-hover:border-accent group-hover:text-accent">
                       {c.name.split(" ").slice(0, 2).map((w) => w[0]).join("")}
