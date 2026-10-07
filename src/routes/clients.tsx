@@ -159,7 +159,11 @@ function ClientsPage() {
                         src={c.logo}
                         alt={`${c.name} logo`}
                         loading="lazy"
-                        className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        className={`h-full w-full object-contain transition-transform duration-500 group-hover:scale-105 ${
+                          ["Pidilite", "Greenply", "Shree Cement", "Ashok Leyland"].includes(c.name)
+                            ? "scale-110"
+                            : ""
+                        }`}
                       />
                     </div>
                   ) : (
