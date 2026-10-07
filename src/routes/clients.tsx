@@ -161,8 +161,28 @@ function ClientsPage() {
                         loading="lazy"
                         className={`object-contain transition-transform duration-500 group-hover:scale-105 ${
                           ["RK Marble", "Prince Pipes", "JK Cement", "Kansai Nerolac", "JBM Group"].includes(c.name)
-                            ? "h-20 w-[115%] max-w-none"
-                            : "h-full w-full"
+                            ? "h-20 w-[115%] max-w-none group-hover:scale-[1.15]"
+                            : [
+                                  "Adani Defence & Aerospace",
+                                  "Mahindra & Mahindra",
+                                  "Supreme",
+                                  "Unicharm",
+                                  "Pidilite",
+                                  "Kusum Healthcare",
+                                  "Micromax",
+                                  "Shree Cement",
+                                  "Ashok Leyland",
+                                  "V Mart",
+                                  "Gyan Bharati School",
+                                  "L.K. Singhania Education Centre",
+                                  "NIT Patna",
+                                  "IIT Mandi",
+                                  "DS Group",
+                                  "Propus",
+                                  "Greenply",
+                              ].includes(c.name)
+                              ? "h-full w-full scale-110 group-hover:scale-[1.15]"
+                              : "h-full w-full"
                         }`}
                       />
                     </div>
