@@ -159,10 +159,10 @@ function ClientsPage() {
                         src={c.logo}
                         alt={`${c.name} logo`}
                         loading="lazy"
-                        className={`h-full w-full object-contain transition-transform duration-500 group-hover:scale-105 ${
-                          ["Pidilite", "Greenply", "Shree Cement", "Ashok Leyland"].includes(c.name)
-                            ? "scale-110"
-                            : ""
+                        className={`object-contain transition-transform duration-500 group-hover:scale-105 ${
+                          ["RK Marble", "Prince Pipes", "JK Cement", "Kansai Nerolac", "JBM Group"].includes(c.name)
+                            ? "h-20 w-[115%] max-w-none"
+                            : "h-full w-full"
                         }`}
                       />
                     </div>
