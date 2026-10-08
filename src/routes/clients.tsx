@@ -161,7 +161,7 @@ function ClientsPage() {
                         loading="lazy"
                         className={`object-contain transition-transform duration-500 group-hover:scale-105 ${
                           ["RK Marble", "Prince Pipes", "JK Cement", "Kansai Nerolac", "JBM Group"].includes(c.name)
-                            ? "h-16 w-[92%] max-w-none group-hover:scale-[1.15]"
+                            ? "h-16 w-[92%] max-w-none"
                             : ["Paracoat Products", "Power Grid Corporation of India"].includes(c.name)
                               ? "h-[80%] w-[80%]"
                             : [
