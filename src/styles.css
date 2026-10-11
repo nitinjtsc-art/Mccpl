@@ -180,3 +180,22 @@
   .img-hover { transition: transform 1.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
   .group:hover .img-hover { transform: scale(1.06); }
 }
+
+/* Shared hero slide overlay — dark navy, left-weighted */
+.hero-overlay {
+  background:
+    linear-gradient(90deg,
+      color-mix(in oklab, var(--ink) 88%, transparent) 0%,
+      color-mix(in oklab, var(--ink) 70%, transparent) 30%,
+      color-mix(in oklab, var(--ink) 35%, transparent) 55%,
+      transparent 80%),
+    linear-gradient(0deg, color-mix(in oklab, var(--ink) 60%, transparent) 0%, transparent 35%);
+}
+@media (max-width: 767px) {
+  .hero-overlay {
+    background: linear-gradient(0deg,
+      color-mix(in oklab, var(--ink) 90%, transparent) 0%,
+      color-mix(in oklab, var(--ink) 65%, transparent) 50%,
+      color-mix(in oklab, var(--ink) 35%, transparent) 100%);
+  }
+}
