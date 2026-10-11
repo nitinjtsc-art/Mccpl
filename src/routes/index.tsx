@@ -157,8 +157,7 @@ function Home() {
               alt=""
               className="h-full w-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink/35 via-ink/15 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
+            <div aria-hidden="true" className="hero-overlay absolute inset-0" />
           </motion.div>
         </AnimatePresence>
 
@@ -176,7 +175,7 @@ function Home() {
                 <span aria-hidden="true" className="h-4 w-0.5 shrink-0 bg-accent" />
                 {heroSlides[active].eyebrow}
               </div>
-              <h1 className="display text-balance text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] text-primary-foreground">
+              <h1 className="display text-balance text-[clamp(2.25rem,5.6vw,5rem)] font-bold leading-[1.05] tracking-tight text-primary-foreground">
                 {heroSlides[active].title}
               </h1>
             </motion.div>
@@ -185,14 +184,14 @@ function Home() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link
               to="/projects"
-              className="group inline-flex items-center gap-3 bg-accent px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-transform hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-3 rounded-[2px] bg-accent px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-accent-foreground transition-all hover:-translate-y-0.5 hover:brightness-110"
             >
               Explore Our Work
               <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 border border-primary-foreground/30 px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-ink"
+              className="inline-flex items-center gap-3 rounded-[2px] border border-primary-foreground/70 px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-ink"
             >
               Request a Quote
             </Link>
@@ -205,7 +204,7 @@ function Home() {
                 key={i}
                 onClick={() => setActive(i)}
                 aria-label={`Slide ${i + 1}`}
-                className="group relative h-1 w-14 overflow-hidden bg-primary-foreground/20"
+                className="group relative h-1 w-14 overflow-hidden bg-primary-foreground/35"
               >
                 <span
                   className={`block h-full bg-accent transition-all duration-500 ${
@@ -214,7 +213,7 @@ function Home() {
                 />
               </button>
             ))}
-            <span className="mono ml-3 text-[11px] uppercase tracking-[0.25em] text-primary-foreground/60">
+            <span className="mono ml-3 text-[12px] font-bold uppercase tracking-[0.25em] text-primary-foreground/90">
               0{active + 1} / 0{heroSlides.length}
             </span>
           </div>
