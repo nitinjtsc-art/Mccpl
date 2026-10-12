@@ -7,7 +7,7 @@ import indospaceAsset from "@/assets/projects/indospace-3.jpg.asset.json";
 import hellaAsset from "@/assets/projects/hella.png.asset.json";
 import passportAsset from "@/assets/projects/passport-office-amritsar3.JPG.asset.json";
 import patniAsset from "@/assets/projects/patni-public-school-nimbahera-rajasthan-2.jpg.asset.json";
-import fortuneAsset from "@/assets/projects/fortune-park-orange-3.jpg.asset.json";
+import fortuneAsset from "@/assets/projects/fortune-park-orange-correct.jpg.asset.json";
 import adaniPowerAsset from "@/assets/projects/adani-singhrauli.jpeg.asset.json";
 import propusAsset from "@/assets/projects/propus-inc-2.jpg.asset.json";
 import iitMandiAsset from "@/assets/projects/iit-mandi-2.jpg.asset.json";
