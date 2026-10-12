@@ -1,9 +1,7 @@
-import home1 from "@/assets/home/home-1.jpg.asset.json";
-import home2 from "@/assets/home/home-2.jpg.asset.json";
-import home3 from "@/assets/home/home-3.jpg.asset.json";
-import home4 from "@/assets/home/home-4.jpg.asset.json";
-import home5 from "@/assets/home/home-5.jpg.asset.json";
-import fortuneHotel from "@/assets/home/hero-fortune-hotel.jpg";
+import { projects } from "@/data/projects";
+
+const projectImage = (id: string) =>
+  projects.find((project) => project.id === id)?.image ?? null;
 
 export type HomeProject = {
   id: string;
@@ -13,7 +11,7 @@ export type HomeProject = {
   consultant: string;
   value: string;
   category: string;
-  image: string;
+  image: string | null;
   year: string;
   summary?: string;
 };
@@ -27,7 +25,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "Institutional consultants",
     value: "Institutional",
     category: "Institutional",
-    image: home3.url,
+    image: projectImage("iit-mandi"),
     year: "Flagship",
     summary:
       "Select infrastructure for a premier IIT campus built on challenging mountainous terrain. Required terrain-adaptive structural engineering for stability and longevity.",
@@ -40,7 +38,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "Green-building consultants",
     value: "Industrial",
     category: "Industrial",
-    image: home2.url,
+    image: projectImage("markem-imaje"),
     year: "Flagship",
     summary:
       "Industrial ink manufacturing facility for the French specialist. Modern factory layout with premium specifications, certified as a green building.",
@@ -53,7 +51,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "In-house & multi-discipline",
     value: "Integrated",
     category: "Industrial",
-    image: home4.url,
+    image: null,
     year: "Flagship",
     summary:
       "Integrated development covering cement-plant civil works, external infrastructure, staff accommodation and an on-campus school.",
@@ -66,7 +64,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "PEB & logistics consultants",
     value: "₹54 Cr",
     category: "Warehousing",
-    image: home1.url,
+    image: projectImage("vmart"),
     year: "Delivered ahead of schedule",
     summary:
       "5,00,000 sqft warehousing development executed in a stringent 6-month window — delivered ahead of schedule with zero compromise on quality.",
@@ -79,7 +77,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "Industrial consultants",
     value: "Industrial",
     category: "Industrial",
-    image: home5.url,
+    image: projectImage("prince-pipes"),
     year: "Flagship",
     summary:
       "Greenfield factory engineered for pipe and fitting production — efficient material flow, durable construction, industry-specific specifications.",
@@ -92,7 +90,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "Hospitality designers & PMC",
     value: "Hospitality",
     category: "Hospitality",
-    image: fortuneHotel,
+    image: projectImage("fortune-park"),
     year: "Flagship",
     summary:
       "Premium hospitality build executed with strict quality control and close coordination with designers — refined, guest-grade finishes throughout.",

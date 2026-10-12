@@ -376,12 +376,14 @@ function Home() {
               <Reveal key={p.id} delay={(i % 3) * 0.08}>
                 <Link to="/projects" className="group block">
                   <div className="relative aspect-[4/3] overflow-hidden bg-card">
-                    <img
-                      src={p.image}
-                      alt={p.name}
-                      loading="lazy"
-                      className="img-hover h-full w-full object-cover"
-                    />
+                    {p.image ? (
+                      <img
+                        src={p.image}
+                        alt={p.name}
+                        loading="lazy"
+                        className="img-hover h-full w-full object-cover"
+                      />
+                    ) : null}
                     <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent opacity-90" />
                     <div className="absolute left-5 top-5 bg-accent px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-foreground">
                       {p.category}
