@@ -1,0 +1,3 @@
+- [x] Add Wonder Cement's attached photo to Recently Delivered.
+- [x] Replace V-Mart's photo consistently on the homepage and Projects page.
+- [x] Show Area as "-" for all project specifications and verify the updates.
