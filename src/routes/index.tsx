@@ -20,9 +20,10 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { homeProjects } from "@/data/homeProjects";
-import home1 from "@/assets/home/home-1.jpg.asset.json";
-import home2 from "@/assets/home/home-2.jpg.asset.json";
-import home3 from "@/assets/home/home-3.jpg.asset.json";
+// Slides 1–3 use edge-widened versions of the uploaded 4:3 photos so they fill wide laptop screens.
+import home1Wide from "@/assets/home/home-1-wide.jpg";
+import home2Wide from "@/assets/home/home-2-wide.jpg";
+import home3Wide from "@/assets/home/home-3-wide.jpg";
 import home4 from "@/assets/home/home-4.jpg.asset.json";
 import home5 from "@/assets/home/home-5.jpg.asset.json";
 
@@ -50,17 +51,17 @@ export const Route = createFileRoute("/")({
 
 const heroSlides = [
   {
-    image: home1.url,
+    image: home1Wide,
     eyebrow: "Industrial · Facilities",
     title: "Modern industrial buildings, built to perform.",
   },
   {
-    image: home2.url,
+    image: home2Wide,
     eyebrow: "Industrial · Manufacturing",
     title: "Turnkey factories, delivered on schedule.",
   },
   {
-    image: home3.url,
+    image: home3Wide,
     eyebrow: "Institutional",
     title: "Public buildings designed to serve generations.",
   },
