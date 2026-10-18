@@ -384,12 +384,12 @@ function Home() {
                         className="img-hover h-full w-full object-cover"
                       />
                     ) : null}
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent opacity-90" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/85 via-45% to-transparent" />
                     <div className="absolute left-5 top-5 bg-accent px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-foreground">
                       {p.category}
                     </div>
                     <div className="absolute inset-x-6 bottom-6 text-primary-foreground">
-                      <div className="mono mb-2 text-[10px] uppercase tracking-[0.22em] text-primary-foreground/70">
+                      <div className="mono mb-2 text-[10px] font-medium uppercase tracking-[0.22em] text-primary-foreground">
                         {p.location} · {p.year}
                       </div>
                       <div className="display text-xl font-semibold leading-tight md:text-2xl">
