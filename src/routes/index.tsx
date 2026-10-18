@@ -20,12 +20,11 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { homeProjects } from "@/data/homeProjects";
-// Slides 1–3 use edge-widened versions of the uploaded 4:3 photos so they fill wide laptop screens.
-import home1Wide from "@/assets/home/home-1-wide.jpg";
-import home2Wide from "@/assets/home/home-2-wide.jpg";
-import home3Wide from "@/assets/home/home-3-wide.jpg";
-import home4 from "@/assets/home/home-4.jpg.asset.json";
-import home5 from "@/assets/home/home-5.jpg.asset.json";
+import home1 from "@/assets/home/Modern_Industrial_Campus_in_Daylight.png.asset.json";
+import home2 from "@/assets/home/Modern_Industrial_Facility_Under_Blue_Skies_1.png.asset.json";
+import home3 from "@/assets/home/Government_College_Campus_Exterior.png.asset.json";
+import home4 from "@/assets/home/Modern_Desert_Processing_Plant.png.asset.json";
+import home5 from "@/assets/home/Illuminated_Industrial_Showroom_at_Blue_Hour.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -51,17 +50,17 @@ export const Route = createFileRoute("/")({
 
 const heroSlides = [
   {
-    image: home1Wide,
+    image: home1.url,
     eyebrow: "Industrial · Facilities",
     title: "Modern industrial buildings, built to perform.",
   },
   {
-    image: home2Wide,
+    image: home2.url,
     eyebrow: "Industrial · Manufacturing",
     title: "Turnkey factories, delivered on schedule.",
   },
   {
-    image: home3Wide,
+    image: home3.url,
     eyebrow: "Institutional",
     title: "Public buildings designed to serve generations.",
   },
