@@ -142,7 +142,7 @@ function Home() {
       <SiteHeader />
 
       {/* HERO — full bleed image carousel */}
-      <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-ink pt-20 md:pt-28">
+      <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-ink pt-20 md:h-[85svh] md:min-h-[560px] md:pt-28">
         <AnimatePresence>
           <motion.div
             key={active}
@@ -161,7 +161,7 @@ function Home() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="container-x relative z-10 flex h-full flex-col justify-end pb-20 md:pb-28">
+        <div className="container-x relative z-10 flex h-full flex-col justify-end pb-20 md:pb-16">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
