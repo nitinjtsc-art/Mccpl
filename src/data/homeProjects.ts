@@ -1,4 +1,5 @@
 import { projects } from "@/data/projects";
+import wonderCementAsset from "@/assets/projects/wonder-cement-township.jpg.asset.json";
 
 const projectImage = (id: string) =>
   projects.find((project) => project.id === id)?.image ?? null;
@@ -51,7 +52,7 @@ export const homeProjects: HomeProject[] = [
     consultant: "In-house & multi-discipline",
     value: "Integrated",
     category: "Industrial",
-    image: null,
+    image: wonderCementAsset.url,
     year: "Flagship",
     summary:
       "Integrated development covering cement-plant civil works, external infrastructure, staff accommodation and an on-campus school.",

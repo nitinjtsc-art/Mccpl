@@ -65,7 +65,7 @@ function ProjectsPage() {
                       ["Client", p.client],
                       ["Location", p.location],
                       ["Consultant", p.consultant],
-                      ["Contract Value", p.value],
+                      ["Area", "-"],
                     ].map(([k, v]) => (
                       <div key={k} className="grid grid-cols-3 gap-4 border-b border-border/60 pb-4">
                         <dt className="mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
