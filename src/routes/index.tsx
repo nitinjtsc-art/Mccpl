@@ -156,7 +156,7 @@ function Home() {
               src={heroSlides[active].image}
               alt=""
               style={{ ["--hero-shift" as string]: ["20%", "10%", "0%", "10%", "0%"][active] }}
-              className="h-full w-full object-cover object-center lg:object-[70%_30%] lg:translate-x-[var(--hero-shift)]"
+              className="h-full w-full object-cover object-center lg:object-[70%_30%] lg:translate-x-[var(--hero-shift)] lg:[mask-image:linear-gradient(90deg,transparent,black_18%)]"
             />
             <div aria-hidden="true" className="hero-overlay absolute inset-0" />
           </motion.div>
