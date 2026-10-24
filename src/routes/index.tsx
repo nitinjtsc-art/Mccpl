@@ -161,7 +161,7 @@ function Home() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="container-x relative z-10 flex h-full flex-col justify-end pb-12 pt-4 md:pt-[14px]">
+        <div className="container-x relative z-10 flex h-full flex-col justify-end pb-12 pt-4 md:pt-[14px] lg:justify-start lg:pb-10 lg:pt-[70px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
