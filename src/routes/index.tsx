@@ -150,12 +150,14 @@ function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.2 }}
-            className="absolute inset-x-0 bottom-0 top-20 md:top-[116px]"
+            className="absolute inset-x-0 bottom-0 top-20 md:top-[112px]"
           >
             <img
               src={heroSlides[active].image}
               alt=""
-              className="h-full w-full object-cover object-center lg:object-[70%_30%]"
+              className={`h-full w-full object-cover object-center transition-transform duration-700 lg:object-[70%_30%] ${
+                active === 3 ? "scale-105" : ""
+              }`}
             />
             <div aria-hidden="true" className="hero-overlay absolute inset-0" />
           </motion.div>
@@ -394,13 +396,6 @@ function Home() {
                       </div>
                       <div className="display text-xl font-semibold leading-tight md:text-2xl">
                         {p.name}
-                      </div>
-                      <div className="mt-4 flex items-center justify-between border-t border-primary-foreground/20 pt-4 text-sm">
-                        <span className="text-primary-foreground/70">{p.value}</span>
-                        <ArrowUpRight
-                          size={18}
-                          className="text-accent transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                        />
                       </div>
                     </div>
                   </div>
