@@ -150,7 +150,7 @@ function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.2 }}
-            className="absolute inset-x-0 bottom-0 top-20 md:top-[112px]"
+            className="absolute inset-x-0 bottom-0 top-20 md:top-[104px]"
           >
             <img
               src={heroSlides[active].image}
@@ -163,7 +163,7 @@ function Home() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="container-x relative z-10 flex h-full flex-col justify-end pb-12 pt-4 md:pt-[14px] lg:justify-start lg:pb-10 lg:pt-[calc(70px+5vh)]">
+        <div className="container-x relative z-10 flex h-full flex-col justify-end pb-12 pt-4 md:pt-[14px] lg:justify-start lg:pb-10 lg:pt-[calc(70px+13vh)]">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}

@@ -82,7 +82,7 @@ export function SiteHeader() {
           scrolled ? "bg-white shadow-soft" : "bg-white"
         }`}
       >
-        <div className="container-x flex h-[60px] items-center justify-between md:h-[76px]">
+        <div className="container-x flex h-[54px] items-center justify-between md:h-[68px]">
           <Link to="/" className="flex items-center gap-3">
             <img
               src={mccLogo}
@@ -293,7 +293,7 @@ function Dropdown({
       </Link>
 
       <div
-        className={`fixed left-1/2 top-[calc(2.25rem+4.75rem)] z-40 w-[min(560px,92vw)] -translate-x-1/2 transition-all duration-300 ${
+        className={`fixed left-1/2 top-[calc(2.25rem+4.25rem)] z-40 w-[min(560px,92vw)] -translate-x-1/2 transition-all duration-300 ${
           isOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"
         }`}
         {...handlers}
