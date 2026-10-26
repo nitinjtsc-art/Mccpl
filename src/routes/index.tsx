@@ -20,7 +20,6 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { homeProjects } from "@/data/homeProjects";
-import home1 from "@/assets/home/Modern_Industrial_Campus_in_Daylight.png.asset.json";
 import heroSlide1 from "@/assets/home/hero-slide-1.png.asset.json";
 import home2 from "@/assets/home/Modern_Industrial_Facility_Under_Blue_Skies_1.png.asset.json";
 import home3 from "@/assets/home/Government_College_Campus_Exterior.png.asset.json";
