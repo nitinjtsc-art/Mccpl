@@ -18,15 +18,6 @@ export const Route = createFileRoute("/about_/team")({
 type Member = { name: string; role: string; initials: string };
 
 const founder: Member = { name: "Rajendra Mittal", role: "Founder & Managing Director", initials: "RM" };
-const directors: Member[] = [
-  { name: "Anil Mittal", role: "Director, Operations", initials: "AM" },
-  { name: "Vikas Sharma", role: "Head of Projects", initials: "VS" },
-];
-const leads: Member[] = [
-  { name: "Sunita Verma", role: "QA / QC Lead", initials: "SV" },
-  { name: "Deepak Yadav", role: "Site Safety Officer", initials: "DY" },
-  { name: "Priya Singh", role: "Procurement & Contracts", initials: "PS" },
-];
 
 function Card({ m, accent = false }: { m: Member; accent?: boolean }) {
   return (
@@ -78,43 +69,10 @@ function TeamPage() {
             </div>
           </Reveal>
 
-          <div className="flex flex-col items-center">
-            {/* Level 1 */}
+          <div className="flex justify-center">
             <Reveal>
               <Card m={founder} accent />
             </Reveal>
-
-            {/* connector */}
-            <div className="h-10 w-px bg-accent/50" aria-hidden="true" />
-
-            {/* Level 2 */}
-            <div className="relative w-full max-w-3xl">
-              <div className="absolute left-1/4 right-1/4 top-0 h-px bg-accent/50" aria-hidden="true" />
-              <div className="grid grid-cols-2 justify-items-center gap-8 pt-0">
-                {directors.map((m, i) => (
-                  <Reveal key={m.name} delay={i * 0.08} className="relative flex flex-col items-center">
-                    <div className="h-10 w-px bg-accent/50" aria-hidden="true" />
-                    <Card m={m} />
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-
-            {/* connector down */}
-            <div className="h-10 w-px bg-accent/50" aria-hidden="true" />
-
-            {/* Level 3 */}
-            <div className="relative w-full max-w-5xl">
-              <div className="absolute left-[16%] right-[16%] top-0 h-px bg-accent/50" aria-hidden="true" />
-              <div className="grid grid-cols-1 justify-items-center gap-8 pt-0 md:grid-cols-3">
-                {leads.map((m, i) => (
-                  <Reveal key={m.name} delay={i * 0.08} className="relative flex flex-col items-center">
-                    <div className="h-10 w-px bg-accent/50" aria-hidden="true" />
-                    <Card m={m} />
-                  </Reveal>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
