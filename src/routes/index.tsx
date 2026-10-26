@@ -20,7 +20,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { homeProjects } from "@/data/homeProjects";
-import home1 from "@/assets/home/Modern_Industrial_Campus_in_Daylight.png.asset.json";
+import heroSlide1 from "@/assets/home/hero-slide-1.png.asset.json";
 import home2 from "@/assets/home/Modern_Industrial_Facility_Under_Blue_Skies_1.png.asset.json";
 import home3 from "@/assets/home/Government_College_Campus_Exterior.png.asset.json";
 import home4 from "@/assets/home/Modern_Desert_Processing_Plant.png.asset.json";
@@ -50,7 +50,7 @@ export const Route = createFileRoute("/")({
 
 const heroSlides = [
   {
-    image: home1.url,
+    image: heroSlide1.url,
     eyebrow: "Industrial · Facilities",
     title: "Modern industrial buildings, built to perform.",
   },
@@ -163,7 +163,7 @@ function Home() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="container-x relative z-10 flex h-full flex-col justify-end pb-12 pt-4 md:pt-[14px] lg:justify-start lg:pb-10 lg:pt-[70px]">
+        <div className="container-x relative z-10 flex h-full flex-col justify-end pb-12 pt-4 md:pt-[14px] lg:justify-start lg:pb-10 lg:pt-[calc(70px+5vh)]">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -392,7 +392,7 @@ function Home() {
                     </div>
                     <div className="absolute inset-x-6 bottom-6 text-primary-foreground">
                       <div className="mono mb-2 text-[10px] font-medium uppercase tracking-[0.22em] text-primary-foreground">
-                        {p.location} · {p.year}
+                        {p.location}
                       </div>
                       <div className="display text-xl font-semibold leading-tight md:text-2xl">
                         {p.name}
